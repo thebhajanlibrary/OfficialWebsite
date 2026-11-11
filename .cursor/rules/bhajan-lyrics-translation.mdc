@@ -1,0 +1,34 @@
+---
+description: Full line-by-line English translation when adding bhajans to bhajan-content.ts
+globs: src/lib/bhajan-content.ts
+alwaysApply: false
+---
+
+# Bhajan lyrics translation
+
+When adding or editing a song in `src/lib/bhajan-content.ts`, the `translation` field must mirror `roman_lyrics` **line for line**.
+
+## Rules
+
+- **One English line per roman line** — same count, same order, same section headings (`## Chorus`, `## Verse 1`, etc.).
+- **Repeat every repeated line** — chorus refrains, doubled couplets, and `Oho …` echo lines must each get their own translation line, even when identical to a line above.
+- **Do not summarize or merge** — never collapse a chorus to two lines when the roman block has four.
+- **Blank lines** — match blank lines between roman stanzas in the translation.
+
+## Example
+
+```text
+roman_lyrics:
+Aisi lagi lagan, Meera ho gayi magan
+Woh to gali-gali Hari gun gaane lagi
+Aisi lagi lagan, Meera ho gayi magan
+
+translation:
+Such was the attachment — Meera became lost in bliss
+She began singing Hari's glories through every lane
+Such was the attachment — Meera became lost in bliss
+```
+
+## Check before finishing
+
+Count non-empty lines in `roman_lyrics` and `translation` (excluding `##` headings); they should match.

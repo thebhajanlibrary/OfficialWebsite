@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 128" role="img" aria-labelledby="bhajan-library-logo-title">
+  <title id="bhajan-library-logo-title">Bhajan Library</title>
+  <g>
+    <circle cx="64" cy="64" r="64" fill="#132033"/>
+    <path d="M34 50c8-10 18-16 30-16" fill="none" stroke="#c4781a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M94 50c-8-10-18-16-30-16" fill="none" stroke="#c4781a" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M62 100 L24 86 L24 56 L62 68 Z" fill="#f7f9fc"/>
+    <path d="M66 100 L104 86 L104 56 L66 68 Z" fill="#e4ebf3"/>
+    <path d="M34 64.5 L54 71" fill="none" stroke="#c1cbd8" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M32 71.5 L52 78" fill="none" stroke="#c1cbd8" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M74 71 L94 64.5" fill="none" stroke="#b7c3d1" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M76 78 L96 71.5" fill="none" stroke="#b7c3d1" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M64 68 V100" fill="none" stroke="#c4781a" stroke-width="2.75" stroke-linecap="round"/>
+    <path d="M64 20c0 0-13 16-13 26 0 7.5 5.8 13 13 13s13-5.5 13-13c0-10-13-26-13-26z" fill="#c4781a"/>
+    <path d="M64 33c0 0-6 8.5-6 13.5 0 3.6 2.7 6.2 6 6.2s6-2.6 6-6.2c0-5-6-13.5-6-13.5z" fill="#f5edd9"/>
+  </g>
+  <text x="160" y="78" fill="#132033" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-weight="600">Bhajan Library</text>
+</svg>
