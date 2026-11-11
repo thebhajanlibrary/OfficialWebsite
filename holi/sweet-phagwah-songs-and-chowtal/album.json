@@ -1,0 +1,99 @@
+{
+  "title": "Sweet Phagwah Songs and Chowtal",
+  "cover_title": "Phagwah Song · Chowtal & Ulara",
+  "label": "Mohabeer Records",
+  "catalogue": "MO-191",
+  "year": 1998,
+  "composer_band": "Aghaaz Band",
+  "address": "87-22 168th Place, Jamaica, NY 11432",
+  "site_album_slug": "sweet-phagwah-songs-and-chowtal",
+  "site_sections": ["albums", "folders/holi"],
+  "tracks": [
+    {
+      "number": 1,
+      "file": "audio/01-rang-barse.mp3",
+      "title": "Rang Barse",
+      "artist": "Pt. Chunelall Narine & Jharna Mukherjee",
+      "site_slug": "rang-barse-chunelall-jharna"
+    },
+    {
+      "number": 2,
+      "file": "audio/02-holi-ayee-re.mp3",
+      "title": "Holi Ayee Re",
+      "artist": "Pt. Chunelall Narine & Jharna Mukherjee",
+      "site_slug": "holi-ayee-re-chunelall-jharna"
+    },
+    {
+      "number": 3,
+      "file": "audio/03-aaj-na-chorange.mp3",
+      "title": "Aaj Na Chorange",
+      "artist": "Pt. Chunelall Narine & Jharna Mukherjee",
+      "site_slug": "aaj-na-chorange-chunelall-jharna"
+    },
+    {
+      "number": 4,
+      "file": "audio/04-holi-ke-din.mp3",
+      "title": "Holi Ke Din",
+      "artist": "Pt. Chunelall Narine & Jharna Mukherjee",
+      "site_slug": "holi-ke-din-chunelall-jharna"
+    },
+    {
+      "number": 5,
+      "file": "audio/05-holi-re-holi.mp3",
+      "title": "Holi Re Holi",
+      "artist": "Pt. Chunelall Narine & Jharna Mukherjee",
+      "site_slug": "holi-re-holi-chunelall-jharna"
+    },
+    {
+      "number": 6,
+      "file": "audio/06-mere-pehle.mp3",
+      "title": "Mere Pehle",
+      "artist": "Pt. Chunelall Narine & Jharna Mukherjee",
+      "site_slug": "mere-pehle-chunelall-jharna"
+    },
+    {
+      "number": 7,
+      "file": "audio/07-rang-holi-ka.mp3",
+      "title": "Rang Holi Ka",
+      "artist": "Pt. Chunelall Narine & Jharna Mukherjee",
+      "site_slug": "rang-holi-ka-chunelall-jharna"
+    },
+    {
+      "number": 8,
+      "file": "audio/08-rang-ah-basanti.mp3",
+      "title": "Rang Ah Basanti",
+      "artist": "Pt. Chunelall Narine & Jharna Mukherjee",
+      "site_slug": "rang-ah-basanti-chunelall-jharna"
+    },
+    {
+      "number": 9,
+      "file": "audio/09-holi-ka-nandall.mp3",
+      "title": "Holi Ka Nandall",
+      "artist": "Pt. Chunelall Narine & Jharna Mukherjee",
+      "site_slug": "holi-ka-nandall-chunelall-jharna"
+    },
+    {
+      "number": 10,
+      "file": "audio/10-holi-kheai-raghu.mp3",
+      "title": "Holi Kheai Raghu",
+      "artist": "Pt. Chunelall Narine & Jharna Mukherjee",
+      "site_slug": "holi-kheai-raghu-chunelall-jharna"
+    },
+    {
+      "number": 11,
+      "file": "audio/11-gokula-chowtal.mp3",
+      "title": "Gokula Chowtal",
+      "artist": "Mahatma Gandhi Satsang Society",
+      "site_slug": "gokula-chowtal-mahatma-gandhi-satsang",
+      "kind": "chowtal"
+    },
+    {
+      "number": 12,
+      "file": "audio/12-horee-khalay.mp3",
+      "title": "Horee Khalay",
+      "artist": "Mahatma Gandhi Satsang Society",
+      "site_slug": "horee-khalay-mahatma-gandhi-satsang",
+      "kind": "chowtal"
+    }
+  ]
+}

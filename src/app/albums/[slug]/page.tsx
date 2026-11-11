@@ -103,13 +103,6 @@ export default async function AlbumDetailPage({ params }: Props) {
             </p>
           )}
           <p className="mt-3 text-muted">{album.description}</p>
-          {album.slug === "lets-play-holi" && (
-            <p className="mt-3 rounded-lg border border-border bg-surface-muted/60 px-3 py-2 text-sm text-muted">
-              Marked as <span className="font-medium text-primary">Holi remixes</span>
-              {" — "}
-              personal private library only; rights not cleared for sharing or redistribution.
-            </p>
-          )}
           {album.slug === "sweet-phagwah-songs-and-chowtal" && (
             <p className="mt-3 rounded-lg border border-border bg-surface-muted/60 px-3 py-2 text-sm text-muted">
               Specialty Phagwah CD — also linked from{" "}

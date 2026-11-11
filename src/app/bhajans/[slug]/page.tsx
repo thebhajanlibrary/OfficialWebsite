@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BhajanAlternateTitle } from "@/components/bhajan/BhajanAlternateTitle";
 import { LyricsView } from "@/components/bhajan/LyricsView";
+import { CompanionVideo } from "@/components/bhajan/CompanionVideo";
 import { QueueAwarePlayer } from "@/components/bhajan/QueueAwarePlayer";
 import {
   getAdjacentBhajans,
@@ -280,25 +281,11 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
           ) : null}
 
           {current.video_url && isLocalVideoUrl(current.video_url) ? (
-            <aside className="mx-auto w-full max-w-[260px] shrink-0 space-y-2 lg:mx-0">
-              <div className="overflow-hidden rounded-xl border border-border bg-black shadow-sm">
-                <div className="relative aspect-[9/16] w-full">
-                  <video
-                    src={current.video_url}
-                    poster={current.video_poster_url ?? undefined}
-                    className="absolute inset-0 h-full w-full object-contain"
-                    controls
-                    playsInline
-                    preload="metadata"
-                  />
-                </div>
-              </div>
-              {current.video_credit ? (
-                <p className="text-sm leading-relaxed text-muted">
-                  {current.video_credit}
-                </p>
-              ) : null}
-            </aside>
+            <CompanionVideo
+              src={current.video_url}
+              poster={current.video_poster_url}
+              credit={current.video_credit}
+            />
           ) : null}
         </div>
       ) : null}
