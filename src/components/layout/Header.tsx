@@ -1,19 +1,9 @@
 import Link from "next/link";
 import { getCurrentUser } from "@/lib/queries";
+import { DesktopNav } from "@/components/layout/DesktopNav";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { NavSearch } from "@/components/search/NavSearch";
 import { BrandMark } from "@/components/layout/BrandMark";
-
-const links = [
-  { href: "/bhajans", label: "Bhajans" },
-  { href: "/albums", label: "Albums" },
-  { href: "/chutney", label: "Chutney" },
-  { href: "/folders/chutney-style-bhajan", label: "Chutney Bhajan" },
-  { href: "/browse/occasion", label: "Occasion" },
-  { href: "/calendar", label: "Calendar" },
-  { href: "/chowtal", label: "Chowtal" },
-  { href: "/artists", label: "Artists" },
-];
 
 export async function Header() {
   const user = await getCurrentUser();
@@ -28,33 +18,18 @@ export async function Header() {
           </p>
         </Link>
 
-        <nav
-          aria-label="Main"
-          className="hidden min-w-0 items-center justify-end gap-0.5 md:flex"
-        >
-          <div className="flex min-w-0 items-center gap-0.5 overflow-x-auto">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="nav-link whitespace-nowrap px-2.5 py-2 text-sm font-medium text-foreground/70 hover:text-primary"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          <div className="relative z-50 ml-1 shrink-0">
+        <div className="hidden min-w-0 items-center gap-2 md:flex">
+          <DesktopNav />
+          <div className="relative z-50 shrink-0">
             <NavSearch />
           </div>
-
           <Link
             href="/upload"
-            className="ml-2 shrink-0 text-sm font-medium text-accent transition hover:underline"
+            className="shrink-0 rounded-full px-3 py-1.5 text-sm font-medium text-accent transition hover:bg-accent-soft hover:text-primary"
           >
             Add a song
           </Link>
-        </nav>
+        </div>
 
         <MobileNav loggedIn={Boolean(user)} />
       </div>
