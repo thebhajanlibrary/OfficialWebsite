@@ -26,6 +26,8 @@ type Props = {
   ariaLabel?: string;
   /** Side zones only — centre clicks pass through (e.g. YouTube iframe). */
   overlayOnly?: boolean;
+  /** Leave the bottom of the frame clickable (YouTube’s own control bar). */
+  reserveBottom?: number;
 };
 
 export function DoubleTapSeekSurface({
@@ -37,6 +39,7 @@ export function DoubleTapSeekSurface({
   className = "",
   ariaLabel,
   overlayOnly = false,
+  reserveBottom = 0,
 }: Props) {
   const [flash, setFlash] = useState<Flash>(null);
   const lastTapRef = useRef<{ side: "left" | "right"; time: number } | null>(
@@ -119,15 +122,18 @@ export function DoubleTapSeekSurface({
 
   const coversParent = /\b(absolute|fixed)\b/.test(className);
 
+  const edgeStyle =
+    reserveBottom > 0 ? { top: 0, bottom: reserveBottom } : undefined;
+
   const zoneClass = (side: "left" | "right") =>
-    `absolute inset-y-0 z-10 w-[42%] touch-manipulation pointer-events-auto ${
-      side === "left" ? "left-0" : "right-0"
-    } group/zone`;
+    `absolute z-10 w-[42%] touch-manipulation pointer-events-auto ${
+      reserveBottom > 0 ? "" : "inset-y-0"
+    } ${side === "left" ? "left-0" : "right-0"} group/zone`;
 
   const hintClass = (side: "left" | "right") =>
-    `pointer-events-none absolute inset-y-0 z-[15] flex w-[38%] items-center justify-center opacity-0 transition-opacity duration-200 group-hover/zone:opacity-100 group-hover:opacity-100 group-focus-within:opacity-100 ${
-      side === "left" ? "left-0" : "right-0"
-    }`;
+    `pointer-events-none absolute z-[15] flex w-[38%] items-center justify-center opacity-0 transition-opacity duration-200 group-hover/zone:opacity-100 group-hover:opacity-100 group-focus-within:opacity-100 ${
+      reserveBottom > 0 ? "" : "inset-y-0"
+    } ${side === "left" ? "left-0" : "right-0"}`;
 
   return (
     <div
@@ -153,7 +159,7 @@ export function DoubleTapSeekSurface({
 
       {!disabled && (
         <>
-          <div className={hintClass("left")} aria-hidden>
+          <div className={hintClass("left")} style={edgeStyle} aria-hidden>
             <span className="flex h-11 w-11 flex-col items-center justify-center rounded-full bg-black/55 text-white shadow-lg backdrop-blur-sm sm:h-12 sm:w-12">
               <RotateCcw className="h-4 w-4 sm:h-[18px] sm:w-[18px]" strokeWidth={2.25} />
               <span className="mt-0.5 text-[10px] font-semibold tabular-nums leading-none sm:text-[11px]">
@@ -161,7 +167,7 @@ export function DoubleTapSeekSurface({
               </span>
             </span>
           </div>
-          <div className={hintClass("right")} aria-hidden>
+          <div className={hintClass("right")} style={edgeStyle} aria-hidden>
             <span className="flex h-11 w-11 flex-col items-center justify-center rounded-full bg-black/55 text-white shadow-lg backdrop-blur-sm sm:h-12 sm:w-12">
               <RotateCw className="h-4 w-4 sm:h-[18px] sm:w-[18px]" strokeWidth={2.25} />
               <span className="mt-0.5 text-[10px] font-semibold tabular-nums leading-none sm:text-[11px]">
@@ -172,11 +178,13 @@ export function DoubleTapSeekSurface({
 
           <div
             className={zoneClass("left")}
+            style={edgeStyle}
             aria-hidden
             onPointerUp={(e) => handleZonePointerUp("left", e)}
           />
           <div
             className={zoneClass("right")}
+            style={edgeStyle}
             aria-hidden
             onPointerUp={(e) => handleZonePointerUp("right", e)}
           />

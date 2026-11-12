@@ -385,6 +385,10 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
     name: "Kamlesh Barot",
     bio: "Gujarati folk singer known for timli and garba, including Fararar Eto Fare Re.",
   },
+  "krishna-das": {
+    name: "Krishna Das",
+    bio: "American kirtan singer. Favourites here include Om Namah Shivaya, Sri Ram Jai Ram, Baba Hanuman, and the Hanuman Chalisa.",
+  },
   "radhika-das": {
     name: "Radhika Das",
     bio: "Kirtan singer. Favourites here include Radha Ramana Haribol.",

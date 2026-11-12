@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import {
   createContext,
   useCallback,
@@ -12,7 +12,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { X } from "lucide-react";
+import { PictureInPicture2, X } from "lucide-react";
 import {
   DOUBLE_TAP_SEEK_SECONDS,
   DoubleTapSeekSurface,
@@ -195,9 +195,13 @@ function PersistentYouTubeHost() {
   const { session, clear } = useYouTubePlayback();
   const audioQueue = useQueuePlaybackOptional();
   const pathname = usePathname();
-  const router = useRouter();
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const wantPlayingRef = useRef(true);
+  const currentTimeRef = useRef(0);
+  const pipActiveRef = useRef(false);
+  const pipWindowRef = useRef<Window | null>(null);
+  const [pipSupported, setPipSupported] = useState(false);
+  const [pipOpen, setPipOpen] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
@@ -214,11 +218,35 @@ function PersistentYouTubeHost() {
   const onTrackPage = Boolean(session && trackPath && pathname === trackPath);
 
   useEffect(() => {
+    setPipSupported(
+      typeof window !== "undefined" && "documentPictureInPicture" in window
+    );
+  }, []);
+
+  useEffect(() => {
+    currentTimeRef.current = currentTime;
+  }, [currentTime]);
+
+  useEffect(() => {
     wantPlayingRef.current = Boolean(session);
     setPlaying(Boolean(session));
     setCurrentTime(0);
     setDuration(0);
   }, [session]);
+
+  useEffect(() => {
+    return () => {
+      pipActiveRef.current = false;
+      const win = pipWindowRef.current;
+      pipWindowRef.current = null;
+      setPipOpen(false);
+      try {
+        win?.close();
+      } catch {
+        // already closed
+      }
+    };
+  }, [session?.slug]);
 
   // Advance queue when YouTube ends + keep lock-screen metadata
   useEffect(() => {
@@ -268,7 +296,7 @@ function PersistentYouTubeHost() {
         } else if (payload.info === 2) {
           // Leaving Safari / lock pauses the iframe — keep going.
           // A pause while the page is visible is a real user pause.
-          if (pageIsHidden() && wantPlayingRef.current) {
+          if (pageIsHidden() && wantPlayingRef.current && !pipActiveRef.current) {
             resumeYoutubeBackground();
             ytCommand(iframeRef.current?.contentWindow, "playVideo");
             setPlaying(true);
@@ -306,7 +334,7 @@ function PersistentYouTubeHost() {
           "*"
         );
         ytCommand(win, "addEventListener", ["onStateChange"]);
-        if (wantPlayingRef.current && pageIsHidden()) {
+        if (wantPlayingRef.current && pageIsHidden() && !pipActiveRef.current) {
           resumeYoutubeBackground();
           ytCommand(win, "playVideo");
         }
@@ -324,7 +352,7 @@ function PersistentYouTubeHost() {
   useEffect(() => {
     if (!session) return;
     const kick = () => {
-      if (!wantPlayingRef.current) return;
+      if (!wantPlayingRef.current || pipActiveRef.current) return;
       resumeYoutubeBackground();
       ytCommand(iframeRef.current?.contentWindow, "playVideo");
     };
@@ -358,6 +386,7 @@ function PersistentYouTubeHost() {
       ? {
           play: () => {
             wantPlayingRef.current = true;
+            if (pipActiveRef.current) return;
             resumeYoutubeBackground();
             ytCommand(iframeRef.current?.contentWindow, "playVideo");
             setPlaying(true);
@@ -470,6 +499,106 @@ function PersistentYouTubeHost() {
     };
   }, [session, onTrackPage, pathname]);
 
+  const togglePip = async () => {
+    if (!session) return;
+    const open = pipWindowRef.current;
+    if (open && !open.closed) {
+      open.close();
+      return;
+    }
+    const api = (
+      window as Window & {
+        documentPictureInPicture?: {
+          requestWindow: (options?: {
+            width?: number;
+            height?: number;
+            preferInitialWindowPlacement?: boolean;
+          }) => Promise<Window>;
+        };
+      }
+    ).documentPictureInPicture;
+    if (!api) return;
+
+    const startAt = Math.max(0, Math.floor(currentTimeRef.current));
+    try {
+      const win = await api.requestWindow({
+        width: 480,
+        height: 270,
+        preferInitialWindowPlacement: true,
+      });
+      pipWindowRef.current = win;
+      pipActiveRef.current = true;
+      setPipOpen(true);
+      ytCommand(iframeRef.current?.contentWindow, "pauseVideo");
+
+      const src = new URL(withPlayerParams(session.embedUrl, true));
+      if (startAt > 0) src.searchParams.set("start", String(startAt));
+      const doc = win.document;
+      doc.title = `${session.title} · Bhajan Library`;
+      doc.documentElement.style.height = "100%";
+      doc.body.style.margin = "0";
+      doc.body.style.height = "100%";
+      doc.body.style.background = "#000";
+      const frameEl = doc.createElement("iframe");
+      frameEl.src = src.toString();
+      frameEl.title = session.title;
+      frameEl.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen";
+      frameEl.referrerPolicy = "strict-origin-when-cross-origin";
+      frameEl.allowFullscreen = true;
+      frameEl.style.cssText =
+        "position:fixed;inset:0;width:100%;height:100%;border:0;";
+      doc.body.appendChild(frameEl);
+
+      let lastTime = startAt;
+      const onMessage = (event: MessageEvent) => {
+        if (
+          event.origin !== "https://www.youtube.com" &&
+          event.origin !== "https://youtube.com"
+        ) {
+          return;
+        }
+        let data: unknown = event.data;
+        if (typeof data === "string") {
+          try {
+            data = JSON.parse(data);
+          } catch {
+            return;
+          }
+        }
+        if (!data || typeof data !== "object") return;
+        const info = (data as { info?: { currentTime?: number } }).info;
+        if (
+          info &&
+          typeof info === "object" &&
+          typeof info.currentTime === "number"
+        ) {
+          lastTime = info.currentTime;
+        }
+      };
+      const restore = () => {
+        win.removeEventListener("message", onMessage);
+        win.removeEventListener("pagehide", restore);
+        if (pipWindowRef.current !== win) return;
+        pipWindowRef.current = null;
+        pipActiveRef.current = false;
+        setPipOpen(false);
+        ytCommand(iframeRef.current?.contentWindow, "seekTo", [lastTime, true]);
+        if (wantPlayingRef.current) {
+          resumeYoutubeBackground();
+          ytCommand(iframeRef.current?.contentWindow, "playVideo");
+          setPlaying(true);
+        }
+      };
+      win.addEventListener("message", onMessage);
+      win.addEventListener("pagehide", restore);
+    } catch {
+      pipActiveRef.current = false;
+      pipWindowRef.current = null;
+      setPipOpen(false);
+    }
+  };
+
   if (!session) return null;
 
   const frame = box ?? {
@@ -497,23 +626,41 @@ function PersistentYouTubeHost() {
       }}
     >
       {frame.mode === "mini" && (
-        <div className="absolute top-0 right-0 left-0 z-30 flex items-center justify-between gap-2 bg-gradient-to-b from-black/70 to-transparent px-2 py-1.5">
-          <Link
-            href={session.href}
-            className="min-w-0 truncate text-xs font-medium text-white/95 hover:underline"
-          >
+        <Link
+          href={session.href}
+          className="absolute inset-0 z-20 flex flex-col bg-gradient-to-b from-black/70 via-transparent to-transparent"
+          aria-label={`Open now playing: ${session.title}`}
+        >
+          <span className="truncate px-2 py-1.5 pr-16 text-xs font-medium text-white/95">
             {session.title}
-          </Link>
+          </span>
+        </Link>
+      )}
+      <div className="absolute top-2 right-2 z-30 flex items-center gap-1">
+        {pipSupported && (
+          <button
+            type="button"
+            onClick={() => void togglePip()}
+            className={`rounded-full bg-black/55 p-1.5 text-white backdrop-blur-sm transition hover:bg-white/15 ${
+              pipOpen ? "text-accent" : ""
+            }`}
+            aria-label={pipOpen ? "Exit picture-in-picture" : "Picture-in-picture"}
+            title={pipOpen ? "Exit picture-in-picture" : "Picture-in-picture"}
+          >
+            <PictureInPicture2 className="h-4 w-4" aria-hidden />
+          </button>
+        )}
+        {frame.mode === "mini" && (
           <button
             type="button"
             onClick={clear}
-            className="shrink-0 rounded-md p-1 text-white/80 transition hover:bg-white/15 hover:text-white"
+            className="rounded-full bg-black/55 p-1.5 text-white/90 backdrop-blur-sm transition hover:bg-white/15 hover:text-white"
             aria-label="Close YouTube player"
           >
-            <X className="h-3.5 w-3.5" aria-hidden />
+            <X className="h-4 w-4" aria-hidden />
           </button>
-        </div>
-      )}
+        )}
+      </div>
       <iframe
         ref={iframeRef}
         key={session.embedUrl}
@@ -526,17 +673,12 @@ function PersistentYouTubeHost() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
         allowFullScreen
       />
+      {frame.mode === "slot" && (
       <DoubleTapSeekSurface
         className="absolute inset-0 z-20"
         overlayOnly
-        ariaLabel={
-          frame.mode === "mini"
-            ? `${session.title}. Open this song on the site. Double-tap left or right to skip 30 seconds.`
-            : `${session.title}. Double-tap left or right to skip 30 seconds.`
-        }
-        onSingleTap={
-          frame.mode === "mini" ? () => router.push(session.href) : undefined
-        }
+        reserveBottom={56}
+        ariaLabel={`${session.title}. Double-tap left or right to skip 30 seconds.`}
         onSeekBack={() => {
           const next = seekByOffset(
             currentTime,
@@ -558,6 +700,7 @@ function PersistentYouTubeHost() {
       >
         <div className="h-full w-full" aria-hidden />
       </DoubleTapSeekSurface>
+      )}
     </div>
   );
 }

@@ -111,11 +111,14 @@ export default async function HomePage() {
     <div className="space-y-16 sm:space-y-20">
       <section className="grid items-center gap-10 pt-2 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-14 lg:pt-6">
         <div>
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-accent">
-            Satsang library
-          </p>
-          <h1 className="font-display mt-4 max-w-xl text-5xl font-semibold leading-[0.95] text-primary sm:text-6xl lg:text-[4.5rem]">
-            The song for this sitting.
+          <h1>
+            <img
+              src="/brand/logo.svg"
+              alt="Bhajan Library"
+              width={640}
+              height={128}
+              className="h-16 w-auto max-w-full sm:h-24"
+            />
           </h1>
           <p className="mt-5 max-w-md text-base leading-relaxed text-muted sm:text-lg">
             Lyrics and recordings, kept by deity, occasion, and singer.

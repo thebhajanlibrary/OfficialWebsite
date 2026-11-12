@@ -499,6 +499,7 @@ export const FESTIVALS: Festival[] = [
       "hanuman-chalisa-ankit-batra",
       "hanuman-chalisa-priyesh-dhoolab",
       "hanuman-chalisa-ramayana",
+      "hanuman-chalisa-krishna-das",
       "sankatmochan-hanuman-ashtak-hariharan",
       "bajrang-baan-hariharan",
       "bolo-jai-jai-bajrangi-rakesh-yankaran",

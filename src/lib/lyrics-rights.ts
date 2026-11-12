@@ -3,7 +3,6 @@
  * Shared hymns already in the library (Hanuman Chalisa, old aartis) are not listed.
  */
 const LYRICS_PERMISSION_SLUGS = new Set([
-  "radha-ramana-haribol-radhika-das",
   "gori-tame-manda-lidha-mohi-raj-umesh-barot",
   "dakla-bandish-projekt",
   "moti-veraana-osman-mir",

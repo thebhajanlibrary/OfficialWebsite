@@ -19758,7 +19758,13 @@ Joy of Raghu’s line, when will you come along the Bhil woman’s path?`,
     display_order: 341,
     category_slugs: ["krishna", "radha", "kirtan", "general", "satsang", "bhajan", "devotion"],
     meaning:
-      "Radhika Das’s kirtan for Radha and Krishna. The call is to chant Radha Ramana, the beloved of Radha, and pass that name around the circle.",
+      "Radhika Das’s kirtan for Radha and Krishna. The call is to chant Radha Ramana, the beloved of Radha.",
+    roman_lyrics: `## Chorus
+
+Jai Jai Radha Raman Hari Bol.`,
+    translation: `## Chorus
+
+Victory, victory — chant Radha Ramana, Hari.`,
   },
   "aarti-kunj-bihari-ki-hariom-sharad": {
     title: "Aarti Kunj Bihari Ki",
@@ -19921,6 +19927,80 @@ The cry of the poor one who asks is heard
 
 Of Shri Girdhar, Krishna Murari
 Aarti of Kunj Bihari`,
+  },
+  "om-namah-shivaya-krishna-das": {
+    title: "Om Namah Shivaya",
+    artist_version: "Krishna Das",
+    audio_url: "https://www.youtube.com/watch?v=PTc8X37oJBE",
+    youtube_url: "https://www.youtube.com/watch?v=PTc8X37oJBE",
+    thumbnail_url: "/images/om-namah-shivaya-krishna-das.jpg",
+    cover_url: "/images/om-namah-shivaya-krishna-das.jpg",
+    mini_cover_url: "/images/om-namah-shivaya-krishna-das.jpg",
+    display_order: 343,
+    category_slugs: ["shiva", "shivratri", "mantra", "kirtan", "general", "satsang", "bhajan", "devotion", "sanskrit"],
+    meaning:
+      "Krishna Das’s live kirtan of the five-syllable mantra. The words are the old bow to Shiva.",
+    roman_lyrics: `## Chorus
+
+Om namah Shivaya`,
+    translation: `## Chorus
+
+I bow to Shiva`,
+  },
+  "hanuman-chalisa-krishna-das": {
+    title: "Hanuman Chalisa",
+    alternate_title: "Hanuman Chaleesa",
+    artist_version: "Krishna Das",
+    audio_url: "https://www.youtube.com/watch?v=PcuI-eMGla4",
+    youtube_url: "https://www.youtube.com/watch?v=PcuI-eMGla4",
+    thumbnail_url: "/images/hanuman-chalisa-krishna-das.jpg",
+    cover_url: "/images/hanuman-chalisa-krishna-das.jpg",
+    mini_cover_url: "/images/hanuman-chalisa-krishna-das.jpg",
+    display_order: 344,
+    category_slugs: [...HANUMAN_CHALISA_CATEGORY_SLUGS],
+    meaning:
+      "Krishna Das’s kirtan of Tulsidas’s Hanuman Chalisa, from Live on Earth.",
+    roman_lyrics: HANUMAN_CHALISA_ROMAN,
+    translation: HANUMAN_CHALISA_TRANSLATION,
+  },
+  "sri-ram-jai-ram-krishna-das": {
+    title: "Sri Ram Jai Ram",
+    alternate_title: "Heart as Wide as the World",
+    artist_version: "Krishna Das",
+    audio_url: "https://www.youtube.com/watch?v=lT1UI54YUZc",
+    youtube_url: "https://www.youtube.com/watch?v=lT1UI54YUZc",
+    thumbnail_url: "/images/sri-ram-jai-ram-krishna-das.jpg",
+    cover_url: "/images/sri-ram-jai-ram-krishna-das.jpg",
+    mini_cover_url: "/images/sri-ram-jai-ram-krishna-das.jpg",
+    display_order: 345,
+    category_slugs: ["ram", "kirtan", "general", "satsang", "bhajan", "devotion", "hindi"],
+    meaning:
+      "Krishna Das sings the old Ram mantra. The same video opens with Heart as Wide as the World. Those verses are his, and they are not printed here.",
+    roman_lyrics: `## Chorus
+
+Sri Ram jai Ram, jai jai Ram`,
+    translation: `## Chorus
+
+Victory to Ram, victory, victory to Ram`,
+  },
+  "baba-hanuman-krishna-das": {
+    title: "Baba Hanuman",
+    artist_version: "Krishna Das",
+    audio_url: "https://www.youtube.com/watch?v=ZdjEgaND0n8",
+    youtube_url: "https://www.youtube.com/watch?v=ZdjEgaND0n8",
+    thumbnail_url: "/images/baba-hanuman-krishna-das.jpg",
+    cover_url: "/images/baba-hanuman-krishna-das.jpg",
+    mini_cover_url: "/images/baba-hanuman-krishna-das.jpg",
+    display_order: 346,
+    category_slugs: ["hanuman", "ram", "kirtan", "hanuman-jayanti", "general", "satsang", "bhajan", "devotion", "hindi"],
+    meaning:
+      "Krishna Das’s kirtan calling Hanuman by name. The line here is that call. Further verses on the recording are his and are not printed here.",
+    roman_lyrics: `## Chorus
+
+Baba Hanuman, jai jai Hanuman`,
+    translation: `## Chorus
+
+Father Hanuman, victory to Hanuman`,
   },
 };
 
