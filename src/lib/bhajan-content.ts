@@ -19940,13 +19940,25 @@ Aarti of Kunj Bihari`,
     display_order: 343,
     category_slugs: ["shiva", "shivratri", "mantra", "kirtan", "general", "satsang", "bhajan", "devotion", "sanskrit"],
     meaning:
-      "Krishna Das’s live kirtan of the five-syllable mantra. The words are the old bow to Shiva.",
+      "Krishna Das’s kirtan of the five-syllable mantra, calling Shiva as Shambhu Shankara, Girija Shankara, and Arunachala Shiva.",
     roman_lyrics: `## Chorus
 
-Om namah Shivaya`,
+Om Namah Shivaaya
+Shivaaya namaha
+Shivaaya namah om
+Shivaaya namaha, namaha Shivaaya
+Shambhu Shankara namah Shivaaya
+Girijaa Shankara namah Shivaaya
+Arunaachala Shiva namah Shivaaya`,
     translation: `## Chorus
 
-I bow to Shiva`,
+Om, I bow to Shiva
+I bow to Shiva
+I bow to Shiva, Om
+I bow to Shiva, I bow to Shiva
+Bow to Shambhu Shankara, Shiva
+Bow to Girija’s Shankara, Shiva
+Bow to Arunachala Shiva`,
   },
   "hanuman-chalisa-krishna-das": {
     title: "Hanuman Chalisa",
@@ -19988,42 +20000,65 @@ Oh friend, remember Hanuman
   },
   "sri-ram-jai-ram-krishna-das": {
     title: "Sri Ram Jai Ram",
-    alternate_title: "Heart as Wide as the World",
     artist_version: "Krishna Das",
-    audio_url: "https://www.youtube.com/watch?v=lT1UI54YUZc",
-    youtube_url: "https://www.youtube.com/watch?v=lT1UI54YUZc",
+    audio_url: "https://www.youtube.com/watch?v=YkY6bFYhNcs",
+    youtube_url: "https://www.youtube.com/watch?v=YkY6bFYhNcs",
     thumbnail_url: "/images/sri-ram-jai-ram-krishna-das.jpg",
     cover_url: "/images/sri-ram-jai-ram-krishna-das.jpg",
     mini_cover_url: "/images/sri-ram-jai-ram-krishna-das.jpg",
     display_order: 345,
     category_slugs: ["ram", "kirtan", "general", "satsang", "bhajan", "devotion", "hindi"],
     meaning:
-      "Krishna Das sings the old Ram mantra. The same video opens with Heart as Wide as the World. Those verses are his, and they are not printed here.",
+      "Krishna Das sings the Ram name Hanuman is always calling, with Sita Ram and Baba Hanuman.",
     roman_lyrics: `## Chorus
 
-Sri Ram jai Ram, jai jai Ram`,
+Shree Ram Jai Raam Jai Jai Raam
+Jai Seetaaraam, Jai Jai Hanumaan
+Jai Seeyaaraam, Jai Baaba Hanumaan
+Seetaaraam Seetaraam`,
     translation: `## Chorus
 
-Victory to Ram, victory, victory to Ram`,
+Shri Ram, victory to Ram, victory, victory to Ram
+Victory to Sita and Ram, victory to Hanuman
+Victory to Sita and Ram, victory to Baba Hanuman
+Sita Ram, Sita Ram`,
   },
   "baba-hanuman-krishna-das": {
     title: "Baba Hanuman",
     artist_version: "Krishna Das",
-    audio_url: "https://www.youtube.com/watch?v=ZdjEgaND0n8",
-    youtube_url: "https://www.youtube.com/watch?v=ZdjEgaND0n8",
+    audio_url: "https://www.youtube.com/watch?v=A45VErCakxo",
+    youtube_url: "https://www.youtube.com/watch?v=A45VErCakxo",
     thumbnail_url: "/images/baba-hanuman-krishna-das.jpg",
     cover_url: "/images/baba-hanuman-krishna-das.jpg",
     mini_cover_url: "/images/baba-hanuman-krishna-das.jpg",
     display_order: 346,
     category_slugs: ["hanuman", "ram", "kirtan", "hanuman-jayanti", "general", "satsang", "bhajan", "devotion", "hindi"],
     meaning:
-      "Krishna Das’s kirtan calling Hanuman by name. The line here is that call. Further verses on the recording are his and are not printed here.",
+      "Krishna Das’s kirtan for Hanuman: the bow to Anjani’s son, Sita Ram, Bajrangbali, and Sankata Mochan.",
     roman_lyrics: `## Chorus
 
-Baba Hanuman, jai jai Hanuman`,
+Baba Hanuman
+Namo, namo, Anjaninandanaaya
+Jaya Seeyaa Raama, Jai Jai Hanumaan
+Jaya Bajrangbalee, Baba Hanuman
+Sankata Mochan kripaa nidhaan
+Jai Jai Jai Hanuman Gosaaee
+Kripaa karahu Gurudeva kee naaee
+Sankata Mochan kripaa nidhaan
+Laala Langotta, Laala Nishaan
+Hare Raama Raama Raama, Seetaa Raama Raama Raama`,
     translation: `## Chorus
 
-Father Hanuman, victory to Hanuman`,
+Father Hanuman
+I bow, I bow again and again to Anjani’s son, Hanuman
+Victory to Sita and Ram, victory to Hanuman
+Victory to the one with the body of a thunderbolt, my Baba, Hanuman
+You are the home of all grace. Destroy my troubles
+Hail, my Lord Hanuman
+You are my guru, bestow your grace on me
+You are the destroyer of suffering, the abode of grace
+You wear a red langot and carry a red flag
+Hare Rama, Sita Rama`,
   },
   "om-jai-jagdish-hare-krishna-das": {
     title: "Om Jai Jagdish Hare",
@@ -20119,6 +20154,35 @@ Raise your hand in blessing, I am lying at your door
 
 O Lord, remove my impurities, take away my sins
 Increase my reverence and devotion and service to the Saints`,
+  },
+  "jai-shiva-omkara-krishna-das": {
+    title: "Jai Shiva Omkara",
+    artist_version: "Krishna Das",
+    audio_url: "https://www.youtube.com/watch?v=sn1otVlvVrM",
+    youtube_url: "https://www.youtube.com/watch?v=sn1otVlvVrM",
+    thumbnail_url: "/images/jai-shiva-omkara-krishna-das.jpg",
+    cover_url: "/images/jai-shiva-omkara-krishna-das.jpg",
+    mini_cover_url: "/images/jai-shiva-omkara-krishna-das.jpg",
+    display_order: 348,
+    category_slugs: ["shiva", "shivratri", "aarti", "kirtan", "general", "satsang", "bhajan", "devotion", "hindi"],
+    meaning:
+      "Krishna Das’s kirtan of the Shiva aarti, naming Brahma, Vishnu, and eternal Shiva, and calling Mahadev.",
+    roman_lyrics: `## Chorus
+
+Jai Shiva Omkara
+Jaya Shiva Omkaraa
+Jaya Hara Shiva Omkaraa
+Brahma Vishnu Sadaa Shiva
+Hara Hara Mahaadev
+Jaya Hara Hara Mahaadev`,
+    translation: `## Chorus
+
+Victory to Shiva, whose form is Om
+Victory to Shiva, whose form is Om
+Victory to Hara, Shiva, whose form is Om
+Brahma, Vishnu, and eternal Shiva
+Hara, Hara, great God
+Victory, Hara Hara, great God`,
   },
 };
 

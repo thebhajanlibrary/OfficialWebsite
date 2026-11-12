@@ -165,6 +165,7 @@ export const HYMN_FOLDERS: HymnFolder[] = [
       "jai-ambe-durge-maiya-hari-om-sharan",
       "mateshwari-jagdambike-nandini-sharan",
       "om-jai-shiv-shakti-hare-hari-om-sharan",
+      "jai-shiva-omkara-krishna-das",
       "om-jai-jai-mahadev-harry-panday",
       "shiv-bhola-bhandari-he-hari-om-sharan",
       "aarti-kunj-bihari-ki-hariom-sharad",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type Props = {
   roman: string;
@@ -12,7 +12,14 @@ type Props = {
   dark?: boolean;
   /** Start with English translation visible (default true) */
   showTranslationDefault?: boolean;
+  /** Distraction-free layout, controlled by the song page */
+  reading?: boolean;
+  onReadingChange?: (next: boolean) => void;
 };
+
+type LyricSize = "sm" | "md" | "lg";
+
+const SIZE_KEY = "bhajan-lyric-size";
 
 type LyricLine = {
   roman: string;
@@ -118,9 +125,33 @@ export function LyricsView({
   large = false,
   dark = false,
   showTranslationDefault = true,
+  reading = false,
+  onReadingChange,
 }: Props) {
   const [showTranslation, setShowTranslation] = useState(showTranslationDefault);
   const [showHindi, setShowHindi] = useState(false);
+  const [size, setSize] = useState<LyricSize>("md");
+
+  useEffect(() => {
+    if (dark || large) return;
+    try {
+      const stored = localStorage.getItem(SIZE_KEY);
+      if (stored === "sm" || stored === "md" || stored === "lg") {
+        setSize(stored);
+      }
+    } catch {
+      /* private browsing */
+    }
+  }, [dark, large]);
+
+  function chooseSize(next: LyricSize) {
+    setSize(next);
+    try {
+      localStorage.setItem(SIZE_KEY, next);
+    } catch {
+      /* private browsing */
+    }
+  }
   const lines = useMemo(
     () => pairLines(roman, translation, devanagari),
     [roman, translation, devanagari]
@@ -129,56 +160,140 @@ export function LyricsView({
   const hasTranslation = Boolean(translation?.trim());
   const hasHindi = Boolean(devanagari?.trim());
 
+  const lightSize = {
+    sm: {
+      roman: "text-base leading-relaxed text-foreground",
+      trans: "mt-1.5 text-sm leading-relaxed text-muted",
+      hindi: "mt-1.5 text-base leading-relaxed text-accent",
+    },
+    md: {
+      roman: "text-lg leading-relaxed text-foreground sm:text-xl",
+      trans: "mt-1.5 text-sm leading-relaxed text-muted sm:text-base",
+      hindi: "mt-1.5 text-lg leading-relaxed text-accent sm:text-xl",
+    },
+    lg: {
+      roman: "text-xl leading-relaxed text-foreground sm:text-2xl",
+      trans: "mt-1.5 text-base leading-relaxed text-muted sm:text-lg",
+      hindi: "mt-1.5 text-xl leading-relaxed text-accent sm:text-2xl",
+    },
+  }[reading && size === "sm" ? "md" : reading && size === "md" ? "lg" : size];
+
   const romanClass = dark
     ? large
       ? "text-2xl leading-snug sm:text-3xl"
       : "text-xl leading-snug"
     : large
-      ? "text-xl leading-snug text-foreground sm:text-2xl"
-      : "text-lg leading-snug text-foreground sm:text-xl";
+      ? "text-xl leading-relaxed text-foreground sm:text-2xl"
+      : lightSize.roman;
 
   const transClass = dark
     ? "mt-1 text-base leading-snug text-[#aeb8c9] sm:text-lg"
-    : "mt-1 text-sm leading-snug text-muted sm:text-base";
+    : large
+      ? "mt-1 text-sm leading-relaxed text-muted sm:text-base"
+      : lightSize.trans;
 
   const hindiClass = dark
     ? "mt-1 text-xl leading-snug text-[#e8c9a8] sm:text-2xl"
-    : "mt-1 text-lg leading-snug text-accent sm:text-xl";
+    : large
+      ? "mt-1 text-lg leading-relaxed text-accent sm:text-xl"
+      : lightSize.hindi;
 
   const panelClass = dark
     ? "space-y-5"
-    : "lyric-panel space-y-5 rounded-r-xl p-5 sm:p-6";
+    : "lyric-panel space-y-6 rounded-2xl p-5 sm:p-8";
 
-  const toggleIdle = dark
-    ? "rounded-lg border border-white/15 px-3 py-1.5 text-sm transition hover:border-white/35 hover:bg-white/5"
-    : "btn-secondary rounded-lg px-3 py-1.5 text-sm";
+  const chipIdle = dark
+    ? "rounded-full px-3 py-1.5 text-sm text-[#d7deea] transition hover:bg-white/10"
+    : "rounded-full px-3 py-1.5 text-sm text-foreground/80 transition hover:bg-accent-soft";
 
-  const toggleActive = dark
-    ? "rounded-lg border border-white/40 bg-white/10 px-3 py-1.5 text-sm"
-    : "rounded-lg border border-primary bg-primary px-3 py-1.5 text-sm font-medium text-white";
+  const chipOn = dark
+    ? "rounded-full bg-white/15 px-3 py-1.5 text-sm font-medium text-white"
+    : "rounded-full bg-primary px-3 py-1.5 text-sm font-medium text-white";
+
+  const toolBtn = dark
+    ? "rounded-full border border-white/15 px-3 py-1.5 text-sm transition hover:bg-white/10"
+    : "rounded-full border border-border bg-surface px-3 py-1.5 text-sm text-foreground transition hover:border-accent hover:bg-accent-soft";
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap gap-2">
-        {hasTranslation && (
-          <button
-            type="button"
-            onClick={() => setShowTranslation((v) => !v)}
-            className={showTranslation ? toggleActive : toggleIdle}
-            aria-pressed={showTranslation}
-          >
-            {showTranslation ? "Hide" : "Show"} translation
-          </button>
-        )}
-        {hasHindi && (
-          <button
-            type="button"
-            onClick={() => setShowHindi((v) => !v)}
-            className={showHindi ? toggleActive : toggleIdle}
-            aria-pressed={showHindi}
-          >
-            {showHindi ? "Hide" : "Show"} Hindi
-          </button>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div
+          className={
+            dark
+              ? "inline-flex flex-wrap items-center gap-1 rounded-full border border-white/15 p-1"
+              : "inline-flex flex-wrap items-center gap-1 rounded-full border border-border bg-surface p-1"
+          }
+          role="group"
+          aria-label="Lyric scripts"
+        >
+          <span className={chipOn}>Roman</span>
+          {hasTranslation && (
+            <button
+              type="button"
+              onClick={() => setShowTranslation((v) => !v)}
+              className={showTranslation ? chipOn : chipIdle}
+              aria-pressed={showTranslation}
+            >
+              English
+            </button>
+          )}
+          {hasHindi && (
+            <button
+              type="button"
+              onClick={() => setShowHindi((v) => !v)}
+              className={showHindi ? chipOn : chipIdle}
+              aria-pressed={showHindi}
+            >
+              Hindi
+            </button>
+          )}
+        </div>
+
+        {!dark && !large && (
+          <div className="flex flex-wrap items-center gap-2">
+            <div
+              className="inline-flex items-center rounded-full border border-border bg-surface p-1"
+              role="group"
+              aria-label="Lyric text size"
+            >
+              <button
+                type="button"
+                className="rounded-full px-2.5 py-1 text-xs text-foreground disabled:opacity-35"
+                aria-label="Smaller lyrics"
+                disabled={size === "sm"}
+                onClick={() =>
+                  chooseSize(size === "lg" ? "md" : "sm")
+                }
+              >
+                A−
+              </button>
+              <button
+                type="button"
+                className="rounded-full px-2.5 py-1 text-base text-foreground disabled:opacity-35"
+                aria-label="Larger lyrics"
+                disabled={size === "lg"}
+                onClick={() =>
+                  chooseSize(size === "sm" ? "md" : "lg")
+                }
+              >
+                A+
+              </button>
+            </div>
+            {onReadingChange && (
+              <button
+                type="button"
+                className={
+                  reading
+                    ? "rounded-full bg-primary px-3 py-1.5 text-sm font-medium text-white"
+                    : toolBtn
+                }
+                aria-pressed={reading}
+                onClick={() => onReadingChange(!reading)}
+              >
+                {reading ? "Exit reading" : "Reading"}
+              </button>
+            )}
+          </div>
         )}
       </div>
 
@@ -197,7 +312,7 @@ export function LyricsView({
           if (sectionMatch) {
             const headingClass = dark
               ? "font-display text-lg font-semibold tracking-wide text-[#e8c9a8] sm:text-xl"
-              : "font-display text-lg font-semibold tracking-wide text-primary sm:text-xl";
+              : "text-xs font-semibold tracking-[0.18em] text-accent uppercase";
             return (
               <div
                 key={i}

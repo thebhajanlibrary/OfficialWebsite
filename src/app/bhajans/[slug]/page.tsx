@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BhajanAlternateTitle } from "@/components/bhajan/BhajanAlternateTitle";
-import { LyricsView } from "@/components/bhajan/LyricsView";
+import { SongReadingLayout } from "@/components/bhajan/SongReadingLayout";
 import { CompanionVideo } from "@/components/bhajan/CompanionVideo";
 import { QueueAwarePlayer } from "@/components/bhajan/QueueAwarePlayer";
 import {
@@ -219,58 +219,31 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
         </div>
       </header>
 
-      {embed && (
-        <QueueAwarePlayer
-          kind="youtube"
-          embedUrl={embed}
-          title={current.title}
-          cover={playerCover}
-          artist={artistNames.join(" · ") || null}
-          slug={current.slug}
-          autoPlay={autoPlay}
-          queueLabel={queueNote}
-          prevHref={prevInQueue}
-          nextHref={nextInQueue}
-          prevTitle={queueNeighbors?.prevSlug ? navPrevTitle : null}
-          nextTitle={queueNeighbors?.nextSlug ? navNextTitle : null}
-          queueKey={queueKey}
-          queueTracks={queueTracks}
-        />
-      )}
-
-      {localVideo && current.audio_url && (
-        <QueueAwarePlayer
-          kind="video"
-          src={current.audio_url}
-          title={current.title}
-          poster={playerCover}
-          offerResume={videoOnly}
-          autoPlay={autoPlay}
-          queueLabel={queueNote}
-          prevHref={prevInQueue}
-          nextHref={nextInQueue}
-          prevTitle={queueNeighbors?.prevSlug ? navPrevTitle : null}
-          nextTitle={queueNeighbors?.nextSlug ? navNextTitle : null}
-        />
-      )}
-
-      {(localAudio && current.audio_url) ||
-      (current.video_url && isLocalVideoUrl(current.video_url)) ? (
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
-          {localAudio && current.audio_url ? (
-            <div className="min-w-0 flex-1">
+      <SongReadingLayout
+        hasPlayer={Boolean(
+          embed ||
+            (localVideo && current.audio_url) ||
+            (localAudio && current.audio_url) ||
+            (current.video_url && isLocalVideoUrl(current.video_url)) ||
+            (current.audio_url && !embed && !localVideo && !localAudio)
+        )}
+        hasLyrics={hasLyrics}
+        roman={current.roman_lyrics}
+        translation={current.translation}
+        devanagari={current.devanagari_lyrics}
+        meaning={current.meaning}
+        meaningTitle={!hasLyrics || hideLyrics ? "About" : "Meaning"}
+        permissionNote={lyricsPermission}
+        player={
+          <>
+            {embed && (
               <QueueAwarePlayer
-                kind="audio"
-                src={current.audio_url}
+                kind="youtube"
+                embedUrl={embed}
                 title={current.title}
                 cover={playerCover}
-                coverAspect={current.player_cover_aspect}
-                miniCover={
-                  current.mini_cover_url ??
-                  current.thumbnail_url ??
-                  playerCover
-                }
                 artist={artistNames.join(" · ") || null}
+                slug={current.slug}
                 autoPlay={autoPlay}
                 queueLabel={queueNote}
                 prevHref={prevInQueue}
@@ -279,82 +252,99 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
                 nextTitle={queueNeighbors?.nextSlug ? navNextTitle : null}
                 queueKey={queueKey}
                 queueTracks={queueTracks}
-                slug={current.slug}
               />
-            </div>
-          ) : null}
+            )}
 
-          {current.video_url && isLocalVideoUrl(current.video_url) ? (
-            <CompanionVideo
-              src={current.video_url}
-              poster={current.video_poster_url}
-              credit={current.video_credit}
-            />
-          ) : null}
-        </div>
-      ) : null}
+            {localVideo && current.audio_url && (
+              <QueueAwarePlayer
+                kind="video"
+                src={current.audio_url}
+                title={current.title}
+                poster={playerCover}
+                offerResume={videoOnly}
+                autoPlay={autoPlay}
+                queueLabel={queueNote}
+                prevHref={prevInQueue}
+                nextHref={nextInQueue}
+                prevTitle={queueNeighbors?.prevSlug ? navPrevTitle : null}
+                nextTitle={queueNeighbors?.nextSlug ? navNextTitle : null}
+              />
+            )}
 
-      {current.audio_url && !embed && !localVideo && !localAudio && (
-        <p>
-          <a
-            href={current.audio_url}
-            target="_blank"
-            rel="noreferrer"
-            className="font-medium text-accent underline-offset-2 hover:underline"
-          >
-            Open audio link
-          </a>
-        </p>
-      )}
+            {(localAudio && current.audio_url) ||
+            (current.video_url && isLocalVideoUrl(current.video_url)) ? (
+              <div className="flex flex-col gap-6">
+                {localAudio && current.audio_url ? (
+                  <QueueAwarePlayer
+                    kind="audio"
+                    src={current.audio_url}
+                    title={current.title}
+                    cover={playerCover}
+                    coverAspect={current.player_cover_aspect}
+                    miniCover={
+                      current.mini_cover_url ??
+                      current.thumbnail_url ??
+                      playerCover
+                    }
+                    artist={artistNames.join(" · ") || null}
+                    autoPlay={autoPlay}
+                    queueLabel={queueNote}
+                    prevHref={prevInQueue}
+                    nextHref={nextInQueue}
+                    prevTitle={queueNeighbors?.prevSlug ? navPrevTitle : null}
+                    nextTitle={queueNeighbors?.nextSlug ? navNextTitle : null}
+                    queueKey={queueKey}
+                    queueTracks={queueTracks}
+                    slug={current.slug}
+                  />
+                ) : null}
 
-      {youtubeExtra && youtubeExtra !== embedFromAudio && (
-        <div className="space-y-2">
-          <p className="text-sm text-muted">Also on YouTube</p>
-          <p>
-            <a
-              href={current.youtube_url!}
-              target="_blank"
-              rel="noreferrer"
-              className="font-medium text-accent underline-offset-2 hover:underline"
-            >
-              Watch on YouTube
-            </a>
-            <span className="text-sm text-muted">
-              {" "}
-              (opens externally — won&apos;t play over the queue)
-            </span>
-          </p>
-        </div>
-      )}
+                {current.video_url && isLocalVideoUrl(current.video_url) ? (
+                  <CompanionVideo
+                    src={current.video_url}
+                    poster={current.video_poster_url}
+                    credit={current.video_credit}
+                  />
+                ) : null}
+              </div>
+            ) : null}
 
-      {hasLyrics && (
-        <section className="space-y-3">
-          <h2 className="font-display text-2xl font-semibold text-primary">
-            Lyrics
-          </h2>
-          <LyricsView
-            roman={current.roman_lyrics}
-            translation={current.translation}
-            devanagari={current.devanagari_lyrics}
-          />
-        </section>
-      )}
+            {current.audio_url && !embed && !localVideo && !localAudio && (
+              <p>
+                <a
+                  href={current.audio_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-accent underline-offset-2 hover:underline"
+                >
+                  Open audio link
+                </a>
+              </p>
+            )}
 
-      {current.meaning && (
-        <section className="space-y-3">
-          <h2 className="font-display text-2xl font-semibold text-primary">
-            {!hasLyrics || hideLyrics ? "About" : "Meaning"}
-          </h2>
-          <p className="leading-relaxed text-muted">{current.meaning}</p>
-          {lyricsPermission && (
-            <p className="leading-relaxed text-muted">
-              These words belong to the writer. They will be added here once
-              permission is in place.
-            </p>
-          )}
-        </section>
-      )}
-
+            {youtubeExtra && youtubeExtra !== embedFromAudio && (
+              <div className="mt-4 space-y-2">
+                <p className="text-sm text-muted">Also on YouTube</p>
+                <p>
+                  <a
+                    href={current.youtube_url!}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium text-accent underline-offset-2 hover:underline"
+                  >
+                    Watch on YouTube
+                  </a>
+                  <span className="text-sm text-muted">
+                    {" "}
+                    (opens externally — won&apos;t play over the queue)
+                  </span>
+                </p>
+              </div>
+            )}
+          </>
+        }
+        extra={
+          <>
       <section className="space-y-4">
         <h2 className="font-display text-2xl font-semibold text-primary">
           Categories
@@ -402,6 +392,9 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
         {current.updated_at !== current.created_at &&
           ` · Updated ${formatDate(current.updated_at)}`}
       </p>
+          </>
+        }
+      />
 
       <nav className="flex justify-between gap-3 border-t border-border pt-6 text-sm">
         {navPrev ? (

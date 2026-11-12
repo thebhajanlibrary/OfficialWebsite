@@ -86,10 +86,12 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "sonu-nigam": {
     name: "Sonu Nigam",
+    photo_url: "/images/sonu-nigam.jpg",
     bio: "Indian playback singer. Favourites here include Ram Siya Ram (Mangal Bhavan / Ramayan chaupai).",
   },
   "amit-trivedi": {
     name: "Amit Trivedi",
+    photo_url: "/images/amit-trivedi.jpg",
     bio: "Indian composer and singer. Favourites here include Namo Namo from Kedarnath.",
   },
   "anup-jalota": {
@@ -127,6 +129,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "jagjit-singh": {
     name: "Jagjit Singh",
+    photo_url: "/images/jagjit-singh.jpg",
     bio: "Legendary ghazal and bhajan singer (1941–2011). His soft, measured voice carried classic devotionals including Jai Radha Madhav, Gaiye Ganapati Jagvandan, and many Saregama recordings into satsang and home listening alike.",
   },
   "shri-prakash-gossai": {
@@ -202,6 +205,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "boodram-holass": {
     name: "Boodram Holass",
+    photo_url: "/images/boodram-holass.jpg",
     bio: "Indo-Trinidadian chutney and classical singer from Cedros — known for the gari classic Thar Gori Jamuna Hilore (Chutney Soca Monarch 2005), and bhajans such as Aaye Bhi Akela.",
   },
   "roshan-ji": {
@@ -219,7 +223,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   "mukesh": {
     name: "Mukesh",
     bio: "Beloved Indian playback singer (1923–1976), the voice of countless film classics and non-film bhajans — including Prabhu Ka Naam Japo (Ravindra Jain).",
-    photo_url: "/images/mukesh.png",
+    photo_url: "/images/mukesh.jpg",
   },
   "kishore-kumar": {
     name: "Kishore Kumar",
@@ -237,6 +241,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "udit-narayan": {
     name: "Udit Narayan",
+    photo_url: "/images/udit-narayan.jpg",
     bio: "Indian playback singer. Favourites here include O Palanhare from Lagaan with Lata Mangeshkar.",
   },
   "usha-mangeshkar": {
@@ -387,7 +392,8 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "krishna-das": {
     name: "Krishna Das",
-    bio: "American kirtan singer. Favourites here include Om Jai Jagdish Hare, Om Namah Shivaya, Sri Ram Jai Ram, Baba Hanuman, and the Hanuman Chalisa.",
+    photo_url: "/images/krishna-das.jpg",
+    bio: "American kirtan singer. Favourites here include Jai Shiva Omkara, Om Jai Jagdish Hare, Om Namah Shivaya, Sri Ram Jai Ram, Baba Hanuman, and the Hanuman Chalisa.",
   },
   "radhika-das": {
     name: "Radhika Das",
@@ -419,6 +425,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "falguni-pathak": {
     name: "Falguni Pathak",
+    photo_url: "/images/falguni-pathak.jpg",
     bio: "Singer known for Navratri garba. Favourites here include Indhana Vinvaa Gayi Thi More Saiyan.",
   },
   "aishwarya-majmudar": {
@@ -443,6 +450,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "diljit-dosanjh": {
     name: "Diljit Dosanjh",
+    photo_url: "/images/diljit-dosanjh.jpg",
     bio: "Indian singer. He sings the Ramayana recording of the Hanuman Chalisa with Sukhwinder Singh, Mohit Chauhan, Shankar Mahadevan, and Kailash Kher.",
   },
   "mohit-chauhan": {
@@ -463,6 +471,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "dewindersingh-sewnath": {
     name: "Dewindersingh Sewnath",
+    photo_url: "/images/dewindersingh-sewnath.jpg",
     bio: "Chutney bhajan singer. His February 2024 Nahi Chahiye Rang Mahal is filed under Chutney Bhajan.",
   },
   "bidjwanwatie-chaitoe": {

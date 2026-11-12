@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  /* Cooler slate library surfaces + deep navy + saffron accent */
-  --background: #e8edf3;
-  --surface: #f7f9fc;
-  --surface-muted: #d8e0ea;
-  --foreground: #0f1724;
-  --muted: #5a6476;
-  --border: #c1cbd8;
-  --primary: #132033;
-  --primary-hover: #0a121c;
-  --accent: #c4781a;
-  --accent-soft: #f5edd9;
-  --ring: #132033;
-  --danger: #9b2c2c;
-  --glow: rgba(196, 120, 26, 0.12);
+  /* Warm ivory library surfaces, deep navy type, muted saffron */
+  --background: #f8f5ef;
+  --surface: #fffdf9;
+  --surface-muted: #e7ded0;
+  --foreground: #152238;
+  --muted: #5c564c;
+  --border: #e0d6c8;
+  --primary: #152238;
+  --primary-hover: #0e1828;
+  --accent: #c58a36;
+  --accent-soft: #f6edd9;
+  --ring: #152238;
+  --danger: #8f4338;
+  --glow: rgba(197, 138, 54, 0.16);
 }
 
 @theme inline {
@@ -38,8 +38,8 @@ body {
   background-color: var(--background);
   background-image:
     radial-gradient(ellipse 85% 50% at 50% -8%, var(--glow), transparent 58%),
-    radial-gradient(ellipse 45% 35% at 100% 0%, rgba(19, 32, 51, 0.05), transparent 52%),
-    linear-gradient(180deg, #f4f7fb 0%, var(--background) 38%, #e2e8f0 100%);
+    radial-gradient(ellipse 45% 35% at 100% 0%, rgba(197, 138, 54, 0.09), transparent 52%),
+    linear-gradient(180deg, #fbf8f3 0%, var(--background) 42%, #f3ece3 100%);
   background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-body), system-ui, sans-serif;
@@ -150,8 +150,10 @@ h3,
 }
 
 .lyric-panel {
+  border: 1px solid color-mix(in srgb, var(--border) 80%, transparent);
   border-left: 3px solid var(--accent);
-  background: color-mix(in srgb, var(--surface) 92%, white);
+  background: color-mix(in srgb, var(--surface) 82%, var(--accent-soft));
+  box-shadow: 0 18px 40px rgba(21, 34, 56, 0.04);
 }
 
 /* Visually hidden but still “playing” — display:none lets iOS suspend on lock */
