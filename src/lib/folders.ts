@@ -149,6 +149,7 @@ export const HYMN_FOLDERS: HymnFolder[] = [
       "om-jai-jagdish-hare-anuradha-paudwal",
       "om-jai-jagdish-hare-maanya-arora",
       "om-jai-jagdish-hare-hari-om-sharan",
+      "om-jai-jagdish-hare-krishna-das",
       "om-jai-lakshmi-mata-prakash-gossai",
       "lakshmi-aarti-basdeo-jaikaran",
       "jai-he-mahalaxmi-maa-usha-mangeshkar",

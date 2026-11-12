@@ -387,7 +387,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "krishna-das": {
     name: "Krishna Das",
-    bio: "American kirtan singer. Favourites here include Om Namah Shivaya, Sri Ram Jai Ram, Baba Hanuman, and the Hanuman Chalisa.",
+    bio: "American kirtan singer. Favourites here include Om Jai Jagdish Hare, Om Namah Shivaya, Sri Ram Jai Ram, Baba Hanuman, and the Hanuman Chalisa.",
   },
   "radhika-das": {
     name: "Radhika Das",

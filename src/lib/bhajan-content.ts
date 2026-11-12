@@ -19960,9 +19960,31 @@ I bow to Shiva`,
     display_order: 344,
     category_slugs: [...HANUMAN_CHALISA_CATEGORY_SLUGS],
     meaning:
-      "Krishna Das’s kirtan of Tulsidas’s Hanuman Chalisa, from Live on Earth.",
-    roman_lyrics: HANUMAN_CHALISA_ROMAN,
-    translation: HANUMAN_CHALISA_TRANSLATION,
+      "Krishna Das’s kirtan of Tulsidas’s Hanuman Chalisa. He calls “Bhajelo ji Hanuman” — friend, remember Hanuman — around the opening dohas, then the forty chaupais.",
+    roman_lyrics: `## Chorus
+
+Bhajelo ji Hanuman, bhajelo ji Hanuman
+
+${HANUMAN_CHALISA_ROMAN.replace(
+  "## Chaupais",
+  `## Chorus
+
+Bhajelo ji Hanuman, bhajelo ji Hanuman
+
+## Chaupais`,
+)}`,
+    translation: `## Chorus
+
+Oh friend, remember Hanuman
+
+${HANUMAN_CHALISA_TRANSLATION.replace(
+  "## Chaupais",
+  `## Chorus
+
+Oh friend, remember Hanuman
+
+## Chaupais`,
+)}`,
   },
   "sri-ram-jai-ram-krishna-das": {
     title: "Sri Ram Jai Ram",
@@ -20002,6 +20024,101 @@ Baba Hanuman, jai jai Hanuman`,
     translation: `## Chorus
 
 Father Hanuman, victory to Hanuman`,
+  },
+  "om-jai-jagdish-hare-krishna-das": {
+    title: "Om Jai Jagdish Hare",
+    alternate_title: "Jaya Jagadisha Hare",
+    artist_version: "Krishna Das",
+    audio_url: "https://www.youtube.com/watch?v=PjO0C7J9eEw",
+    youtube_url: "https://www.youtube.com/watch?v=PjO0C7J9eEw",
+    thumbnail_url: "/images/om-jai-jagdish-hare-krishna-das.jpg",
+    cover_url: "/images/om-jai-jagdish-hare-krishna-das.jpg",
+    mini_cover_url: "/images/om-jai-jagdish-hare-krishna-das.jpg",
+    display_order: 347,
+    category_slugs: [...OM_JAI_JAGDISH_CATEGORY_SLUGS],
+    meaning: `${OM_JAI_JAGDISH_MEANING} This entry is the Krishna Das recording.`,
+    roman_lyrics: `## Chorus
+
+Om Jaya Jagadeesha Hare, Swaami jaya Jagadeesha hare
+Bhakta janana ke sankata, deena janana ke sankata
+Kshaana mein dura kare
+Om jaya Jagadeesha hare
+
+## Verse
+
+Jo Dhyaawe phala paawai, dukha vinashey mana kaa
+Sukha sampati ghara aawai, kashta mitai tana kaa
+
+## Verse
+
+Maata Pitaa tuma mere, sharana gahoon kisa kee
+Tuma bina aura na dooja, aasha karoon jisa kee
+
+## Verse
+
+Tuma poorana paramaatmaa, tuma antarayaamee
+Paara Brahma parameshwara, tuma suba ke swami
+
+## Verse
+
+Tuma karunaa ke saagara, tuma paalana kartaa
+Mein sewaka tuma swami, kripaa karo bharataa
+
+## Verse
+
+Tuma ho ek agochara, suba ke praana patee
+Kisa vidhi miloon dayaamaya, tumako mein kumati
+
+## Verse
+
+Deena bandhu dukha hartaa, tuma rakshaka merey
+Apney haata utaao, dwaara paraa terey
+
+## Verse
+
+Vishaaya vikaara mitaao, paapa haro devaa
+Shraddhaa bhakti barhaao, Santana kee sewaa`,
+    translation: `## Chorus
+
+Hail to the Lord of the Universe, Oh Master, hail
+The troubles of devotees, the troubles of humble people
+In an instant you remove them
+Hail to the Lord of the Universe
+
+## Verse
+
+Meditating on you brings these fruits: sorrows of the heart are destroyed
+Happiness and wealth come to the home, and physical sickness is removed
+
+## Verse
+
+You are my Mother and Father, from whom else can I seek refuge
+Without you, there is no one; I have no other hope
+
+## Verse
+
+You are Complete, the Supreme Self, who dwells within
+Beyond Brahma, you are the Supreme Lord, the Master of All
+
+## Verse
+
+You are an Ocean of Compassion, the Nourisher
+I am the Servant, you are the Master, bestow your grace, Preserver
+
+## Verse
+
+You are One, Unseen, Lord of all life
+Oh Merciful One, how can I find you, with a mind so defiled
+
+## Verse
+
+Brother of the Helpless, Reliever of Sorrows, You are my Protector
+Raise your hand in blessing, I am lying at your door
+
+## Verse
+
+O Lord, remove my impurities, take away my sins
+Increase my reverence and devotion and service to the Saints`,
   },
 };
 
