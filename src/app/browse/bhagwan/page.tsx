@@ -1,8 +1,13 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { CategoryGrid } from "@/components/bhajan/CategoryGrid";
 import { getCategories } from "@/lib/queries";
 
-export const metadata: Metadata = { title: "Browse by Bhagwan" };
+export const metadata = pageMeta({
+  title: "Browse by Bhagwan",
+  description:
+    "Find bhajans by deity: Hanuman, Shiva, Krishna, Durga, Lakshmi, Ganesha, and more.",
+  path: "/browse/bhagwan",
+});
 
 export default async function BrowseBhagwanPage() {
   const categories = await getCategories("bhagwan");

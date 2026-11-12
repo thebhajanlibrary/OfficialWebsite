@@ -9,6 +9,7 @@ import {
   getChutneyArtist,
   type ChutneySong,
 } from "@/lib/chutney";
+import { clip, pageMeta } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -78,11 +79,16 @@ function artistSongRows(
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const artist = getChutneyArtist(slug);
-  return {
-    title: artist
-      ? `${artist.name} · Traditional Chutney`
-      : "Chutney Artist",
-  };
+  if (!artist) return { title: "Chutney Artist" };
+  return pageMeta({
+    title: artist.name,
+    description: clip(
+      artist.bio?.trim() ||
+        `${artist.name} in Traditional Chutney. ${artist.songCount} song${artist.songCount === 1 ? "" : "s"} on Bhajan Library.`
+    ),
+    path: `/chutney/artists/${artist.slug}`,
+    image: artist.photo_url,
+  });
 }
 
 export default async function ChutneyArtistPage({ params }: Props) {

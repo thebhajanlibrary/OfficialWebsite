@@ -27,6 +27,7 @@ import {
 } from "@/lib/chutney";
 
 import { youtubeEmbedUrl, youtubePosterUrl } from "@/lib/utils";
+import { clip, pageMeta } from "@/lib/seo";
 
 
 
@@ -46,11 +47,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const { current } = neighborsInWedding(slug);
 
-  return {
-
-    title: current ? `${current.title} · Wedding` : "Wedding Songs",
-
-  };
+  if (!current) return { title: "Wedding Songs" };
+  return pageMeta({
+    title: current.title,
+    description: clip(
+      `${current.title}${current.artist ? ` by ${current.artist}` : ""}. An Indo-Caribbean wedding song, with the words beside the recording.`
+    ),
+    path: `/wedding/${current.slug}`,
+    image: current.thumbnail_url,
+  });
 
 }
 

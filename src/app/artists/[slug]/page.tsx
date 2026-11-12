@@ -7,13 +7,25 @@ import { BhajanList } from "@/components/bhajan/BhajanList";
 import { CollectionQueueActions } from "@/components/bhajan/CollectionQueueActions";
 import { getArtistBySlug, resolvePlayQueueTracks } from "@/lib/queries";
 import { bhajanPlayHref, encodePlayQueue } from "@/lib/play-queue";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { collectionJsonLd, pageMeta, clip } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const data = await getArtistBySlug(slug);
-  return { title: data?.artist.name ?? "Artist" };
+  if (!data) return { title: "Artist" };
+  const { artist } = data;
+  return pageMeta({
+    title: artist.name,
+    description: clip(
+      artist.bio?.trim() ||
+        `${artist.name} on Bhajan Library. ${artist.bhajanCount} recording${artist.bhajanCount === 1 ? "" : "s"}, with the lyrics beside the song.`
+    ),
+    path: `/artists/${artist.slug}`,
+    image: artist.photo_url,
+  });
 }
 
 export default async function ArtistProfilePage({ params }: Props) {
@@ -26,8 +38,21 @@ export default async function ArtistProfilePage({ params }: Props) {
   const queueTracks = await resolvePlayQueueTracks(playQueue);
   const queueKey = encodePlayQueue(playQueue);
 
+  const description = clip(
+    artist.bio?.trim() ||
+      `${artist.name} on Bhajan Library. ${artist.bhajanCount} recording${artist.bhajanCount === 1 ? "" : "s"}.`
+  );
+
   return (
     <div className="space-y-10">
+      <JsonLd
+        data={collectionJsonLd({
+          name: artist.name,
+          path: `/artists/${artist.slug}`,
+          description,
+          kind: "Person",
+        })}
+      />
       <header className="space-y-5">
         <p className="text-sm text-muted">
           <Link href="/artists" className="transition hover:text-primary">

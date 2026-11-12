@@ -13,6 +13,7 @@ import {
   primaryQueueMedia,
 } from "@/lib/chutney";
 import { youtubeEmbedUrl, youtubePosterUrl } from "@/lib/utils";
+import { pageMeta, clip } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -22,11 +23,15 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const { current } = neighborsInChutney(slug);
-  return {
-    title: current
-      ? `${current.title} · Traditional Chutney`
-      : "Traditional Chutney",
-  };
+  if (!current) return { title: "Traditional Chutney" };
+  return pageMeta({
+    title: current.title,
+    description: clip(
+      `${current.title}${current.artist ? ` by ${current.artist}` : ""}. Traditional Indo-Caribbean chutney, with the words beside the recording.`
+    ),
+    path: `/chutney/${current.slug}`,
+    image: current.thumbnail_url,
+  });
 }
 
 export default async function ChutneyDetailPage({

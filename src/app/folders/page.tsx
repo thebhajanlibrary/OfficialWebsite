@@ -1,9 +1,14 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { getFolders } from "@/lib/queries";
 
-export const metadata: Metadata = { title: "Folders" };
+export const metadata = pageMeta({
+  title: "Folders",
+  description:
+    "Shelves for Hanuman Chalisa, aarti, garba, birthday songs, and the other collections in the library.",
+  path: "/folders",
+});
 
 export default async function FoldersPage() {
   const folders = await getFolders();

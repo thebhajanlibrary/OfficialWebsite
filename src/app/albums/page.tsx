@@ -1,9 +1,14 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { getAlbums } from "@/lib/queries";
 
-export const metadata: Metadata = { title: "Albums" };
+export const metadata = pageMeta({
+  title: "Albums",
+  description:
+    "Bhajan albums in track order. Play the recording and read the lyrics for each song.",
+  path: "/albums",
+});
 
 export default async function AlbumsPage() {
   const albums = await getAlbums();

@@ -5,13 +5,21 @@ import { BhajanList } from "@/components/bhajan/BhajanList";
 import { CollectionQueueActions } from "@/components/bhajan/CollectionQueueActions";
 import { queueTracksFromBhajans } from "@/lib/play-queue";
 import { getBhajansByCategory, getCategoryBySlug } from "@/lib/queries";
+import { pageMeta, clip } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const category = await getCategoryBySlug("bhajan_type", slug);
-  return { title: category ? category.name : "Type" };
+  if (!category) return { title: "Type" };
+  return pageMeta({
+    title: category.name,
+    description: clip(
+      `${category.name} in the Bhajan Library. Play the recording and read Roman, Hindi, and English.`
+    ),
+    path: `/browse/type/${category.slug}`,
+  });
 }
 
 export default async function TypeCategoryPage({ params }: Props) {

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { BhajanList } from "@/components/bhajan/BhajanList";
 import { CollectionQueueActions } from "@/components/bhajan/CollectionQueueActions";
@@ -6,9 +6,12 @@ import { isOmittedFromLibrary } from "@/lib/albums";
 import { queueTracksFromBhajans } from "@/lib/play-queue";
 import { getBhajans } from "@/lib/queries";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "All Bhajans",
-};
+  description:
+    "The full Bhajan Library. Play a recording and read the lyrics in Roman, Hindi, and English.",
+  path: "/bhajans",
+});
 
 export default async function AllBhajansPage() {
   const all = await getBhajans();

@@ -8,6 +8,16 @@ import { getFolder } from "@/lib/folders";
 import { getBhajans, getCategories, getFestivalBhajans } from "@/lib/queries";
 import { getCurrentOrUpcomingFestival, getUpcomingFestivals } from "@/lib/festivals";
 import type { BhajanWithCategories } from "@/lib/types";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { pageMeta, websiteJsonLd } from "@/lib/seo";
+import { SITE_DESCRIPTION } from "@/lib/site";
+
+export const metadata = pageMeta({
+  title: "Bhajan Library — lyrics beside the recording",
+  description: SITE_DESCRIPTION,
+  path: "/",
+  absolute: true,
+});
 
 /** Featured folders swap every six hours, and stay put if you refresh in between. */
 const HERO_FOLDERS: { slug: string; note: string; image?: string }[] = [
@@ -109,6 +119,7 @@ export default async function HomePage() {
 
   return (
     <div className="space-y-16 sm:space-y-20">
+      <JsonLd data={websiteJsonLd()} />
       <section className="grid items-center gap-10 pt-2 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-14 lg:pt-6">
         <div>
           <h1>

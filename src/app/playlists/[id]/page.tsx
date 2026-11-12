@@ -8,13 +8,22 @@ import {
   resolvePlayQueueTracks,
 } from "@/lib/queries";
 import { bhajanPlayHref, encodePlayQueue } from "@/lib/play-queue";
+import { pageMeta, clip } from "@/lib/seo";
 
 type Props = { params: Promise<{ id: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const playlist = await getPlaylistById(id);
-  return { title: playlist?.name ?? "Playlist" };
+  if (!playlist) return { title: "Playlist" };
+  return pageMeta({
+    title: playlist.name,
+    description: clip(
+      playlist.description?.trim() ||
+        `${playlist.name}. A satsang playlist on Bhajan Library.`
+    ),
+    path: `/playlists/${playlist.id}`,
+  });
 }
 
 export default async function PlaylistDetailPage({ params }: Props) {

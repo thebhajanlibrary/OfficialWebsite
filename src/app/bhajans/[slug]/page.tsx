@@ -34,6 +34,13 @@ import {
   queueFromSearch,
 } from "@/lib/play-queue";
 import { CATEGORY_TYPE_LABELS, type CategoryType } from "@/lib/types";
+import { JsonLd } from "@/components/seo/JsonLd";
+import {
+  breadcrumbJsonLd,
+  describeSong,
+  pageMeta,
+  songJsonLd,
+} from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -43,7 +50,19 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const { current } = await getAdjacentBhajans(slug);
-  return { title: current?.title ?? "Bhajan" };
+  if (!current) return { title: "Bhajan" };
+  return pageMeta({
+    title: current.artist_version
+      ? `${current.title} — ${current.artist_version}`
+      : current.title,
+    description: describeSong(
+      current.title,
+      current.artist_version,
+      current.meaning
+    ),
+    path: `/bhajans/${current.slug}`,
+    image: current.cover_url ?? current.thumbnail_url,
+  });
 }
 
 export default async function BhajanDetailPage({ params, searchParams }: Props) {
@@ -128,8 +147,29 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
     if (n.current) navNextTitle = n.current.title;
   }
 
+  const description = describeSong(
+    current.title,
+    current.artist_version,
+    current.meaning
+  );
+
   return (
     <article className="space-y-10">
+      <JsonLd
+        data={[
+          songJsonLd({
+            title: current.title,
+            slug: current.slug,
+            artist: current.artist_version,
+            description,
+            image: current.cover_url ?? current.thumbnail_url,
+          }),
+          breadcrumbJsonLd([
+            { name: "Bhajans", path: "/bhajans" },
+            { name: current.title, path: `/bhajans/${current.slug}` },
+          ]),
+        ]}
+      />
       <header className="space-y-4">
         <p className="text-sm text-muted">
           <Link href="/bhajans" className="transition hover:text-primary">

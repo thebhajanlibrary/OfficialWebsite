@@ -8,13 +8,21 @@ import { CollectionQueueActions } from "@/components/bhajan/CollectionQueueActio
 import { queueTracksFromBhajans } from "@/lib/play-queue";
 import { getBhajansByCategory, getBhajans, getCategoryBySlug } from "@/lib/queries";
 import { getFolder } from "@/lib/folders";
+import { pageMeta, clip } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const category = await getCategoryBySlug("occasion", slug);
-  return { title: category ? category.name : "Occasion" };
+  if (!category) return { title: "Occasion" };
+  return pageMeta({
+    title: category.name,
+    description: clip(
+      `${category.name} songs and bhajans. Find the recording and the lyrics for satsang, home, or the festival.`
+    ),
+    path: `/browse/occasion/${category.slug}`,
+  });
 }
 
 export default async function OccasionCategoryPage({ params }: Props) {

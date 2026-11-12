@@ -10,13 +10,24 @@ import { getFolderWithBhajans, resolvePlayQueueTracks } from "@/lib/queries";
 import { getFolder } from "@/lib/folders";
 import { folkQueueTracks } from "@/lib/chutney";
 import { bhajanPlayHref, encodePlayQueue } from "@/lib/play-queue";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { collectionJsonLd, pageMeta, clip } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const folder = getFolder(slug);
-  return { title: folder?.title ?? "Folder" };
+  if (!folder) return { title: "Folder" };
+  return pageMeta({
+    title: folder.title,
+    description: clip(
+      folder.description ||
+        `${folder.title} on Bhajan Library. Play the recordings and read the lyrics.`
+    ),
+    path: `/folders/${folder.slug}`,
+    image: folder.cover_url,
+  });
 }
 
 export default async function FolderDetailPage({ params }: Props) {
@@ -34,6 +45,13 @@ export default async function FolderDetailPage({ params }: Props) {
 
     return (
       <div className="space-y-8">
+        <JsonLd
+          data={collectionJsonLd({
+            name: folder.title,
+            path: `/folders/${folder.slug}`,
+            description: clip(folder.description),
+          })}
+        />
         <p className="text-sm text-muted">
           <Link href="/folders" className="transition hover:text-primary">
             Folders
@@ -105,6 +123,13 @@ export default async function FolderDetailPage({ params }: Props) {
 
   return (
     <div className="space-y-8">
+      <JsonLd
+        data={collectionJsonLd({
+          name: folder.title,
+          path: `/folders/${folder.slug}`,
+          description: clip(folder.description),
+        })}
+      />
       <p className="text-sm text-muted">
         {folder.slug === "garba" ? (
           <Link href="/browse/occasion/navratri" className="transition hover:text-primary">

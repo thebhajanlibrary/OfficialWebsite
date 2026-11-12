@@ -9,6 +9,7 @@ import {
 } from "@/lib/chowtal";
 import { chowtalMeaningParagraphs } from "@/lib/chowtal-meaning";
 import { youtubeEmbedUrl, youtubePosterUrl } from "@/lib/utils";
+import { pageMeta, clip } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -17,7 +18,14 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const { current } = neighborsInChowtal(slug);
-  return { title: current ? `${current.title} · Chowtal` : "Chowtal" };
+  if (!current) return { title: "Chowtal" };
+  return pageMeta({
+    title: current.title,
+    description: clip(
+      `${current.title}. Phagwah chowtal lyrics for singing, in Roman and English.`
+    ),
+    path: `/chowtal/${current.slug}`,
+  });
 }
 
 export default async function ChowtalDetailPage({ params }: Props) {

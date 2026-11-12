@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { BhajanList } from "@/components/bhajan/BhajanList";
 import { SearchBar } from "@/components/search/SearchBar";
@@ -8,7 +8,13 @@ import { searchBhajans } from "@/lib/queries";
 
 type Props = { searchParams: Promise<{ q?: string }> };
 
-export const metadata: Metadata = { title: "Search" };
+export const metadata = pageMeta({
+  title: "Search",
+  description:
+    "Search Bhajan Library by title, lyric, deity, artist, chutney, or wedding song.",
+  path: "/search",
+  index: false,
+});
 
 export default async function SearchPage({ searchParams }: Props) {
   const { q = "" } = await searchParams;

@@ -1,8 +1,13 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { CategoryGrid } from "@/components/bhajan/CategoryGrid";
 import { getCategories } from "@/lib/queries";
 
-export const metadata: Metadata = { title: "Browse by Occasion" };
+export const metadata = pageMeta({
+  title: "Browse by Occasion",
+  description:
+    "Bhajans for satsang, Diwali, Holi, Navratri, weddings, birthdays, and the rest of the year.",
+  path: "/browse/occasion",
+});
 
 export default async function BrowseOccasionPage() {
   const categories = await getCategories("occasion");

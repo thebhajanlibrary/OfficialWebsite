@@ -8,13 +8,24 @@ import { getAlbumWithTracks, resolvePlayQueueTracks } from "@/lib/queries";
 import { getAlbum } from "@/lib/albums";
 import { artistSlug, creditedArtistNames } from "@/lib/artists";
 import { bhajanPlayHref, encodePlayQueue } from "@/lib/play-queue";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { collectionJsonLd, pageMeta, clip } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const album = getAlbum(slug);
-  return { title: album?.title ?? "Album" };
+  if (!album) return { title: "Album" };
+  return pageMeta({
+    title: `${album.title} — ${album.artist}`,
+    description: clip(
+      album.description ||
+        `${album.title} by ${album.artist}. Listen in order on Bhajan Library.`
+    ),
+    path: `/albums/${album.slug}`,
+    image: album.cover_url,
+  });
 }
 
 export default async function AlbumDetailPage({ params }: Props) {
@@ -30,6 +41,14 @@ export default async function AlbumDetailPage({ params }: Props) {
 
   return (
     <div className="space-y-8">
+      <JsonLd
+        data={collectionJsonLd({
+          name: album.title,
+          path: `/albums/${album.slug}`,
+          description: clip(album.description || `${album.title} by ${album.artist}.`),
+          kind: "MusicAlbum",
+        })}
+      />
       <p className="text-sm text-muted">
         <Link href="/albums" className="transition hover:text-primary">
           Albums

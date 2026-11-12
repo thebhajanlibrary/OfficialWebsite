@@ -1,9 +1,14 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { ArtistAvatar } from "@/components/artists/ArtistAvatar";
 import { getArtists } from "@/lib/queries";
 
-export const metadata: Metadata = { title: "Artists" };
+export const metadata = pageMeta({
+  title: "Artists",
+  description:
+    "Singers and teachers in the Bhajan Library. Open a voice and play their songs with the lyrics beside the recording.",
+  path: "/artists",
+});
 
 export default async function ArtistsPage() {
   const artists = await getArtists();

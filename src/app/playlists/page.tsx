@@ -1,8 +1,13 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { getPlaylists } from "@/lib/queries";
 
-export const metadata: Metadata = { title: "Playlists" };
+export const metadata = pageMeta({
+  title: "Playlists",
+  description:
+    "Programmes for satsang, festivals, and services. Play them through in order.",
+  path: "/playlists",
+});
 
 export default async function PlaylistsPage() {
   const playlists = await getPlaylists();

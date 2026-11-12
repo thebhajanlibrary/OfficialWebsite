@@ -1,7 +1,7 @@
 {
   "name": "Bhajan Library",
   "short_name": "Bhajans",
-  "description": "Personal private library of bhajans for satsang.",
+  "description": "A library for satsang. Play the recording and read the lyrics in Roman, Hindi, and English.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f7f3ee",
