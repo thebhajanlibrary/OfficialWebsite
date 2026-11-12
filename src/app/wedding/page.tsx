@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { WeddingIndexContent } from "@/components/wedding/WeddingIndexContent";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Wedding Songs",
   description:
-    "Indo-Caribbean wedding songs — chutney, chutney-bhajan, lawa, sehra, and more.",
-};
+    "Indo-Caribbean wedding songs: chutney, lawa, sehra, and the rest of the ceremony.",
+  path: "/wedding",
+});
 
 export default function WeddingIndexPage() {
   return (

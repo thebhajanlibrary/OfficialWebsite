@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { getCategories } from "@/lib/queries";
 import { SubmitSongForm } from "@/components/submissions/SubmitSongForm";
 import { UploadCloud, Sparkles, CheckCircle2, Music2 } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Upload & Submit a Song",
+export const metadata = pageMeta({
+  title: "Add a song",
   description:
-    "Contribute new bhajans, traditional chutney, wedding folk, or chowtals to the library.",
-};
+    "Send a bhajan, chutney, wedding song, or chowtal to Bhajan Library.",
+  path: "/upload",
+});
 
 export default async function UploadSongPage() {
   const categories = await getCategories();

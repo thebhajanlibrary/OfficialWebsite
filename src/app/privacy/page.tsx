@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { LegalDocument, LegalSection } from "@/components/legal/LegalDocument";
 import { CONTACT_EMAIL } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Privacy Policy",
   description: "How Bhajan Library handles information from visitors.",
-};
+  path: "/privacy",
+});
 
 const updated = "11 November 2026";
 

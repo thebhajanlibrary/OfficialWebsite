@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { Mail } from "lucide-react";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { CONTACT_EMAIL } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Contact",
   description:
     "Write to Bhajan Library about a song, a correction, or anything else.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

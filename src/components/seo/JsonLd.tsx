@@ -1,7 +1,7 @@
 export function JsonLd({
   data,
 }: {
-  data: Record<string, unknown> | Record<string, unknown>[];
+  data: unknown;
 }) {
   return (
     <script

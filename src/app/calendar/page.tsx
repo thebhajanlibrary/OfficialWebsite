@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { HinduCalendarView } from "@/components/calendar/HinduCalendarView";
 
-export const metadata: Metadata = {
-  title: "Hindu Calendar & Festivals",
+export const metadata = pageMeta({
+  title: "Hindu Calendar and Festivals",
   description:
-    "Upcoming Hindu holidays, festivals, and sacred dates. Sync directly to your Google, Apple, or Outlook calendar.",
-};
+    "Hindu festival dates for the year, with the bhajans that belong to each one.",
+  path: "/calendar",
+});
 
 export default function CalendarPage() {
   return (

@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { ArtistAvatar } from "@/components/artists/ArtistAvatar";
 import { getChutneyArtists } from "@/lib/chutney";
 
-export const metadata: Metadata = {
-  title: "Chutney Artists · Traditional Chutney",
+export const metadata = pageMeta({
+  title: "Chutney Artists",
   description:
-    "Singers in the Traditional Chutney section only — separate from the bhajan Artists page.",
-};
+    "Singers in the Traditional Chutney section, separate from the bhajan artists.",
+  path: "/chutney/artists",
+});
 
 export default function ChutneyArtistsPage() {
   const artists = getChutneyArtists();

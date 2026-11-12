@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { RelatedCollections } from "@/components/layout/RelatedCollections";
 import { getChowtalGrouped, getChowtalSorted } from "@/lib/chowtal";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Chowtal",
   description:
-    "Phagwah / Holi chowtal lyrics for singing — organised by type, no audio needed.",
-};
+    "Phagwah and Holi chowtal lyrics for singing, set out by type.",
+  path: "/chowtal",
+});
 
 export default function ChowtalIndexPage() {
   const groups = getChowtalGrouped();

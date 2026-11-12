@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { RelatedCollections } from "@/components/layout/RelatedCollections";
 import {
@@ -8,11 +8,12 @@ import {
   getChutneySorted,
 } from "@/lib/chutney";
 
-export const metadata: Metadata = {
+export const metadata = pageMeta({
   title: "Traditional Chutney",
   description:
-    "Traditional Indo-Caribbean chutney songs — lyrics and recordings in their own section, separate from the bhajan catalogue.",
-};
+    "Traditional Indo-Caribbean chutney songs, with the lyrics beside the recording.",
+  path: "/chutney",
+});
 
 export default function ChutneyIndexPage() {
   const songs = getChutneySorted();

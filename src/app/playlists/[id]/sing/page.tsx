@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SingingMode } from "@/components/bhajan/SingingMode";
 import { getPlaylistById } from "@/lib/queries";
+import { pageMeta } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -11,9 +12,13 @@ type Props = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
   const playlist = await getPlaylistById(id);
-  return {
-    title: playlist ? `Sing · ${playlist.name}` : "Singing mode",
-  };
+  if (!playlist) return { title: "Singing mode", robots: { index: false, follow: false } };
+  return pageMeta({
+    title: `Sing ${playlist.name}`,
+    description: `Singing view of ${playlist.name}.`,
+    path: `/playlists/${playlist.id}`,
+    index: false,
+  });
 }
 
 export default async function PlaylistSingPage({ params, searchParams }: Props) {
