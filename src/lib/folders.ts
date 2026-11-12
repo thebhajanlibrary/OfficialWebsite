@@ -203,12 +203,13 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     title: "Birthday & Blessings",
     description:
       "Evergreen birthday anthems, long life wishes (tu jiye hazaron saal), and parent blessings for children — sung for family satsang, birthdays, and naming ceremonies.",
-    cover_url: "/images/badhai-ho-badhai-janamdin-ki-cover.jpg",
+    cover_url: "/images/folders/birthday-songs/cover.jpg",
     member_slugs: [
       "baar-baar-din-yeh-aaye",
       "badhai-ho-badhai-janamdin-ki-lata-mangeshkar",
       "o-nanhe-se-farishte-mohammed-rafi",
       "tujhe-suraj-kahoon-ya-chanda-manna-dey",
+      "shiva-hare-shri-prakash-gossai",
     ],
     search_aliases: ["birthday", "birthdays", "happy-birthday", "janamdin"],
   },
