@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Cormorant_Garamond, Outfit } from "next/font/google";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import { QueuePlaybackProvider } from "@/components/bhajan/QueuePlayback";
@@ -98,6 +99,17 @@ export default function RootLayout({
         className="flex min-h-full flex-col antialiased"
         suppressHydrationWarning
       >
+        <Script id="gtag-init" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `}
+        </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-5WP8N2CG"
+          strategy="afterInteractive"
+        />
         <QueuePlaybackProvider>
           <YouTubePlaybackProvider>
             <MediaSessionBridge />
