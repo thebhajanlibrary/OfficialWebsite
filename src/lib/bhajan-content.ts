@@ -1308,6 +1308,108 @@ Om, victory to Mother Lakshmi`;
 const OM_JAI_LAKSHMI_MEANING =
   "Classic Lakshmi aarti (Om Jai Lakshmi Mata) — praise of Mother Lakshmi, consort of Vishnu, source of virtue, wealth, and auspiciousness.";
 
+const NAHI_CHAHIYE_RANG_MAHAL_ROMAN = `## Chorus
+
+nahi chahiye rang mahal na dhan daulat ki shan
+hum to mange tujhse malik ek santosh ka daan
+ki ghar ghar me khushhali ho sada sukh ki haryali ho
+nahi chahiye rang mahal na dhan daulat ki shan
+hum to mange tujhse malik ek santosh ka daan
+
+## Verse 1
+
+tune humko janam diya hai tu hi palanhar
+teri daya se fule fale hum sab ka ghar sansar
+tune humko janam diya hai tu hi palanhar
+teri daya se phule phale hum sab ka ghar sansar
+nahi chahiye hire moti
+
+## Verse 2
+
+nahi chahiye hire moti nahi ratano ke haar
+hum to mange tujhse malik ek santosh ka daan
+
+## Verse 3
+
+sukh ke badale dukh dene ki ager bhawana teri
+dukh ko sahne ki shakti de yahi prarthana meri
+sukh ke badale dukh dene ki ager bhawana teri
+dukh ko sahne ki shakti de yahi prarthana meri
+kisi ke age hath na failaye
+apni mahnat ka sukh paye itna de vardan
+hum to mange tujhse malik ek santosh ka daan
+ki ghar ghar me khushhali ho sada sukh ki haryali ho
+nahi chahiye rang mahal na dhan daulat ki shan
+hum to mange tujhse malik ek santosh ka daan`;
+
+const NAHI_CHAHIYE_RANG_MAHAL_DEVANAGARI = `## Chorus
+
+नहीं चाहिये रंग महल ना धन दौलत की शान
+हम तो मांगे तुझसे मालिक एक संतोष का दान
+की घर घर में खुशहाली हो सदा सुख की हरयाली हो
+नहीं चाहिये रंग महल ना धन दौलत की शान
+हम तो मांगे तुझसे मालिक एक संतोष का दान
+
+## Verse 1
+
+तूने हमको जनम दिया है तू ही पालनहार
+तेरी दया से फूले फलें हम सब का घर संसार
+तूने हमको जनम दिया है तू ही पालनहार
+तेरी दया से फूले फलें हम सब का घर संसार
+नहीं चाहिये हीरे मोती
+
+## Verse 2
+
+नहीं चाहिये हीरे मोती नहीं रत्नों के हार
+हम तो मांगे तुझसे मालिक एक संतोष का दान
+
+## Verse 3
+
+सुख के बदले दुःख देने की अगर भावना तेरी
+दुःख को सहने की शक्ति दे यही प्रार्थना मेरी
+सुख के बदले दुःख देने की अगर भावना तेरी
+दुःख को सहने की शक्ति दे यही प्रार्थना मेरी
+किसी के आगे हाथ ना फैलाये
+अपनी मेहनत का सुख पाये इतना दे वरदान
+हम तो मांगे तुझसे मालिक एक संतोष का दान
+की घर घर में खुशहाली हो सदा सुख की हरयाली हो
+नहीं चाहिये रंग महल ना धन दौलत की शान
+हम तो मांगे तुझसे मालिक एक संतोष का दान`;
+
+const NAHI_CHAHIYE_RANG_MAHAL_TRANSLATION = `## Chorus
+
+I do not want a coloured palace, nor the glory of wealth
+From you, Master, I ask only the gift of contentment
+May every home be happy, may joy stay green forever
+I do not want a coloured palace, nor the glory of wealth
+From you, Master, I ask only the gift of contentment
+
+## Verse 1
+
+You gave us birth, you alone sustain us
+By your grace may every home in the world flower and bear fruit
+You gave us birth, you alone sustain us
+By your grace may every home in the world flower and bear fruit
+I do not want diamonds and pearls
+
+## Verse 2
+
+I do not want diamonds and pearls, nor a necklace of gems
+From you, Master, I ask only the gift of contentment
+
+## Verse 3
+
+If it is your wish to give sorrow in place of joy
+Give the strength to bear that sorrow — this is my prayer
+If it is your wish to give sorrow in place of joy
+Give the strength to bear that sorrow — this is my prayer
+May I not hold out my hand before anyone
+Grant this blessing: joy from the work of my own hands
+From you, Master, I ask only the gift of contentment
+May every home be happy, may joy stay green forever
+I do not want a coloured palace, nor the glory of wealth
+From you, Master, I ask only the gift of contentment`;
+
 export const BHAJAN_CONTENT: Record<string, BhajanContent> = {
   "payo-ji-mere-ram-ratan-dhan-payo": {
     title: "Ram Ratan",
@@ -19104,6 +19206,721 @@ In distress, Lord, your refuge
 ## Chorus
 
 O yes, the praise of Ram, O children`,
+  },
+  "nahi-chahiye-rang-mahal-kj-yesudas": {
+    title: "Nahi Chahiye Rang Mahal",
+    alternate_title: "Nahin Chahiye Rang Mahal · College Girl",
+    artist_version: "K. J. Yesudas & Chandrani Mukherjee",
+    audio_url: "https://www.youtube.com/watch?v=LzfTYYp4H2I",
+    youtube_url: "https://www.youtube.com/watch?v=LzfTYYp4H2I",
+    thumbnail_url: "/images/nahi-chahiye-rang-mahal-kj-yesudas.jpg",
+    cover_url: "/images/nahi-chahiye-rang-mahal-kj-yesudas.jpg",
+    mini_cover_url: "/images/nahi-chahiye-rang-mahal-kj-yesudas.jpg",
+    display_order: 317,
+    category_slugs: ["general", "satsang", "bhajan", "devotion", "hindi"],
+    meaning:
+      "K. J. Yesudas and Chandrani Mukherjee sing Bharat Vyas’s prayer from College Girl (1978), music by Bappi Lahiri. The singer asks the Lord for contentment, not a palace or wealth.",
+    roman_lyrics: NAHI_CHAHIYE_RANG_MAHAL_ROMAN,
+    devanagari_lyrics: NAHI_CHAHIYE_RANG_MAHAL_DEVANAGARI,
+    translation: NAHI_CHAHIYE_RANG_MAHAL_TRANSLATION,
+  },
+  "nahi-chahiye-rang-mahal-dewindersingh-sewnath": {
+    title: "Nahi Chahiye Rang Mahal",
+    alternate_title: "Nahin Chahiye Rang Mahal · Chutney Bhajan · February 2024",
+    artist_version: "Dewindersingh Sewnath",
+    audio_url: "https://www.youtube.com/watch?v=_PBtOUUDqV0",
+    youtube_url: "https://www.youtube.com/watch?v=_PBtOUUDqV0",
+    thumbnail_url: "/images/nahi-chahiye-rang-mahal-dewindersingh-sewnath.jpg",
+    cover_url: "/images/nahi-chahiye-rang-mahal-dewindersingh-sewnath.jpg",
+    mini_cover_url: "/images/nahi-chahiye-rang-mahal-dewindersingh-sewnath.jpg",
+    display_order: 318,
+    category_slugs: ["general", "satsang", "bhajan", "devotion", "hindi"],
+    meaning:
+      "Dewindersingh Sewnath’s February 2024 chutney bhajan of Nahi Chahiye Rang Mahal. This recording stays in Chutney Bhajan.",
+    roman_lyrics: NAHI_CHAHIYE_RANG_MAHAL_ROMAN,
+    devanagari_lyrics: NAHI_CHAHIYE_RANG_MAHAL_DEVANAGARI,
+    translation: NAHI_CHAHIYE_RANG_MAHAL_TRANSLATION,
+  },
+  "gori-tame-manda-lidha-mohi-raj-umesh-barot": {
+    title: "Gori Tame Manda Lidha Mohi Raj",
+    alternate_title: "Gori Tame Manda Lidha · Saiyar Mori Re",
+    artist_version: "Umesh Barot & Ishani Dave",
+    audio_url: "https://www.youtube.com/watch?v=pGG_Zosn-qo",
+    youtube_url: "https://www.youtube.com/watch?v=pGG_Zosn-qo",
+    thumbnail_url: "/images/gori-tame-manda-lidha-mohi-raj-umesh-barot.jpg",
+    cover_url: "/images/gori-tame-manda-lidha-mohi-raj-umesh-barot.jpg",
+    mini_cover_url: "/images/gori-tame-manda-lidha-mohi-raj-umesh-barot.jpg",
+    display_order: 319,
+    category_slugs: ["navratri", "gujarati"],
+    meaning:
+      "A night garba from Saiyar Mori Re. The moon slips behind a cloud and the singer grows shy, then calls the fair one who has taken his heart and turned her face away. He asks her back as she circles the courtyard, anklets sounding.",
+  },
+  "dakla-bandish-projekt": {
+    title: "Dakla",
+    alternate_title: "Dakla · Bandish Projekt",
+    artist_version: "Bandish Projekt & Aishwarya Joshi & MC Todfod",
+    audio_url: "https://www.youtube.com/watch?v=gBeBK9QQtv8",
+    youtube_url: "https://www.youtube.com/watch?v=gBeBK9QQtv8",
+    thumbnail_url: "/images/dakla-bandish-projekt.jpg",
+    cover_url: "/images/dakla-bandish-projekt.jpg",
+    mini_cover_url: "/images/dakla-bandish-projekt.jpg",
+    display_order: 320,
+    category_slugs: ["navratri", "gujarati"],
+    meaning:
+      "A Navratri track built on the dakla, the sharp folk drum that drives a Gujarati circle. Bandish Projekt set Aishwarya Joshi’s singing against that beat, with MC Todfod joining the rhythm. The drum leads, and the circle answers.",
+  },
+  "moti-veraana-osman-mir": {
+    title: "Moti Veraana",
+    alternate_title: "Moti Veraana · Songs of Faith · Navratri 2020",
+    artist_version: "Osman Mir",
+    audio_url: "https://www.youtube.com/watch?v=Jv8KRwF1zQs",
+    youtube_url: "https://www.youtube.com/watch?v=Jv8KRwF1zQs",
+    thumbnail_url: "/images/moti-veraana-osman-mir.jpg",
+    cover_url: "/images/moti-veraana-osman-mir.jpg",
+    mini_cover_url: "/images/moti-veraana-osman-mir.jpg",
+    display_order: 321,
+    category_slugs: ["navratri", "gujarati"],
+    meaning:
+      "Osman Mir’s night song from Amit Trivedi’s Songs of Faith, Navratri 2020. It is quieter than a dhol garba. A lover speaks into the empty dark, toward someone who has gone far.",
+  },
+  "dholida-gangubai-kathiawadi": {
+    title: "Dholida",
+    alternate_title: "Dholida · Gangubai Kathiawadi",
+    artist_version: "Jahnvi Shrimankar & Shailesh Singh",
+    audio_url: "https://www.youtube.com/watch?v=Jh_VKJAEnUY",
+    youtube_url: "https://www.youtube.com/watch?v=Jh_VKJAEnUY",
+    thumbnail_url: "/images/dholida-gangubai-kathiawadi.jpg",
+    cover_url: "/images/dholida-gangubai-kathiawadi.jpg",
+    mini_cover_url: "/images/dholida-gangubai-kathiawadi.jpg",
+    display_order: 322,
+    category_slugs: ["navratri", "hindi"],
+    meaning:
+      "The garba from Gangubai Kathiawadi. Someone calls the dhol player, the beat starts, and the street fills. Once the dhol speaks, everyone is pulled into the circle.",
+  },
+  "mor-bani-thanghat-kare": {
+    title: "Mor Bani Thanghat Kare",
+    alternate_title: "Mor Bani Thanghat Kare · Goliyon Ki Raasleela Ram-Leela",
+    artist_version: "Osman Mir & Aditi Paul",
+    audio_url: "https://www.youtube.com/watch?v=lfm-NIrZyV0",
+    youtube_url: "https://www.youtube.com/watch?v=lfm-NIrZyV0",
+    thumbnail_url: "/images/mor-bani-thanghat-kare.jpg",
+    cover_url: "/images/mor-bani-thanghat-kare.jpg",
+    mini_cover_url: "/images/mor-bani-thanghat-kare.jpg",
+    display_order: 323,
+    category_slugs: ["navratri", "gujarati"],
+    meaning:
+      "A traditional garba used in Ram-Leela. The dancer’s skirt is the colour of a peacock, and it flares and rustles as she turns. The song stays on that picture: the cloth, the spin, and the circle moving around her.",
+  },
+  "radha-ne-shyam-mali-jashe": {
+    title: "Radha Ne Shyam Mali Jashe",
+    alternate_title: "Radha Ne Shyam Mali Jashe",
+    artist_version: "Sachin Sanghvi & Shruti Pathak",
+    audio_url: "https://www.youtube.com/watch?v=tTfF5klskmo",
+    youtube_url: "https://www.youtube.com/watch?v=tTfF5klskmo",
+    thumbnail_url: "/images/radha-ne-shyam-mali-jashe.jpg",
+    cover_url: "/images/radha-ne-shyam-mali-jashe.jpg",
+    mini_cover_url: "/images/radha-ne-shyam-mali-jashe.jpg",
+    display_order: 324,
+    category_slugs: ["navratri", "krishna", "radha", "gujarati"],
+    meaning:
+      "Sachin Sanghvi and Shruti Pathak’s garba of Radha going to meet Shyam. The garden is the meeting place. The song follows her on the way there, in the season when Krishna’s name is sung in the circle.",
+  },
+  "vaagyo-re-dhol-hellaro": {
+    title: "Vaagyo Re Dhol",
+    alternate_title: "Vaagyo Re Dhol · Hellaro",
+    artist_version: "Bhoomi Trivedi",
+    audio_url: "https://www.youtube.com/watch?v=sDZA54sTqwQ",
+    youtube_url: "https://www.youtube.com/watch?v=sDZA54sTqwQ",
+    thumbnail_url: "/images/vaagyo-re-dhol-hellaro.jpg",
+    cover_url: "/images/vaagyo-re-dhol-hellaro.jpg",
+    mini_cover_url: "/images/vaagyo-re-dhol-hellaro.jpg",
+    display_order: 325,
+    category_slugs: ["navratri", "gujarati"],
+    meaning:
+      "From Hellaro. In the film, women who have been kept from the garba hear the dhol and answer it. The drum is the signal that the circle can begin, and the dance itself is the freedom the song is about.",
+  },
+  "garbe-ki-raat-rahul-vaidya": {
+    title: "Garbe Ki Raat",
+    alternate_title: "Garbe Ki Raat",
+    artist_version: "Rahul Vaidya & Yashita Sharma",
+    audio_url: "https://www.youtube.com/watch?v=OPWik6jypxs",
+    youtube_url: "https://www.youtube.com/watch?v=OPWik6jypxs",
+    thumbnail_url: "/images/garbe-ki-raat-rahul-vaidya.jpg",
+    cover_url: "/images/garbe-ki-raat-rahul-vaidya.jpg",
+    mini_cover_url: "/images/garbe-ki-raat-rahul-vaidya.jpg",
+    display_order: 326,
+    category_slugs: ["navratri", "hindi"],
+    meaning:
+      "Rahul Vaidya and Yashita Sharma’s Hindi garba about one whole night in the circle. The lights stay up, the beat keeps going, and the night itself is the celebration.",
+  },
+  "nagada-sang-dhol-baaje": {
+    title: "Nagada Sang Dhol Baaje",
+    alternate_title: "Nagada Sang Dhol · Goliyon Ki Raasleela Ram-Leela",
+    artist_version: "Shreya Ghoshal & Osman Mir",
+    audio_url: "https://www.youtube.com/watch?v=BmWkUAU1ktk",
+    youtube_url: "https://www.youtube.com/watch?v=BmWkUAU1ktk",
+    thumbnail_url: "/images/nagada-sang-dhol-baaje.jpg",
+    cover_url: "/images/nagada-sang-dhol-baaje.jpg",
+    mini_cover_url: "/images/nagada-sang-dhol-baaje.jpg",
+    display_order: 327,
+    category_slugs: ["navratri", "hindi"],
+    meaning:
+      "From Ram-Leela, the raas where the nagada and the dhol are played together. A dancer waits for someone who has not yet come, and the circle opens anyway. An older Gujarati garba is folded in, the one in which Sita watches the road for Ram.",
+  },
+  "shubhaarambh-kai-po-che": {
+    title: "Shubhaarambh",
+    alternate_title: "Shubhaarambh · Kai Po Che",
+    artist_version: "Divya Kumar & Shruti Pathak",
+    audio_url: "https://www.youtube.com/watch?v=dlz09a-pyPE",
+    youtube_url: "https://www.youtube.com/watch?v=dlz09a-pyPE",
+    thumbnail_url: "/images/shubhaarambh-kai-po-che.jpg",
+    cover_url: "/images/shubhaarambh-kai-po-che.jpg",
+    mini_cover_url: "/images/shubhaarambh-kai-po-che.jpg",
+    display_order: 328,
+    category_slugs: ["navratri", "gujarati"],
+    meaning:
+      "From Kai Po Che. The title means an auspicious beginning, and the song is sung like the first step of a garba night. It blesses the start: the circle forming, the night opening, friends stepping in together.",
+  },
+  "kesariyo-aishwarya-majmudar": {
+    title: "Kesariyo",
+    alternate_title: "Kesariyo · Aishwarya Majmudar",
+    artist_version: "Aishwarya Majmudar",
+    audio_url: "https://www.youtube.com/watch?v=GZwvya3eFG0",
+    youtube_url: "https://www.youtube.com/watch?v=GZwvya3eFG0",
+    thumbnail_url: "/images/kesariyo-aishwarya-majmudar.jpg",
+    cover_url: "/images/kesariyo-aishwarya-majmudar.jpg",
+    mini_cover_url: "/images/kesariyo-aishwarya-majmudar.jpg",
+    display_order: 329,
+    category_slugs: ["navratri", "gujarati"],
+    meaning:
+      "Aishwarya Majmudar’s Navratri garba in praise of saffron, the colour of the festival. That colour is the joy of the night, worn and sung as the circle turns.",
+  },
+  "gori-radha-ne-kalo-kaan-kirtidan-gadhvi": {
+    title: "Gori Radha Ne Kalo Kaan",
+    alternate_title: "Gori Radha Ne Kalo Kaan · Wrong Side Raju",
+    artist_version: "Kirtidan Gadhvi",
+    audio_url: "https://www.youtube.com/watch?v=ccqg6e2rfLU",
+    youtube_url: "https://www.youtube.com/watch?v=ccqg6e2rfLU",
+    thumbnail_url: "/images/gori-radha-ne-kalo-kaan-kirtidan-gadhvi.jpg",
+    cover_url: "/images/gori-radha-ne-kalo-kaan-kirtidan-gadhvi.jpg",
+    mini_cover_url: "/images/gori-radha-ne-kalo-kaan-kirtidan-gadhvi.jpg",
+    display_order: 330,
+    category_slugs: ["navratri", "krishna", "radha", "gujarati"],
+    meaning:
+      "From Wrong Side Raju. Kirtidan Gadhvi sings the old contrast of fair Radha and dark Kanha. It is a playful garba about that pair, her brightness set against his darkness.",
+  },
+  "karshan-bhagwan-chalya-aditya-gadhvi": {
+    title: "Karshan Bhagwan Chalya",
+    alternate_title: "Karshan Bhagwan Chalya · Jiyo Maniyara",
+    artist_version: "Aditya Gadhvi",
+    audio_url: "https://www.youtube.com/watch?v=YMrVf4O65Ss",
+    youtube_url: "https://www.youtube.com/watch?v=YMrVf4O65Ss",
+    thumbnail_url: "/images/karshan-bhagwan-chalya-aditya-gadhvi.jpg",
+    cover_url: "/images/karshan-bhagwan-chalya-aditya-gadhvi.jpg",
+    mini_cover_url: "/images/karshan-bhagwan-chalya-aditya-gadhvi.jpg",
+    display_order: 331,
+    category_slugs: ["navratri", "krishna", "gujarati"],
+    meaning:
+      "Aditya Gadhvi’s garba from Jiyo Maniyara. Lord Krishna has set out, and the song follows him as he walks. The village and the circle move because he has stepped out among them.",
+  },
+  "indhana-vinvaa-gayi-falguni-pathak": {
+    title: "Indhana Vinvaa Gayi Thi More Saiyan",
+    alternate_title: "Indhana Vinvaa Gayi · Falguni Pathak",
+    artist_version: "Falguni Pathak",
+    audio_url: "https://www.youtube.com/watch?v=Q_ZXz9Omq4k",
+    youtube_url: "https://www.youtube.com/watch?v=Q_ZXz9Omq4k",
+    thumbnail_url: "/images/indhana-vinvaa-gayi-falguni-pathak.jpg",
+    cover_url: "/images/indhana-vinvaa-gayi-falguni-pathak.jpg",
+    mini_cover_url: "/images/indhana-vinvaa-gayi-falguni-pathak.jpg",
+    display_order: 332,
+    category_slugs: ["navratri", "gujarati"],
+    meaning:
+      "Falguni Pathak’s garba of a woman who went out to gather firewood and met her beloved on the way. An ordinary errand becomes the meeting the song keeps returning to.",
+  },
+  "zulan-morali-vagi-re-aditya-gadhvi": {
+    title: "Zulan Morali Vagi Re",
+    alternate_title: "Zulan Morali Vagi Re",
+    artist_version: "Aditya Gadhvi",
+    audio_url: "https://www.youtube.com/watch?v=P4OlI-ksWMM",
+    youtube_url: "https://www.youtube.com/watch?v=P4OlI-ksWMM",
+    thumbnail_url: "/images/zulan-morali-vagi-re-aditya-gadhvi.jpg",
+    cover_url: "/images/zulan-morali-vagi-re-aditya-gadhvi.jpg",
+    mini_cover_url: "/images/zulan-morali-vagi-re-aditya-gadhvi.jpg",
+    display_order: 333,
+    category_slugs: ["navratri", "krishna", "gujarati"],
+    meaning:
+      "Aditya Gadhvi’s garba of the swing and Krishna’s flute. The swing moves, the flute sounds, and the circle turns toward that call.",
+  },
+  "halaji-tara-hath-vakhanu-aditya-gadhvi": {
+    title: "Halaji Tara Hath Vakhanu",
+    alternate_title: "Halaji Tara Hath Vakhanu",
+    artist_version: "Aditya Gadhvi",
+    audio_url: "https://www.youtube.com/watch?v=46f6aPSXN7Y",
+    youtube_url: "https://www.youtube.com/watch?v=46f6aPSXN7Y",
+    thumbnail_url: "/images/halaji-tara-hath-vakhanu-aditya-gadhvi.jpg",
+    cover_url: "/images/halaji-tara-hath-vakhanu-aditya-gadhvi.jpg",
+    mini_cover_url: "/images/halaji-tara-hath-vakhanu-aditya-gadhvi.jpg",
+    display_order: 334,
+    category_slugs: ["navratri", "gujarati"],
+    meaning:
+      "Aditya Gadhvi’s garba of praise for the beloved’s hand. The singer keeps returning to that hand, the one that meets another hand in the circle.",
+  },
+  "maar-to-mele-ishani-dave": {
+    title: "Maar To Mele",
+    alternate_title: "Maar To Mele",
+    artist_version: "Ishani Dave",
+    audio_url: "https://www.youtube.com/watch?v=vFORQ0vbadQ",
+    youtube_url: "https://www.youtube.com/watch?v=vFORQ0vbadQ",
+    thumbnail_url: "/images/maar-to-mele-ishani-dave.jpg",
+    cover_url: "/images/maar-to-mele-ishani-dave.jpg",
+    mini_cover_url: "/images/maar-to-mele-ishani-dave.jpg",
+    display_order: 335,
+    category_slugs: ["navratri", "gujarati"],
+    meaning:
+      "Ishani Dave’s garba, a direct call to come and meet. The title is the invitation. The song keeps asking for that meeting, sung to the beat of the circle.",
+  },
+  "odhani-made-in-china": {
+    title: "Odhani",
+    alternate_title: "Odhani · Made In China",
+    artist_version: "Neha Kakkar & Darshan Raval",
+    audio_url: "https://www.youtube.com/watch?v=C7u6rtswjCU",
+    youtube_url: "https://www.youtube.com/watch?v=C7u6rtswjCU",
+    thumbnail_url: "/images/odhani-made-in-china.jpg",
+    cover_url: "/images/odhani-made-in-china.jpg",
+    mini_cover_url: "/images/odhani-made-in-china.jpg",
+    display_order: 336,
+    category_slugs: ["navratri", "hindi"],
+    meaning:
+      "From Made In China. A playful garba about the odhani, the scarf that slips and gets caught as people dance. The scarf is the flirtation: it moves, someone notices, and the circle keeps turning.",
+  },
+  "sanedo-made-in-china": {
+    title: "Sanedo",
+    alternate_title: "Sanedo · Made In China",
+    artist_version: "Mika Singh & Nikhita Gandhi & Benny Dayal",
+    audio_url: "https://www.youtube.com/watch?v=KwUIzf3eM9I",
+    youtube_url: "https://www.youtube.com/watch?v=KwUIzf3eM9I",
+    thumbnail_url: "/images/sanedo-made-in-china.jpg",
+    cover_url: "/images/sanedo-made-in-china.jpg",
+    mini_cover_url: "/images/sanedo-made-in-china.jpg",
+    display_order: 337,
+    category_slugs: ["navratri", "gujarati"],
+    meaning:
+      "From Made In China, set to the sanedo, the fast folk beat of a Gujarati celebration. It is a teasing night song. The beat carries the teasing, and the garba rides on it.",
+  },
+  "khelo-khelo-re-bhavani-maa-geeta-rabari": {
+    title: "Khelo Khelo Re Bhavani Maa",
+    alternate_title: "Khel Khel Re Bhavani Maa · ખેલ ખેલ રે ભાવની મા",
+    artist_version: "Geeta Rabari",
+    audio_url: "https://www.youtube.com/watch?v=Vm0vGnl9mKs",
+    youtube_url: "https://www.youtube.com/watch?v=Vm0vGnl9mKs",
+    thumbnail_url: "/images/khelo-khelo-re-bhavani-maa-geeta-rabari.jpg",
+    cover_url: "/images/khelo-khelo-re-bhavani-maa-geeta-rabari.jpg",
+    mini_cover_url: "/images/khelo-khelo-re-bhavani-maa-geeta-rabari.jpg",
+    display_order: 338,
+    category_slugs: ["navratri", "durga", "gujarati"],
+    meaning:
+      "Geeta Rabari’s garba for Mother Bhavani and Ambe, and for Bahuchar, Deut, and Kalka Maa. The circle turns, the anklets sound, and whoever sings is blessed.",
+    roman_lyrics: `## Chorus
+
+Khelo khelo re bhavani maa jai jai ambey maa
+Jai jai ambey maa mari jai jai ambey maa
+
+## Verse
+
+Mari bauchar maa ne kaje re jai jai ambey maa
+Mari deut maa ne kaje re jai jai ambey maa
+Mari kalka maa ne kaje re jai jai ambey maa
+
+## Chorus
+
+Jai jai ambey maa mari jai jai ambey maa
+Khelo khelo re bhavani maa jai jai ambey maa
+
+## Verse
+
+Ger ger garba gaye re jai jai ambey maa
+Ghanghar sundaryo bandhaye re hai jai ambey maa
+Ae maa shobha ghani thai re jai jai ambey maa
+
+## Chorus
+
+Jai jai ambey maa mari jai jai ambey maa
+Khelo khelo re bhavani maa jai jai ambey maa
+
+## Verse
+
+Mane sewak ghanghar gaje re jai jai ambey maa
+Madi ghanghar ramwa aawe re jai jai ambey maa
+Madi sundar saji aawe re jai jai ambey maa
+Madi rum jhumta aawe re jai jai ambey maa
+
+## Chorus
+
+Jai jai ambey maa mari jai jai ambey maa
+Khelo khelo re bhavani maa jai jai ambey maa
+
+## Verse
+
+Madi garbo layi ne aawe re jai jai ambey maa
+Haato garba ma je gave re jai jai ambey maa
+Madi tena prasang thave re jai jai ambey maa
+Tena papo parley thaye re jai jai ambey maa
+
+## Chorus
+
+Jai jai ambey maa mari jai jai ambey maa
+Khelo khelo re bhavani maa jai jai ambey maa
+
+## Verse
+
+Tena sukh sampati aape re jai jai ambey maa
+Tena usmawa bhi rakhe re jai jai ambey maa
+Tena sukh shanti aape re jai jai ambey maa
+Tena vaikunth vass rakhe re jai jai ambey maa
+
+## Chorus
+
+Jai jai ambey maa mari jai jai ambey maa
+Khelo khelo re bhavani maa jai jai ambey maa`,
+    devanagari_lyrics: `## Chorus
+
+ખેલો ખેલો રે ભવાની મા જય જય અંબે મા
+જય જય અંબે મા મારી જય જય અંબે મા
+
+## Verse
+
+મારી બહુચર મા ને કાજે રે જય જય અંબે મા
+મારી દેઉત મા ને કાજે રે જય જય અંબે મા
+મારી કાળકા મા ને કાજે રે જય જય અંબે મા
+
+## Chorus
+
+જય જય અંબે મા મારી જય જય અંબે મા
+ખેલો ખેલો રે ભવાની મા જય જય અંબે મા
+
+## Verse
+
+ગેર ગેર ગરબા ગાયે રે જય જય અંબે મા
+ઘૂઘરાં સુંદરિયો બાંધે રે હે જય અંબે મા
+એ મા શોભા ઘણી થાય રે જય જય અંબે મા
+
+## Chorus
+
+જય જય અંબે મા મારી જય જય અંબે મા
+ખેલો ખેલો રે ભવાની મા જય જય અંબે મા
+
+## Verse
+
+મને સેવક ઘૂઘરાં ગાજે રે જય જય અંબે મા
+માડી ઘૂઘરાં રમવા આવે રે જય જય અંબે મા
+માડી સુંદર સજી આવે રે જય જય અંબે મા
+માડી રમઝૂમતાં આવે રે જય જય અંબે મા
+
+## Chorus
+
+જય જય અંબે મા મારી જય જય અંબે મા
+ખેલો ખેલો રે ભવાની મા જય જય અંબે મા
+
+## Verse
+
+માડી ગરબો લઈને આવે રે જય જય અંબે મા
+હાથો ગરબામાં જે ગાવે રે જય જય અંબે મા
+માડી તેના પ્રસન્ન થાય રે જય જય અંબે મા
+તેના પાપો પરલય થાય રે જય જય અંબે મા
+
+## Chorus
+
+જય જય અંબે મા મારી જય જય અંબે મા
+ખેલો ખેલો રે ભવાની મા જય જય અંબે મા
+
+## Verse
+
+તેને સુખ સંપત્તિ આપે રે જય જય અંબે મા
+તેના ઉશ્મા પણ રાખે રે જય જય અંબે મા
+તેને સુખ શાંતિ આપે રે જય જય અંબે મા
+તેને વૈકુંઠ વાસ રાખે રે જય જય અંબે મા
+
+## Chorus
+
+જય જય અંબે મા મારી જય જય અંબે મા
+ખેલો ખેલો રે ભવાની મા જય જય અંબે મા`,
+    translation: `## Chorus
+
+Play, play, O Mother Bhavani, victory, victory to Mother Ambe
+Victory to Mother Ambe, my victory to Mother Ambe
+
+## Verse
+
+For my Bahuchar Mother's sake, victory to Mother Ambe
+For my Deut Mother's sake, victory to Mother Ambe
+For my Kalka Mother's sake, victory to Mother Ambe
+
+## Chorus
+
+Victory to Mother Ambe, my victory to Mother Ambe
+Play, play, O Mother Bhavani, victory, victory to Mother Ambe
+
+## Verse
+
+They sing the garba in the circle, victory to Mother Ambe
+The beauties tie on anklets, O victory to Mother Ambe
+O Mother, such splendour comes, victory to Mother Ambe
+
+## Chorus
+
+Victory to Mother Ambe, my victory to Mother Ambe
+Play, play, O Mother Bhavani, victory, victory to Mother Ambe
+
+## Verse
+
+My servant's anklets sound, victory to Mother Ambe
+The girl comes to play the anklets, victory to Mother Ambe
+The girl comes dressed in beauty, victory to Mother Ambe
+The girl comes jingling, victory to Mother Ambe
+
+## Chorus
+
+Victory to Mother Ambe, my victory to Mother Ambe
+Play, play, O Mother Bhavani, victory, victory to Mother Ambe
+
+## Verse
+
+The girl comes carrying the garba, victory to Mother Ambe
+Whoever sings the garba with their hands, victory to Mother Ambe
+Mother is pleased with them, victory to Mother Ambe
+Their sins are destroyed, victory to Mother Ambe
+
+## Chorus
+
+Victory to Mother Ambe, my victory to Mother Ambe
+Play, play, O Mother Bhavani, victory, victory to Mother Ambe
+
+## Verse
+
+She gives them happiness and wealth, victory to Mother Ambe
+She keeps their spirit too, victory to Mother Ambe
+She gives them peace and happiness, victory to Mother Ambe
+She keeps a place for them in Vaikunth, victory to Mother Ambe
+
+## Chorus
+
+Victory to Mother Ambe, my victory to Mother Ambe
+Play, play, O Mother Bhavani, victory, victory to Mother Ambe`,
+  },
+  "rama-rama-rishab-rikhiram-sharma": {
+    title: "Rama Rama",
+    alternate_title: "Rama Rama · Sitar for Mental Health · Diwali 2026",
+    artist_version: "Rishab Rikhiram Sharma",
+    audio_url: "https://www.youtube.com/watch?v=-eQEFtrOpNw",
+    youtube_url: "https://www.youtube.com/watch?v=-eQEFtrOpNw",
+    thumbnail_url: "/images/rama-rama-rishab-rikhiram-sharma.png",
+    cover_url: "/images/rama-rama-rishab-rikhiram-sharma.png",
+    mini_cover_url: "/images/rama-rama-rishab-rikhiram-sharma.png",
+    display_order: 339,
+    category_slugs: ["ram", "diwali", "general", "satsang", "bhajan", "devotion", "hindi"],
+    meaning:
+      "Rishab Rikhiram Sharma’s sitar setting, filmed at Kusum Sarovar for Diwali 2026. Tabla, dholak, flute, and shehnai sit with the sitar. The refrain on this page is the old Shabari call. The further verses, as on the T-Series recording, are credited to Manoj Muntashir and are not printed here.",
+    roman_lyrics: `## Chorus
+
+Rama rama ratte ratte, beeti re umariya
+Raghukul nandan kab aaoge bhilani ki dagariya`,
+    translation: `## Chorus
+
+Chanting Rama Rama, a whole life has gone by
+Joy of Raghu’s line, when will you come along the Bhil woman’s path?`,
+  },
+  "hanuman-chalisa-ramayana": {
+    title: "Hanuman Chalisa",
+    alternate_title: "Shree Hanuman Chalisa · Ramayana",
+    artist_version:
+      "Sukhwinder Singh & Diljit Dosanjh & Mohit Chauhan & Shankar Mahadevan & Kailash Kher",
+    audio_url: "https://www.youtube.com/watch?v=XWAeTGff5jE",
+    youtube_url: "https://www.youtube.com/watch?v=XWAeTGff5jE",
+    thumbnail_url: "/images/hanuman-chalisa-ramayana.png",
+    cover_url: "/images/hanuman-chalisa-ramayana.png",
+    mini_cover_url: "/images/hanuman-chalisa-ramayana.png",
+    display_order: 340,
+    category_slugs: [...HANUMAN_CHALISA_CATEGORY_SLUGS],
+    meaning:
+      "The Ramayana recording of Tulsidas’s Hanuman Chalisa. A.R. Rahman sets the forty chaupais, sung by Sukhwinder Singh, Diljit Dosanjh, Mohit Chauhan, Shankar Mahadevan, and Kailash Kher.",
+    roman_lyrics: HANUMAN_CHALISA_ROMAN,
+    translation: HANUMAN_CHALISA_TRANSLATION,
+  },
+  "radha-ramana-haribol-radhika-das": {
+    title: "Radha Ramana Haribol",
+    alternate_title: "Radha Ramana Hari Bol",
+    artist_version: "Radhika Das",
+    audio_url: "https://www.youtube.com/watch?v=cwWzjdOuM0I",
+    youtube_url: "https://www.youtube.com/watch?v=cwWzjdOuM0I",
+    thumbnail_url: "/images/radha-ramana-haribol-radhika-das.jpg",
+    cover_url: "/images/radha-ramana-haribol-radhika-das.jpg",
+    mini_cover_url: "/images/radha-ramana-haribol-radhika-das.jpg",
+    display_order: 341,
+    category_slugs: ["krishna", "radha", "kirtan", "general", "satsang", "bhajan", "devotion"],
+    meaning:
+      "Radhika Das’s kirtan for Radha and Krishna. The call is to chant Radha Ramana, the beloved of Radha, and pass that name around the circle.",
+  },
+  "aarti-kunj-bihari-ki-hariom-sharad": {
+    title: "Aarti Kunj Bihari Ki",
+    alternate_title: "Shri Girdhar Krishna Murari Ki",
+    artist_version: "Hariom Sharad",
+    audio_url: "https://www.youtube.com/watch?v=bYu-PrJvq6o",
+    youtube_url: "https://www.youtube.com/watch?v=bYu-PrJvq6o",
+    thumbnail_url: "/images/aarti-kunj-bihari-ki-hariom-sharad.jpg",
+    cover_url: "/images/aarti-kunj-bihari-ki-hariom-sharad.jpg",
+    mini_cover_url: "/images/aarti-kunj-bihari-ki-hariom-sharad.jpg",
+    display_order: 342,
+    category_slugs: ["krishna", "radha", "aarti", "general", "satsang", "bhajan", "devotion", "hindi"],
+    meaning:
+      "The traditional aarti of Kunj Bihari, Krishna of the grove. The lamp is offered to the flute, the peacock crown, Radha beside him, and the bank of the Yamuna. Hariom Sharad sings it.",
+    roman_lyrics: `## Opening
+
+Vasudev sutam devam, Kamsa Chanura mardanam
+Devaki paramanandam, Krishnam vande jagadgurum
+
+## Chorus
+
+Aarti Kunj Bihari ki
+Shri Girdhar Krishna Murari ki
+
+## Verse
+
+Gale mein vaijayanti mala
+Bajave murali madhur bala
+Shravan mein kundal jhalakala
+Nand ke nand, Shri Anand kand
+Mohan Brij chandra, Radhika Raman Bihari ki
+
+## Chorus
+
+Shri Girdhar Krishna Murari ki
+Aarti Kunj Bihari ki
+
+## Verse
+
+Gagan sam ang kanti kali
+Radhika chamak rahi aali
+Latan mein thade Banmali
+Bhramar si alak, kasturi tilak, chandra si jhalak
+Lalit chhavi Shyama pyari ki
+
+## Chorus
+
+Shri Girdhar Krishna Murari ki
+Aarti Kunj Bihari ki
+
+## Verse
+
+Kanakmay mor mukut bilse
+Devta darshan ko tarse
+Gagan son suman rasi barse
+Baje murchang, madhur mridang, gwalin sang
+Atul rati Gop kumari ki
+
+## Chorus
+
+Shri Girdhar Krishna Murari ki
+Aarti Kunj Bihari ki
+
+## Verse
+
+Jahan te pragat bhai Ganga
+Kalush kali harini Shri Ganga
+Smaran te hot moh bhanga
+Basi Shiv sheesh, jata ke beech, hare agh keech
+Charan chhavi Shri Banwari ki
+
+## Chorus
+
+Shri Girdhar Krishna Murari ki
+Aarti Kunj Bihari ki
+
+## Verse
+
+Chamakti ujjwal tat renu
+Baj rahi Vrindavan benu
+Chahun disi gopi, gwal, dhenu
+Hansat mridu mand, chandni chand, katat bhav phand
+Ter sun deen bhikhari ki
+
+## Chorus
+
+Shri Girdhar Krishna Murari ki
+Aarti Kunj Bihari ki`,
+    translation: `## Opening
+
+I bow to Krishna, son of Vasudev, who felled Kamsa and Chanura
+Bliss of Devaki, teacher of the world
+
+## Chorus
+
+Aarti of Kunj Bihari
+Of Shri Girdhar, Krishna Murari
+
+## Verse
+
+A garland of wildflowers at his throat
+The young one plays a sweet flute
+Earrings gleam at his ears
+Nanda’s joy, the moon of Braj
+Radha’s beloved, the beautiful one of the grove
+
+## Chorus
+
+Of Shri Girdhar, Krishna Murari
+Aarti of Kunj Bihari
+
+## Verse
+
+A dark radiance like the sky
+Radha shines beside him, dear friend
+Banmali stands among the vines
+Bee-black locks, a musk tilak, a moonlike gleam
+The lovely form of beloved Shyama
+
+## Chorus
+
+Of Shri Girdhar, Krishna Murari
+Aarti of Kunj Bihari
+
+## Verse
+
+A golden peacock crown glitters
+The gods long for a sight of him
+A wealth of flowers rains from the sky
+Jaw’s harp sounds, the mridang is sweet, the gopis are with him
+Matchless love of the cowherd girls
+
+## Chorus
+
+Of Shri Girdhar, Krishna Murari
+Aarti of Kunj Bihari
+
+## Verse
+
+From where the Ganga appeared
+Shri Ganga, who wears away the stain of this age
+Remembrance of her breaks attachment
+She rests on Shiva’s head, in the midst of his locks, and carries off the mire of sin
+The beauty of Shri Banwari’s feet
+
+## Chorus
+
+Of Shri Girdhar, Krishna Murari
+Aarti of Kunj Bihari
+
+## Verse
+
+Bright dust glitters on the bank
+Vrindavan’s flute is sounding
+Gopis, cowherds, and cows on every side
+A soft smile, moonlight, the snare of the world cut through
+The cry of the poor one who asks is heard
+
+## Chorus
+
+Of Shri Girdhar, Krishna Murari
+Aarti of Kunj Bihari`,
   },
 };
 

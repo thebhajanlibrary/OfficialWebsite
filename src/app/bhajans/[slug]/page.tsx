@@ -25,6 +25,7 @@ import {
   trackNumberInAlbum,
 } from "@/lib/albums";
 import { folderForBhajan } from "@/lib/folders";
+import { lyricsNeedPermission } from "@/lib/lyrics-rights";
 import { AutoplayLink } from "@/components/bhajan/AutoplayLink";
 import {
   bhajanPlayHref,
@@ -76,6 +77,9 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
   const videoOnly = /^\[Video only/i.test(current.roman_lyrics.trim());
   const albumTrack = /^\[Album track/i.test(current.roman_lyrics.trim());
   const hideLyrics = videoOnly || albumTrack;
+  const hasLyrics =
+    !hideLyrics && current.roman_lyrics.trim().length > 0;
+  const lyricsPermission = !hasLyrics && lyricsNeedPermission(current.slug);
   const hymnFolder = folderForBhajan(current);
   const album = albumForBhajan(current.slug);
   const albumTrackNo = album
@@ -160,7 +164,7 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
         )}
 
         <div className="flex flex-wrap gap-2 pt-1">
-          {!hideLyrics && (
+          {hasLyrics && (
             <Link
               href={`/bhajans/${current.slug}/sing`}
               className="btn-primary rounded-lg px-4 py-2.5 text-sm font-semibold"
@@ -323,7 +327,7 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
         </div>
       )}
 
-      {!hideLyrics && (
+      {hasLyrics && (
         <section className="space-y-3">
           <h2 className="font-display text-2xl font-semibold text-primary">
             Lyrics
@@ -339,9 +343,15 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
       {current.meaning && (
         <section className="space-y-3">
           <h2 className="font-display text-2xl font-semibold text-primary">
-            {hideLyrics ? "About" : "Meaning"}
+            {!hasLyrics || hideLyrics ? "About" : "Meaning"}
           </h2>
           <p className="leading-relaxed text-muted">{current.meaning}</p>
+          {lyricsPermission && (
+            <p className="leading-relaxed text-muted">
+              These words belong to the writer. They will be added here once
+              permission is in place.
+            </p>
+          )}
         </section>
       )}
 

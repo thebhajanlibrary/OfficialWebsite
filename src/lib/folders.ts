@@ -47,7 +47,7 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     title: "Chutney Style Bhajan",
     description:
       "Indo-Caribbean baithak / chutney-style devotionals for satsang — Ram, Krishna, and more, from different singers. Starts with tracks from Ramdew Chaitoe’s The Star Melodies; more artists will be added.",
-    cover_url: "/images/albums/star-melodies-ramdew-chaitoe.jpg",
+    cover_url: "/images/folders/chutney-style-bhajan/cover.jpg",
     search_aliases: ["chutney", "baithak", "chowtal", "chutney bhajan"],
     member_slugs: [
       "adjie-naath-kaise-arjun-ke-abhie-maan-ramdew-chaitoe",
@@ -66,6 +66,7 @@ export const HYMN_FOLDERS: HymnFolder[] = [
       "chalo-re-sabhi-ram-se-mile-babla-kanchan",
       "bolo-jai-jai-bajrangi-rakesh-yankaran",
       "rako-ladj-hamarie-ramdew-chaitoe",
+      "nahi-chahiye-rang-mahal-dewindersingh-sewnath",
     ],
   },
   {
@@ -107,7 +108,7 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     title: "Garba",
     description:
       "Navratri garba and timli. These stay in this folder and in the Navratri section — they are not everyday satsang bhajans.",
-    cover_url: "/images/fararar-eto-fare-re-kamlesh-barot.jpg",
+    cover_url: "/images/folders/garba/cover.jpg",
     search_aliases: ["garba", "dandiya", "timli", "navratri garba"],
     omit_from_library: true,
     member_slugs: [
@@ -116,6 +117,26 @@ export const HYMN_FOLDERS: HymnFolder[] = [
       "chogada-unplugged-darshan-raval",
       "chogada-darshan-raval",
       "kanudo-zilva-hendyo-geeta-rabari",
+      "gori-tame-manda-lidha-mohi-raj-umesh-barot",
+      "dakla-bandish-projekt",
+      "moti-veraana-osman-mir",
+      "dholida-gangubai-kathiawadi",
+      "mor-bani-thanghat-kare",
+      "radha-ne-shyam-mali-jashe",
+      "vaagyo-re-dhol-hellaro",
+      "garbe-ki-raat-rahul-vaidya",
+      "nagada-sang-dhol-baaje",
+      "shubhaarambh-kai-po-che",
+      "kesariyo-aishwarya-majmudar",
+      "gori-radha-ne-kalo-kaan-kirtidan-gadhvi",
+      "karshan-bhagwan-chalya-aditya-gadhvi",
+      "indhana-vinvaa-gayi-falguni-pathak",
+      "zulan-morali-vagi-re-aditya-gadhvi",
+      "halaji-tara-hath-vakhanu-aditya-gadhvi",
+      "maar-to-mele-ishani-dave",
+      "odhani-made-in-china",
+      "sanedo-made-in-china",
+      "khelo-khelo-re-bhavani-maa-geeta-rabari",
     ],
   },
   {
@@ -145,6 +166,7 @@ export const HYMN_FOLDERS: HymnFolder[] = [
       "om-jai-shiv-shakti-hare-hari-om-sharan",
       "om-jai-jai-mahadev-harry-panday",
       "shiv-bhola-bhandari-he-hari-om-sharan",
+      "aarti-kunj-bihari-ki-hariom-sharad",
     ],
   },
   {
@@ -256,6 +278,11 @@ export function isInstrumentalKaraokeTrack(slug: string): boolean {
 }
 
 /** True when a track should be skipped from library / category Play all & shuffle. */
+/** Recordings that stay in a folder and are left out of All Bhajans. */
+export const EVERYDAY_LIBRARY_SKIP_SLUGS = new Set([
+  "nahi-chahiye-rang-mahal-dewindersingh-sewnath",
+]);
+
 export function isLibraryQueueSkipTrack(slug: string): boolean {
   if (PARTY_MIX_REGULAR_EXCEPTIONS.has(slug)) return false;
   return LIBRARY_QUEUE_SKIP_FOLDERS.some((folderSlug) =>

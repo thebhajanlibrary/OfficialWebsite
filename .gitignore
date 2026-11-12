@@ -34,9 +34,10 @@ yarn-error.log*
 .env*
 !.env.local.example
 
-# large local media (keep files in public/videos and public/audio locally)
-/public/videos/**
-/public/audio/**
+# Local backup copies of recordings. The site files in public/audio and public/videos are deployed.
+/public/audio/**/*.bak.mp3
+/public/videos/**/*.full.mp4
+/public/videos/**/*.web.mp4
 
 # vercel
 .vercel

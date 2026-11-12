@@ -9,6 +9,7 @@ import { getSubmissionCounts } from "@/lib/submissions";
 import { Clock, Inbox, ArrowRight, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = { title: "Admin" };
+export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
   const [bhajans, playlists] = await Promise.all([getBhajans(), getPlaylists()]);

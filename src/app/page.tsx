@@ -1,11 +1,56 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SearchBar } from "@/components/search/SearchBar";
 import { BhajanList } from "@/components/bhajan/BhajanList";
 import { FestivalCelebration } from "@/components/home/FestivalCelebration";
+import { isOmittedFromLibrary } from "@/lib/albums";
+import { getFolder } from "@/lib/folders";
 import { getBhajans, getCategories, getFestivalBhajans } from "@/lib/queries";
 import { getCurrentOrUpcomingFestival, getUpcomingFestivals } from "@/lib/festivals";
 import type { BhajanWithCategories } from "@/lib/types";
-import { BrandMark } from "@/components/layout/BrandMark";
+
+/** Featured folders swap every six hours, and stay put if you refresh in between. */
+const HERO_FOLDERS: { slug: string; note: string; image?: string }[] = [
+  {
+    slug: "hanuman-chalisa",
+    note: "Every version",
+    image: "/images/hanuman-chalisa-lata-mangeshkar.png",
+  },
+  { slug: "chutney-style-bhajan", note: "Baithak devotionals" },
+  { slug: "aarti", note: "Satsang aartis" },
+  { slug: "wedding", note: "Marriage songs" },
+  { slug: "holi", note: "Songs for Phagwah" },
+  { slug: "om-jai-jagdish-hare", note: "Vishnu aarti" },
+  { slug: "om-jai-lakshmi-mata", note: "Lakshmi aarti" },
+  { slug: "o-palanhare", note: "The Lagaan prayer" },
+  { slug: "birthday-songs", note: "Long life and blessings" },
+  { slug: "garba", note: "Navratri garba" },
+];
+
+const HERO_SLOT_MS = 6 * 60 * 60 * 1000;
+
+function featuredFolders(count = 4) {
+  const pool = HERO_FOLDERS.flatMap((entry) => {
+    const folder = getFolder(entry.slug);
+    const image = entry.image ?? folder?.cover_url;
+    if (!folder || !image) return [];
+    return [
+      {
+        href: `/folders/${folder.slug}`,
+        title: folder.title,
+        note: entry.note,
+        image,
+      },
+    ];
+  });
+  if (pool.length === 0) return [];
+  const start = Math.floor(Date.now() / HERO_SLOT_MS) % pool.length;
+  return Array.from({ length: Math.min(count, pool.length) }, (_, i) => {
+    return pool[(start + i) % pool.length]!;
+  });
+}
+
+export const revalidate = 21600;
 
 export default async function HomePage() {
   let recent: Awaited<ReturnType<typeof getBhajans>> = [];
@@ -22,12 +67,10 @@ export default async function HomePage() {
         ReturnType<typeof getCategories>
       >),
     ]);
-    recent = all.slice(0, 8);
+    recent = all.filter((b) => !isOmittedFromLibrary(b.slug)).slice(0, 8);
     bhagwanCount = bhagwan.length;
-    // Only show setup banner when there is truly no local catalogue either
     setupNeeded = all.length === 0;
 
-    // Load featured bhajans for current and upcoming festivals
     const festivalIds = new Set<string>();
     if (currentFestivalInfo) festivalIds.add(currentFestivalInfo.festival.id);
     for (const u of upcomingFestivals) {
@@ -43,89 +86,66 @@ export default async function HomePage() {
     setupNeeded = true;
   }
 
+  const recordings = featuredFolders();
+
   const browse = [
     { href: "/bhajans", label: "All Bhajans", hint: "Full catalogue" },
-    {
-      href: "/chowtal",
-      label: "Chowtal",
-      hint: "Phagwah singing",
-    },
-    {
-      href: "/chutney",
-      label: "Traditional Chutney",
-      hint: "Indo-Caribbean classics",
-    },
-    {
-      href: "/folders/chutney-style-bhajan",
-      label: "Chutney Bhajan",
-      hint: "Baithak devotionals",
-    },
-    {
-      href: "/folders/wedding",
-      label: "Wedding Songs",
-      hint: "Marriage & wedding",
-    },
-    {
-      href: "/folders/hanuman-chalisa",
-      label: "Hanuman Chalisa",
-      hint: "Every version",
-    },
-    {
-      href: "/albums/shree-hanuman-chalisa-hariharan",
-      label: "Shree Hanuman Chalisa",
-      hint: "Hariharan · 1993",
-    },
-    {
-      href: "/albums/lets-play-holi",
-      label: "Let's Play Holi",
-      hint: "Holi remixes",
-    },
-    {
-      href: "/albums/yaad-sangeet-harry-panday",
-      label: "Yaad Sangeet",
-      hint: "Harry Panday",
-    },
-    { href: "/artists", label: "Artists", hint: "By singer" },
+    { href: "/albums", label: "Albums", hint: "Recordings in track order" },
+    { href: "/artists", label: "Artists", hint: "Singers and teachers" },
     {
       href: "/browse/bhagwan",
       label: "By Bhagwan",
-      hint: bhagwanCount ? `${bhagwanCount} deities` : "Browse deities",
+      hint: bhagwanCount ? `${bhagwanCount} deities` : "Browse by deity",
     },
-    {
-      href: "/browse/occasion/birthday",
-      label: "Birthday Songs",
-      hint: "Long life & blessings",
-    },
+    { href: "/browse/occasion", label: "Occasions", hint: "Festival, satsang, and home" },
+    { href: "/calendar", label: "Hindu Calendar", hint: "The dates for this year" },
+    { href: "/chutney", label: "Traditional Chutney", hint: "Indo-Caribbean classics" },
+    { href: "/folders/chutney-style-bhajan", label: "Chutney Bhajan", hint: "Baithak devotionals" },
+    { href: "/chowtal", label: "Chowtal", hint: "Phagwah singing" },
+    { href: "/folders/wedding", label: "Wedding Songs", hint: "Marriage and blessings" },
+    { href: "/folders/hanuman-chalisa", label: "Hanuman Chalisa", hint: "Every version" },
+    { href: "/browse/occasion/birthday", label: "Birthday Songs", hint: "Long life and blessings" },
   ];
 
   return (
     <div className="space-y-16 sm:space-y-20">
-      <section className="relative -mx-4 px-4 pb-2 pt-4 sm:-mx-6 sm:px-6 sm:pb-4 sm:pt-8">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
-          style={{
-            background:
-              "radial-gradient(ellipse 70% 80% at 18% 18%, rgba(196,120,26,0.11), transparent 55%), radial-gradient(ellipse 55% 65% at 92% 8%, rgba(19,32,51,0.08), transparent 50%)",
-          }}
-        />
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="animate-rise flex flex-col items-center">
-            <BrandMark className="mb-5 h-16 w-16 sm:h-20 sm:w-20" />
-            <p className="font-display text-5xl font-semibold leading-[1.05] text-primary sm:text-6xl md:text-7xl">
-              Bhajan Library
-            </p>
-          </div>
-          <p className="animate-rise-delay mx-auto mt-5 max-w-xl text-base text-muted sm:text-lg">
-            Find bhajans for satsang by deity, occasion, or lyric.
+      <section className="grid items-center gap-10 pt-2 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-14 lg:pt-6">
+        <div>
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-accent">
+            Satsang library
           </p>
-          <div className="animate-rise-delay relative z-30 mx-auto mt-8 max-w-2xl text-left">
-            <SearchBar large autofocus />
+          <h1 className="font-display mt-4 max-w-xl text-5xl font-semibold leading-[0.95] text-primary sm:text-6xl lg:text-[4.5rem]">
+            The song for this sitting.
+          </h1>
+          <p className="mt-5 max-w-md text-base leading-relaxed text-muted sm:text-lg">
+            Lyrics and recordings, kept by deity, occasion, and singer.
+          </p>
+          <div className="relative z-30 mt-8 max-w-xl">
+            <SearchBar large />
           </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
+          {recordings.map((item) => (
+            <Link key={item.href} href={item.href} className="group min-w-0">
+              <span className="relative block aspect-square overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_16px_40px_rgba(19,32,51,0.12)]">
+                <Image
+                  src={item.image}
+                  alt=""
+                  fill
+                  sizes="240px"
+                  className="object-cover transition duration-500 group-hover:scale-[1.04]"
+                />
+              </span>
+              <span className="mt-2.5 block truncate font-display text-lg font-semibold text-primary group-hover:text-accent">
+                {item.title}
+              </span>
+              <span className="block truncate text-sm text-muted">{item.note}</span>
+            </Link>
+          ))}
         </div>
       </section>
 
-      {/* Religious Festival Celebration & Featured Songs */}
       {(currentFestivalInfo || upcomingFestivals.length > 0) && (
         <FestivalCelebration
           currentFestivalInfo={currentFestivalInfo}
@@ -148,26 +168,32 @@ export default async function HomePage() {
       )}
 
       <section className="space-y-5">
-        <div>
-          <h2 className="font-display text-3xl font-semibold text-primary">
-            Browse
+        <div className="flex items-end justify-between gap-4">
+          <h2 className="font-display text-3xl font-semibold text-primary sm:text-4xl">
+            The shelves
           </h2>
-          <p className="mt-1 text-muted">Explore the library by collection.</p>
+          <p className="hidden text-sm text-muted sm:block">Twelve ways in.</p>
         </div>
-        <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {browse.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="group bg-surface px-5 py-6 transition hover:bg-accent-soft"
-            >
-              <p className="font-display text-xl font-semibold text-primary transition group-hover:text-accent">
-                {item.label}
-              </p>
-              <p className="mt-1 text-sm text-muted">{item.hint}</p>
-            </Link>
+        <ol className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2">
+          {browse.map((item, index) => (
+            <li key={item.href} className="bg-surface">
+              <Link
+                href={item.href}
+                className="group grid grid-cols-[2.5rem_1fr] items-baseline gap-2 px-5 py-4 transition hover:bg-accent-soft sm:px-6"
+              >
+                <span className="font-display text-lg text-accent">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="min-w-0">
+                  <span className="block font-display text-xl font-semibold text-primary transition group-hover:text-accent">
+                    {item.label}
+                  </span>
+                  <span className="mt-0.5 block text-sm text-muted">{item.hint}</span>
+                </span>
+              </Link>
+            </li>
           ))}
-        </div>
+        </ol>
       </section>
 
       {recent.length > 0 && (

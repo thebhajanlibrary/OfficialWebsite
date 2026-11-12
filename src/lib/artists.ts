@@ -102,6 +102,10 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
     bio: "Devotional singer known for Shiva bhajans including Shambhu Nath.",
     photo_url: "/images/shambhu-nath-agam-v2-square.png",
   },
+  "hariom-sharad": {
+    name: "Hariom Sharad",
+    bio: "Devotional singer. Favourites here include Aarti Kunj Bihari Ki.",
+  },
   "hari-om-sharan": {
     name: "Hari Om Sharan",
     bio: "Beloved bhajan singer (1932–2007) whose sweet, mellow voice shaped satsang singing across India and the diaspora. Known for Pushpanjali, Premanjali, Sumiran, and classic aartis with Nandini Sharan.",
@@ -381,13 +385,81 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
     name: "Kamlesh Barot",
     bio: "Gujarati folk singer known for timli and garba, including Fararar Eto Fare Re.",
   },
+  "radhika-das": {
+    name: "Radhika Das",
+    bio: "Kirtan singer. Favourites here include Radha Ramana Haribol.",
+  },
   "geeta-rabari": {
     name: "Geeta Rabari",
-    bio: "Gujarati folk and garba singer. Favourites here include Mari Mata Na Pagla from Ramzat Mashup.",
+    bio: "Gujarati folk and garba singer. Favourites here include Mari Mata Na Pagla, Khelo Khelo Re Bhavani Maa, and Kanudo Zilva Hendyo.",
   },
   "kinjal-dave": {
     name: "Kinjal Dave",
     bio: "Gujarati singer known for Navratri garba and the Jay Adhyashakti aarti to Ambe Maa.",
+  },
+  "umesh-barot": {
+    name: "Umesh Barot",
+    bio: "Gujarati singer. With Ishani Dave he sings Gori Tame Manda Lidha Mohi Raj from Saiyar Mori Re.",
+  },
+  "ishani-dave": {
+    name: "Ishani Dave",
+    bio: "Gujarati singer. Favourites here include Gori Tame Manda Lidha Mohi Raj and Maar To Mele.",
+  },
+  "osman-mir": {
+    name: "Osman Mir",
+    bio: "Gujarati folk and playback singer. Favourites here include Moti Veraana and Mor Bani Thanghat Kare.",
+  },
+  "aditya-gadhvi": {
+    name: "Aditya Gadhvi",
+    bio: "Gujarati folk singer. Garba favourites here include Karshan Bhagwan Chalya, Zulan Morali Vagi Re, and Halaji Tara Hath Vakhanu.",
+  },
+  "falguni-pathak": {
+    name: "Falguni Pathak",
+    bio: "Singer known for Navratri garba. Favourites here include Indhana Vinvaa Gayi Thi More Saiyan.",
+  },
+  "aishwarya-majmudar": {
+    name: "Aishwarya Majmudar",
+    bio: "Gujarati singer. Favourites here include the garba Kesariyo.",
+  },
+  "kirtidan-gadhvi": {
+    name: "Kirtidan Gadhvi",
+    bio: "Gujarati folk singer. Favourites here include Gori Radha Ne Kalo Kaan from Wrong Side Raju.",
+  },
+  "k-j-yesudas": {
+    name: "K. J. Yesudas",
+    bio: "Indian playback singer. Favourites here include Nahi Chahiye Rang Mahal from College Girl, with Chandrani Mukherjee.",
+  },
+  "chandrani-mukherjee": {
+    name: "Chandrani Mukherjee",
+    bio: "Indian playback singer. With K. J. Yesudas she sings Nahi Chahiye Rang Mahal from College Girl.",
+  },
+  "sukhwinder-singh": {
+    name: "Sukhwinder Singh",
+    bio: "Indian playback singer. He sings the Ramayana recording of the Hanuman Chalisa with Diljit Dosanjh, Mohit Chauhan, Shankar Mahadevan, and Kailash Kher.",
+  },
+  "diljit-dosanjh": {
+    name: "Diljit Dosanjh",
+    bio: "Indian singer. He sings the Ramayana recording of the Hanuman Chalisa with Sukhwinder Singh, Mohit Chauhan, Shankar Mahadevan, and Kailash Kher.",
+  },
+  "mohit-chauhan": {
+    name: "Mohit Chauhan",
+    bio: "Indian playback singer. He sings the Ramayana recording of the Hanuman Chalisa with Sukhwinder Singh, Diljit Dosanjh, Shankar Mahadevan, and Kailash Kher.",
+  },
+  "shankar-mahadevan": {
+    name: "Shankar Mahadevan",
+    bio: "Indian playback singer. He sings the Ramayana recording of the Hanuman Chalisa with Sukhwinder Singh, Diljit Dosanjh, Mohit Chauhan, and Kailash Kher.",
+  },
+  "kailash-kher": {
+    name: "Kailash Kher",
+    bio: "Indian playback singer. He sings the Ramayana recording of the Hanuman Chalisa with Sukhwinder Singh, Diljit Dosanjh, Mohit Chauhan, and Shankar Mahadevan.",
+  },
+  "rishab-rikhiram-sharma": {
+    name: "Rishab Rikhiram Sharma",
+    bio: "Sitarist and singer. Favourites here include the Diwali bhajan Rama Rama, filmed at Kusum Sarovar.",
+  },
+  "dewindersingh-sewnath": {
+    name: "Dewindersingh Sewnath",
+    bio: "Chutney bhajan singer. His February 2024 Nahi Chahiye Rang Mahal is filed under Chutney Bhajan.",
   },
   "bidjwanwatie-chaitoe": {
     name: "Bidjwanwatie Chaitoe",

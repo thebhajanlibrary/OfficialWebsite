@@ -1,4 +1,4 @@
-import { HYMN_FOLDERS } from "@/lib/folders";
+import { EVERYDAY_LIBRARY_SKIP_SLUGS, HYMN_FOLDERS } from "@/lib/folders";
 
 export type Album = {
   slug: string;
@@ -484,6 +484,7 @@ export function countsTowardArtistIndex(bhajanSlug: string): boolean {
 
 /** Specialty album tracks hidden from All Bhajans / library Play all. */
 export function isOmittedFromLibrary(bhajanSlug: string): boolean {
+  if (EVERYDAY_LIBRARY_SKIP_SLUGS.has(bhajanSlug)) return true;
   if (albumForBhajan(bhajanSlug)?.omit_from_library) return true;
   return HYMN_FOLDERS.some(
     (folder) =>

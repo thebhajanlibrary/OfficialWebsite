@@ -8,19 +8,9 @@ import { createPortal } from "react-dom";
 import { logoutAction } from "@/lib/actions";
 import { SearchBar } from "@/components/search/SearchBar";
 import { BrandMark } from "@/components/layout/BrandMark";
+import { LIBRARY_LINKS, NAV_GROUPS, navLinkActive } from "@/lib/nav";
 
-type NavLink = {
-  href: string;
-  label: string;
-};
-
-export function MobileNav({
-  links,
-  loggedIn = false,
-}: {
-  links: NavLink[];
-  loggedIn?: boolean;
-}) {
+export function MobileNav({ loggedIn = false }: { loggedIn?: boolean }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
@@ -46,8 +36,6 @@ export function MobileNav({
       window.removeEventListener("keydown", onKey);
     };
   }, [open]);
-
-  const homeActive = pathname === "/";
 
   const panel =
     mounted && open
@@ -84,24 +72,35 @@ export function MobileNav({
               </div>
 
               <div className="flex-1 overflow-y-auto overscroll-contain px-3 py-3 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
+                {NAV_GROUPS.map((group) => (
+                  <div key={group.title} className="mb-4">
+                    <p className="px-3 pb-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted">
+                      {group.title}
+                    </p>
+                    <ul>
+                      {group.links.map((link) => {
+                        const active = navLinkActive(pathname, link.href);
+                        return (
+                          <li key={link.href}>
+                            <Link
+                              href={link.href}
+                              className={`block rounded-xl px-3 py-2.5 text-base font-medium transition ${
+                                active
+                                  ? "bg-accent-soft text-primary"
+                                  : "text-foreground/80 hover:bg-surface-muted hover:text-primary"
+                              }`}
+                            >
+                              {link.label}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                ))}
                 <ul>
-                  <li>
-                    <Link
-                      href="/"
-                      className={`block rounded-xl px-3 py-2.5 text-base font-medium transition ${
-                        homeActive
-                          ? "bg-accent-soft text-primary"
-                          : "text-foreground/80 hover:bg-surface-muted hover:text-primary"
-                      }`}
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  {links.map((link) => {
-                    const active =
-                      pathname === link.href ||
-                      (link.href !== "/" &&
-                        pathname.startsWith(`${link.href}/`));
+                  {LIBRARY_LINKS.map((link) => {
+                    const active = navLinkActive(pathname, link.href);
                     return (
                       <li key={link.href}>
                         <Link
@@ -109,7 +108,9 @@ export function MobileNav({
                           className={`block rounded-xl px-3 py-2.5 text-base font-medium transition ${
                             active
                               ? "bg-accent-soft text-primary"
-                              : "text-foreground/80 hover:bg-surface-muted hover:text-primary"
+                              : link.href === "/upload"
+                                ? "text-accent hover:bg-accent/10"
+                                : "text-foreground/80 hover:bg-surface-muted hover:text-primary"
                           }`}
                         >
                           {link.label}
@@ -117,16 +118,6 @@ export function MobileNav({
                       </li>
                     );
                   })}
-                  <li>
-                    <Link
-                      href="/upload"
-                      className={`mt-2 flex items-center gap-2 rounded-xl border border-accent/40 bg-accent/10 px-3 py-2.5 text-base font-semibold text-accent transition hover:bg-accent/20 ${
-                        pathname === "/upload" ? "bg-accent text-white" : ""
-                      }`}
-                    >
-                      Upload / Submit Song
-                    </Link>
-                  </li>
                 </ul>
 
                 {loggedIn ? (

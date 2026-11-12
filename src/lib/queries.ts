@@ -335,14 +335,20 @@ export async function getBhajanBySlug(
 export async function getBhajanById(
   id: string
 ): Promise<BhajanWithCategories | null> {
-  const supabase = await createClient();
-  const [{ data, error }, categories] = await Promise.all([
-    supabase.from("bhajans").select(bhajanSelect).eq("id", id).maybeSingle(),
-    getCategories(),
-  ]);
+  try {
+    const supabase = await createClient();
+    const [{ data, error }, categories] = await Promise.all([
+      supabase.from("bhajans").select(bhajanSelect).eq("id", id).maybeSingle(),
+      getCategories(),
+    ]);
 
-  if (error) throw error;
-  return data ? mapBhajan(data as BhajanRow, categoryIndexFrom(categories)) : null;
+    if (error) throw error;
+    return data ? mapBhajan(data as BhajanRow, categoryIndexFrom(categories)) : null;
+  } catch (err) {
+    if (isDynamicServerError(err)) throw err;
+    console.error("getBhajanById:", err);
+    return null;
+  }
 }
 
 export async function getCategories(
@@ -421,6 +427,7 @@ export async function searchBhajans(
   // Search mapped bhajans so local content overrides (artist, lyrics, etc.) are included.
   const all = await getBhajans();
   return all
+    .filter((b) => !isOmittedFromLibrary(b.slug))
     .map((b) => {
       const folder = folderForBhajan(b);
       const score = scoreSearchMatch(
@@ -453,41 +460,53 @@ export async function searchBhajans(
 }
 
 export async function getPlaylists(): Promise<Playlist[]> {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("playlists")
-    .select("*")
-    .order("created_at", { ascending: false });
+  try {
+    const supabase = await createClient();
+    const { data, error } = await supabase
+      .from("playlists")
+      .select("*")
+      .order("created_at", { ascending: false });
 
-  if (error) throw error;
-  return data as Playlist[];
+    if (error) throw error;
+    return data as Playlist[];
+  } catch (err) {
+    if (isDynamicServerError(err)) throw err;
+    console.error("getPlaylists:", err);
+    return [];
+  }
 }
 
 export async function getPlaylistById(
   id: string
 ): Promise<PlaylistWithItems | null> {
-  const supabase = await createClient();
-  const { data: playlist, error } = await supabase
-    .from("playlists")
-    .select("*")
-    .eq("id", id)
-    .maybeSingle();
+  try {
+    const supabase = await createClient();
+    const { data: playlist, error } = await supabase
+      .from("playlists")
+      .select("*")
+      .eq("id", id)
+      .maybeSingle();
 
-  if (error) throw error;
-  if (!playlist) return null;
+    if (error) throw error;
+    if (!playlist) return null;
 
-  const { data: items, error: itemsError } = await supabase
-    .from("playlist_items")
-    .select("*, bhajan:bhajans(*)")
-    .eq("playlist_id", id)
-    .order("position", { ascending: true });
+    const { data: items, error: itemsError } = await supabase
+      .from("playlist_items")
+      .select("*, bhajan:bhajans(*)")
+      .eq("playlist_id", id)
+      .order("position", { ascending: true });
 
-  if (itemsError) throw itemsError;
+    if (itemsError) throw itemsError;
 
-  return {
-    ...(playlist as Playlist),
-    items: (items ?? []) as PlaylistWithItems["items"],
-  };
+    return {
+      ...(playlist as Playlist),
+      items: (items ?? []) as PlaylistWithItems["items"],
+    };
+  } catch (err) {
+    if (isDynamicServerError(err)) throw err;
+    console.error("getPlaylistById:", err);
+    return null;
+  }
 }
 
 export async function getAdjacentBhajans(slug: string): Promise<{
