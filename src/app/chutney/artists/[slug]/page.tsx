@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { ArtistAvatar } from "@/components/artists/ArtistAvatar";
 import { ArtistLiveClips } from "@/components/artists/ArtistLiveClips";
 import {
@@ -193,10 +194,13 @@ export default async function ChutneyArtistPage({ params }: Props) {
         </h2>
         <ul className="divide-y divide-border border-y border-border">
           {rows.map((row) => (
-            <li key={row.key}>
+            <li
+              key={row.key}
+              className="flex items-center gap-3 py-3.5 sm:gap-4 sm:px-2"
+            >
               <Link
                 href={row.href}
-                className="flex items-center gap-3 py-3.5 transition hover:bg-surface-muted/60 sm:gap-4 sm:px-2"
+                className="flex min-w-0 flex-1 items-center gap-3 transition hover:text-accent sm:gap-4"
               >
                 {row.thumbnail_url ? (
                   // eslint-disable-next-line @next/next/no-img-element
@@ -213,6 +217,7 @@ export default async function ChutneyArtistPage({ params }: Props) {
                   ) : null}
                 </span>
               </Link>
+              <ShareSongButton path={row.href} title={row.title} />
             </li>
           ))}
         </ul>

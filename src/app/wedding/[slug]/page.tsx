@@ -10,6 +10,7 @@ import { LyricsView } from "@/components/bhajan/LyricsView";
 
 import { QueueAwarePlayer } from "@/components/bhajan/QueueAwarePlayer";
 
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { ChutneyCredits } from "@/components/chutney/ChutneyCredits";
 
 import {
@@ -181,6 +182,12 @@ export default async function WeddingDetailPage({ params, searchParams }: Props)
             </Link>
 
           )}
+
+          <ShareSongButton
+            variant="button"
+            path={`/wedding/${current.slug}`}
+            title={current.title}
+          />
 
         </div>
 

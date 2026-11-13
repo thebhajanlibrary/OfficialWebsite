@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CollectionQueueActions } from "@/components/bhajan/CollectionQueueActions";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import {
   getCurrentUser,
   getPlaylistById,
@@ -85,7 +86,7 @@ export default async function PlaylistDetailPage({ params }: Props) {
             key={item.id}
             className="rounded-2xl border border-border bg-surface p-4"
           >
-            <div className="flex gap-4">
+            <div className="flex items-center gap-4">
               <span className="font-display text-2xl text-accent">
                 {index + 1}
               </span>
@@ -105,6 +106,10 @@ export default async function PlaylistDetailPage({ params }: Props) {
                   <p className="mt-2 text-sm italic text-accent">{item.notes}</p>
                 )}
               </div>
+              <ShareSongButton
+                path={`/bhajans/${item.bhajan.slug}`}
+                title={item.bhajan.title}
+              />
             </div>
           </li>
         ))}

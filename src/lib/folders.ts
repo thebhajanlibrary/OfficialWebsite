@@ -65,6 +65,7 @@ export const HYMN_FOLDERS: HymnFolder[] = [
       "radha-kanhaiya-babla-kanchan",
       "chalo-re-sabhi-ram-se-mile-babla-kanchan",
       "bolo-jai-jai-bajrangi-rakesh-yankaran",
+      "sona-sona-lagay-rakesh-yankaran",
       "rako-ladj-hamarie-ramdew-chaitoe",
       "nahi-chahiye-rang-mahal-dewindersingh-sewnath",
     ],

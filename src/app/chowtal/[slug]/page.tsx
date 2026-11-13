@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LyricsView } from "@/components/bhajan/LyricsView";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { QueueAwarePlayer } from "@/components/bhajan/QueueAwarePlayer";
 import {
   CHOWTAL_KIND_LABELS,
@@ -82,6 +83,11 @@ export default async function ChowtalDetailPage({ params }: Props) {
               YouTube
             </a>
           )}
+          <ShareSongButton
+            variant="button"
+            path={`/chowtal/${current.slug}`}
+            title={current.title}
+          />
         </div>
       </header>
 

@@ -1,5 +1,6 @@
 import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { RelatedCollections } from "@/components/layout/RelatedCollections";
 import { getChowtalGrouped, getChowtalSorted } from "@/lib/chowtal";
 
@@ -83,16 +84,23 @@ export default function ChowtalIndexPage() {
             </h2>
             <ul className="divide-y divide-border border-y border-border">
               {g.songs.map((song) => (
-                <li key={song.slug}>
+                <li
+                  key={song.slug}
+                  className="flex items-center gap-3 py-3.5 sm:gap-4 sm:px-2"
+                >
                   <Link
                     href={`/chowtal/${song.slug}`}
-                    className="flex flex-col gap-0.5 py-3.5 transition hover:bg-surface-muted/60 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4 sm:px-2"
+                    className="flex min-w-0 flex-1 flex-col gap-0.5 transition hover:text-accent sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
                   >
                     <span className="font-medium text-primary">{song.title}</span>
                     {song.cue && (
                       <span className="shrink-0 text-sm text-muted">{song.cue}</span>
                     )}
                   </Link>
+                  <ShareSongButton
+                    path={`/chowtal/${song.slug}`}
+                    title={song.title}
+                  />
                 </li>
               ))}
             </ul>

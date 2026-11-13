@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ChutneyVersionPlayer } from "@/components/bhajan/ChutneyVersionPlayer";
 import { LyricsView } from "@/components/bhajan/LyricsView";
 import { QueueAwarePlayer } from "@/components/bhajan/QueueAwarePlayer";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { ChutneyCredits } from "@/components/chutney/ChutneyCredits";
 import {
   chutneyPerformerCredit,
@@ -115,6 +116,11 @@ export default async function ChutneyDetailPage({
               YouTube
             </a>
           )}
+          <ShareSongButton
+            variant="button"
+            path={`/chutney/${current.slug}`}
+            title={current.title}
+          />
         </div>
       </header>
 

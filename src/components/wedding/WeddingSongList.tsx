@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import {
   chutneyPerformerCredit,
   chutneyPerformerNames,
@@ -62,6 +63,7 @@ export function WeddingSongList() {
                 )}
               </span>
             </span>
+            <ShareSongButton path={`/wedding/${song.slug}`} title={song.title} />
           </li>
         );
       })}

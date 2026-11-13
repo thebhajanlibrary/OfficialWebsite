@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BhajanAlternateTitle } from "@/components/bhajan/BhajanAlternateTitle";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { SongReadingLayout } from "@/components/bhajan/SongReadingLayout";
 import { CompanionVideo } from "@/components/bhajan/CompanionVideo";
 import { QueueAwarePlayer } from "@/components/bhajan/QueueAwarePlayer";
@@ -256,6 +257,11 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
               YouTube
             </a>
           )}
+          <ShareSongButton
+            variant="button"
+            path={`/bhajans/${current.slug}`}
+            title={current.title}
+          />
         </div>
       </header>
 

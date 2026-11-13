@@ -1,6 +1,7 @@
 import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { BhajanList } from "@/components/bhajan/BhajanList";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { SearchBar } from "@/components/search/SearchBar";
 import { searchChutney, searchWedding, chutneyListingCredit } from "@/lib/chutney";
 import { searchFolders } from "@/lib/folders";
@@ -95,10 +96,13 @@ export default async function SearchPage({ searchParams }: Props) {
               </h2>
               <ul className="divide-y divide-border border-y border-border">
                 {chutneyResults.map((song) => (
-                  <li key={song.slug}>
+                  <li
+                    key={song.slug}
+                    className="flex items-center gap-3 py-3.5 sm:gap-4 sm:px-2"
+                  >
                     <Link
                       href={`/chutney/${song.slug}`}
-                      className="flex items-center gap-3 py-3.5 transition hover:bg-surface-muted/60 sm:gap-4 sm:px-2"
+                      className="flex min-w-0 flex-1 items-center gap-3 transition hover:text-accent sm:gap-4"
                     >
                       {song.thumbnail_url ? (
                         // eslint-disable-next-line @next/next/no-img-element
@@ -117,6 +121,10 @@ export default async function SearchPage({ searchParams }: Props) {
                         </span>
                       </span>
                     </Link>
+                    <ShareSongButton
+                      path={`/chutney/${song.slug}`}
+                      title={song.title}
+                    />
                   </li>
                 ))}
               </ul>
@@ -130,10 +138,13 @@ export default async function SearchPage({ searchParams }: Props) {
               </h2>
               <ul className="divide-y divide-border border-y border-border">
                 {weddingOnly.map((song) => (
-                  <li key={song.slug}>
+                  <li
+                    key={song.slug}
+                    className="flex items-center gap-3 py-3.5 sm:gap-4 sm:px-2"
+                  >
                     <Link
                       href={`/wedding/${song.slug}`}
-                      className="flex flex-col gap-0.5 py-3.5 transition hover:bg-surface-muted/60 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4 sm:px-2"
+                      className="flex min-w-0 flex-1 flex-col gap-0.5 transition hover:text-accent sm:flex-row sm:items-baseline sm:justify-between sm:gap-4"
                     >
                       <span className="font-medium text-primary">
                         {song.title}
@@ -142,6 +153,10 @@ export default async function SearchPage({ searchParams }: Props) {
                         {chutneyListingCredit(song, "Wedding")}
                       </span>
                     </Link>
+                    <ShareSongButton
+                      path={`/wedding/${song.slug}`}
+                      title={song.title}
+                    />
                   </li>
                 ))}
               </ul>

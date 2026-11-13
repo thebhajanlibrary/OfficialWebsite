@@ -20184,6 +20184,52 @@ Brahma, Vishnu, and eternal Shiva
 Hara, Hara, great God
 Victory, Hara Hara, great God`,
   },
+  "suna-suna-lage-brij-ka-dham-mohammed-rafi": {
+    title: "Suna Suna Lage Brij Ka Dham",
+    alternate_title: "Gokul Ko Chhod Chale Re Ghansham · Neelmani",
+    artist_version: "Mohammed Rafi",
+    audio_url: "https://www.youtube.com/watch?v=vHZVBGr6ncw",
+    youtube_url: "https://www.youtube.com/watch?v=vHZVBGr6ncw",
+    thumbnail_url: "/images/suna-suna-lage-brij-ka-dham-mohammed-rafi.jpg",
+    cover_url: "/images/suna-suna-lage-brij-ka-dham-mohammed-rafi.jpg",
+    mini_cover_url: "/images/suna-suna-lage-brij-ka-dham-mohammed-rafi.jpg",
+    display_order: 349,
+    category_slugs: [
+      "krishna",
+      "janmashtami",
+      "general",
+      "satsang",
+      "bhajan",
+      "devotion",
+      "hindi",
+    ],
+    meaning:
+      "Mohammed Rafi in the film Neelmani. After Kanha leaves Gokul for Mathura, Brij feels empty: the river, the kadam shade, the cows, and Radha are left calling him back.",
+    roman_lyrics: "",
+  },
+  "sona-sona-lagay-rakesh-yankaran": {
+    title: "Sona Sona Lagay",
+    alternate_title: "Suna Suna Lage Brij Ka Dham · Gokul Ko Chhod",
+    artist_version: "Rakesh Yankaran",
+    audio_url: "https://www.youtube.com/watch?v=FYEpesgnv7I",
+    youtube_url: "https://www.youtube.com/watch?v=FYEpesgnv7I",
+    thumbnail_url: "/images/sona-sona-lagay-rakesh-yankaran.jpg",
+    cover_url: "/images/sona-sona-lagay-rakesh-yankaran.jpg",
+    mini_cover_url: "/images/sona-sona-lagay-rakesh-yankaran.jpg",
+    display_order: 350,
+    category_slugs: [
+      "krishna",
+      "janmashtami",
+      "general",
+      "satsang",
+      "bhajan",
+      "devotion",
+      "hindi",
+    ],
+    meaning:
+      "Rakesh Yankaran’s chutney-style version of Suna Suna Lage Brij Ka Dham, the same song Mohammed Rafi sings in Neelmani. Brij feels empty after Kanha leaves Gokul for Mathura.",
+    roman_lyrics: "",
+  },
 };
 
 

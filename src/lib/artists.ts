@@ -196,7 +196,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "rakesh-yankaran": {
     name: "Rakesh Yankaran",
-    bio: "Trinidadian chutney and chutney-bhajan singer of the Yankaran family — Hanuman and Ram devotionals for satsang.",
+    bio: "Trinidadian chutney and chutney-bhajan singer of the Yankaran family — Hanuman, Ram, and Krishna devotionals for satsang, including Sona Sona Lagay and Jai Jai Bajrangi.",
     photo_url: "/images/rakesh-yankaran.png",
   },
   unknown: {
@@ -276,7 +276,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "mohammed-rafi": {
     name: "Mohammed Rafi",
-    bio: "Legendary Indian playback singer (1924–1980). Favourites here include Baar Baar Din Yeh Aaye, O Nanhe Se Farishte, and Jai Raghunandan Jai Siyaram (with Asha Bhosle).",
+    bio: "Legendary Indian playback singer (1924–1980). Favourites here include Suna Suna Lage Brij Ka Dham (Neelmani), Baar Baar Din Yeh Aaye, O Nanhe Se Farishte, and Jai Raghunandan Jai Siyaram (with Asha Bhosle).",
     photo_url: "/images/mohammed-rafi-mid.png",
   },
   "manna-dey": {

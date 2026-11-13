@@ -1,6 +1,7 @@
 import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { getAlbums } from "@/lib/queries";
 
 export const metadata = pageMeta({
@@ -66,17 +67,22 @@ export default async function AlbumsPage() {
                     {tracks.map((track, i) => (
                       <li
                         key={track.id}
-                        className="flex break-inside-avoid items-baseline gap-2 py-1"
+                        className="flex break-inside-avoid items-center gap-2 py-1"
                       >
                         <span className="w-4 shrink-0 text-xs tabular-nums text-muted">
                           {i + 1}
                         </span>
                         <Link
                           href={`/bhajans/${track.slug}`}
-                          className="min-w-0 truncate text-sm text-foreground transition hover:text-accent"
+                          className="min-w-0 flex-1 truncate text-sm text-foreground transition hover:text-accent"
                         >
                           {track.title}
                         </Link>
+                        <ShareSongButton
+                          size="sm"
+                          path={`/bhajans/${track.slug}`}
+                          title={track.title}
+                        />
                       </li>
                     ))}
                   </ol>

@@ -8,6 +8,7 @@ import {
   isBhajanPartyMixTrack,
   isInstrumentalKaraokeTrack,
 } from "@/lib/folders";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { bhajanPlayHref, type PlayQueueRef } from "@/lib/play-queue";
 
 type Props = {
@@ -124,13 +125,16 @@ export function BhajanCard({ bhajan, playQueue = null }: Props) {
           )}
         </div>
       </div>
-      <Link
-        href={href}
-        className="mt-1 shrink-0 text-muted opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100"
-        aria-label={`Open ${bhajan.title}`}
-      >
-        →
-      </Link>
+      <div className="mt-1 flex shrink-0 items-center gap-1">
+        <ShareSongButton path={`/bhajans/${bhajan.slug}`} title={bhajan.title} />
+        <Link
+          href={href}
+          className="shrink-0 px-1 text-muted opacity-0 transition group-hover:translate-x-0.5 group-hover:opacity-100"
+          aria-label={`Open ${bhajan.title}`}
+        >
+          →
+        </Link>
+      </div>
     </div>
   );
 }

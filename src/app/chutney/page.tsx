@@ -1,5 +1,6 @@
 import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { RelatedCollections } from "@/components/layout/RelatedCollections";
 import {
   chutneyArtistSlug,
@@ -107,6 +108,10 @@ export default function ChutneyIndexPage() {
                   <span className="shrink-0 text-sm text-muted">{song.cue}</span>
                 )}
               </span>
+              <ShareSongButton
+                path={`/chutney/${song.slug}`}
+                title={song.title}
+              />
             </li>
           );
         })}

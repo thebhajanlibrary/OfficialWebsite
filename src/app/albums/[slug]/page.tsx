@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CollectionQueueActions } from "@/components/bhajan/CollectionQueueActions";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { RelatedCollections } from "@/components/layout/RelatedCollections";
 import { getAlbumWithTracks, resolvePlayQueueTracks } from "@/lib/queries";
 import { getAlbum } from "@/lib/albums";
@@ -319,7 +320,7 @@ export default async function AlbumDetailPage({ params }: Props) {
               return (
                 <li
                   key={track.id}
-                  className="flex items-baseline gap-3 border-b border-border/80 py-3 transition hover:bg-surface/80"
+                  className="flex items-center gap-3 border-b border-border/80 py-3 transition hover:bg-surface/80"
                 >
                   <span className="w-5 shrink-0 text-sm tabular-nums text-muted">
                     {i + 1}
@@ -342,6 +343,10 @@ export default async function AlbumDetailPage({ params }: Props) {
                       </p>
                     )}
                   </div>
+                  <ShareSongButton
+                    path={`/bhajans/${track.slug}`}
+                    title={track.title}
+                  />
                   <Link
                     href={href}
                     className="shrink-0 text-muted"
