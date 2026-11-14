@@ -20,6 +20,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { href: "/folders/chutney-style-bhajan", label: "Chutney Bhajan" },
       { href: "/chowtal", label: "Chowtal" },
       { href: "/folders/wedding", label: "Wedding" },
+      { href: "/folders/mantras", label: "Mantras" },
       { href: "/browse/occasion", label: "Occasions" },
       { href: "/browse/bhagwan", label: "By Bhagwan" },
       { href: "/calendar", label: "Calendar" },

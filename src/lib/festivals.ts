@@ -131,6 +131,8 @@ export const FESTIVALS: Festival[] = [
       accentText: "text-orange-600 dark:text-orange-400",
     },
     featuredSongSlugs: [
+      "ekadantaya-vakratundaya-after-remix",
+      "vakratunda-mahakaya-anup-jalota",
       "jai-ganesh-harry-panday",
       "jai-jai-ganapati-rajin-balgobind",
       "gaiye-ganapati-jagvandan-jagjit-singh",

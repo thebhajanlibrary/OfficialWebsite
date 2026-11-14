@@ -73,11 +73,18 @@ export function SongReadingLayout({
             <p className="max-w-2xl leading-relaxed text-muted">{meaning}</p>
             {permissionNote && (
               <p className="max-w-2xl leading-relaxed text-muted">
-                These words belong to the writer. They will be added here once
-                permission is in place.
+                This recording stays in the library. The words were written for
+                a film, so the lyric sheet appears here once an authorised text
+                is added.
               </p>
             )}
           </section>
+        ) : permissionNote ? (
+          <p className="max-w-2xl leading-relaxed text-muted">
+            This recording stays in the library. The words were written for a
+            film, so the lyric sheet appears here once an authorised text is
+            added.
+          </p>
         ) : null}
 
         {!reading && extra}

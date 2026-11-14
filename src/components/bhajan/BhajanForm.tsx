@@ -164,12 +164,11 @@ export function BhajanForm({ categories, initial, action }: Props) {
       <section className="space-y-4 rounded-2xl border border-border bg-surface p-4 sm:p-6">
         <h2 className="font-display text-xl text-primary">Lyrics & meaning</h2>
         <Field
-          label="Romanised lyrics *"
-          hint="One singing line per row. Blank lines separate verses."
+          label="Romanised lyrics"
+          hint="Optional. Add these when the words are traditional, public domain, or you have permission to publish them. A film-original lyric sheet can stay blank: the recording and the player still save. One singing line per row."
         >
           <textarea
             name="roman_lyrics"
-            required
             className={textareaClass}
             defaultValue={initial?.roman_lyrics ?? ""}
           />

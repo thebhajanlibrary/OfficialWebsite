@@ -1,8 +1,10 @@
 /**
- * Songs whose words are a living writer's, so the page waits for permission.
- * Shared hymns already in the library (Hanuman Chalisa, old aartis) are not listed.
+ * A film recording is still listed, with its player and details.
+ * Only a film-original lyric sheet waits for an authorised text.
+ * Traditional and public-domain hymns are not listed here, even when a
+ * film or a living singer has recorded them.
  */
-const LYRICS_PERMISSION_SLUGS = new Set([
+const FILM_ORIGINAL_LYRIC_SLUGS = new Set([
   "gori-tame-manda-lidha-mohi-raj-umesh-barot",
   "dakla-bandish-projekt",
   "moti-veraana-osman-mir",
@@ -22,8 +24,16 @@ const LYRICS_PERMISSION_SLUGS = new Set([
   "maar-to-mele-ishani-dave",
   "odhani-made-in-china",
   "sanedo-made-in-china",
+  "suna-suna-lage-brij-ka-dham-mohammed-rafi",
+  "sona-sona-lagay-rakesh-yankaran",
+  "setum-bandhya-ramayana",
 ]);
 
+export function filmOriginalLyrics(slug: string): boolean {
+  return FILM_ORIGINAL_LYRIC_SLUGS.has(slug);
+}
+
+/** True when the public page should wait for an authorised lyric text. */
 export function lyricsNeedPermission(slug: string): boolean {
-  return LYRICS_PERMISSION_SLUGS.has(slug);
+  return filmOriginalLyrics(slug);
 }

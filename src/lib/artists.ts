@@ -96,7 +96,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "anup-jalota": {
     name: "Anup Jalota",
-    bio: "The Bhajan Samrat — legendary Indian ghazal and bhajan singer whose Shiva and Krishna devotionals are staples of satsang across the diaspora.",
+    bio: "The Bhajan Samrat — legendary Indian ghazal and bhajan singer. Favourites here include Vakratunda Mahakaya and his Shiva and Krishna devotionals.",
     photo_url: "/images/anup-jalota.png",
   },
   "agam-aggarwal": {
@@ -473,6 +473,14 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
     name: "Dewindersingh Sewnath",
     photo_url: "/images/dewindersingh-sewnath.jpg",
     bio: "Chutney bhajan singer. His February 2024 Nahi Chahiye Rang Mahal is filed under Chutney Bhajan.",
+  },
+  "ramayana-the-legend-of-prince-rama": {
+    name: "Ramayana: The Legend of Prince Rama",
+    bio: "The 1992 animated film. Setum Bandhya is the vanara song as the bridge to Lanka is built.",
+  },
+  "after-remix": {
+    name: "After Remix",
+    bio: "Lofi bhajan channel. Ekadantaya Vakratundaya, a traditional Ganesh mantra, is in the Mantras folder.",
   },
   "bidjwanwatie-chaitoe": {
     name: "Bidjwanwatie Chaitoe",

@@ -1,34 +1,83 @@
+
 ---
-description: Full line-by-line English translation when adding bhajans to bhajan-content.ts
+description: Bhajan lyrics, copyright classification and line-by-line English translation
 globs: src/lib/bhajan-content.ts
 alwaysApply: false
 ---
 
-# Bhajan lyrics translation
+# Bhajan Library: Lyrics and Translations
 
-When adding or editing a song in `src/lib/bhajan-content.ts`, the `translation` field must mirror `roman_lyrics` **line for line**.
+This project is a Hindu devotional music and lyrics library.
 
-## Rules
+Its purpose is to help users discover, read, understand and sing bhajans, aartis, mantras, stotras, Garba songs and other devotional compositions.
 
-- **One English line per roman line** — same count, same order, same section headings (`## Chorus`, `## Verse 1`, etc.).
-- **Repeat every repeated line** — chorus refrains, doubled couplets, and `Oho …` echo lines must each get their own translation line, even when identical to a line above.
-- **Do not summarize or merge** — never collapse a chorus to two lines when the roman block has four.
-- **Blank lines** — match blank lines between roman stanzas in the translation.
+## 1. Lyrics and copyright
 
-## Example
+- Do not automatically classify a devotional song as copyrighted solely because it appears in a Bollywood film.
+- Distinguish traditional devotional compositions from newly written film lyrics.
+- Traditional and public-domain lyrics can remain public domain even when performed by contemporary artists.
+- A modern recording, arrangement or adaptation may have separate copyright protection.
+- Religious subject matter does not automatically make lyrics public domain.
+- Where the project owner has appropriate permission or a valid licence, support adding the authorised lyrics.
+- Do not assume a YouTube embed grants permission to reproduce lyrics separately.
+- Do not invent lyrics or present unverified text as authentic.
 
-```text
+When copyright status is uncertain:
+1. Identify whether the underlying composition is traditional or modern.
+2. Check the available evidence and permissions.
+3. Explain the specific uncertainty rather than rejecting the entire song.
+4. Continue implementing song metadata, categories, playback and other functionality.
+5. Allow the administrator to supply authorised lyrics through the site's content management workflow.
+
+Do not treat all Bollywood devotional songs as a single copyright category.
+
+## 2. Lyrics formatting
+
+When adding or editing a song in
+`src/lib/bhajan-content.ts`, preserve the existing content structure.
+
+- Preserve the original lyrics accurately.
+- Maintain the established Roman transliteration format.
+- Preserve chorus and verse headings.
+- Maintain repeated lines.
+- Preserve stanza breaks.
+- Do not invent missing verses.
+
+## 3. English translation
+
+The `translation` field must mirror `roman_lyrics`
+line for line.
+
+### Rules
+
+- One English line per Roman line.
+- Same line count and order.
+- Same section headings (`## Chorus`, `## Verse 1`, etc.).
+- Repeat every repeated line, including chorus refrains and echo lines.
+- Never summarise or merge lines.
+- Match blank lines between stanzas.
+- Preserve the devotional meaning and cultural context.
+- Use clear, natural British English.
+
+### Example
+
 roman_lyrics:
 Aisi lagi lagan, Meera ho gayi magan
 Woh to gali-gali Hari gun gaane lagi
 Aisi lagi lagan, Meera ho gayi magan
 
 translation:
-Such was the attachment — Meera became lost in bliss
+Such was the attachment, Meera became lost in bliss
 She began singing Hari's glories through every lane
-Such was the attachment — Meera became lost in bliss
-```
+Such was the attachment, Meera became lost in bliss
 
-## Check before finishing
+## 4. Before finishing
 
-Count non-empty lines in `roman_lyrics` and `translation` (excluding `##` headings); they should match.
+- Confirm the lyrics are authorised or public domain.
+- Verify the lyrics against available reliable sources.
+- Count non-empty lines in `roman_lyrics` and `translation`, excluding section headings.
+- Both counts must match.
+- Ensure repeated lines are translated individually.
+- Ensure the existing website functionality is preserved.
+- If lyrics cannot be supplied, retain the song entry and provide an administrator workflow for adding authorised text.
+ 

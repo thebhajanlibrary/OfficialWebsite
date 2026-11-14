@@ -15,7 +15,8 @@ export default async function NewBhajanPage() {
           Add bhajan
         </h1>
         <p className="mt-1 text-muted">
-          Add in any order — categories organise it automatically.
+          The recording can be saved without a lyric sheet. Add traditional,
+          public-domain, or authorised words when you have them.
         </p>
       </div>
       <BhajanForm categories={categories} action={saveBhajanAction} />

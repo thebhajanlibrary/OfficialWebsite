@@ -412,7 +412,8 @@ export function SubmitSongForm({ categories }: Props) {
               4. Lyrics &amp; English Translation
             </h3>
             <p className="text-xs text-muted">
-              Add Roman / English lyrics and optional line-by-line translation
+              Add traditional or public-domain words, or words you have
+              permission to share. A film-original lyric sheet can be left blank.
             </p>
           </div>
         </div>

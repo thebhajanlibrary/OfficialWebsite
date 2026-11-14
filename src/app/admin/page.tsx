@@ -4,6 +4,7 @@ import {
   deleteBhajanAction,
   deletePlaylistAction,
 } from "@/lib/actions";
+import { filmOriginalLyrics } from "@/lib/lyrics-rights";
 import { getBhajans, getPlaylists } from "@/lib/queries";
 import { getSubmissionCounts } from "@/lib/submissions";
 import { Clock, Inbox, ArrowRight, Sparkles } from "lucide-react";

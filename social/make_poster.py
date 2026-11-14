@@ -72,7 +72,15 @@ def main():
     d.text(xy(380, 684), "Roman, Hindi, English", font=font(sans, 24), fill=MUTED, anchor="ls")
     d.text(xy(48, 800), "Browse", font=font(serif, 40), fill=IVORY, anchor="ls")
     d.text(xy(48, 848), "deity, occasion, artist, or folder", font=font(sans, 24), fill=MUTED, anchor="ls")
-    d.text(xy(48, 928), "New songs join the same shelves.", font=font(serif, 28), fill=CREAM, anchor="ls")
+    d.text(xy(48, 900), "New songs join the same shelves.", font=font(serif, 28), fill=CREAM, anchor="ls")
+    d.text(xy(48, 956), "TikTok  @thebhajanlibrary", font=font(sans, 22), fill=IVORY, anchor="ls")
+    d.text(
+        xy(48, 990),
+        "Instagram  @bhajanlibrary    Facebook",
+        font=font(sans, 22),
+        fill=IVORY,
+        anchor="ls",
+    )
 
     img.save(OUT, quality=95)
     print(OUT)

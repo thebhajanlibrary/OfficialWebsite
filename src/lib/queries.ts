@@ -70,6 +70,20 @@ function isDynamicServerError(err: unknown): boolean {
   );
 }
 
+function filledText(value: string | null | undefined): string | null {
+  const text = value?.trim() ?? "";
+  return text ? text : null;
+}
+
+/** File lyrics win when they exist. A blank file leaves room for an authorised text saved by an admin. */
+function preferLyrics(
+  fromFile: string | null | undefined,
+  fromDatabase: string | null | undefined,
+  fallback: string | null = null
+): string | null {
+  return filledText(fromFile) ?? filledText(fromDatabase) ?? fallback;
+}
+
 function mapBhajan(
   row: BhajanRow,
   categoryIndex?: Map<string, Category>
@@ -107,10 +121,14 @@ function mapBhajan(
     alternate_title: content.alternate_title ?? bhajan.alternate_title,
     audio_url: content.audio_url ?? bhajan.audio_url,
     artist_version: content.artist_version ?? bhajan.artist_version,
-    roman_lyrics: content.roman_lyrics ?? bhajan.roman_lyrics,
-    devanagari_lyrics: content.devanagari_lyrics ?? bhajan.devanagari_lyrics,
-    translation: content.translation ?? bhajan.translation,
-    meaning: content.meaning ?? bhajan.meaning,
+    roman_lyrics:
+      preferLyrics(content.roman_lyrics, bhajan.roman_lyrics, "") ?? "",
+    devanagari_lyrics: preferLyrics(
+      content.devanagari_lyrics,
+      bhajan.devanagari_lyrics
+    ),
+    translation: preferLyrics(content.translation, bhajan.translation),
+    meaning: preferLyrics(content.meaning, bhajan.meaning),
     display_order: content.display_order ?? bhajan.display_order,
     thumbnail_url: assetUrl(content.thumbnail_url ?? null),
     cover_url: assetUrl(content.cover_url ?? null),

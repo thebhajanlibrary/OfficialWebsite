@@ -2507,7 +2507,7 @@ I worship the lotus feet of Shri Raghunandan.`,
   },
   "munni-munni": {
     title: "Munni Munni",
-    alternate_title: "Muni Muni · Kali Yatra · Munni Munni Maiya Maiya",
+    alternate_title: "Muni Muni Re Amma · Kali Yatra · Mariamma",
     artist_version: "Taran Terence Sookbir",
     audio_url: "/audio/folders/bhajan-party-mix/munni-munni.mp3",
     thumbnail_url: "/images/munni-munni.png",
@@ -2524,66 +2524,381 @@ I worship the lotus feet of Shri Raghunandan.`,
       "hindi",
     ],
     meaning:
-      "Regular Kali bhajan by Taran Terence Sookbir (Kali Yatra / Munni Munni EP). Opens with the Jayanti Mangala Kali mantra, then the Munni Munni Maiya chorus and jai calls to Kali / Mahakali. Also listed in Bhajan Party Mix — not a remix. Lyrics drafted from the recording (no published sheet online).",
-    roman_lyrics: `## Opening (mantra)
+      "Taran Terence Sookbir's Kali Yatra. The Jayanti Mangala Kali sloka opens it, then the Muni Muni call to Mariamma and Kali, and a round of jai for Ganesh, Dharti, Surya, Krishna, Ram, Hanuman, the Nag Devata, Shiva, Ganga, Lakshmi, Sarasvati, Durga, Mahakali, Kateri Ma, Sangani Baba, Dih Baba, Munishvara, and Kal Bhairav.",
+    roman_lyrics: `## Sloka
 
-Jayanti Mangala Kali
-Bhadrakali Kapalini
-Durga Kshama Shiva Dhatri
-Swaha Swadha Namostute
-Namah Devi
+Jayanti Mangala Kali, Bhadrakali Kapalini,
+Durga Shama Shivadatri Swaha Swadha Namostute Namah,
+Devi.....
 
 ## Chorus
 
-Munni Munni Maiya Maiya
-Munni Munni Maiya Maiya
-Munni Munni Maiya Maiya
-Munni Munni Maiya Maiya
+Muni Muni Re Amma Mariamma Re
+Muni Muni Re Amma Devi Amma Ye Amma Kali Amma
+O Amma Mariamma Re Amma Devi Amma (2)
+O Amma Kali Amma Re Amma Devi Amma Ye
+Muni Muni Re Amma Muni Muni,
+Muni Muni Re Amma Devi Amma Ye Amma Kali Amma
+O Amma Mariamma Re Amma Devi Amma,
+O Amma Kali Amma Re Amma Devi Amma Ye
+O Amma Kali Bhadrakali,
+Jayantikali, Mangalakali,
+Sabko Kali Re Amma Devi Amma,
 
-## Verse / call
+O Amma Mariamma Re Amma Devi Amma (2)
+O Amma Kali Amma Re Amma Devi Amma Re
 
-Kali Bhadrakali Kapalini
-Durga Kshama Shiva Dhatri Kapalini
-Kali Bhadrakali Kapalini
-Durga Kshama Shiva Dhatri Kapalini
+## Ganesh
 
-## Jai
+Jai Jai Ganesh Bhagavan (2)
+Ganesh Bhagavan Jai Jai Ganesh Bhagavan (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
 
-Jai jai Dhatri Mata
-Jai jai Dhatri Mata
-Jai jai Mahakali Maiya
-Jai jai Mahakali Maiya
+## Dharti Mata
+
+Jai Jai Dharti Mata (2)
+Dharti Mata Jai Jai Dharti Mata
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Surya
+
+Jai Jai Surya Bhagavan (2)
+Surya Bhagavan Jai Jai Surya Bhagavan
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Krishna
+
+Jai Jai Krishna Bhagavan (2)
+Krishna Bhagavan Jai Jai Krishna Bhagavan (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Ram
+
+Jai Jai Ram Bhagavan (2)
+Ram Bhagavan Jai Jai Ram Bhagavan (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Hanuman
+
+Jai Jai Hanuman Baba (2)
+Hanuman Baba Jai Jai Hanuman Baba (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Nag Devata
+
+Jai Jai Nag Devata (2)
+Nag Devata Jai Jai Nag Devata (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Shiva
+
+Jai Jai Shiva Bhagavan (2)
+Shiva Bhagavan Jai Jai Shiva Bhagavan (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Ganga Mata
+
+Jai Jai Ganga Mata (2)
+Ganga Mata Jai Jai Ganga Mata (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Lakshmi Mata
+
+Jai Jai Lakshmi Mata (2)
+Lakshmi Mata Jai Jai Lakshmi Mata (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Sarasvati
+
+Jai Jai Sarasvati Ma (2)
+Sarasvati Ma Jai Jai Sarasvati Ma (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Durga Mata
+
+Jai Jai Durga Mata (2)
+Durga Mata Jai Jai Durga Mata
+Havanya Ma Amma Bhavani Mama,
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Re
 
 ## Chorus
 
-Munni Munni Maiya Maiya
-Munni Munni Maiya Maiya`,
-    translation: `## Opening (mantra)
+Muni Muni Re Muni Muni
+Muni Muni Re Amma Devi Amma Ye
+Amma Kali Amma O Amma Mariamma Re Amma Devi Amma,
+O Amma Kali Amma Re Amma Devi Amma Ye
 
-Victory to auspicious Kali
-Bhadrakali, the skull-bearer
-Durga, forgiveness, Shiva’s consort, the sustainer
-Swaha, Swadha — salutations to you
-Salutations, O Devi
+## Kali
+
+Jai Jai Ma Kali Ma
+Jai Jai Mahakali Ma
+Ma Kali Ma Jai Jai Mahakali Ma (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Re
+
+## Kateri Ma
+
+Jai Jai Kateri Ma (2)
+Kateri Ma Jai Jai Kateri Ma (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Sangani Baba
+
+Jai Jai Sangani Baba (2)
+Sangani Baba Jai Jai Sangani Baba (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Di Baba
+
+Jai Jai Di Baba (2)
+Di Baba Jai Jai Di Baba (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Munishvara
+
+Jai Jai Munishvara (2)
+Munishvara Jai Jai Munishvara (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Ye
+
+## Kal Bhairav
+
+Jai Jai Kal Bhairo Baba
+Jai Jai Kal Bhairo
+Kal Bhairo Baba Jai Jai Kal Bhairo (2)
+Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Re
+Muni Muni Re! Muni Muni!
+Muni Muni Re Amma Devi Amma Re Amma Kali Amma
+O Amma Mariamma Re Amma Devi Amma
+O Amma Kali Amma Re Amma Devi Amma Re
+
+## Close
+
+O Amma Kali Bhadrakali,
+Jayantikali, Mangalakali,
+Sabko Kali Re Amma Devi Amma,
+O Amma Mariamma Re Amma Devi Amma`,
+    translation: `## Sloka
+
+O victorious, auspicious Kali, Bhadrakali, skull-bearer,
+Durga, the peaceful, giver of the auspicious, Swaha, Swadha, salutations to you, salutations,
+O Goddess.....
 
 ## Chorus
 
-Munni Munni, Mother, Mother
-(affectionate call to Mother Kali)
+Muni, Muni, O Mother Mariamma
+Muni, Muni, O Mother, Goddess Mother, O Mother Kali
+O Mother Mariamma, O Goddess Mother (2)
+O Mother Kali, O Goddess Mother
+Muni, Muni, O Mother, Muni, Muni,
+Muni, Muni, O Mother, Goddess Mother, O Mother Kali
+O Mother Mariamma, O Goddess Mother,
+O Mother Kali, O Goddess Mother
+O Mother Kali, Bhadrakali,
+Victorious Kali, auspicious Kali,
+Kali for every one of us, O Goddess Mother,
 
-## Verse / call
+O Mother Mariamma, O Goddess Mother (2)
+O Mother Kali, O Goddess Mother
 
-Kali, Bhadrakali, Kapalini
-Durga, forgiveness, Shiva’s consort, Kapalini
+## Ganesh
 
-## Jai
+Victory, victory to Lord Ganesh (2)
+Lord Ganesh, victory, victory to Lord Ganesh (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
 
-Victory, victory to Mother Dhatri
-Victory, victory to Mother Mahakali
+## Dharti Mata
+
+Victory, victory to Mother Earth (2)
+Mother Earth, victory, victory to Mother Earth
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Surya
+
+Victory, victory to Lord Surya (2)
+Lord Surya, victory, victory to Lord Surya
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Krishna
+
+Victory, victory to Lord Krishna (2)
+Lord Krishna, victory, victory to Lord Krishna (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Ram
+
+Victory, victory to Lord Ram (2)
+Lord Ram, victory, victory to Lord Ram (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Hanuman
+
+Victory, victory to Baba Hanuman (2)
+Baba Hanuman, victory, victory to Baba Hanuman (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Nag Devata
+
+Victory, victory to the serpent deity (2)
+Serpent deity, victory, victory to the serpent deity (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Shiva
+
+Victory, victory to Lord Shiva (2)
+Lord Shiva, victory, victory to Lord Shiva (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Ganga Mata
+
+Victory, victory to Mother Ganga (2)
+Mother Ganga, victory, victory to Mother Ganga (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Lakshmi Mata
+
+Victory, victory to Mother Lakshmi (2)
+Mother Lakshmi, victory, victory to Mother Lakshmi (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Sarasvati
+
+Victory, victory to Mother Sarasvati (2)
+Mother Sarasvati, victory, victory to Mother Sarasvati (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Durga Mata
+
+Victory, victory to Mother Durga (2)
+Mother Durga, victory, victory to Mother Durga
+O Mother Havanya, Mother Bhavani, Mother,
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
 
 ## Chorus
 
-Munni Munni, Mother, Mother`,
+Muni, Muni, Muni, Muni
+Muni, Muni, O Mother, Goddess Mother
+Mother Kali, O Mother Mariamma, O Goddess Mother,
+O Mother Kali, O Goddess Mother
+
+## Kali
+
+Victory, victory, Mother Kali, Mother
+Victory, victory, Mother Mahakali, Mother
+Mother Kali, Mother, victory, victory, Mother Mahakali (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Kateri Ma
+
+Victory, victory to Mother Kateri (2)
+Mother Kateri, victory, victory to Mother Kateri (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Sangani Baba
+
+Victory, victory to Sangani Baba (2)
+Sangani Baba, victory, victory to Sangani Baba (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Di Baba
+
+Victory, victory to Dih Baba (2)
+Dih Baba, victory, victory to Dih Baba (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Munishvara
+
+Victory, victory to Munishvara (2)
+Munishvara, victory, victory to Munishvara (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Kal Bhairav
+
+Victory, victory to Baba Kal Bhairav
+Victory, victory to Kal Bhairav
+Baba Kal Bhairav, victory, victory to Kal Bhairav (2)
+Mother, Goddess Mother,
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+Muni, Muni, Muni, Muni!
+Muni, Muni, O Mother, Goddess Mother, O Mother Kali
+O Mother Mariamma, O Goddess Mother
+O Mother Kali, O Goddess Mother
+
+## Close
+
+O Mother Kali, Bhadrakali,
+Victorious Kali, auspicious Kali,
+Kali for every one of us, O Goddess Mother,
+O Mother Mariamma, O Goddess Mother`,
   },
   "om-jai-jagdish-hare-remix": {
     title: "Om Jai Jagdish Hare (Remix)",
@@ -20228,6 +20543,111 @@ Victory, Hara Hara, great God`,
     ],
     meaning:
       "Rakesh Yankaran’s chutney-style version of Suna Suna Lage Brij Ka Dham, the same song Mohammed Rafi sings in Neelmani. Brij feels empty after Kanha leaves Gokul for Mathura.",
+    roman_lyrics: "",
+  },
+  "ekadantaya-vakratundaya-after-remix": {
+    title: "Ekadantaya Vakratundaya",
+    alternate_title: "Ganesh mantra · Lofi mix",
+    artist_version: "After Remix",
+    audio_url: "https://www.youtube.com/watch?v=DdguUbMnHx0",
+    youtube_url: "https://www.youtube.com/watch?v=DdguUbMnHx0",
+    thumbnail_url: "/images/ekadantaya-vakratundaya-after-remix.jpg",
+    cover_url: "/images/ekadantaya-vakratundaya-after-remix.jpg",
+    mini_cover_url: "/images/ekadantaya-vakratundaya-after-remix.jpg",
+    display_order: 351,
+    category_slugs: [
+      "ganesh",
+      "mantra",
+      "prarthana",
+      "general",
+      "satsang",
+      "bhajan",
+      "devotion",
+      "sanskrit",
+    ],
+    meaning:
+      "A traditional Ganesh dhyana. After Remix’s lofi recording names the one-tusked, curved-trunk son of Gauri, and holds in meditation the Lord who removes obstacles.",
+    roman_lyrics: `## Mantra
+
+Ekadantaya vakratundaya
+Gauri tanayaya dhimahi
+Vighna nashanaya Ganeshvaraya
+Gauri priyaya dhimahi`,
+    devanagari_lyrics: `## Mantra
+
+एकदन्ताय वक्रतुण्डाय
+गौरीतनयाय धीमहि
+विघ्ननाशनाय गणेश्वराय
+गौरीप्रियाय धीमहि`,
+    translation: `## Mantra
+
+For the one-tusked Lord, for the curved-trunk Lord
+We meditate on Gauri's son
+For Ganeshvara, who destroys obstacles
+We meditate on Gauri's beloved`,
+  },
+  "vakratunda-mahakaya-anup-jalota": {
+    title: "Vakratunda Mahakaya",
+    alternate_title: "Ganesh mantra",
+    artist_version: "Anup Jalota",
+    audio_url: "https://www.youtube.com/watch?v=kxxhO92X8ro",
+    youtube_url: "https://www.youtube.com/watch?v=kxxhO92X8ro",
+    thumbnail_url: "/images/vakratunda-mahakaya-anup-jalota.jpg",
+    cover_url: "/images/vakratunda-mahakaya-anup-jalota.jpg",
+    mini_cover_url: "/images/vakratunda-mahakaya-anup-jalota.jpg",
+    display_order: 352,
+    category_slugs: [
+      "ganesh",
+      "mantra",
+      "prarthana",
+      "general",
+      "satsang",
+      "bhajan",
+      "devotion",
+      "sanskrit",
+    ],
+    meaning:
+      "Anup Jalota sings the traditional Ganesh shloka: the curved-trunk Lord, bright as a crore of suns, is asked to clear every task of obstacles.",
+    roman_lyrics: `## Mantra
+
+Vakratunda mahakaya
+Suryakoti samaprabha
+Nirvighnam kuru me deva
+Sarva karyeshu sarvada`,
+    devanagari_lyrics: `## Mantra
+
+वक्रतुण्ड महाकाय
+सूर्यकोटि समप्रभ
+निर्विघ्नं कुरु मे देव
+सर्वकार्येषु सर्वदा`,
+    translation: `## Mantra
+
+O curved-trunk Lord, of mighty form
+Radiant as a crore of suns
+Lord, make my work free of obstacles
+In every task, always`,
+  },
+  "setum-bandhya-ramayana": {
+    title: "Setum Bandhya",
+    alternate_title: "Ram Setu · Ramayana: The Legend of Prince Rama",
+    artist_version: "Ramayana: The Legend of Prince Rama",
+    audio_url: "https://www.youtube.com/watch?v=tNSjiqxvxRw",
+    youtube_url: "https://www.youtube.com/watch?v=tNSjiqxvxRw",
+    thumbnail_url: "/images/setum-bandhya-ramayana.jpg",
+    cover_url: "/images/setum-bandhya-ramayana.jpg",
+    mini_cover_url: "/images/setum-bandhya-ramayana.jpg",
+    display_order: 353,
+    category_slugs: [
+      "ram",
+      "ram-navami",
+      "general",
+      "satsang",
+      "bhajan",
+      "devotion",
+      "sanskrit",
+    ],
+    meaning:
+      "From the film Ramayana: The Legend of Prince Rama. The vanaras sing as they lay the stone bridge so Ram’s army can cross the sea to Lanka.",
     roman_lyrics: "",
   },
 };

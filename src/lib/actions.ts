@@ -31,9 +31,68 @@ export async function logoutAction() {
   redirect("/");
 }
 
+async function requireAdmin() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) redirect("/admin/login");
+  return supabase;
+}
+
+export async function saveAuthorisedLyricsAction(formData: FormData) {
+  const supabase = await requireAdmin();
+  const slug = slugify(String(formData.get("slug") ?? ""));
+  const roman = String(formData.get("roman_lyrics") ?? "").trim();
+  if (!slug) throw new Error("Missing song");
+  if (!roman) throw new Error("Authorised lyrics are required");
+
+  const lyrics = {
+    roman_lyrics: roman,
+    devanagari_lyrics: emptyToNull(
+      String(formData.get("devanagari_lyrics") ?? "")
+    ),
+    translation: emptyToNull(String(formData.get("translation") ?? "")),
+  };
+
+  const { data: existing, error: lookupError } = await supabase
+    .from("bhajans")
+    .select("id")
+    .eq("slug", slug)
+    .maybeSingle();
+  if (lookupError) throw lookupError;
+
+  if (existing?.id) {
+    const { error } = await supabase
+      .from("bhajans")
+      .update(lyrics)
+      .eq("id", existing.id);
+    if (error) throw error;
+  } else {
+    const title = String(formData.get("title") ?? "").trim() || slug;
+    const { error } = await supabase.from("bhajans").insert({
+      title,
+      slug,
+      alternate_title: emptyToNull(String(formData.get("alternate_title") ?? "")),
+      artist_version: emptyToNull(String(formData.get("artist_version") ?? "")),
+      meaning: emptyToNull(String(formData.get("meaning") ?? "")),
+      audio_url: emptyToNull(String(formData.get("audio_url") ?? "")),
+      ...lyrics,
+    });
+    if (error) throw error;
+  }
+
+  revalidatePath("/");
+  revalidatePath("/bhajans");
+  revalidatePath("/admin");
+  revalidatePath(`/bhajans/${slug}`);
+  redirect(`/bhajans/${slug}`);
+}
+
 export async function saveBhajanAction(formData: FormData) {
+  const supabase = await requireAdmin();
   const id = String(formData.get("id") ?? "").trim() || null;
-  requireFields(formData, ["title", "roman_lyrics"]);
+  requireFields(formData, ["title"]);
 
   const title = String(formData.get("title")).trim();
   const slugInput = String(formData.get("slug") ?? "").trim();
@@ -61,7 +120,6 @@ export async function saveBhajanAction(formData: FormData) {
     })(),
   };
 
-  const supabase = await createClient();
   let bhajanId = id;
 
   if (id) {

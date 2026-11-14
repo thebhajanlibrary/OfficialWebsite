@@ -141,6 +141,18 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     ],
   },
   {
+    slug: "mantras",
+    title: "Mantras",
+    description:
+      "Short mantras for japa and satsang. These stay in All Bhajans as well.",
+    cover_url: "/images/ekadantaya-vakratundaya-after-remix.jpg",
+    search_aliases: ["mantra", "japa", "ganesh mantra"],
+    member_slugs: [
+      "ekadantaya-vakratundaya-after-remix",
+      "vakratunda-mahakaya-anup-jalota",
+    ],
+  },
+  {
     slug: "aarti",
     title: "Aarti",
     description:

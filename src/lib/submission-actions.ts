@@ -80,7 +80,6 @@ export async function submitSongAction(
   const errors: Record<string, string> = {};
   if (!title) errors.title = "Song title is required";
   if (!artistName) errors.artist_name = "Artist / singer name is required";
-  if (!romanLyrics) errors.roman_lyrics = "Roman / English lyrics are required";
 
   const audioFile = formData.get("audio_file") as File | null;
   const audioUrlInput = emptyToNull(String(formData.get("audio_url") ?? ""));
