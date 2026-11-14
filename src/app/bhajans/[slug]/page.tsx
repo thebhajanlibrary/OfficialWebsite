@@ -289,80 +289,6 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
                 embedUrl={embed}
                 title={current.title}
                 cover={playerCover}
-        extra={
-          user && !hasLyrics && !hideLyrics ? (
-            <section id="authorised-lyrics" className="space-y-4">
-              <h2 className="font-display text-2xl font-semibold text-primary">
-                Authorised lyrics
-              </h2>
-              <p className="max-w-2xl text-sm leading-relaxed text-muted">
-                Paste a text you are allowed to publish: a traditional or
-                public-domain hymn, or words you have permission to use. A
-                film-original sheet stays off the page until that text is saved.
-                One singing line per row, with the same line breaks in the
-                English.
-              </p>
-              <form action={saveAuthorisedLyricsAction} className="max-w-2xl space-y-3">
-                <input type="hidden" name="slug" value={current.slug} />
-                <input type="hidden" name="title" value={current.title} />
-                <input
-                  type="hidden"
-                  name="alternate_title"
-                  value={current.alternate_title ?? ""}
-                />
-                <input
-                  type="hidden"
-                  name="artist_version"
-                  value={current.artist_version ?? ""}
-                />
-                <input
-                  type="hidden"
-                  name="meaning"
-                  value={current.meaning ?? ""}
-                />
-                <input
-                  type="hidden"
-                  name="audio_url"
-                  value={current.audio_url ?? ""}
-                />
-                <label className="block space-y-1.5">
-                  <span className="text-sm font-medium text-foreground">
-                    Roman lyrics
-                  </span>
-                  <textarea
-                    name="roman_lyrics"
-                    required
-                    className="min-h-40 w-full rounded-xl border border-border bg-surface px-3 py-2.5 font-mono text-sm leading-relaxed"
-                  />
-                </label>
-                <label className="block space-y-1.5">
-                  <span className="text-sm font-medium text-foreground">
-                    Hindi lyrics
-                  </span>
-                  <textarea
-                    name="devanagari_lyrics"
-                    className="min-h-28 w-full rounded-xl border border-border bg-surface px-3 py-2.5 font-mono text-sm leading-relaxed"
-                  />
-                </label>
-                <label className="block space-y-1.5">
-                  <span className="text-sm font-medium text-foreground">
-                    English, line for line
-                  </span>
-                  <textarea
-                    name="translation"
-                    className="min-h-28 w-full rounded-xl border border-border bg-surface px-3 py-2.5 font-mono text-sm leading-relaxed"
-                  />
-                </label>
-                <button
-                  type="submit"
-                  className="rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white hover:bg-primary-hover"
-                >
-                  Save authorised lyrics
-                </button>
-              </form>
-            </section>
-          ) : null
-        }
                 artist={artistNames.join(" · ") || null}
                 slug={current.slug}
                 autoPlay={autoPlay}
@@ -466,6 +392,81 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
         }
         extra={
           <>
+            {user && !hasLyrics && !hideLyrics ? (
+              <section id="authorised-lyrics" className="space-y-4">
+                <h2 className="font-display text-2xl font-semibold text-primary">
+                  Authorised lyrics
+                </h2>
+                <p className="max-w-2xl text-sm leading-relaxed text-muted">
+                  Paste a text you are allowed to publish: a traditional or
+                  public-domain hymn, or words you have permission to use. A
+                  film-original sheet stays off the page until that text is saved.
+                  One singing line per row, with the same line breaks in the
+                  English.
+                </p>
+                <form
+                  action={saveAuthorisedLyricsAction}
+                  className="max-w-2xl space-y-3"
+                >
+                  <input type="hidden" name="slug" value={current.slug} />
+                  <input type="hidden" name="title" value={current.title} />
+                  <input
+                    type="hidden"
+                    name="alternate_title"
+                    value={current.alternate_title ?? ""}
+                  />
+                  <input
+                    type="hidden"
+                    name="artist_version"
+                    value={current.artist_version ?? ""}
+                  />
+                  <input
+                    type="hidden"
+                    name="meaning"
+                    value={current.meaning ?? ""}
+                  />
+                  <input
+                    type="hidden"
+                    name="audio_url"
+                    value={current.audio_url ?? ""}
+                  />
+                  <label className="block space-y-1.5">
+                    <span className="text-sm font-medium text-foreground">
+                      Roman lyrics
+                    </span>
+                    <textarea
+                      name="roman_lyrics"
+                      required
+                      className="min-h-40 w-full rounded-xl border border-border bg-surface px-3 py-2.5 font-mono text-sm leading-relaxed"
+                    />
+                  </label>
+                  <label className="block space-y-1.5">
+                    <span className="text-sm font-medium text-foreground">
+                      Hindi lyrics
+                    </span>
+                    <textarea
+                      name="devanagari_lyrics"
+                      className="min-h-28 w-full rounded-xl border border-border bg-surface px-3 py-2.5 font-mono text-sm leading-relaxed"
+                    />
+                  </label>
+                  <label className="block space-y-1.5">
+                    <span className="text-sm font-medium text-foreground">
+                      English, line for line
+                    </span>
+                    <textarea
+                      name="translation"
+                      className="min-h-28 w-full rounded-xl border border-border bg-surface px-3 py-2.5 font-mono text-sm leading-relaxed"
+                    />
+                  </label>
+                  <button
+                    type="submit"
+                    className="rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white hover:bg-primary-hover"
+                  >
+                    Save authorised lyrics
+                  </button>
+                </form>
+              </section>
+            ) : null}
       <section className="space-y-4">
         <h2 className="font-display text-2xl font-semibold text-primary">
           Categories
