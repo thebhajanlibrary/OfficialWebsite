@@ -68,6 +68,7 @@ export const HYMN_FOLDERS: HymnFolder[] = [
       "sona-sona-lagay-rakesh-yankaran",
       "rako-ladj-hamarie-ramdew-chaitoe",
       "nahi-chahiye-rang-mahal-dewindersingh-sewnath",
+      "munni-munni",
     ],
   },
   {
@@ -342,15 +343,26 @@ export function bhajanBelongsToFolder(
   );
 }
 
+export function foldersForBhajan(bhajan: {
+  title: string;
+  slug: string;
+  alternate_title?: string | null;
+}): HymnFolder[] {
+  return HYMN_FOLDERS.filter((folder) =>
+    bhajanBelongsToFolder(folder.slug, bhajan)
+  );
+}
+
 export function folderForBhajan(bhajan: {
   title: string;
   slug: string;
   alternate_title?: string | null;
 }): HymnFolder | null {
+  const folders = foldersForBhajan(bhajan);
   return (
-    HYMN_FOLDERS.find((folder) =>
-      bhajanBelongsToFolder(folder.slug, bhajan)
-    ) ?? null
+    folders.find((folder) => folder.slug !== "bhajan-party-mix") ??
+    folders[0] ??
+    null
   );
 }
 

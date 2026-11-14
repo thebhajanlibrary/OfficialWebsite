@@ -25,7 +25,7 @@ import {
   countsTowardArtistIndex,
   trackNumberInAlbum,
 } from "@/lib/albums";
-import { folderForBhajan } from "@/lib/folders";
+import { foldersForBhajan } from "@/lib/folders";
 import { lyricsNeedPermission } from "@/lib/lyrics-rights";
 import { saveAuthorisedLyricsAction } from "@/lib/actions";
 import { AutoplayLink } from "@/components/bhajan/AutoplayLink";
@@ -101,7 +101,7 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
   const hasLyrics =
     !hideLyrics && current.roman_lyrics.trim().length > 0;
   const lyricsPermission = !hasLyrics && lyricsNeedPermission(current.slug);
-  const hymnFolder = folderForBhajan(current);
+  const hymnFolders = foldersForBhajan(current);
   const album = albumForBhajan(current.slug);
   const albumTrackNo = album
     ? trackNumberInAlbum(album, current.slug)
@@ -222,14 +222,15 @@ export default async function BhajanDetailPage({ params, searchParams }: Props) 
               {albumTrackNo != null ? `Album · track ${albumTrackNo}` : "Album"}
             </Link>
           )}
-          {hymnFolder && (
+          {hymnFolders.map((folder) => (
             <Link
-              href={`/folders/${hymnFolder.slug}`}
+              key={folder.slug}
+              href={`/folders/${folder.slug}`}
               className="btn-secondary rounded-lg px-4 py-2.5 text-sm"
             >
-              {hymnFolder.title} folder
+              {folder.title} folder
             </Link>
-          )}
+          ))}
           {user && !current.id.startsWith("local-") && (
             <Link
               href={`/admin/bhajans/${current.id}/edit`}

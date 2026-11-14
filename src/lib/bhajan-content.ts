@@ -2714,25 +2714,25 @@ Sabko Kali Re Amma Devi Amma,
 O Amma Mariamma Re Amma Devi Amma`,
     translation: `## Sloka
 
-O victorious, auspicious Kali, Bhadrakali, skull-bearer,
-Durga, the peaceful, giver of the auspicious, Swaha, Swadha, salutations to you, salutations,
+Jayanti (the victorious), Mangala (the auspicious), Kali, Bhadrakali (auspicious Kali), Kapalini (she who carries a skull),
+Durga, Shama (peace), Shivadatri (giver of what is auspicious), Swaha (offering to the gods), Swadha (offering to the ancestors), salutations to you, salutations,
 O Goddess.....
 
 ## Chorus
 
-Muni, Muni, O Mother Mariamma
-Muni, Muni, O Mother, Goddess Mother, O Mother Kali
-O Mother Mariamma, O Goddess Mother (2)
+O lord of the sages, O mother of rain and healing
+O lord of the sages, O Mother, Goddess Mother, O Mother Kali
+O mother of rain and healing, O Goddess Mother (2)
 O Mother Kali, O Goddess Mother
-Muni, Muni, O Mother, Muni, Muni,
-Muni, Muni, O Mother, Goddess Mother, O Mother Kali
-O Mother Mariamma, O Goddess Mother,
+O lord of the sages, O Mother, O lord of the sages,
+O lord of the sages, O Mother, Goddess Mother, O Mother Kali
+O mother of rain and healing, O Goddess Mother,
 O Mother Kali, O Goddess Mother
-O Mother Kali, Bhadrakali,
+O Mother Kali, Bhadrakali (auspicious form of Kali),
 Victorious Kali, auspicious Kali,
 Kali for every one of us, O Goddess Mother,
 
-O Mother Mariamma, O Goddess Mother (2)
+O mother of rain and healing, O Goddess Mother (2)
 O Mother Kali, O Goddess Mother
 
 ## Ganesh
@@ -2740,7 +2740,7 @@ O Mother Kali, O Goddess Mother
 Victory, victory to Lord Ganesh (2)
 Lord Ganesh, victory, victory to Lord Ganesh (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Dharti Mata
@@ -2748,15 +2748,15 @@ O Mother Kali, O Goddess Mother
 Victory, victory to Mother Earth (2)
 Mother Earth, victory, victory to Mother Earth
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Surya
 
-Victory, victory to Lord Surya (2)
-Lord Surya, victory, victory to Lord Surya
+Victory, victory to Lord Surya (the sun) (2)
+Lord Surya (the sun), victory, victory to Lord Surya
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Krishna
@@ -2764,7 +2764,7 @@ O Mother Kali, O Goddess Mother
 Victory, victory to Lord Krishna (2)
 Lord Krishna, victory, victory to Lord Krishna (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Ram
@@ -2772,7 +2772,7 @@ O Mother Kali, O Goddess Mother
 Victory, victory to Lord Ram (2)
 Lord Ram, victory, victory to Lord Ram (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Hanuman
@@ -2780,15 +2780,15 @@ O Mother Kali, O Goddess Mother
 Victory, victory to Baba Hanuman (2)
 Baba Hanuman, victory, victory to Baba Hanuman (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Nag Devata
 
-Victory, victory to the serpent deity (2)
-Serpent deity, victory, victory to the serpent deity (2)
+Victory, victory to Nag Devata (the serpent deity) (2)
+Nag Devata (the serpent deity), victory, victory to Nag Devata (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Shiva
@@ -2796,7 +2796,7 @@ O Mother Kali, O Goddess Mother
 Victory, victory to Lord Shiva (2)
 Lord Shiva, victory, victory to Lord Shiva (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Ganga Mata
@@ -2804,7 +2804,7 @@ O Mother Kali, O Goddess Mother
 Victory, victory to Mother Ganga (2)
 Mother Ganga, victory, victory to Mother Ganga (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Lakshmi Mata
@@ -2812,7 +2812,7 @@ O Mother Kali, O Goddess Mother
 Victory, victory to Mother Lakshmi (2)
 Mother Lakshmi, victory, victory to Mother Lakshmi (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Sarasvati
@@ -2820,85 +2820,85 @@ O Mother Kali, O Goddess Mother
 Victory, victory to Mother Sarasvati (2)
 Mother Sarasvati, victory, victory to Mother Sarasvati (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Durga Mata
 
 Victory, victory to Mother Durga (2)
 Mother Durga, victory, victory to Mother Durga
-O Mother Havanya, Mother Bhavani, Mother,
+O Mother Havanya, Mother Bhavani (a name of Durga), Mother,
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Chorus
 
-Muni, Muni, Muni, Muni
-Muni, Muni, O Mother, Goddess Mother
-Mother Kali, O Mother Mariamma, O Goddess Mother,
+O lord of the sages, O lord of the sages
+O lord of the sages, O Mother, Goddess Mother
+Mother Kali, O mother of rain and healing, O Goddess Mother,
 O Mother Kali, O Goddess Mother
 
 ## Kali
 
 Victory, victory, Mother Kali, Mother
-Victory, victory, Mother Mahakali, Mother
-Mother Kali, Mother, victory, victory, Mother Mahakali (2)
+Victory, victory, Mother Mahakali (great Kali), Mother
+Mother Kali, Mother, victory, victory, Mother Mahakali (great Kali) (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Kateri Ma
 
-Victory, victory to Mother Kateri (2)
-Mother Kateri, victory, victory to Mother Kateri (2)
+Victory, victory to Kateri Ma (fierce guardian mother) (2)
+Kateri Ma (fierce guardian mother), victory, victory to Kateri Ma (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Sangani Baba
 
-Victory, victory to Sangani Baba (2)
-Sangani Baba, victory, victory to Sangani Baba (2)
+Victory, victory to Sangani Baba (village guardian) (2)
+Sangani Baba (village guardian), victory, victory to Sangani Baba (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Di Baba
 
-Victory, victory to Dih Baba (2)
-Dih Baba, victory, victory to Dih Baba (2)
+Victory, victory to Dih Baba (guardian of the village boundary) (2)
+Dih Baba (guardian of the village boundary), victory, victory to Dih Baba (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Munishvara
 
-Victory, victory to Munishvara (2)
-Munishvara, victory, victory to Munishvara (2)
+Victory, victory to Munishvara (village form of Shiva) (2)
+Munishvara (village form of Shiva), victory, victory to Munishvara (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Kal Bhairav
 
-Victory, victory to Baba Kal Bhairav
-Victory, victory to Kal Bhairav
-Baba Kal Bhairav, victory, victory to Kal Bhairav (2)
+Victory, victory to Baba Kal Bhairav (fierce form of Shiva)
+Victory, victory to Kal Bhairav (fierce form of Shiva)
+Baba Kal Bhairav (fierce form of Shiva), victory, victory to Kal Bhairav (2)
 Mother, Goddess Mother,
-O Mother Mariamma, O Goddess Mother
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
-Muni, Muni, Muni, Muni!
-Muni, Muni, O Mother, Goddess Mother, O Mother Kali
-O Mother Mariamma, O Goddess Mother
+O lord of the sages, O lord of the sages!
+O lord of the sages, O Mother, Goddess Mother, O Mother Kali
+O mother of rain and healing, O Goddess Mother
 O Mother Kali, O Goddess Mother
 
 ## Close
 
-O Mother Kali, Bhadrakali,
+O Mother Kali, Bhadrakali (auspicious form of Kali),
 Victorious Kali, auspicious Kali,
 Kali for every one of us, O Goddess Mother,
-O Mother Mariamma, O Goddess Mother`,
+O mother of rain and healing, O Goddess Mother`,
   },
   "om-jai-jagdish-hare-remix": {
     title: "Om Jai Jagdish Hare (Remix)",
