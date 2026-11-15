@@ -70,7 +70,18 @@ export function SongReadingLayout({
             <h2 className="font-display text-2xl font-semibold text-primary">
               {meaningTitle}
             </h2>
-            <p className="max-w-2xl leading-relaxed text-muted">{meaning}</p>
+            {meaning
+              .split(/\n\s*\n/)
+              .map((paragraph) => paragraph.trim())
+              .filter(Boolean)
+              .map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="max-w-2xl leading-relaxed text-muted"
+                >
+                  {paragraph}
+                </p>
+              ))}
             {permissionNote && (
               <p className="max-w-2xl leading-relaxed text-muted">
                 This recording stays in the library. The words were written for

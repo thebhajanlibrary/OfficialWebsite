@@ -20967,7 +20967,7 @@ Victory, Hara Hara, great God`,
   },
   "kabhi-khushi-kabhie-gham-lata-mangeshkar": {
     title: "Kabhi Khushi Kabhie Gham",
-    alternate_title: "Title track · Kabhi Khushi Kabhie Gham",
+    alternate_title: "Sometimes happiness, sometimes sorrow · Same name as the film (2001)",
     artist_version: "Lata Mangeshkar",
     audio_url: "https://www.youtube.com/watch?v=2N7-GZpLlC0",
     youtube_url: "https://www.youtube.com/watch?v=2N7-GZpLlC0",
@@ -20976,8 +20976,13 @@ Victory, Hara Hara, great God`,
     mini_cover_url: "https://i.ytimg.com/vi/2N7-GZpLlC0/hqdefault.jpg",
     display_order: 392,
     category_slugs: ["general", "satsang", "bhajan", "devotion", "hindi"],
-    meaning:
-      "Lata Mangeshkar sings the title song of Kabhi Khushi Kabhie Gham. A family song: joy and sorrow travel together, and the people we love stay through both. Listed in All Bhajans.",
+    meaning: `The song and the film share one name: Kabhi Khushi Kabhie Gham (2001). Lata Mangeshkar sings this recording. It is the title song, the slow family piece, not one of the dance numbers in the same film. Music is by Jatin–Lalit and the words are by Javed Akhtar. Karan Johar directed the film for Dharma Productions. Its line on the posters was “It’s all about loving your parents.”
+
+Kabhi means “sometimes.” Khushi means happiness. Kabhie is the same word again, spelt the way the film prints it. Gham means sorrow, grief, the heavy kind. So the whole name is a sentence: sometimes happiness, sometimes sorrow. Nothing in the title promises that life stays on one side.
+
+The story is the Raichand family, a very rich Delhi house with a strict father, Yashvardhan, and a tender mother, Nandini. Rahul is the elder son, adopted, and the son the father is proudest of. Rohan is the younger son, born to them. Rahul falls in love with Anjali, who lives in Chandni Chowk, a crowded old neighbourhood, not the world the father planned for him. Yash refuses the match. Rahul marries her anyway and is told he is no longer a Raichand. He, Anjali, and later their child leave for London. The big house goes quiet. Rohan grows up, learns what was hidden, and goes after his brother to bring him home. The film ends when the father yields and the family stands in one place again.
+
+That swing is what the song is for. A family home is not a happy song or a sad song. The same rooms hold a wedding and a farewell, a mother’s hope and a father’s pride, a son who stays and a son who is sent away. Happiness arrives, then sorrow, then happiness again, and the people are still one family. Lata sings it as a blessing over that house: joy and grief both belong there, and love is what is left when the feeling changes. It is not a prayer to a deity. It sits in All Bhajans as a family song.`,
     roman_lyrics: "",
   },
   "suna-suna-lage-brij-ka-dham-mohammed-rafi": {
