@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState, useRef, useState } from "react";
 import Link from "next/link";
 import {
   Music,
@@ -72,6 +72,29 @@ export function SubmitSongForm({ categories }: Props) {
     new Set(["general", "devotion", "hindi"])
   );
   const [showAllCategories, setShowAllCategories] = useState(false);
+  const [lyricsPrompt, setLyricsPrompt] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  const lyricsRef = useRef<HTMLTextAreaElement>(null);
+  const allowEmptyLyrics = useRef(false);
+
+  function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+    if (allowEmptyLyrics.current) {
+      allowEmptyLyrics.current = false;
+      return;
+    }
+    const lyrics = String(
+      new FormData(event.currentTarget).get("roman_lyrics") ?? ""
+    ).trim();
+    if (lyrics) return;
+    event.preventDefault();
+    setLyricsPrompt(true);
+  }
+
+  function confirmWithoutLyrics() {
+    allowEmptyLyrics.current = true;
+    setLyricsPrompt(false);
+    formRef.current?.requestSubmit();
+  }
 
   function toggleCategory(slug: string) {
     setSelectedCategories((prev) => {
@@ -130,7 +153,12 @@ export function SubmitSongForm({ categories }: Props) {
   }
 
   return (
-    <form action={formAction} className="mx-auto max-w-3xl space-y-8">
+    <form
+      ref={formRef}
+      action={formAction}
+      onSubmit={onSubmit}
+      className="mx-auto max-w-3xl space-y-8"
+    >
       {state?.errors?.media && (
         <div className="flex items-start gap-3 rounded-2xl border border-red-500/30 bg-red-500/10 p-4 text-sm text-red-600 dark:text-red-400">
           <AlertCircle className="h-5 w-5 shrink-0" />
@@ -413,7 +441,8 @@ export function SubmitSongForm({ categories }: Props) {
             </h3>
             <p className="text-xs text-muted">
               Add traditional or public-domain words, or words you have
-              permission to share. A film-original lyric sheet can be left blank.
+              permission to share. If the Roman words are left empty, you will
+              be asked to confirm before the song is sent.
             </p>
           </div>
         </div>
@@ -421,14 +450,13 @@ export function SubmitSongForm({ categories }: Props) {
         <label className="block space-y-1">
           <div className="flex items-center justify-between">
             <span className="text-sm font-medium text-foreground">
-              Roman / English Transliterated Lyrics{" "}
-              <span className="text-red-500">*</span>
+              Roman / English Transliterated Lyrics
             </span>
             <span className="text-xs text-muted">Use ## Refrain or ## Verse headers</span>
           </div>
           <textarea
+            ref={lyricsRef}
             name="roman_lyrics"
-            required
             rows={8}
             placeholder={`## Refrain\n\nJai Jai Hanuman Gosai...\n\n## Verse 1\n\nJai Kapis Tihun Lok Ujagar...`}
             className="w-full rounded-xl border border-border bg-surface px-3.5 py-2.5 font-mono text-sm leading-relaxed text-foreground shadow-sm focus:border-accent focus:outline-none"
@@ -524,6 +552,50 @@ export function SubmitSongForm({ categories }: Props) {
           )}
         </button>
       </div>
+
+      {lyricsPrompt && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-primary/40 p-4 sm:items-center">
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="lyrics-warning-title"
+            className="w-full max-w-md rounded-2xl border border-border bg-surface p-6 shadow-xl"
+          >
+            <h2
+              id="lyrics-warning-title"
+              className="font-display text-2xl font-semibold text-primary"
+            >
+              Upload without lyrics?
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              The words are what let someone follow the recording and understand
+              the song. Roman lyrics, with the English under each line, are the
+              part of the library people come to read. If you can share the
+              words, add them before you send this. You can still upload the
+              recording on its own, and it will wait for review.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setLyricsPrompt(false);
+                  lyricsRef.current?.focus();
+                }}
+                className="rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-white hover:bg-primary-hover"
+              >
+                Add the lyrics
+              </button>
+              <button
+                type="button"
+                onClick={confirmWithoutLyrics}
+                className="rounded-xl border border-border bg-surface px-4 py-2.5 text-sm font-medium hover:border-accent"
+              >
+                Upload without lyrics
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </form>
   );
 }

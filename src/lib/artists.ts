@@ -482,6 +482,71 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
     name: "After Remix",
     bio: "Lofi bhajan channel. Ekadantaya Vakratundaya, a traditional Ganesh mantra, is in the Mantras folder.",
   },
+  "sanatan-dharm": {
+    name: "Sanatan Dharm",
+    bio: "A recording of Aaj Andhere Mein Hai Hum Insaan.",
+  },
+  "devashish-ramdath": {
+    name: "Devashish Ramdath",
+    bio: "Indo-Caribbean singer. Satya Ka Darshan is his set of funeral and memorial songs.",
+    photo_url: "/images/devashish-ramdath.jpg",
+  },
+  "rohid-chedie": {
+    name: "Rohid Chedie",
+    bio: "Sings Jane Chale Jaatein Hain Kahan, a tribute recorded with Sharwien Tedjoe.",
+  },
+  "sharwien-tedjoe": {
+    name: "Sharwien Tedjoe",
+    bio: "Sings Jane Chale Jaatein Hain Kahan with Rohid Chedie.",
+  },
+  "reeshabh-purohit": {
+    name: "Reeshabh Purohit",
+    bio: "Sings Tulsidas’s Shri Ramchandra Kripalu Bhajman.",
+  },
+  "p-b-srinivas": {
+    name: "P. B. Srinivas",
+    bio: "Singer of the Ram bhajan Rama Rama Raghurama.",
+  },
+  "lovenish-khatri": {
+    name: "Lovenish Khatri",
+    bio: "Sings Hey Mahaveer, a slowed recording of the Hanuman aarti Mangal Murti.",
+  },
+  "sanam": {
+    name: "Sanam",
+    bio: "Band. Their Ek Pyar Ka Nagma Hai is a cover of the song from Shor.",
+  },
+  "sachin-gupta": {
+    name: "Sachin Gupta",
+    bio: "His lofi recording of Ek Pyar Ka Nagma Hai.",
+  },
+  "pranav-chandran": {
+    name: "Pranav Chandran",
+    bio: "Sings an unplugged Kya Hua Tera Wada.",
+  },
+  "rahul-jain": {
+    name: "Rahul Jain",
+    bio: "Sings an unplugged Yeh Dosti Hum Nahi Todenge.",
+  },
+  "sookdeo-sookraj": {
+    name: "Sookdeo Sookraj",
+    bio: "Indo-Caribbean singer. Ek Din Hamay Bhi Jaana Hai is his funeral song.",
+  },
+  "jaspal-singh": {
+    name: "Jaspal Singh",
+    bio: "Sings Mangal Bhawan Amangal Hari in Geet Gaata Chal, from Tulsidas’s Ramcharitmanas.",
+  },
+  "arati-mukherjee": {
+    name: "Arati Mukherjee",
+    bio: "Playback singer. Shyam Teri Bansi Pukare is her Krishna song.",
+  },
+  "tulsi-bk": {
+    name: "Tulsi Bk",
+    bio: "Sings Jyoti Bindu Parmatma Se.",
+  },
+  "ami-patel": {
+    name: "Ami Patel",
+    bio: "Sings Tujhe Sooraj Kahoon Ya Chanda, the song from Ek Phool Do Mali.",
+  },
   "bidjwanwatie-chaitoe": {
     name: "Bidjwanwatie Chaitoe",
     bio: "Surinamese chutney and baithak gana singer of the Chaitoe family. Favourites include Karejwa me laage, Na Manu Na Manu, and the Paar Karo remix with Rawytee Ramroop.",

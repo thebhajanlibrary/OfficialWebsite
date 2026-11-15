@@ -52,7 +52,9 @@ export function DesktopNav() {
             key={link.href}
             href={link.href}
             aria-current={active ? "page" : undefined}
-            className={`rounded-full px-3 py-1.5 text-sm font-medium transition ${itemClass(active)}`}
+            className={`border-b-2 px-3 py-1.5 text-sm font-medium transition ${
+              active ? "border-accent text-primary" : "border-transparent text-foreground/75 hover:border-border hover:text-primary"
+            }`}
           >
             {link.label}
           </Link>
@@ -62,7 +64,11 @@ export function DesktopNav() {
       <div ref={menuRef} className="relative">
         <button
           type="button"
-          className={`inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium transition ${itemClass(collectionsActive || open)}`}
+          className={`inline-flex items-center gap-1 border-b-2 px-3 py-1.5 text-sm font-medium transition ${
+            collectionsActive || open
+              ? "border-accent text-primary"
+              : "border-transparent text-foreground/75 hover:border-border hover:text-primary"
+          }`}
           aria-expanded={open}
           aria-haspopup="true"
           onClick={() => setOpen((value) => !value)}
@@ -74,7 +80,7 @@ export function DesktopNav() {
           />
         </button>
         {open ? (
-          <div className="absolute right-0 top-[calc(100%+0.45rem)] z-50 w-56 rounded-2xl border border-border bg-surface p-1.5 shadow-[0_16px_40px_rgba(21,34,56,0.12)]">
+          <div className="absolute right-0 top-[calc(100%+0.45rem)] z-50 w-56 border border-border bg-surface p-1.5 shadow-[4px_4px_0_rgba(44,36,22,0.08)]">
             {collections.map((link) => {
               const active = navLinkActive(pathname, link.href);
               return (
@@ -82,7 +88,7 @@ export function DesktopNav() {
                   key={link.href}
                   href={link.href}
                   aria-current={active ? "page" : undefined}
-                  className={`block rounded-xl px-3 py-2 text-sm font-medium transition ${itemClass(active)}`}
+                  className={`block px-3 py-2 text-sm font-medium transition ${itemClass(active)}`}
                 >
                   {link.label}
                 </Link>

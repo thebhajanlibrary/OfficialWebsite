@@ -9,7 +9,7 @@ export async function Header() {
   const user = await getCurrentUser();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border/70 border-t-[3px] border-t-accent bg-surface/90 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-border bg-surface/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
         <Link href="/" className="group flex min-w-0 shrink-0 items-center gap-2.5">
           <BrandMark />

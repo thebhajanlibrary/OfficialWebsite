@@ -234,8 +234,14 @@ export default async function FolderDetailPage({ params }: Props) {
 
       {folder.slug === "chutney-style-bhajan" && (
         <RelatedCollections
-          heading="Albums"
+          heading="Also see"
           items={[
+            {
+              href: "/chutney",
+              title: "Traditional Chutney",
+              kicker: "Collection",
+              hint: "Indo-Caribbean classics, kept in their own section",
+            },
             {
               href: "/albums/lets-sing-and-dance-with-dropati",
               title: "Let's Sing & Dance with Dropati",

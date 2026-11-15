@@ -72,38 +72,68 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     ],
   },
   {
+    slug: "funeral-memorial",
+    title: "Funeral & Memorial",
+    description:
+      "Bhajans, prayers, and remembrance. Satya Ka Darshan by Devashish Ramdath sits here with the other songs kept for a funeral or a memorial.",
+    cover_url: "/images/folders/funeral-memorial/cover.jpg",
+    search_aliases: ["funeral", "memorial", "antyeshti", "remembrance", "satya ka darshan"],
+    member_slugs: [
+      "toot-gayi-hai-maala-devashish-ramdath",
+      "aaj-suno-hum-geet-devashish-ramdath",
+      "pinjare-ke-panchhi-devashish-ramdath",
+      "koi-roye-koi-gaaye-devashish-ramdath",
+      "aaj-andhere-mein-devashish-ramdath",
+      "hamare-prabhu-avagun-devashish-ramdath",
+      "your-karmic-story-devashish-ramdath",
+      "god-is-standing-at-your-door-devashish-ramdath",
+      "ek-din-hamay-bhi-jana-hai-devashish-ramdath",
+      "hari-ho-ram-milan-devashish-ramdath",
+      "aaye-bhi-akela-devashish-ramdath",
+      "aaj-suno-hum-geet-shri-prakash-gossai",
+      "mere-ke-panchi-pawan-sharma",
+      "aaye-bhi-akela-boodram-holass",
+      "he-prabhu-anand-data",
+      "tu-kitni-achhi-hai-lata-mangeshkar",
+      "aaj-andhay-ray-harry-panday",
+      "aaj-andhere-mein-sanatan-dharm",
+      "achutam-keshavam-ankit-batra",
+      "prabhu-ka-naam-japo-mukesh",
+      "shree-ramchandra-kripalu-bhajman-nitin-mukesh",
+      "shree-ramchandra-kripalu-reeshabh-purohit",
+      "mangalmurti-maruti-nandan-hariharan",
+      "hey-mahaveer-mangal-murti-lovenish-khatri",
+      "raghupati-raghav-rajaram-kedar-pandit",
+      "raghupati-raghav-raja-ram-mahendra-kapoor",
+      "mangal-bhawan-amangal-hari-jaspal-singh",
+      "ek-din-hamay-bhi-jana-hai-sookdeo-sookraj",
+      "jane-chale-jaatein-hain-rohid-chedie",
+      "jai-raghunandan-jai-siyaram-mohammed-rafi",
+      "rama-rama-raghurama-pb-srinivas",
+      "shyam-teri-bansi-pukare-arati-mukherjee",
+      "jyoti-bindu-parmatma-tulsi-bk",
+      "nadiya-na-piye-mohammed-rafi",
+      "jai-shri-ram-do-akshar-mohammed-rafi",
+      "chal-ud-ja-re-panchhi-mohammed-rafi",
+      "ek-pyar-ka-nagma-sanam",
+      "ek-pyar-ka-nagma-lofi-sachin-gupta",
+      "kya-hua-tera-wada-pranav-chandran",
+      "yeh-dosti-rahul-jain",
+      "tu-kitni-achhi-hai-neha-kakkar",
+      "bada-natkhat-hai-lata-mangeshkar",
+      "tere-jaisa-yaar-kahan-kishore-kumar",
+      "zindagi-ka-safar-kishore-kumar",
+      "kiya-hai-pyar-jise-jagjit-singh",
+      "ae-malik-tere-bande-hum-lata-mangeshkar",
+      "tujhe-sooraj-kahoon-ami-patel",
+    ],
+  },
+  {
     slug: "hanuman-chalisa",
     title: "Hanuman Chalisa",
     description:
       "All versions of the Hanuman Chalisa — different singers, same prayer.",
-  },
-  {
-    slug: "om-jai-jagdish-hare",
-    title: "Om Jai Jagadish Hare",
-    description:
-      "Vishnu aarti — regular satsang versions by different singers (not the party remix).",
-    cover_url: "/images/om-jai-jagdish-hare-anuradha-paudwal-player.png",
-  },
-  {
-    slug: "om-jai-lakshmi-mata",
-    title: "Om Jai Lakshmi Mata",
-    description:
-      "Lakshmi aarti — regular satsang versions by different singers.",
-    cover_url: "/images/om-jai-lakshmi-mata-prakash-gossai.jpg",
-    member_slugs: [
-      "om-jai-lakshmi-mata-prakash-gossai",
-    ],
-  },
-  {
-    slug: "o-palanhare",
-    title: "O Palanhare",
-    description:
-      "O Nurturer — the Lagaan prayer and karaoke / instrumental versions for satsang.",
-    cover_url: "/images/o-palanhare-lagaan.png",
-    member_slugs: [
-      "o-palanhare-lata-mangeshkar",
-      "o-palanhare-kedar-pandit",
-    ],
+    cover_url: "/images/folders/hanuman-chalisa/cover.jpg",
   },
   {
     slug: "garba",
@@ -190,7 +220,7 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     title: "Holi",
     description:
       "Holi / Phagwah songs for the festival of colours — Indo-Caribbean chutney bhajans and classic Holi kirtan. Remixes from Let's Play Holi stay in that album.",
-    cover_url: "/images/albums/lets-play-holi.png",
+    cover_url: "/images/folders/holi/cover.jpg",
     member_slugs: [
       "holi-khelai-raghuveera",
       "oh-maro-maro-pichakari-babla-kanchan",
@@ -202,7 +232,7 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     title: "Wedding",
     description:
       "Indo-Caribbean wedding songs — chutney, chutney-bhajan, lawa, sehra, matkorwa, bidai, and more. Dropati's full album, Paar Karo remix, and other marriage favourites.",
-    cover_url: "/images/albums/lets-sing-and-dance-with-dropati.png",
+    cover_url: "/images/folders/wedding/cover.jpg",
     search_aliases: [
       "wedding",
       "shaadi",
@@ -299,6 +329,41 @@ export function isInstrumentalKaraokeTrack(slug: string): boolean {
 export const EVERYDAY_LIBRARY_SKIP_SLUGS = new Set([
   "nahi-chahiye-rang-mahal-dewindersingh-sewnath",
 ]);
+
+/**
+ * Sad, slow, or funeral-specific recordings.
+ * They stay on Funeral & Memorial, and off All Bhajans.
+ * Everyday bhajans that are also sung at a funeral stay in both.
+ */
+export const FUNERAL_MOOD_SKIP_SLUGS = new Set([
+  "toot-gayi-hai-maala-devashish-ramdath",
+  "aaj-suno-hum-geet-devashish-ramdath",
+  "pinjare-ke-panchhi-devashish-ramdath",
+  "koi-roye-koi-gaaye-devashish-ramdath",
+  "aaj-andhere-mein-devashish-ramdath",
+  "hamare-prabhu-avagun-devashish-ramdath",
+  "your-karmic-story-devashish-ramdath",
+  "god-is-standing-at-your-door-devashish-ramdath",
+  "ek-din-hamay-bhi-jana-hai-devashish-ramdath",
+  "hari-ho-ram-milan-devashish-ramdath",
+  "aaye-bhi-akela-devashish-ramdath",
+  "aaj-andhere-mein-sanatan-dharm",
+  "ek-din-hamay-bhi-jana-hai-sookdeo-sookraj",
+  "jane-chale-jaatein-hain-rohid-chedie",
+  "jyoti-bindu-parmatma-tulsi-bk",
+  "nadiya-na-piye-mohammed-rafi",
+  "chal-ud-ja-re-panchhi-mohammed-rafi",
+  "ek-pyar-ka-nagma-sanam",
+  "ek-pyar-ka-nagma-lofi-sachin-gupta",
+  "kya-hua-tera-wada-pranav-chandran",
+  "zindagi-ka-safar-kishore-kumar",
+  "kiya-hai-pyar-jise-jagjit-singh",
+  "ae-malik-tere-bande-hum-lata-mangeshkar",
+]);
+
+export function isKeptFromAllBhajans(slug: string): boolean {
+  return FUNERAL_MOOD_SKIP_SLUGS.has(slug);
+}
 
 export function isLibraryQueueSkipTrack(slug: string): boolean {
   if (PARTY_MIX_REGULAR_EXCEPTIONS.has(slug)) return false;

@@ -2,7 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { Sparkles, Calendar, Music, ArrowRight, Flame, ChevronRight } from "lucide-react";
+import { LOCAL_CATEGORIES } from "@/lib/categories";
 import { CollectionQueueActions } from "@/components/bhajan/CollectionQueueActions";
 import {
   bhajanPlayHref,
@@ -119,6 +121,9 @@ export function FestivalCelebration({
   const featuredBhajans = bhajans.filter((b) => !garbaSlugs.has(b.slug));
   const garbaBhajans = bhajans.filter((b) => garbaSlugs.has(b.slug));
   const queueTracks = queueTracksFromBhajans(featuredBhajans, playQueue);
+  const songsHref = festival.categorySlug
+    ? browseHrefForCategory(festival.categorySlug)
+    : null;
 
   const getBadge = () => {
     if (status === "today") {
@@ -215,9 +220,9 @@ export function FestivalCelebration({
               <Music className="h-3.5 w-3.5 text-accent" />
               Featured Songs
             </h3>
-            {festival.categorySlug && (
+            {songsHref && (
               <Link
-                href={`/browse/occasion/${festival.categorySlug}`}
+                href={songsHref}
                 className="text-xs text-accent hover:underline flex items-center gap-0.5"
               >
                 All {festival.name} songs
@@ -259,6 +264,17 @@ export function FestivalCelebration({
   );
 }
 
+const SONG_PREVIEW = 20;
+
+function browseHrefForCategory(slug: string): string | null {
+  const category = LOCAL_CATEGORIES.find((item) => item.slug === slug);
+  if (!category) return null;
+  if (category.type === "bhagwan") return `/browse/bhagwan/${slug}`;
+  if (category.type === "occasion") return `/browse/occasion/${slug}`;
+  if (category.type === "bhajan_type") return `/browse/type/${slug}`;
+  return null;
+}
+
 function SongGrid({
   bhajans,
   playQueue,
@@ -266,9 +282,14 @@ function SongGrid({
   bhajans: BhajanWithCategories[];
   playQueue: PlayQueueRef;
 }) {
+  const [expanded, setExpanded] = useState(false);
+  const hasMore = bhajans.length > SONG_PREVIEW;
+  const shown = hasMore && !expanded ? bhajans.slice(0, SONG_PREVIEW) : bhajans;
+
   return (
+    <div className="space-y-3">
     <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
-      {bhajans.map((b) => {
+      {shown.map((b) => {
         const playHref = bhajanPlayHref(b.slug, playQueue, { autoplay: true });
         return (
           <Link
@@ -308,6 +329,16 @@ function SongGrid({
           </Link>
         );
       })}
+    </div>
+      {hasMore && (
+        <button
+          type="button"
+          onClick={() => setExpanded((value) => !value)}
+          className="text-sm text-accent transition hover:text-primary"
+        >
+          {expanded ? "Show less" : `See more · ${bhajans.length - SONG_PREVIEW} more`}
+        </button>
+      )}
     </div>
   );
 }

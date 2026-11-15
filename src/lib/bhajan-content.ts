@@ -1533,6 +1533,7 @@ O my Guru, I have received the priceless treasure of Lord Ram.`,
       "satsang",
       "morning-prayer",
       "evening-prayer",
+      "funeral",
       "memorial",
       "prarthana",
       "peace",
@@ -1634,7 +1635,16 @@ O Lord, giver of bliss, grant us wisdom`,
     cover_url: "/images/albums/yaad-sangeet-player-art.png",
     thumbnail_url: "/images/albums/yaad-sangeet-library.png",
     display_order: 40,
-    category_slugs: ["general", "satsang", "bhajan", "devotion", "hindi"],
+    category_slugs: [
+      "general",
+      "satsang",
+      "funeral",
+      "memorial",
+      "bhajan",
+      "devotion",
+      "hindi",
+      "suitable-for-funerals",
+    ],
     meaning:
       "Harry Panday's Yaad Sangeet rendition of Aaj Andhere Mein Hai Hum Insaan — a prayer for the sun of wisdom to light the darkness of ignorance.",
     roman_lyrics: `## Chorus
@@ -3866,7 +3876,17 @@ Glory, glory, glory to Hanuman Gosai.`,
     thumbnail_url: "/images/albums/shree-hanuman-chalisa-hariharan.png",
     cover_url: "/images/albums/shree-hanuman-chalisa-hariharan-player-cover.png",
     display_order: 26,
-    category_slugs: ["hanuman", "general", "satsang", "bhajan", "devotion", "hindi"],
+    category_slugs: [
+      "hanuman",
+      "general",
+      "satsang",
+      "bhajan",
+      "devotion",
+      "hindi",
+      "funeral",
+      "memorial",
+      "suitable-for-funerals",
+    ],
     meaning:
       "Mangal Murti Maaruti Nandan — auspicious form, son of Maruti, destroyer of all inauspiciousness. Hariharan, Gulshan Kumar / T-Series album.",
     roman_lyrics: `## Chorus
@@ -6409,6 +6429,9 @@ Glory, glory, glory to Krishna Hare`,
       "bhajan",
       "devotion",
       "hindi",
+      "funeral",
+      "memorial",
+      "suitable-for-funerals",
     ],
     meaning:
       "Ankit Batra (Art of Living). The Sanskrit refrain names Vishnu as Achyuta, Keshava, Krishna Damodara, Rama-Narayana, and Janaki’s beloved. The Hindi verses are not a line-by-line gloss of that Sanskrit — they answer the doubt that God is distant: He comes, eats, sleeps, and dances for those who love Him as Meera, Shabri, Yashoda, and the gopis did. Keep His name while you work; darshan comes in time.",
@@ -6633,7 +6656,16 @@ O Lord, protect my honour`,
     cover_url: "/images/tu-kitni-achhi-hai-player.jpg",
     mini_cover_url: "/images/tu-kitni-achhi-hai-thumb.jpg",
     display_order: 57,
-    category_slugs: ["general", "satsang", "memorial", "bhajan", "devotion", "hindi"],
+    category_slugs: [
+      "general",
+      "satsang",
+      "funeral",
+      "memorial",
+      "bhajan",
+      "devotion",
+      "hindi",
+      "suitable-for-funerals",
+    ],
     meaning:
       "Classic mother's song from Raja Aur Runk (1968), sung by Lata Mangeshkar — lyrics Anand Bakshi, music Laxmikant–Pyarelal. A child's love for mother: she is a garden in a thorny world, and those who still have their mother are blessed.",
     roman_lyrics: `## Chorus
@@ -6944,7 +6976,7 @@ We have to live together our whole lives.`,
     cover_url: "/images/jai-raghunandan-jai-siyaram-player.jpg",
     mini_cover_url: "/images/jai-raghunandan-jai-siyaram-thumb.jpg",
     display_order: 58,
-    category_slugs: ["ram", "general", "satsang", "bhajan", "devotion", "hindi"],
+    category_slugs: ["ram", "general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
     meaning:
       "Classic Ram bhajan from Gharana (1961), sung by Mohammed Rafi and Asha Bhosle — lyrics Shakeel Badayuni, music Ravi. Opens with a Ram ashraya verse, then glory to Raghunandan and Sita-Ram, destroyer of sorrow, steersman of the boat, ocean of compassion.",
     roman_lyrics: `## Opening
@@ -13603,6 +13635,9 @@ O Nurturer`,
       "bhajan",
       "devotion",
       "hindi",
+      "funeral",
+      "memorial",
+      "suitable-for-funerals",
     ],
     meaning:
       "Mukesh’s classic non-film bhajan (Ravindra Jain, from Ram Kare So Hoye, 1971) — chant the Lord’s name, O mind; He alone removes your troubles. Life is a night’s stay; when the cage opens, the bird does not remain.",
@@ -13710,6 +13745,9 @@ Chant the Lord's name, O my mind`,
       "bhajan",
       "devotion",
       "hindi",
+      "funeral",
+      "memorial",
+      "suitable-for-funerals",
     ],
     meaning:
       "Nitin Mukesh’s Saregama recording of Tulsidas’s beloved Ram stuti (Pushpanjali / Nehanjali Devotional) — praise of Shri Ram’s lotus form, and prayer for His grace to dwell in the heart and destroy the roots of desire.",
@@ -13788,43 +13826,81 @@ Manjul mangal mool
 Baam ang pharkan lage
 
 Siyapati Ramchandra ki jai`,
-    translation: `O mind, sing praises of gracious Shri Ramchandra,
-Who removes the terrible fear of birth and death,
-Whose eyes, face, hands, and feet are like fresh red lotus blooms.
+    translation: `## Refrain
 
-His beauty surpasses countless Kamadevas;
-He is lovely as a fresh cloud against blue sky.
-His golden garments shine like lightning — I bow to Janak's daughter's Lord.
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
+Eyes like a fresh lotus, a lotus face
+Lotus hands, and lotus-soft feet
 
-I worship the friend of the poor, Lord of the sun,
-Destroyer of the race of demons and fiends,
-Joy of Raghu's line, moon of Kosala, son of Dasharatha.
+## Verse 1
 
-His crown, earrings, and tilak are charming;
-His limbs are richly adorned.
-With arms to His knees He holds bow and arrow,
-Victor in battle over Khara and Dushana.
+A beauty beyond numberless gods of love
+Lovely as a fresh dark raincloud
+A yellow cloth shining like pure lightning
+I bow to the Lord chosen by Janak's daughter
 
-Thus sings Tulsidas — delight of Shiva and sages —
-Dwell in the lotus of my heart, O Lord,
-And crush the wicked host of lust and vice.
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
 
-Whoever the mind loves, such a bridegroom is found —
-Naturally handsome, dark-complexioned,
-Ocean of mercy, wise and gentle,
-Ravana knew His love well.
+## Verse 2
 
-Hearing Gauri's blessing thus,
-Sita and her companions rejoiced in heart.
-Tulsidas worshipped Bhavani again and again,
-And went gladly to the temple.
+Sing of the friend of the poor, lord of the day, foe of the demons
+Destroyer of the demon dynasty
+Joy of the Raghu line, moon of Koshala
+Son of Dasharath
 
-Knowing Gauri was pleased,
-Sita's heart could not contain its joy —
-The root of all auspiciousness;
-Her left limbs began to throb.
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
 
-Victory to Sita's Lord Ramchandra!`,
+## Verse 3
+
+A beautiful crown, earrings, and tilak upon His head
+His broad form is richly adorned
+Arms reaching His knees, holding arrow and bow
+Victor in battle over Khara and Dushana
+
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
+
+## Verse 4
+
+Thus says Tulsidas, of Shankar
+Who delights the mind of Shesha and the sages
+Come and dwell in the lotus of my heart
+Crusher of the wicked host of desire
+
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
+
+## Verse 5
+
+May she find a bridegroom after her own heart
+Naturally handsome, and dark
+A treasure of mercy, noble and gentle
+Who knows how to love
+
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
+
+## Verse 6
+
+Hearing Gauri's blessing in this way
+Sita, with her friends, rejoiced in her heart
+Tulsi worshipped Bhavani again and again
+And went to the temple with a glad heart
+
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
+
+## Doha
+
+Knowing Gauri was favourable
+The joy in Sita's heart cannot be told
+The lovely root of all that is auspicious
+Her left side began to throb
+
+Victory to Ramchandra, lord of Sita`,
   },
   "hey-ganga-maiya-shivam-rajaram": {
     title: "Hey Ganga Maiya",
@@ -20648,6 +20724,1152 @@ In every task, always`,
     ],
     meaning:
       "From the film Ramayana: The Legend of Prince Rama. The vanaras sing as they lay the stone bridge so Ram’s army can cross the sea to Lanka.",
+    roman_lyrics: "",
+  },
+
+  "toot-gayi-hai-maala-devashish-ramdath": {
+    title: "Toot Gayi Hai Maala",
+    alternate_title: "The Garland Is Broken · Satya Ka Darshan",
+    artist_version: "Devashish Ramdath",
+    audio_url: "https://www.youtube.com/watch?v=QGcPSNkg3rs",
+    youtube_url: "https://www.youtube.com/watch?v=QGcPSNkg3rs",
+    thumbnail_url: "https://i.ytimg.com/vi/QGcPSNkg3rs/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/QGcPSNkg3rs/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/QGcPSNkg3rs/hqdefault.jpg",
+    display_order: 354,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "funeral-specific", "suitable-for-funerals"],
+    meaning: "Devashish Ramdath, from Satya Ka Darshan. The garland has broken: a funeral song for the moment a life comes apart.",
+    roman_lyrics: "",
+  },
+  "aaj-suno-hum-geet-devashish-ramdath": {
+    title: "Aaj Suno Hum Geet",
+    alternate_title: "Satya Ka Darshan",
+    artist_version: "Devashish Ramdath",
+    audio_url: "https://www.youtube.com/watch?v=vkuWsQjTWvc",
+    youtube_url: "https://www.youtube.com/watch?v=vkuWsQjTWvc",
+    thumbnail_url: "https://i.ytimg.com/vi/vkuWsQjTWvc/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/vkuWsQjTWvc/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/vkuWsQjTWvc/hqdefault.jpg",
+    display_order: 355,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "funeral-specific", "suitable-for-funerals"],
+    meaning: "Devashish Ramdath’s Satya Ka Darshan recording of the farewell song. Two sorrowful birds are parting.",
+    roman_lyrics: `## Verses
+
+Aaj suni ham geet vidaa kaa gaa rahay
+Do dukhiyaa-ree panchhee bichhuray jaa rahay
+
+Bahut dino kay saathee aaj judaa hongay
+Gum sum aakhariyon may aansoon aa rahay
+
+Aaj suni ham geet vidaa kaa gaa rahay
+Do dukhiyaa-ree panchhee bichhuray jaa rahay
+
+Alag alag raahin par chal diye do praanee
+Nirdai jag ne in kee peer nahee jaanee
+Aaj puraanee sukh ke din yaad aa rahay
+
+Aaj suni ham geet vidaa kaa gaa rahay
+Do dukhiyaa-ree panchhee bichhuray jaa rahay
+
+Koyee mat poochho kown hai ye kyoon rotay hai
+Is jag me aise bhee abhaagay hote hai
+Lut gaye phir bhee dil kaa dard chhipaa rahay
+
+Aaj suni ham geet vidaa kaa gaa rahay
+Do dukhiyaa-ree panchhee bichhuray jaa rahay`,
+    translation: `## Verses
+
+Today hear us sing a farewell song
+Two sorrowful birds are parting ways
+
+Companions of many days will be separated today
+Silent tears come to their eyes
+
+Today hear us sing a farewell song
+Two sorrowful birds are parting ways
+
+Two souls have set out on separate roads
+This heartless world did not know their pain
+Today the old days of happiness come to mind
+
+Today hear us sing a farewell song
+Two sorrowful birds are parting ways
+
+Do not ask who they are or why they cry
+In this world some are born so unfortunate
+Robbed of everything, still they hide the pain of the heart
+
+Today hear us sing a farewell song
+Two sorrowful birds are parting ways`,
+  },
+  "pinjare-ke-panchhi-devashish-ramdath": {
+    title: "Pinjare Ke Panchhi",
+    alternate_title: "Satya Ka Darshan",
+    artist_version: "Devashish Ramdath",
+    audio_url: "https://www.youtube.com/watch?v=tlqYT8iKyAE",
+    youtube_url: "https://www.youtube.com/watch?v=tlqYT8iKyAE",
+    thumbnail_url: "https://i.ytimg.com/vi/tlqYT8iKyAE/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/tlqYT8iKyAE/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/tlqYT8iKyAE/hqdefault.jpg",
+    display_order: 356,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "funeral-specific", "suitable-for-funerals"],
+    meaning: "Devashish Ramdath’s Satya Ka Darshan recording. The bird in the cage weeps where no one can see.",
+    roman_lyrics: `## Chorus
+
+Pinjare ke panchhi re
+Tera dard na jaane koi
+Tera dard na jaane koi
+
+Bahar se to khamosh rahe tu
+Bahar se to khamosh rahe tu
+Bhitar bhitar roye re
+Hay e bhitar bhitar roye
+Tera dard na jaane koi
+
+## Verses
+
+Kah na sake tu
+Apni kahani
+Teri bhi panchhi
+Kya zindgani re
+
+Kah na sake tu
+Apni kahani
+Teri bhi panchhi
+Kya zindgani re
+Vidhi ne teri katha likhi
+Aansu mein kalam duboe
+Tera dard na jaane koi
+Tera dard na jaane koi
+
+Chupake chupake rone wale
+Rakhna chhipaake
+Dil ke chhale re
+Chupake chupake rone wale
+Rakhna chhipaake
+Dil ke chhale re
+Ye patthar ka desh hain pagale
+Koi na tera hoy
+Tera dard na jaane koi
+
+Pinjare ke panchhi re
+Tera dard na jaane koi
+Tera dard na jaane koi
+Pinjare ke panchhi re`,
+    translation: `## Chorus
+
+O bird in the cage
+No one knows your pain
+No one knows your pain
+
+Outwardly you remain silent
+Outwardly you remain silent
+Inside you weep and weep
+Alas — inside you weep
+No one knows your pain
+
+## Verses
+
+You could not tell
+Your own story
+What kind of life is yours too
+O bird
+
+You could not tell
+Your own story
+What kind of life is yours too
+O bird
+Destiny wrote your tale
+Dipping the pen in tears
+No one knows your pain
+No one knows your pain
+
+You who weep in secret
+Keep hidden
+The wounds of the heart
+You who weep in secret
+Keep hidden
+The wounds of the heart
+This is a land of stone, O foolish one
+No one here is yours
+No one knows your pain
+
+O bird in the cage
+No one knows your pain
+No one knows your pain
+O bird in the cage`,
+  },
+  "koi-roye-koi-gaaye-devashish-ramdath": {
+    title: "Koi Roye Koi Gaaye",
+    alternate_title: "Some Cry, Some Sing · Satya Ka Darshan",
+    artist_version: "Devashish Ramdath",
+    audio_url: "https://www.youtube.com/watch?v=09ogvwGdHWE",
+    youtube_url: "https://www.youtube.com/watch?v=09ogvwGdHWE",
+    thumbnail_url: "https://i.ytimg.com/vi/09ogvwGdHWE/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/09ogvwGdHWE/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/09ogvwGdHWE/hqdefault.jpg",
+    display_order: 357,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Devashish Ramdath, from Satya Ka Darshan. In the same world some are crying and some are singing.",
+    roman_lyrics: "",
+  },
+  "aaj-andhere-mein-devashish-ramdath": {
+    title: "Aaj Andhere Mein Hain",
+    alternate_title: "Aaj Andhere Mein Hai Hum Insaan · Satya Ka Darshan",
+    artist_version: "Devashish Ramdath",
+    audio_url: "https://www.youtube.com/watch?v=Ppldi_d0fxU",
+    youtube_url: "https://www.youtube.com/watch?v=Ppldi_d0fxU",
+    thumbnail_url: "https://i.ytimg.com/vi/Ppldi_d0fxU/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/Ppldi_d0fxU/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/Ppldi_d0fxU/hqdefault.jpg",
+    display_order: 358,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Devashish Ramdath’s Satya Ka Darshan recording. People are standing in the dark, asking God for the sun of wisdom.",
+    roman_lyrics: `## Chorus
+
+Aaj andhere mein hai hum insaan
+Gyan ka suraj chamka de Bhagwan
+Aaj andhere mein hai hum insaan
+Gyan ka suraj chamka de Bhagwan
+
+## Verses
+
+Bhatak rahe hum raah dikha de
+Bhagwan raah dikha de
+Bhatak rahe hum raah dikha de
+Bhagwan raah dikha de
+Kadam kadam par kiran bichha de
+Bhagwan kiran bichha de
+In akhiyan ko Prabhu kara de
+Jyoti se pahchaan
+
+Aaj andhere mein hai hum insaan
+Gyan ka suraj chamka de Bhagwan
+
+Hum to hai santaan tihaari
+Prabhu santaan tihaari
+Hum to hai santaan tihaari
+Prabhu santaan tihaari
+Teri daya ke hum adhikaari
+Prabhu hai hum adhikaari
+Duniya hove sukhi hamaari
+Aisa de vardaan
+
+Aaj andhere mein hai hum insaan
+Gyan ka suraj chamka de Bhagwan`,
+    translation: `## Chorus
+
+Today we humans are in darkness
+O God, kindle the sun of wisdom
+Today we humans are in darkness
+O God, kindle the sun of wisdom
+
+## Verses
+
+We are wandering — show us the path
+O God, show us the path
+We are wandering — show us the path
+O God, show us the path
+Lay a ray of light at every step
+O God, lay that ray of light
+O Lord, make these eyes
+Know You through that light
+
+Today we humans are in darkness
+O God, kindle the sun of wisdom
+
+We are Your children
+O Lord, we are Your children
+We are Your children
+O Lord, we are Your children
+We have a right to Your mercy
+O Lord, we have a right to it
+May our world be happy
+Grant us such a blessing
+
+Today we humans are in darkness
+O God, kindle the sun of wisdom`,
+  },
+  "hamare-prabhu-avagun-devashish-ramdath": {
+    title: "Hamare Prabhu Avagun",
+    alternate_title: "O Lord, Take No Note of My Faults · Satya Ka Darshan",
+    artist_version: "Devashish Ramdath",
+    audio_url: "https://www.youtube.com/watch?v=ZwEJnuL6KXI",
+    youtube_url: "https://www.youtube.com/watch?v=ZwEJnuL6KXI",
+    thumbnail_url: "https://i.ytimg.com/vi/ZwEJnuL6KXI/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/ZwEJnuL6KXI/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/ZwEJnuL6KXI/hqdefault.jpg",
+    display_order: 359,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Devashish Ramdath, from Satya Ka Darshan. A prayer that the Lord will not count the singer’s faults.",
+    roman_lyrics: "",
+  },
+  "your-karmic-story-devashish-ramdath": {
+    title: "Your Karmic Story",
+    alternate_title: "Satya Ka Darshan",
+    artist_version: "Devashish Ramdath",
+    audio_url: "https://www.youtube.com/watch?v=0ZNDQ0Wjfqw",
+    youtube_url: "https://www.youtube.com/watch?v=0ZNDQ0Wjfqw",
+    thumbnail_url: "https://i.ytimg.com/vi/0ZNDQ0Wjfqw/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/0ZNDQ0Wjfqw/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/0ZNDQ0Wjfqw/hqdefault.jpg",
+    display_order: 360,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Devashish Ramdath, from Satya Ka Darshan. The life just lived is a story of karma.",
+    roman_lyrics: "",
+  },
+  "god-is-standing-at-your-door-devashish-ramdath": {
+    title: "God Is Standing At Your Door",
+    alternate_title: "Satya Ka Darshan",
+    artist_version: "Devashish Ramdath",
+    audio_url: "https://www.youtube.com/watch?v=WjY3UypsrUE",
+    youtube_url: "https://www.youtube.com/watch?v=WjY3UypsrUE",
+    thumbnail_url: "https://i.ytimg.com/vi/WjY3UypsrUE/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/WjY3UypsrUE/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/WjY3UypsrUE/hqdefault.jpg",
+    display_order: 361,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Devashish Ramdath, from Satya Ka Darshan. God is already standing at the door.",
+    roman_lyrics: "",
+  },
+  "ek-din-hamay-bhi-jana-hai-devashish-ramdath": {
+    title: "Ek Din Hamay Bhi Jana Hai",
+    alternate_title: "One Day We Also Have to Leave · Satya Ka Darshan",
+    artist_version: "Devashish Ramdath",
+    audio_url: "https://www.youtube.com/watch?v=MOTFERqo4Ow",
+    youtube_url: "https://www.youtube.com/watch?v=MOTFERqo4Ow",
+    thumbnail_url: "https://i.ytimg.com/vi/MOTFERqo4Ow/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/MOTFERqo4Ow/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/MOTFERqo4Ow/hqdefault.jpg",
+    display_order: 362,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "funeral-specific", "suitable-for-funerals"],
+    meaning: "Devashish Ramdath, from Satya Ka Darshan. One day we also have to leave.",
+    roman_lyrics: "",
+  },
+  "hari-ho-ram-milan-devashish-ramdath": {
+    title: "Hari Ho Ram Milan",
+    alternate_title: "When Will I Meet the Divine · Satya Ka Darshan",
+    artist_version: "Devashish Ramdath",
+    audio_url: "https://www.youtube.com/watch?v=3zHsERJZ-DA",
+    youtube_url: "https://www.youtube.com/watch?v=3zHsERJZ-DA",
+    thumbnail_url: "https://i.ytimg.com/vi/3zHsERJZ-DA/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/3zHsERJZ-DA/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/3zHsERJZ-DA/hqdefault.jpg",
+    display_order: 363,
+    category_slugs: ["ram", "general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Devashish Ramdath, from Satya Ka Darshan. A call for the day the singer will meet Ram.",
+    roman_lyrics: "",
+  },
+  "aaye-bhi-akela-devashish-ramdath": {
+    title: "Aaye Bhi Akela",
+    alternate_title: "Satya Ka Darshan",
+    artist_version: "Devashish Ramdath",
+    audio_url: "https://www.youtube.com/watch?v=b7H56VnZFjQ",
+    youtube_url: "https://www.youtube.com/watch?v=b7H56VnZFjQ",
+    thumbnail_url: "https://i.ytimg.com/vi/b7H56VnZFjQ/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/b7H56VnZFjQ/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/b7H56VnZFjQ/hqdefault.jpg",
+    display_order: 364,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "funeral-specific", "suitable-for-funerals"],
+    meaning: "Devashish Ramdath’s Satya Ka Darshan recording. We come alone and we leave alone. Life is a fair of two days.",
+    roman_lyrics: `## Chorus
+
+Aaye bhi akela
+Jaaye bhi akela
+Do din ki zindagi hai
+Do din ka mela
+Do din ka mela
+
+Aaye bhi akela
+Jaaye bhi akela
+Do din ki zindagi hai
+Do din ka mela
+Do din ka mela
+
+## Verses
+
+Teri zindagi mauj hai do ghadi ki
+Ye baaten hain naadaa sab jeete ji ki
+Sab jeete ji ki
+
+Ye duniya hui hai na hogi kisi ki
+Wohi ek manzil hai har aadmi ki
+Har aadmi ki
+
+Jahaan sab ko jaana padega akela
+Do din ki zindagi hai
+Do din ka mela
+Do din ka mela
+
+## Chorus
+
+Aaye bhi akela
+Jaaye bhi akela
+Do din ki zindagi hai
+Do din ka mela
+Do din ka mela`,
+    translation: `## Chorus
+
+We come alone
+We leave alone
+Life is only a few days
+A fair of two days
+A fair of two days
+
+We come alone
+We leave alone
+Life is only a few days
+A fair of two days
+A fair of two days
+
+## Verses
+
+Your life's joy lasts only a moment
+These are the empty talks of the living
+Of the living
+
+This world has belonged to no one, and never will
+There is one destination for every person
+For every person
+
+Where everyone must go alone
+Life is only a few days
+A fair of two days
+A fair of two days
+
+## Chorus
+
+We come alone
+We leave alone
+Life is only a few days
+A fair of two days
+A fair of two days`,
+  },
+  "aaj-andhere-mein-sanatan-dharm": {
+    title: "Aaj Andhere Mein Hain",
+    alternate_title: "Aaj Andhere Mein Hai Hum Insaan",
+    artist_version: "Sanatan Dharm",
+    audio_url: "https://www.youtube.com/watch?v=MYT2mLhF3k0",
+    youtube_url: "https://www.youtube.com/watch?v=MYT2mLhF3k0",
+    thumbnail_url: "https://i.ytimg.com/vi/MYT2mLhF3k0/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/MYT2mLhF3k0/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/MYT2mLhF3k0/hqdefault.jpg",
+    display_order: 365,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Another recording of Aaj Andhere Mein Hai Hum Insaan, asking for the sun of wisdom in the dark.",
+    roman_lyrics: `## Chorus
+
+Aaj andhere mein hai hum insaan
+Gyan ka suraj chamka de Bhagwan
+Aaj andhere mein hai hum insaan
+Gyan ka suraj chamka de Bhagwan
+
+## Verses
+
+Bhatak rahe hum raah dikha de
+Bhagwan raah dikha de
+Bhatak rahe hum raah dikha de
+Bhagwan raah dikha de
+Kadam kadam par kiran bichha de
+Bhagwan kiran bichha de
+In akhiyan ko Prabhu kara de
+Jyoti se pahchaan
+
+Aaj andhere mein hai hum insaan
+Gyan ka suraj chamka de Bhagwan
+
+Hum to hai santaan tihaari
+Prabhu santaan tihaari
+Hum to hai santaan tihaari
+Prabhu santaan tihaari
+Teri daya ke hum adhikaari
+Prabhu hai hum adhikaari
+Duniya hove sukhi hamaari
+Aisa de vardaan
+
+Aaj andhere mein hai hum insaan
+Gyan ka suraj chamka de Bhagwan`,
+    translation: `## Chorus
+
+Today we humans are in darkness
+O God, kindle the sun of wisdom
+Today we humans are in darkness
+O God, kindle the sun of wisdom
+
+## Verses
+
+We are wandering — show us the path
+O God, show us the path
+We are wandering — show us the path
+O God, show us the path
+Lay a ray of light at every step
+O God, lay that ray of light
+O Lord, make these eyes
+Know You through that light
+
+Today we humans are in darkness
+O God, kindle the sun of wisdom
+
+We are Your children
+O Lord, we are Your children
+We are Your children
+O Lord, we are Your children
+We have a right to Your mercy
+O Lord, we have a right to it
+May our world be happy
+Grant us such a blessing
+
+Today we humans are in darkness
+O God, kindle the sun of wisdom`,
+  },
+  "shree-ramchandra-kripalu-reeshabh-purohit": {
+    title: "Shree Ramchandra Kripalu Bhajman",
+    alternate_title: "Sri Ramchandra Krupalu",
+    artist_version: "Reeshabh Purohit",
+    audio_url: "https://www.youtube.com/watch?v=Hi_gyY-mMQo",
+    youtube_url: "https://www.youtube.com/watch?v=Hi_gyY-mMQo",
+    thumbnail_url: "https://i.ytimg.com/vi/Hi_gyY-mMQo/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/Hi_gyY-mMQo/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/Hi_gyY-mMQo/hqdefault.jpg",
+    display_order: 366,
+    category_slugs: ["ram", "general", "satsang", "aarti", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Reeshabh Purohit sings Tulsidas’s Ram aarti, with Chaitanya. The words are the same aarti as Nitin Mukesh’s recording.",
+    roman_lyrics: `## Refrain
+
+Shri Ramchandra kripalu bhaj man
+Haran bhav bhay darunam
+Nav kanj lochan, kanj mukh
+Kar kanj, pad kanjarunam
+
+## Verse 1
+
+Kandarp aganit amit chhavi
+Nav neel nirad sundaram
+Pat peet manahu tadit ruchi shuchi
+Naumi Janak sutavaram
+
+Shri Ramchandra kripalu bhaj man
+Haran bhav bhay darunam
+
+## Verse 2
+
+Bhaju din bandhu dinesh danav
+Daitya vansh nikandanam
+Raghunand anand kand kaushal chand
+Dashrath nandanam
+
+Shri Ramchandra kripalu bhaj man
+Haran bhav bhay darunam
+
+## Verse 3
+
+Shir mukut kundal tilak charu
+Udar ang vibhushanam
+Aajan bhuj shar chaap dhar
+Sangram jit khar dhushanam
+
+Shri Ramchandra kripalu bhaj man
+Haran bhav bhay darunam
+
+## Verse 4
+
+Iti vadati Tulsidas Shankar
+Shesh muni man ranjanam
+Mam hriday kanj nivas kuru
+Kamadi khal dal ganjanam
+
+Shri Ramchandra kripalu bhaj man
+Haran bhav bhay darunam
+
+## Verse 5
+
+Man jaahi raach milahi so baru
+Sahaj sundar saanvaro
+Karuna nidhan sujan silu
+Sanehu jaanat raavaro
+
+Shri Ramchandra kripalu bhaj man
+Haran bhav bhay darunam
+
+## Verse 6
+
+Ehi bhanti Gauri asis suni
+Siya sahit hiy harshi ali
+Tulsi bhawani pooji puni puni
+Mudit man mandir chali
+
+Shri Ramchandra kripalu bhaj man
+Haran bhav bhay darunam
+
+## Doha
+
+Jaani Gauri anukool
+Siya hiy harshu na jaai kahi
+Manjul mangal mool
+Baam ang pharkan lage
+
+Siyapati Ramchandra ki jai`,
+    translation: `## Refrain
+
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
+Eyes like a fresh lotus, a lotus face
+Lotus hands, and lotus-soft feet
+
+## Verse 1
+
+A beauty beyond numberless gods of love
+Lovely as a fresh dark raincloud
+A yellow cloth shining like pure lightning
+I bow to the Lord chosen by Janak's daughter
+
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
+
+## Verse 2
+
+Sing of the friend of the poor, lord of the day, foe of the demons
+Destroyer of the demon dynasty
+Joy of the Raghu line, moon of Koshala
+Son of Dasharath
+
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
+
+## Verse 3
+
+A beautiful crown, earrings, and tilak upon His head
+His broad form is richly adorned
+Arms reaching His knees, holding arrow and bow
+Victor in battle over Khara and Dushana
+
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
+
+## Verse 4
+
+Thus says Tulsidas, of Shankar
+Who delights the mind of Shesha and the sages
+Come and dwell in the lotus of my heart
+Crusher of the wicked host of desire
+
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
+
+## Verse 5
+
+May she find a bridegroom after her own heart
+Naturally handsome, and dark
+A treasure of mercy, noble and gentle
+Who knows how to love
+
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
+
+## Verse 6
+
+Hearing Gauri's blessing in this way
+Sita, with her friends, rejoiced in her heart
+Tulsi worshipped Bhavani again and again
+And went to the temple with a glad heart
+
+O mind, sing of Shri Ramchandra, full of grace
+He takes away the terrible fear of worldly life
+
+## Doha
+
+Knowing Gauri was favourable
+The joy in Sita's heart cannot be told
+The lovely root of all that is auspicious
+Her left side began to throb
+
+Victory to Ramchandra, lord of Sita`,
+  },
+  "raghupati-raghav-raja-ram-mahendra-kapoor": {
+    title: "Raghupati Raghav Raja Ram",
+    alternate_title: "Purab Aur Pachhim",
+    artist_version: "Mahendra Kapoor",
+    audio_url: "https://www.youtube.com/watch?v=nBKqlE4qlr0",
+    youtube_url: "https://www.youtube.com/watch?v=nBKqlE4qlr0",
+    thumbnail_url: "https://i.ytimg.com/vi/nBKqlE4qlr0/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/nBKqlE4qlr0/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/nBKqlE4qlr0/hqdefault.jpg",
+    display_order: 367,
+    category_slugs: ["ram", "general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Mahendra Kapoor sings the Raghupati Raghav bhajan in Purab Aur Pachhim. The hymn asks Ram, and every name of God, to give right understanding.",
+    roman_lyrics: `## Bhajan
+
+Raghupati Raghav Raja Ram
+Patita pavan Sita Ram
+Sita Ram, Sita Ram
+Bhaj pyare tu Sita Ram
+Ishwar Allah tero naam
+Sabko sanmati de Bhagwan
+Raghupati Raghav Raja Ram
+Patita pavan Sita Ram`,
+    translation: `## Bhajan
+
+Raghupati, Raghav, King Ram
+Sita and Ram, who purify the fallen
+Sita Ram, Sita Ram
+Beloved, sing of Sita and Ram
+Ishwar and Allah are Your names
+O God, give everyone right understanding
+Raghupati, Raghav, King Ram
+Sita and Ram, who purify the fallen`,
+  },
+  "mangal-bhawan-amangal-hari-jaspal-singh": {
+    title: "Mangal Bhawan Amangal Hari",
+    alternate_title: "Geet Gaata Chal",
+    artist_version: "Jaspal Singh",
+    audio_url: "https://www.youtube.com/watch?v=8ZctD4a5dvo",
+    youtube_url: "https://www.youtube.com/watch?v=8ZctD4a5dvo",
+    thumbnail_url: "https://i.ytimg.com/vi/8ZctD4a5dvo/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/8ZctD4a5dvo/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/8ZctD4a5dvo/hqdefault.jpg",
+    display_order: 368,
+    category_slugs: ["ram", "general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Jaspal Singh sings Tulsidas’s lines in Geet Gaata Chal. Ram is the home of what is auspicious, and the one who takes away what is not.",
+    roman_lyrics: `## Refrain
+
+Mangal bhavan amangal hari
+Dravahu so Dasharath ajar bihari
+Ram Siya Ram, Siya Ram jai jai Ram`,
+    translation: `## Refrain
+
+Abode of what is auspicious, remover of what is inauspicious
+Be moved, O son of Dasharath, who plays in the courtyard
+Ram and Sita, Ram, victory, victory to Ram`,
+  },
+  "hey-mahaveer-mangal-murti-lovenish-khatri": {
+    title: "Hey Mahaveer",
+    alternate_title: "Mangal Murti",
+    artist_version: "Lovenish Khatri",
+    audio_url: "https://www.youtube.com/watch?v=Fhq30W88wVc",
+    youtube_url: "https://www.youtube.com/watch?v=Fhq30W88wVc",
+    thumbnail_url: "https://i.ytimg.com/vi/Fhq30W88wVc/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/Fhq30W88wVc/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/Fhq30W88wVc/hqdefault.jpg",
+    display_order: 369,
+    category_slugs: ["hanuman", "general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Lovenish Khatri’s slowed Hey Mahaveer is the Hanuman aarti Mangal Murti Maruti Nandan.",
+    roman_lyrics: `## Chorus
+
+Mangal Murti Maaruti Nandan
+Sakal Amangal Mool Nikandan
+
+## Verses
+
+Pavan Tanay Santan Hitkaari
+Hriday Viraajat Avadh Bihaari
+Mangal Murti Maaruti Nandan
+Sakal Amangal Mool Nikandan
+
+Maat Pita Guru Ganpati Shaarad
+Shivaa Samet Shambhu Shuk Naarad
+Mangal Murti Maaruti Nandan
+Sakal Amangal Mool Nikandan
+
+Charan Kamal Bandau Sab Kaahu
+Dehu Raampad Nehu Nibhaahu
+Mangal Murti Maaruti Nandan
+Sakal Amangal Mool Nikandan
+
+Jai Jai Jai Hanuman Gosai
+Kripa Karo Gurudev Ki Naai
+Mangal Murti Maaruti Nandan
+Sakal Amangal Mool Nikandan
+
+Bandau Raam Lakhan Baidhehi
+Yeh Tulsi Ke Param Sanehi
+Mangal Murti Maaruti Nandan
+Sakal Amangal Mool Nikandan`,
+    translation: `## Chorus
+
+Auspicious form, son of Maruti
+Root-destroyer of all inauspiciousness
+
+## Verses
+
+Son of the Wind, benefactor of the saints
+In your heart shines the Lord of Avadh
+Auspicious form, son of Maruti
+Root-destroyer of all inauspiciousness
+
+Mother, father, Guru, Ganpati, Sharada
+Along with Shiva, Shambhu, Shuk and Narad
+Auspicious form, son of Maruti
+Root-destroyer of all inauspiciousness
+
+I bow to the lotus feet of them all
+Grant me lasting love for Ram's feet
+Auspicious form, son of Maruti
+Root-destroyer of all inauspiciousness
+
+Glory, glory, glory to Hanuman Gosai
+Bless me with a Guru's compassionate glance
+Auspicious form, son of Maruti
+Root-destroyer of all inauspiciousness
+
+I bow to Ram, Lakshman and Vaidehi
+This is Tulsi's dearest beloved
+Auspicious form, son of Maruti
+Root-destroyer of all inauspiciousness`,
+  },
+  "ek-din-hamay-bhi-jana-hai-sookdeo-sookraj": {
+    title: "Ek Din Hamay Bhi Jana Hai",
+    alternate_title: "One Day We Also Have to Leave",
+    artist_version: "Sookdeo Sookraj",
+    audio_url: "https://www.youtube.com/watch?v=oqw_oxhhqFM",
+    youtube_url: "https://www.youtube.com/watch?v=oqw_oxhhqFM",
+    thumbnail_url: "https://i.ytimg.com/vi/oqw_oxhhqFM/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/oqw_oxhhqFM/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/oqw_oxhhqFM/hqdefault.jpg",
+    display_order: 370,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "funeral-specific", "suitable-for-funerals"],
+    meaning: "Sookdeo Sookraj’s funeral song. One day we also have to go.",
+    roman_lyrics: "",
+  },
+  "jane-chale-jaatein-hain-rohid-chedie": {
+    title: "Jane Chale Jaatein Hain Kahan",
+    alternate_title: "Tribute to Arvinesh Sahai",
+    artist_version: "Rohid Chedie & Sharwien Tedjoe",
+    audio_url: "https://www.youtube.com/watch?v=gBhsdOU3gSY",
+    youtube_url: "https://www.youtube.com/watch?v=gBhsdOU3gSY",
+    thumbnail_url: "https://i.ytimg.com/vi/gBhsdOU3gSY/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/gBhsdOU3gSY/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/gBhsdOU3gSY/hqdefault.jpg",
+    display_order: 371,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Rohid Chedie and Sharwien Tedjoe, a tribute to Arvinesh Sahai. They ask where the ones who leave are going.",
+    roman_lyrics: "",
+  },
+  "rama-rama-raghurama-pb-srinivas": {
+    title: "Rama Rama Raghurama",
+    artist_version: "P. B. Srinivas",
+    audio_url: "https://www.youtube.com/watch?v=LvjfS2I5fqk",
+    youtube_url: "https://www.youtube.com/watch?v=LvjfS2I5fqk",
+    thumbnail_url: "https://i.ytimg.com/vi/LvjfS2I5fqk/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/LvjfS2I5fqk/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/LvjfS2I5fqk/hqdefault.jpg",
+    display_order: 373,
+    category_slugs: ["ram", "general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "P. B. Srinivas sings Rama Rama Raghurama.",
+    roman_lyrics: "",
+  },
+  "shyam-teri-bansi-pukare-arati-mukherjee": {
+    title: "Shyam Teri Bansi Pukare",
+    artist_version: "Arati Mukherjee",
+    audio_url: "https://www.youtube.com/watch?v=UHfoSYeAszw",
+    youtube_url: "https://www.youtube.com/watch?v=UHfoSYeAszw",
+    thumbnail_url: "https://i.ytimg.com/vi/UHfoSYeAszw/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/UHfoSYeAszw/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/UHfoSYeAszw/hqdefault.jpg",
+    display_order: 374,
+    category_slugs: ["krishna", "general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Arati Mukherjee sings to Krishna. Shyam, your flute is calling.",
+    roman_lyrics: "",
+  },
+  "jyoti-bindu-parmatma-tulsi-bk": {
+    title: "Jyoti Bindu Parmatma Se",
+    artist_version: "Tulsi Bk",
+    audio_url: "https://www.youtube.com/watch?v=WMu6Su6Vp2E",
+    youtube_url: "https://www.youtube.com/watch?v=WMu6Su6Vp2E",
+    thumbnail_url: "https://i.ytimg.com/vi/WMu6Su6Vp2E/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/WMu6Su6Vp2E/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/WMu6Su6Vp2E/hqdefault.jpg",
+    display_order: 375,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Tulsi Bk sings of the soul as a point of light returning to the Supreme Soul.",
+    roman_lyrics: "",
+  },
+  "nadiya-na-piye-mohammed-rafi": {
+    title: "Nadiya Na Piye",
+    alternate_title: "Kan Kan Mein Bhagwan",
+    artist_version: "Mohammed Rafi",
+    audio_url: "https://www.youtube.com/watch?v=e-60LJScwo8",
+    youtube_url: "https://www.youtube.com/watch?v=e-60LJScwo8",
+    thumbnail_url: "https://i.ytimg.com/vi/e-60LJScwo8/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/e-60LJScwo8/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/e-60LJScwo8/hqdefault.jpg",
+    display_order: 376,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Mohammed Rafi, from the film Kan Kan Mein Bhagwan. The river does not drink its own water.",
+    roman_lyrics: "",
+  },
+  "jai-shri-ram-do-akshar-mohammed-rafi": {
+    title: "Jai Shri Ram",
+    alternate_title: "Do Akshar Ka Pyara Naam · Hanuman Vijay",
+    artist_version: "Mohammed Rafi",
+    audio_url: "https://www.youtube.com/watch?v=fNBv7655Ixk",
+    youtube_url: "https://www.youtube.com/watch?v=fNBv7655Ixk",
+    thumbnail_url: "https://i.ytimg.com/vi/fNBv7655Ixk/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/fNBv7655Ixk/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/fNBv7655Ixk/hqdefault.jpg",
+    display_order: 377,
+    category_slugs: ["ram", "hanuman", "general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Mohammed Rafi, from the film Hanuman Vijay. Two syllables, the dear name of Shri Ram.",
+    roman_lyrics: "",
+  },
+  "chal-ud-ja-re-panchhi-mohammed-rafi": {
+    title: "Chal Ud Ja Re Panchhi",
+    alternate_title: "Bhabhi",
+    artist_version: "Mohammed Rafi",
+    audio_url: "https://www.youtube.com/watch?v=_ph6Krmzyl4",
+    youtube_url: "https://www.youtube.com/watch?v=_ph6Krmzyl4",
+    thumbnail_url: "https://i.ytimg.com/vi/_ph6Krmzyl4/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/_ph6Krmzyl4/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/_ph6Krmzyl4/hqdefault.jpg",
+    display_order: 378,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Mohammed Rafi, from the film Bhabhi (1957). The bird is told to fly, because this place was never its home.",
+    roman_lyrics: "",
+  },
+  "ek-pyar-ka-nagma-sanam": {
+    title: "Ek Pyar Ka Nagma Hai",
+    alternate_title: "Shor",
+    artist_version: "Sanam",
+    audio_url: "https://www.youtube.com/watch?v=eVv8rcMEMuM",
+    youtube_url: "https://www.youtube.com/watch?v=eVv8rcMEMuM",
+    thumbnail_url: "https://i.ytimg.com/vi/eVv8rcMEMuM/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/eVv8rcMEMuM/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/eVv8rcMEMuM/hqdefault.jpg",
+    display_order: 379,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Sanam’s cover of the song from Shor. Life is a song of love, and a slow walk onward.",
+    roman_lyrics: "",
+  },
+  "ek-pyar-ka-nagma-lofi-sachin-gupta": {
+    title: "Ek Pyar Ka Nagma Hai",
+    alternate_title: "Lofi · Shor",
+    artist_version: "Sachin Gupta",
+    audio_url: "https://www.youtube.com/watch?v=0x-GWKay9wc",
+    youtube_url: "https://www.youtube.com/watch?v=0x-GWKay9wc",
+    thumbnail_url: "https://i.ytimg.com/vi/0x-GWKay9wc/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/0x-GWKay9wc/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/0x-GWKay9wc/hqdefault.jpg",
+    display_order: 380,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Sachin Gupta’s lofi recording of the song from Shor.",
+    roman_lyrics: "",
+  },
+  "kya-hua-tera-wada-pranav-chandran": {
+    title: "Kya Hua Tera Wada",
+    alternate_title: "Hum Kisise Kum Naheen",
+    artist_version: "Pranav Chandran",
+    audio_url: "https://www.youtube.com/watch?v=3PmtRjTBcXk",
+    youtube_url: "https://www.youtube.com/watch?v=3PmtRjTBcXk",
+    thumbnail_url: "https://i.ytimg.com/vi/3PmtRjTBcXk/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/3PmtRjTBcXk/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/3PmtRjTBcXk/hqdefault.jpg",
+    display_order: 381,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Pranav Chandran’s unplugged Kya Hua Tera Wada, the song from Hum Kisise Kum Naheen.",
+    roman_lyrics: "",
+  },
+  "yeh-dosti-rahul-jain": {
+    title: "Yeh Dosti Hum Nahi Todenge",
+    alternate_title: "Sholay",
+    artist_version: "Rahul Jain",
+    audio_url: "https://www.youtube.com/watch?v=Ca6dPcHgdFY",
+    youtube_url: "https://www.youtube.com/watch?v=Ca6dPcHgdFY",
+    thumbnail_url: "https://i.ytimg.com/vi/Ca6dPcHgdFY/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/Ca6dPcHgdFY/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/Ca6dPcHgdFY/hqdefault.jpg",
+    display_order: 382,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Rahul Jain’s unplugged Yeh Dosti, the friendship song from Sholay.",
+    roman_lyrics: "",
+  },
+  "tu-kitni-achhi-hai-neha-kakkar": {
+    title: "Tu Kitni Achhi Hai",
+    alternate_title: "Raja Aur Runk",
+    artist_version: "Neha Kakkar",
+    audio_url: "https://www.youtube.com/watch?v=ZDJjWxCBkqM",
+    youtube_url: "https://www.youtube.com/watch?v=ZDJjWxCBkqM",
+    thumbnail_url: "https://i.ytimg.com/vi/ZDJjWxCBkqM/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/ZDJjWxCBkqM/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/ZDJjWxCBkqM/hqdefault.jpg",
+    display_order: 383,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Neha Kakkar’s cover of Tu Kitni Achhi Hai, the mother’s song from Raja Aur Runk. The words are the same as Lata Mangeshkar’s recording.",
+    roman_lyrics: `## Chorus
+
+Tu kitni achhi hai
+Tu kitni bholi hai
+Pyaari pyaari hai
+O maa, o maa
+
+Ke yeh jo duniya hai
+Yeh ban hai kaanton ka
+Tu phulwaari hai
+O maa, o maa
+
+## Verses
+
+Dukhne laagi hain maa teri aankhiyaan
+Mere liye jaagi hai tu saari saari ratiyaan
+Meri nindiya pe apni nindiya bhi tune vaari hai
+O maa, o maa
+
+## Chorus
+
+Tu kitni achhi hai
+Tu kitni bholi hai
+Pyaari pyaari hai
+O maa, o maa
+
+## Verses
+
+Apna nahin tujhe sukh dukh koi
+Main muskaya tu muskaayi
+Main roya tu royi
+Mere hansne pe, mere rone pe tu balihaari hai
+O maa, o maa
+
+## Verses
+
+Maa bachchon ki jaan hoti hai
+Woh hote hain kismat waale jinke maa hoti hai
+Kitni sundar hai, kitni sheetal hai
+Nyaari nyaari hai
+O maa, o maa
+
+## Chorus
+
+Tu kitni achhi hai
+Tu kitni bholi hai
+Pyaari pyaari hai
+O maa, o maa`,
+    translation: `## Chorus
+
+How good you are
+How innocent you are
+So dear, so lovely
+O mother, o mother
+
+This world is a forest of thorns
+You are a garden of flowers
+O mother, o mother
+
+## Verses
+
+Mother, your eyes look tired and sad
+For me you stayed awake night after night
+For my sleep you even gave up your own sleep
+O mother, o mother
+
+## Chorus
+
+How good you are
+How innocent you are
+So dear, so lovely
+O mother, o mother
+
+## Verses
+
+You have no joy or sorrow of your own
+When I smiled, you smiled
+When I cried, you cried
+For my laughter and my tears you give up everything
+O mother, o mother
+
+## Verses
+
+A mother is the life of her children
+Those who still have their mother are truly blessed
+How beautiful you are, how gentle you are
+How unique you are
+O mother, o mother
+
+## Chorus
+
+How good you are
+How innocent you are
+So dear, so lovely
+O mother, o mother`,
+  },
+  "bada-natkhat-hai-lata-mangeshkar": {
+    title: "Bada Natkhat Hai",
+    alternate_title: "Krishna Kanhaiya · Amar Prem",
+    artist_version: "Lata Mangeshkar",
+    audio_url: "https://www.youtube.com/watch?v=8uhPePg1oNQ",
+    youtube_url: "https://www.youtube.com/watch?v=8uhPePg1oNQ",
+    thumbnail_url: "https://i.ytimg.com/vi/8uhPePg1oNQ/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/8uhPePg1oNQ/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/8uhPePg1oNQ/hqdefault.jpg",
+    display_order: 384,
+    category_slugs: ["krishna", "general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Lata Mangeshkar, from the film Amar Prem. Krishna Kanhaiya is full of mischief.",
+    roman_lyrics: "",
+  },
+  "tere-jaisa-yaar-kahan-kishore-kumar": {
+    title: "Tere Jaisa Yaar Kahan",
+    alternate_title: "Yaarana",
+    artist_version: "Kishore Kumar",
+    audio_url: "https://www.youtube.com/watch?v=cnAlfEuFlO0",
+    youtube_url: "https://www.youtube.com/watch?v=cnAlfEuFlO0",
+    thumbnail_url: "https://i.ytimg.com/vi/cnAlfEuFlO0/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/cnAlfEuFlO0/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/cnAlfEuFlO0/hqdefault.jpg",
+    display_order: 385,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Kishore Kumar, from the film Yaarana. Where is a friend like you.",
+    roman_lyrics: "",
+  },
+  "zindagi-ka-safar-kishore-kumar": {
+    title: "Zindagi Ka Safar",
+    alternate_title: "Safar",
+    artist_version: "Kishore Kumar",
+    audio_url: "https://www.youtube.com/watch?v=Y9iWRDRxFDg",
+    youtube_url: "https://www.youtube.com/watch?v=Y9iWRDRxFDg",
+    thumbnail_url: "https://i.ytimg.com/vi/Y9iWRDRxFDg/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/Y9iWRDRxFDg/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/Y9iWRDRxFDg/hqdefault.jpg",
+    display_order: 386,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Kishore Kumar, from the film Safar. Life is a journey no one understands, and no one returns from.",
+    roman_lyrics: "",
+  },
+  "kiya-hai-pyar-jise-jagjit-singh": {
+    title: "Kiya Hai Pyar Jise Humne",
+    artist_version: "Jagjit Singh",
+    audio_url: "https://www.youtube.com/watch?v=vyax8DRMRfw",
+    youtube_url: "https://www.youtube.com/watch?v=vyax8DRMRfw",
+    thumbnail_url: "https://i.ytimg.com/vi/vyax8DRMRfw/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/vyax8DRMRfw/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/vyax8DRMRfw/hqdefault.jpg",
+    display_order: 387,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Jagjit Singh’s ghazal for the one he loved, kept here for a memorial.",
+    roman_lyrics: "",
+  },
+  "ae-malik-tere-bande-hum-lata-mangeshkar": {
+    title: "Ae Malik Tere Bande Hum",
+    alternate_title: "Do Aankhen Barah Haath",
+    artist_version: "Lata Mangeshkar",
+    audio_url: "https://www.youtube.com/watch?v=m2CJZiP4_Sc",
+    youtube_url: "https://www.youtube.com/watch?v=m2CJZiP4_Sc",
+    thumbnail_url: "https://i.ytimg.com/vi/m2CJZiP4_Sc/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/m2CJZiP4_Sc/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/m2CJZiP4_Sc/hqdefault.jpg",
+    display_order: 388,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Lata Mangeshkar, from the film Do Aankhen Barah Haath. We are Your people, O Master. When we stumble, it is still Your door we come to.",
+    roman_lyrics: "",
+  },
+  "tujhe-sooraj-kahoon-ami-patel": {
+    title: "Tujhe Sooraj Kahoon Ya Chanda",
+    alternate_title: "Ek Phool Do Mali",
+    artist_version: "Ami Patel",
+    audio_url: "https://www.youtube.com/watch?v=VcGZpYkCgak",
+    youtube_url: "https://www.youtube.com/watch?v=VcGZpYkCgak",
+    thumbnail_url: "https://i.ytimg.com/vi/VcGZpYkCgak/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/VcGZpYkCgak/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/VcGZpYkCgak/hqdefault.jpg",
+    display_order: 389,
+    category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
+    meaning: "Ami Patel sings Tujhe Sooraj Kahoon Ya Chanda, the father’s song from Ek Phool Do Mali. Manna Dey sang it in the film.",
     roman_lyrics: "",
   },
 };

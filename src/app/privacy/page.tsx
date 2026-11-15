@@ -1,7 +1,7 @@
 import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { LegalDocument, LegalSection } from "@/components/legal/LegalDocument";
-import { CONTACT_EMAIL } from "@/lib/site";
+import { CONTACT_EMAIL, NOREPLY_EMAIL } from "@/lib/site";
 
 export const metadata = pageMeta({
   title: "Privacy Policy",
@@ -9,7 +9,7 @@ export const metadata = pageMeta({
   path: "/privacy",
 });
 
-const updated = "11 November 2026";
+const updated = "15 November 2026";
 
 export default function PrivacyPage() {
   return (
@@ -35,9 +35,9 @@ export default function PrivacyPage() {
       <LegalSection title="Contact form">
         <p>
           If you write to us, we receive the name, email address, subject, and
-          message you type. The form is delivered by FormSubmit to the library
-          inbox at {CONTACT_EMAIL}. We use that message only to read it and
-          reply. We do not add you to a mailing list.
+          message you type. The form is delivered by FormSubmit to{" "}
+          {NOREPLY_EMAIL}. A reply is sent from that address. We use the
+          message only to read it and reply. We do not add you to a mailing list.
         </p>
       </LegalSection>
 
@@ -45,7 +45,8 @@ export default function PrivacyPage() {
         <p>
           The upload form collects the song details you choose to send, and
           your name and email if you include them. An admin uses that
-          information to review the song. An email address is used only if we
+          information to review the song, and a notice of that upload is sent
+          to {NOREPLY_EMAIL}. An email address is used only if we
           need to write back about that submission.
         </p>
       </LegalSection>

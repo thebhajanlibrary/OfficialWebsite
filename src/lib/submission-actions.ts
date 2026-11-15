@@ -14,6 +14,8 @@ import {
   type SubmissionStatus,
 } from "@/lib/submissions";
 import { emptyToNull, slugify } from "@/lib/utils";
+import { notifyLibrary } from "@/lib/notify";
+import { SITE_URL } from "@/lib/site";
 
 const UPLOADS_DIR = path.join(process.cwd(), "public", "uploads");
 const AUDIO_UPLOADS_DIR = path.join(UPLOADS_DIR, "audio");
@@ -144,6 +146,25 @@ export async function submitSongAction(
     saveSubmission(submission);
     revalidatePath("/admin/submissions");
     revalidatePath("/admin");
+
+    const reviewUrl = `${SITE_URL}/admin/submissions/${id}`;
+    const hasLyrics = romanLyrics.length > 0;
+    const from = [submitterName, submitterEmail].filter(Boolean).join(" · ");
+    await notifyLibrary(
+      `Review a song: ${title}`,
+      [
+        `${title} by ${artistName} is waiting in the admin dashboard.`,
+        hasLyrics
+          ? "Lyrics were included."
+          : "This upload has no lyrics. The person confirmed they still wanted to send the recording.",
+        from ? `From: ${from}` : null,
+        submitterNotes ? `Note: ${submitterNotes}` : null,
+        "",
+        `Open it to accept or turn it down: ${reviewUrl}`,
+      ]
+        .filter((line) => line !== null)
+        .join("\n")
+    );
 
     return {
       success: true,

@@ -4,10 +4,12 @@ import {
   deleteBhajanAction,
   deletePlaylistAction,
 } from "@/lib/actions";
-import { filmOriginalLyrics } from "@/lib/lyrics-rights";
 import { getBhajans, getPlaylists } from "@/lib/queries";
 import { getSubmissionCounts } from "@/lib/submissions";
-import { Clock, Inbox, ArrowRight, Sparkles } from "lucide-react";
+import { checkPlaybackAction } from "@/lib/playback-actions";
+import { getPlaybackReport } from "@/lib/playback-health";
+import { NOREPLY_EMAIL } from "@/lib/site";
+import { ArrowRight, Inbox, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = { title: "Admin" };
 export const dynamic = "force-dynamic";
@@ -15,6 +17,7 @@ export const dynamic = "force-dynamic";
 export default async function AdminPage() {
   const [bhajans, playlists] = await Promise.all([getBhajans(), getPlaylists()]);
   const submissionCounts = getSubmissionCounts();
+  const playback = getPlaybackReport();
 
   return (
     <div className="space-y-10">
@@ -97,6 +100,51 @@ export default async function AdminPage() {
             </Link>
           </div>
         </div>
+      </div>
+
+      <div className="rounded-3xl border border-border bg-surface p-6 shadow-sm sm:p-8">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div className="space-y-1">
+            <h2 className="font-display text-2xl font-semibold text-primary">
+              Recordings that stopped playing
+            </h2>
+            <p className="max-w-xl text-sm text-muted">
+              Each check looks at the next batch of YouTube videos and audio
+              files. When one no longer plays, a note is sent to {NOREPLY_EMAIL}.
+              {playback.checkedAt
+                ? ` Last check ${new Date(playback.checkedAt).toLocaleString()}.`
+                : " No check has run yet."}{" "}
+              {playback.total} recordings are on the list.
+            </p>
+          </div>
+          <form action={checkPlaybackAction}>
+            <button
+              type="submit"
+              className="rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-white hover:bg-primary-hover"
+            >
+              Check the next recordings
+            </button>
+          </form>
+        </div>
+        {playback.broken.length > 0 ? (
+          <ul className="mt-5 divide-y divide-border border-y border-border">
+            {playback.broken.slice(0, 12).map((item) => (
+              <li key={item.key} className="py-3">
+                <a href={item.href} className="font-medium text-primary hover:text-accent">
+                  {item.title}
+                </a>
+                {item.artist ? (
+                  <span className="text-sm text-muted"> · {item.artist}</span>
+                ) : null}
+                <p className="text-sm text-muted">{item.reason}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="mt-4 text-sm text-muted">
+            Nothing on the checks so far has been marked as stopped.
+          </p>
+        )}
       </div>
 
       <section className="space-y-4">

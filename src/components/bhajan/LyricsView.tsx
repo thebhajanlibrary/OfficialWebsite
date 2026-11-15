@@ -200,7 +200,7 @@ export function LyricsView({
 
   const panelClass = dark
     ? "space-y-5"
-    : "lyric-panel space-y-6 rounded-2xl p-5 sm:p-8";
+    : "lyric-panel space-y-6 p-5 sm:p-8";
 
   const chipIdle = dark
     ? "rounded-full px-3 py-1.5 text-sm text-[#d7deea] transition hover:bg-white/10"

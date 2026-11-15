@@ -27,6 +27,20 @@ const FILM_ORIGINAL_LYRIC_SLUGS = new Set([
   "suna-suna-lage-brij-ka-dham-mohammed-rafi",
   "sona-sona-lagay-rakesh-yankaran",
   "setum-bandhya-ramayana",
+  "nadiya-na-piye-mohammed-rafi",
+  "jai-shri-ram-do-akshar-mohammed-rafi",
+  "chal-ud-ja-re-panchhi-mohammed-rafi",
+  "ek-pyar-ka-nagma-sanam",
+  "ek-pyar-ka-nagma-lofi-sachin-gupta",
+  "kya-hua-tera-wada-pranav-chandran",
+  "yeh-dosti-rahul-jain",
+  "tu-kitni-achhi-hai-neha-kakkar",
+  "bada-natkhat-hai-lata-mangeshkar",
+  "tere-jaisa-yaar-kahan-kishore-kumar",
+  "zindagi-ka-safar-kishore-kumar",
+  "ae-malik-tere-bande-hum-lata-mangeshkar",
+  "tujhe-sooraj-kahoon-ami-patel",
+  "shyam-teri-bansi-pukare-arati-mukherjee",
 ]);
 
 export function filmOriginalLyrics(slug: string): boolean {

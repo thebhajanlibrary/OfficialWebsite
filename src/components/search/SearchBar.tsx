@@ -187,11 +187,11 @@ export function SearchBar({
           aria-autocomplete="list"
           aria-controls={listId}
           aria-expanded={open}
-          placeholder="Search title, lyrics, artist, category…"
-          className={`w-full border border-border bg-surface text-foreground shadow-[0_12px_40px_rgba(21,34,56,0.06)] placeholder:text-muted transition focus:border-primary focus:shadow-[0_16px_48px_rgba(21,34,56,0.1)] ${
+          placeholder={large ? "Search the catalogue…" : "Search title, lyrics, artist, category…"}
+          className={`w-full border border-border bg-surface text-foreground shadow-[3px_3px_0_rgba(44,36,22,0.06)] placeholder:text-muted transition focus:border-primary ${
             large
-              ? "rounded-xl py-4 pl-12 pr-4 text-base sm:text-lg"
-              : "rounded-lg py-3 pl-11 pr-4 text-sm sm:text-base"
+              ? "py-4 pl-12 pr-4 text-base sm:text-lg"
+              : "py-3 pl-11 pr-4 text-sm sm:text-base"
           }`}
         />
 
@@ -199,7 +199,7 @@ export function SearchBar({
           <div
             id={listId}
             role="listbox"
-            className="absolute left-0 right-0 top-[calc(100%+0.4rem)] z-[60] max-h-[min(24rem,70vh)] overflow-y-auto rounded-xl border border-border bg-surface text-left shadow-[0_20px_50px_rgba(21,34,56,0.18)]"
+            className="absolute left-0 right-0 top-[calc(100%+0.4rem)] z-[60] max-h-[min(24rem,70vh)] overflow-y-auto border border-border bg-surface text-left shadow-[4px_4px_0_rgba(44,36,22,0.08)]"
           >
             {loading &&
             suggestions.length === 0 &&

@@ -23,7 +23,7 @@ export function BhajanList({
   }
 
   return (
-    <div className="border-t border-border/80">
+    <div className="space-y-3">
       {bhajans.map((bhajan) => (
         <BhajanCard key={bhajan.id} bhajan={bhajan} playQueue={playQueue} />
       ))}

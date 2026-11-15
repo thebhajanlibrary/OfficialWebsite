@@ -3,6 +3,7 @@ import Link from "next/link";
 import { BhajanList } from "@/components/bhajan/BhajanList";
 import { CollectionQueueActions } from "@/components/bhajan/CollectionQueueActions";
 import { isOmittedFromLibrary } from "@/lib/albums";
+import { isKeptFromAllBhajans } from "@/lib/folders";
 import { queueTracksFromBhajans } from "@/lib/play-queue";
 import { getBhajans } from "@/lib/queries";
 
@@ -15,7 +16,9 @@ export const metadata = pageMeta({
 
 export default async function AllBhajansPage() {
   const all = await getBhajans();
-  const bhajans = all.filter((b) => !isOmittedFromLibrary(b.slug));
+  const bhajans = all.filter(
+    (b) => !isOmittedFromLibrary(b.slug) && !isKeptFromAllBhajans(b.slug)
+  );
   const playQueue = { kind: "library" as const, id: "all" };
   const queueTracks = queueTracksFromBhajans(bhajans, playQueue);
 

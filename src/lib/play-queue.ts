@@ -4,7 +4,7 @@ import {
   creditedArtistNames,
   getArtistProfile,
 } from "@/lib/artists";
-import { getFolder, isLibraryQueueSkipTrack } from "@/lib/folders";
+import { getFolder, isKeptFromAllBhajans, isLibraryQueueSkipTrack } from "@/lib/folders";
 import { getFestivalById } from "@/lib/festivals";
 import {
   isLocalAudioUrl,
@@ -229,7 +229,10 @@ export function queueTracksFromBhajans(
     queue?.kind === "library" || queue?.kind === "category";
   const list = forCasualPlay
     ? bhajans.filter(
-        (b) => !isLibraryQueueSkipTrack(b.slug) && !isOmittedFromLibrary(b.slug)
+        (b) =>
+          !isLibraryQueueSkipTrack(b.slug) &&
+          !isOmittedFromLibrary(b.slug) &&
+          (queue?.kind !== "library" || !isKeptFromAllBhajans(b.slug))
       )
     : bhajans;
 

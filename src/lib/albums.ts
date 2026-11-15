@@ -379,6 +379,27 @@ export const ALBUMS: Album[] = [
       "horee-khalay-mahatma-gandhi-satsang",
     ],
   },
+  {
+    slug: "satya-ka-darshan-devashish-ramdath",
+    title: "Satya Ka Darshan",
+    artist: "Devashish Ramdath",
+    description:
+      "Devashish Ramdath’s funeral and memorial songs — the garland that breaks, the bird in the cage, and the day we too must leave.",
+    cover_url: "https://i.ytimg.com/vi/QGcPSNkg3rs/hqdefault.jpg",
+    track_slugs: [
+      "toot-gayi-hai-maala-devashish-ramdath",
+      "aaj-suno-hum-geet-devashish-ramdath",
+      "pinjare-ke-panchhi-devashish-ramdath",
+      "koi-roye-koi-gaaye-devashish-ramdath",
+      "aaj-andhere-mein-devashish-ramdath",
+      "hamare-prabhu-avagun-devashish-ramdath",
+      "your-karmic-story-devashish-ramdath",
+      "god-is-standing-at-your-door-devashish-ramdath",
+      "ek-din-hamay-bhi-jana-hai-devashish-ramdath",
+      "hari-ho-ram-milan-devashish-ramdath",
+      "aaye-bhi-akela-devashish-ramdath",
+    ],
+  },
 ];
 
 /** Normalize album / subtitle text for fuzzy matching (dashes, &amp;, etc.). */

@@ -35,7 +35,7 @@ export function youtubePosterUrl(url: string | null | undefined): string | null 
   return id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : null;
 }
 
-function youtubeVideoId(url: string | null | undefined): string | null {
+export function youtubeVideoId(url: string | null | undefined): string | null {
   if (!url) return null;
   try {
     if (url.startsWith("/") || url.startsWith("./")) return null;

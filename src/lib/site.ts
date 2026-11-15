@@ -1,5 +1,8 @@
 export const CONTACT_EMAIL = "thebhajanlibrary@gmail.com";
 
+/** Uploads and broken-recording notices. The public contact address stays CONTACT_EMAIL. */
+export const NOREPLY_EMAIL = "noreply.bhajanlibrary@gmail.com";
+
 export const SITE_URL = "https://www.bhajanlibrary.com";
 
 export const SITE_NAME = "Bhajan Library";

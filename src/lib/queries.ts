@@ -17,6 +17,7 @@ import {
   bhajanBelongsToFolder,
   folderForBhajan,
   getFolder,
+  isKeptFromAllBhajans,
   isLibraryQueueSkipTrack,
   type HymnFolder,
 } from "@/lib/folders";
@@ -791,7 +792,12 @@ export async function resolvePlayQueueSlugs(
   if (queue.kind === "library") {
     const bhajans = await getBhajans();
     return bhajans
-      .filter((b) => !isLibraryQueueSkipTrack(b.slug) && !isOmittedFromLibrary(b.slug))
+      .filter(
+        (b) =>
+          !isLibraryQueueSkipTrack(b.slug) &&
+          !isOmittedFromLibrary(b.slug) &&
+          !isKeptFromAllBhajans(b.slug)
+      )
       .map((b) => b.slug);
   }
   const data = await getArtistBySlug(queue.id);

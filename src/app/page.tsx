@@ -1,10 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import { SearchBar } from "@/components/search/SearchBar";
+import { RotatingShelf, type ShelfItem } from "@/components/home/RotatingShelf";
 import { BhajanList } from "@/components/bhajan/BhajanList";
 import { FestivalCelebration } from "@/components/home/FestivalCelebration";
 import { isOmittedFromLibrary } from "@/lib/albums";
-import { getFolder } from "@/lib/folders";
+import { getFolder, isKeptFromAllBhajans } from "@/lib/folders";
 import { getBhajans, getCategories, getFestivalBhajans } from "@/lib/queries";
 import { getCurrentOrUpcomingFestival, getUpcomingFestivals } from "@/lib/festivals";
 import type { BhajanWithCategories } from "@/lib/types";
@@ -19,28 +19,18 @@ export const metadata = pageMeta({
   absolute: true,
 });
 
-/** Featured folders swap every six hours, and stay put if you refresh in between. */
 const HERO_FOLDERS: { slug: string; note: string; image?: string }[] = [
-  {
-    slug: "hanuman-chalisa",
-    note: "Every version",
-    image: "/images/hanuman-chalisa-lata-mangeshkar.png",
-  },
+  { slug: "hanuman-chalisa", note: "Every version" },
   { slug: "chutney-style-bhajan", note: "Baithak devotionals" },
   { slug: "aarti", note: "Satsang aartis" },
   { slug: "wedding", note: "Marriage songs" },
   { slug: "holi", note: "Songs for Phagwah" },
-  { slug: "om-jai-jagdish-hare", note: "Vishnu aarti" },
-  { slug: "om-jai-lakshmi-mata", note: "Lakshmi aarti" },
-  { slug: "o-palanhare", note: "The Lagaan prayer" },
   { slug: "birthday-songs", note: "Long life and blessings" },
   { slug: "garba", note: "Navratri garba" },
 ];
 
-const HERO_SLOT_MS = 6 * 60 * 60 * 1000;
-
-function featuredFolders(count = 4) {
-  const pool = HERO_FOLDERS.flatMap((entry) => {
+function shelfItems(): ShelfItem[] {
+  return HERO_FOLDERS.flatMap((entry) => {
     const folder = getFolder(entry.slug);
     const image = entry.image ?? folder?.cover_url;
     if (!folder || !image) return [];
@@ -52,11 +42,6 @@ function featuredFolders(count = 4) {
         image,
       },
     ];
-  });
-  if (pool.length === 0) return [];
-  const start = Math.floor(Date.now() / HERO_SLOT_MS) % pool.length;
-  return Array.from({ length: Math.min(count, pool.length) }, (_, i) => {
-    return pool[(start + i) % pool.length]!;
   });
 }
 
@@ -77,7 +62,9 @@ export default async function HomePage() {
         ReturnType<typeof getCategories>
       >),
     ]);
-    recent = all.filter((b) => !isOmittedFromLibrary(b.slug)).slice(0, 8);
+    recent = all
+      .filter((b) => !isOmittedFromLibrary(b.slug) && !isKeptFromAllBhajans(b.slug))
+      .slice(0, 8);
     bhagwanCount = bhagwan.length;
     setupNeeded = all.length === 0;
 
@@ -96,7 +83,7 @@ export default async function HomePage() {
     setupNeeded = true;
   }
 
-  const recordings = featuredFolders();
+  const recordings = shelfItems();
 
   const browse = [
     { href: "/bhajans", label: "All Bhajans", hint: "Full catalogue" },
@@ -120,45 +107,19 @@ export default async function HomePage() {
   return (
     <div className="space-y-16 sm:space-y-20">
       <JsonLd data={websiteJsonLd()} />
-      <section className="grid items-center gap-10 pt-2 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-14 lg:pt-6">
-        <div>
-          <h1>
-            <img
-              src="/brand/logo.svg"
-              alt="Bhajan Library"
-              width={640}
-              height={128}
-              className="h-16 w-auto max-w-full sm:h-24"
-            />
-          </h1>
-          <p className="mt-5 max-w-md text-base leading-relaxed text-muted sm:text-lg">
-            Lyrics and recordings, kept by deity, occasion, and singer.
-          </p>
-          <div className="relative z-30 mt-8 max-w-xl">
-            <SearchBar large />
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3 sm:gap-4">
-          {recordings.map((item) => (
-            <Link key={item.href} href={item.href} className="group min-w-0">
-              <span className="relative block aspect-square overflow-hidden rounded-2xl border border-border bg-surface shadow-[0_16px_40px_rgba(19,32,51,0.12)]">
-                <Image
-                  src={item.image}
-                  alt=""
-                  fill
-                  sizes="240px"
-                  className="object-cover transition duration-500 group-hover:scale-[1.04]"
-                />
-              </span>
-              <span className="mt-2.5 block truncate font-display text-lg font-semibold text-primary group-hover:text-accent">
-                {item.title}
-              </span>
-              <span className="block truncate text-sm text-muted">{item.note}</span>
-            </Link>
-          ))}
+      <section className="max-w-3xl pt-2 lg:pt-4">
+        <h1 className="font-display text-5xl font-semibold leading-none text-primary sm:text-6xl">
+          Bhajan Library
+        </h1>
+        <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
+          Lyrics and recordings, kept by deity, occasion, and singer.
+        </p>
+        <div className="relative z-30 mt-8 max-w-xl">
+          <SearchBar large />
         </div>
       </section>
+
+      {recordings.length > 0 && <RotatingShelf items={recordings} />}
 
       {(currentFestivalInfo || upcomingFestivals.length > 0) && (
         <FestivalCelebration
@@ -184,26 +145,21 @@ export default async function HomePage() {
       <section className="space-y-5">
         <div className="flex items-end justify-between gap-4">
           <h2 className="font-display text-3xl font-semibold text-primary sm:text-4xl">
-            The shelves
+            Browse
           </h2>
           <p className="hidden text-sm text-muted sm:block">Twelve ways in.</p>
         </div>
-        <ol className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2">
-          {browse.map((item, index) => (
+        <ol className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2">
+          {browse.map((item) => (
             <li key={item.href} className="bg-surface">
               <Link
                 href={item.href}
-                className="group grid grid-cols-[2.5rem_1fr] items-baseline gap-2 px-5 py-4 transition hover:bg-accent-soft sm:px-6"
+                className="group block px-5 py-3.5 transition hover:bg-accent-soft sm:px-6"
               >
-                <span className="font-display text-lg text-accent">
-                  {String(index + 1).padStart(2, "0")}
+                <span className="block font-display text-xl font-semibold text-primary transition group-hover:text-accent">
+                  {item.label}
                 </span>
-                <span className="min-w-0">
-                  <span className="block font-display text-xl font-semibold text-primary transition group-hover:text-accent">
-                    {item.label}
-                  </span>
-                  <span className="mt-0.5 block text-sm text-muted">{item.hint}</span>
-                </span>
+                <span className="mt-0.5 block text-sm text-muted">{item.hint}</span>
               </Link>
             </li>
           ))}
