@@ -110,6 +110,14 @@ export default async function FolderDetailPage({ params }: Props) {
               title: "Chutney wedding songs",
               kicker: "Tagged here",
               hint: `${chutneyWedding.length} song${chutneyWedding.length === 1 ? "" : "s"} · open them from this folder`,
+              cover_url: "/images/folders/wedding/chutney-wedding.jpg",
+            },
+            {
+              href: "/albums/lets-sing-and-dance-with-dropati",
+              title: "Let's Sing & Dance with Dropati",
+              kicker: "Tagged separately",
+              hint: "20 tracks · Dropati's wedding album, kept on its own",
+              cover_url: "/images/albums/lets-sing-and-dance-with-dropati.png",
             },
           ]}
         />
@@ -251,7 +259,7 @@ export default async function FolderDetailPage({ params }: Props) {
               href: "/albums/lets-sing-and-dance-with-dropati",
               title: "Let's Sing & Dance with Dropati",
               kicker: "Album · chutney",
-              hint: "Full Dropati set — tagged Wedding, kept on the album",
+              hint: "Full Dropati set — tagged separately inside the Wedding folder",
               cover_url: "/images/albums/lets-sing-and-dance-with-dropati.png",
             },
             {

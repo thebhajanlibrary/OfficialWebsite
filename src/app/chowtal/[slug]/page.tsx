@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { LyricsView } from "@/components/bhajan/LyricsView";
-import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { QueueAwarePlayer } from "@/components/bhajan/QueueAwarePlayer";
+import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
+import { SongReadingLayout } from "@/components/bhajan/SongReadingLayout";
 import {
   CHOWTAL_KIND_LABELS,
   neighborsInChowtal,
@@ -91,39 +91,39 @@ export default async function ChowtalDetailPage({ params }: Props) {
         </div>
       </header>
 
-      {embed && (
-        <QueueAwarePlayer
-          kind="youtube"
-          embedUrl={embed}
-          title={current.title}
-          cover={poster}
-          slug={current.slug}
-          href={`/chowtal/${current.slug}`}
-        />
-      )}
-
-      <section className="space-y-3">
-        <h2 className="font-display text-2xl font-semibold text-primary">
-          Lyrics
-        </h2>
-        <LyricsView
-          roman={current.roman_lyrics}
-          translation={current.translation}
-        />
-      </section>
-
-      {meaning.length > 0 && (
-        <section className="space-y-3 border-t border-border pt-8">
-          <h2 className="font-display text-2xl font-semibold text-primary">
-            Meaning
-          </h2>
-          <div className="max-w-2xl space-y-4 text-base leading-relaxed text-muted sm:text-lg">
-            {meaning.map((para, i) => (
-              <p key={i}>{para}</p>
-            ))}
-          </div>
-        </section>
-      )}
+      <SongReadingLayout
+        hasPlayer={Boolean(embed)}
+        hasLyrics={Boolean(current.roman_lyrics?.trim())}
+        roman={current.roman_lyrics}
+        translation={current.translation}
+        meaningTitle="Meaning"
+        player={
+          embed ? (
+            <QueueAwarePlayer
+              kind="youtube"
+              embedUrl={embed}
+              title={current.title}
+              cover={poster}
+              slug={current.slug}
+              href={`/chowtal/${current.slug}`}
+            />
+          ) : null
+        }
+        extra={
+          meaning.length > 0 ? (
+            <section className="space-y-3 border-t border-border pt-8">
+              <h2 className="font-display text-2xl font-semibold text-primary">
+                Meaning
+              </h2>
+              <div className="max-w-2xl space-y-4 text-base leading-relaxed text-muted sm:text-lg">
+                {meaning.map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
+            </section>
+          ) : null
+        }
+      />
 
       <nav className="flex justify-between gap-3 border-t border-border pt-6 text-sm">
         {prev ? (

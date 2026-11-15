@@ -327,7 +327,7 @@ export const ALBUMS: Album[] = [
     artist: "Dropati",
     omit_from_library: true,
     description:
-      "Classic Surinamese wedding chutney and chutney-bhajan by Dropati (Shrimati Draupadi Srikant Upadhya). Tagged as a wedding album. It stays here and under Traditional Chutney, and is not listed inside the Wedding folder.",
+      "Classic Surinamese wedding chutney and chutney-bhajan by Dropati (Shrimati Draupadi Srikant Upadhya). Tagged separately inside the Wedding folder, and also under Traditional Chutney. The tracks stay on this album.",
     cover_url: "/images/albums/lets-sing-and-dance-with-dropati.png",
     track_slugs: [
       "gauri-puja-dropati",

@@ -6,11 +6,10 @@ import { notFound, redirect } from "next/navigation";
 
 import { ChutneyVersionPlayer } from "@/components/bhajan/ChutneyVersionPlayer";
 
-import { LyricsView } from "@/components/bhajan/LyricsView";
-
 import { QueueAwarePlayer } from "@/components/bhajan/QueueAwarePlayer";
 
 import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
+import { SongReadingLayout } from "@/components/bhajan/SongReadingLayout";
 import { ChutneyCredits } from "@/components/chutney/ChutneyCredits";
 
 import {
@@ -195,111 +194,55 @@ export default async function WeddingDetailPage({ params, searchParams }: Props)
 
 
 
-      {versions.length > 1 ? (
-
-        <ChutneyVersionPlayer
-
-          versions={versions}
-
-          title={current.title}
-
-          artist={performerCredit ?? current.artist}
-
-          cover={current.cover_url ?? current.thumbnail_url ?? poster}
-
-          slug={current.slug}
-
-          href={`/wedding/${current.slug}`}
-
-          autoPlay={autoPlay}
-
-          initialVersionId={initialVersionId}
-
-          queueKey="wedding:all"
-
-          queueTracks={queueTracks}
-
-        />
-
-      ) : localAudio ? (
-
-        <QueueAwarePlayer
-
-          kind="audio"
-
-          src={localAudio}
-
-          title={current.title}
-
-          artist={performerCredit ?? current.artist}
-
-          cover={current.cover_url ?? current.thumbnail_url ?? poster}
-
-          slug={current.slug}
-
-          href={`/wedding/${current.slug}`}
-
-          autoPlay={autoPlay}
-
-          queueKey="wedding:all"
-
-          queueTracks={queueTracks}
-
-        />
-
-      ) : null}
-
-
-
-      {embed && !localAudio && versions.length === 0 && (
-
-        <QueueAwarePlayer
-
-          kind="youtube"
-
-          embedUrl={embed}
-
-          title={current.title}
-
-          cover={poster ?? current.thumbnail_url}
-
-          artist={performerCredit ?? current.artist}
-
-          slug={current.slug}
-
-          href={`/wedding/${current.slug}`}
-
-          autoPlay={autoPlay}
-
-          queueKey="wedding:all"
-
-          queueTracks={queueTracks}
-
-        />
-
-      )}
-
-
-
-      <section className="space-y-3">
-
-        <h2 className="font-display text-2xl font-semibold text-primary">
-
-          Lyrics
-
-        </h2>
-
-        <LyricsView
-
-          roman={current.roman_lyrics}
-
-          translation={current.translation}
-
-        />
-
-      </section>
-
-
+      <SongReadingLayout
+        hasPlayer={versions.length > 1 || Boolean(localAudio) || Boolean(embed)}
+        hasLyrics={Boolean(current.roman_lyrics?.trim())}
+        roman={current.roman_lyrics ?? ""}
+        translation={current.translation}
+        meaningTitle="Meaning"
+        player={
+          versions.length > 1 ? (
+            <ChutneyVersionPlayer
+              versions={versions}
+              title={current.title}
+              artist={performerCredit ?? current.artist}
+              cover={current.cover_url ?? current.thumbnail_url ?? poster}
+              slug={current.slug}
+              href={`/wedding/${current.slug}`}
+              autoPlay={autoPlay}
+              initialVersionId={initialVersionId}
+              queueKey="wedding:all"
+              queueTracks={queueTracks}
+            />
+          ) : localAudio ? (
+            <QueueAwarePlayer
+              kind="audio"
+              src={localAudio}
+              title={current.title}
+              artist={performerCredit ?? current.artist}
+              cover={current.cover_url ?? current.thumbnail_url ?? poster}
+              slug={current.slug}
+              href={`/wedding/${current.slug}`}
+              autoPlay={autoPlay}
+              queueKey="wedding:all"
+              queueTracks={queueTracks}
+            />
+          ) : embed ? (
+            <QueueAwarePlayer
+              kind="youtube"
+              embedUrl={embed}
+              title={current.title}
+              cover={poster ?? current.thumbnail_url}
+              artist={performerCredit ?? current.artist}
+              slug={current.slug}
+              href={`/wedding/${current.slug}`}
+              autoPlay={autoPlay}
+              queueKey="wedding:all"
+              queueTracks={queueTracks}
+            />
+          ) : null
+        }
+      />
 
       <nav className="flex justify-between gap-3 border-t border-border pt-6 text-sm">
 

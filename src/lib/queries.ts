@@ -702,7 +702,9 @@ export async function getFolders(): Promise<
     folder,
     count:
       folder.slug === "wedding"
-        ? weddingBhajans.length + getWeddingSongs().length
+        ? weddingBhajans.length +
+          getWeddingSongs().length +
+          (getAlbum("lets-sing-and-dance-with-dropati")?.track_slugs.length ?? 0)
         : all.filter((b) => bhajanBelongsToFolder(folder.slug, b)).length,
   })).sort((a, b) =>
     a.folder.title.localeCompare(b.folder.title, undefined, {

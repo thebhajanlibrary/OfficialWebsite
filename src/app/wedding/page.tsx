@@ -7,6 +7,7 @@ export const metadata = pageMeta({
   description:
     "Chutney wedding songs tagged in the Wedding folder on Bhajan Library.",
   path: "/wedding",
+  image: "/images/folders/wedding/chutney-wedding.jpg",
 });
 
 export default function WeddingIndexPage() {

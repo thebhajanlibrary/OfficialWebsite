@@ -256,8 +256,8 @@ Now my body is drenched in sweat, beloved`,
 
 Wadekar chale aage aage
 Sobers goes behind
-Kanhai drinking white-rum
-Durrani drinking wine
+Kanhai drinking ____
+Durrani drinking ____
 
 ## Verse 1
 
@@ -319,8 +319,8 @@ Went on to Venkataraghavan`,
 
 Wadekar walks in front
 Sobers goes behind
-Kanhai’s drinking white-rum
-Durrani’s drinking wine
+Kanhai’s drinking ____
+Durrani’s drinking ____
 
 ## Verse 1
 
@@ -2118,16 +2118,16 @@ Look Santa eatin
 
 ## Verse 2
 
-He say he feel dry he could do with something hard
-Santa mangē dārū piye
-He say he feel dry he could do with something hard
-He gatkay puncheon-wa and he nearly get bad
+He say he feel dry he could do with something ____
+Santa mangē ____ piye
+He say he feel dry he could do with something ____
+He gatkay ____ and he nearly get ____
 
 ## Refrain
 
 Jing ah ling jing ah ling jing ah ling
 Jing ah ling ling ling de bell ringin
-He drinkin puncheon
+He drinkin ____
 
 ## Verse 3
 
@@ -2175,16 +2175,16 @@ Look — Santa is eating
 
 ## Verse 2
 
-He said he felt dry — he could do with something hard (a drink)
-Santa wants to drink rum (dārū)
-He said he felt dry — he could do with something hard (a drink)
-He gulped down Puncheon rum (gatkay / gapkay) and he nearly got drunk
+He said he felt dry — he could do with something ____
+Santa wants to drink ____
+He said he felt dry — he could do with something ____
+He gulped down ____ and he nearly got ____
 
 ## Refrain
 
 Jing ah ling jing ah ling jing ah ling
 Jing ah ling ling ling the bell is ringing
-He is drinking puncheon
+He is drinking ____
 
 ## Verse 3
 
@@ -2692,16 +2692,17 @@ I will pick/harvest it, will you send/ship it or not?`,
     slug: "nanda-baba-anand-yankaran",
     title: "Nanda Baba",
     order: 14,
-    cue: "Chutney bhajan · Anand Yankaran",
+    cue: "Chutney bhajan · Wedding · Anand Yankaran",
     artist: "Anand Yankaran",
     audio_url: "/audio/folders/chutney-style-bhajan/nanda-baba-anand-yankaran.mp3",
     thumbnail_url: "/images/nanda-baba-anand-yankaran.jpg",
-    sections: ["chutney"],
+    sections: ["chutney", "wedding"],
     search_tags: [
       "nanda baba",
       "kanhaiya",
       "nanda baba ji ko chhaiya",
       "yankaran",
+      "wedding",
     ],
     roman_lyrics: `## Chorus
 
@@ -3151,7 +3152,7 @@ The plane caught on fire and we fell inside the cane
 ## Verse 3
 
 I am beating my drum and singing my song
-The only thing I am missing is my bottle of rum
+The only thing I am missing is my bottle of ____
 
 ## Verse 4
 
@@ -3180,7 +3181,7 @@ The plane caught on fire and we fell inside the cane
 ## Verse 3
 
 I am beating my drum and singing my song
-The only thing I am missing is my bottle of rum
+The only thing I am missing is my bottle of ____
 
 ## Verse 4
 
@@ -3233,36 +3234,36 @@ Dono jake baithay hain
 
 ## Verse 2
 
-Nana keene Puncheon daru
+Nana keene ____
 Ujjar jaise pani
-Charlie's wine aur Gilbey wine
+Charlie's ____ aur Gilbey ____
 Khareede meri Nani
 
 ## Chorus
 
 Agay-agay Nana chale
 Nani going behind
-Nana drinkin white one and Nani drinkin wine
+Nana drinkin ____ and Nani drinkin ____
 
 ## Verse 3
 
 Nana ridin bicycle and Nani ringin bell
 Nani lock di handle dey fall inside ah well
-Meh Nana so damn careless he doh care if Nani drown
-And he jump in di bank boy he hold on to white one
+Meh Nana so ____ careless he doh care if Nani drown
+And he jump in di bank boy he hold on to ____
 
 ## Verse 4
 
 Nana smoking tobacco and Nani cigarette
 The rain did started falling di both ah dem get wet
 Meh Nani tell meh Nana ole man ah feelin cold
-Give meh some white one to warm up meh soul
+Give meh some ____ to warm up meh soul
 
 ## Chorus
 
 Agay-agay Nana chale
 Nani going behind
-Nana drinkin white one and Nani drinkin wine
+Nana drinkin ____ and Nani drinkin ____
 
 ## Verse 5
 
@@ -3275,7 +3276,7 @@ Dey took di poor old man and throw him in di jail
 
 Agay-agay Nana chale
 Nani going behind
-Nana drinkin white one and Nani drinkin wine
+Nana drinkin ____ and Nani drinkin ____
 
 ## Verse 6
 
@@ -3287,41 +3288,41 @@ So I have to get one for my companion`,
 
 Grandparents (Nana-Nani) left home
 They are going slowly
-In the Madeira (rum) shop
+In the Madeira (____) shop
 They both went and sat
 
 ## Verse 2
 
-Grandpa bought Puncheon rum
+Grandpa bought ____
 Clear like white water
-Charlie's wine and Gilbey wine
+Charlie's ____ and Gilbey ____
 My grandmother bought
 
 ## Chorus
 
 Grandpa goes in front
 Nani going behind
-Nana drinking white rum and Nani drinking wine
+Nana drinking ____ and Nani drinking ____
 
 ## Verse 3
 
 Nana riding bicycle and Nani ringing the bell
 Nani locked the handle — they fall inside a well
 My Nana is so careless he doesn't care if Nani drowns
-And he jumps on the bank — boy, he holds on to the white rum
+And he jumps on the bank — boy, he holds on to the ____
 
 ## Verse 4
 
 Nana smoking tobacco and Nani cigarette
 The rain started falling — both of them got wet
 My Nani tells my Nana: old man, I'm feeling cold
-Give me some white rum to warm up my soul
+Give me some ____ to warm up my soul
 
 ## Chorus
 
 Grandpa goes in front
 Nani going behind
-Nana drinking white rum and Nani drinking wine
+Nana drinking ____ and Nani drinking ____
 
 ## Verse 5
 
@@ -3334,7 +3335,7 @@ They took the poor old man and threw him in the jail
 
 Grandpa goes in front
 Nani going behind
-Nana drinking white rum and Nani drinking wine
+Nana drinking ____ and Nani drinking ____
 
 ## Verse 6
 
@@ -3545,105 +3546,64 @@ Has my love blossomed like the rare Gulari flower?`,
       "bhauji",
       "bhaiya",
       "sonny mann",
+      "dhanthal",
       "trinidad",
       "bhojpuri",
     ],
     about:
-      "A comic Indo-Caribbean chutney about bhauji (sister-in-law) rolling about after rum, dodging work, dancing at a baraat, and quarrelling with bhaiya — Sonny Mann’s Lootala.",
+      "A comic Indo-Caribbean chutney about bhauji (brother's wife) rolling about, dodging work, playing the dhanthal and dancing at a baraat, and quarrelling with bhaiya — Sonny Mann's Lootala.",
     roman_lyrics: `## Refrain
 
-Lotela, tum lotela
+Lotela khoob lotela
+Lote bhauji khoob lotela
 
 ## Verse 1
 
-Lotay bhauji, lotay, tum lotela
+Bhauji leke saabun khoob nahayela
+____ peeye ragre bhauji khoob lotela
 
 ## Verse 2
 
-Bhauji leke saboon, tum nahaela
+Bhaiya leke gaari khoob kaam karela
+Bhauji na jaane kaam karay khoob sotela
 
 ## Verse 3
 
-Daru piye lagle bhauji tum lotela
+Bhai aur bhauji baraat mein gaili
+Dhanthal bajaavay bhauji khoob nachela
 
 ## Verse 4
 
-Bhaiya leke gari tum kaam karela
-
-## Verse 5
-
-Bhauji na jaane kam kare, tum sootela
-
-## Verse 6
-
-Bhai aur bhauji baraat mein gaile
-
-## Verse 7
-
-Tassa bajawe bhauji tum nachela
-
-## Verse 8
-
-Hamare bhauji tum dabela
-
-## Verse 9
-
-Hamare bhaiya na samjela
-
-## Verse 10
-
-Bhauji bole bhaiya gaddha na samjela
-
-## Verse 11
-
-Bhaiya leke lathi bhauji tum marela`,
+Hamaare bhauji khoob daabela
+Hamaare bhaiya na samjhela
+Bhauji bole bahiya ke tarha na samjhela
+Bhaiya leke latthi bhauji khoob maarela`,
     translation: `## Refrain
 
-Rolling, rolling all about
+Rolled around a lot
+Sister-in-law rolled around well
 
 ## Verse 1
 
-Roll sister-in-law, roll, rolling all about
+Sister-in-law took the soap and bathed well
+Sister-in-law drank ____ and rolled around well
 
 ## Verse 2
 
-Sister-in-law takes soap and is bathing plenty
+Brother takes the car and works hard
+Sister-in-law does not know how to work, she sleeps well
 
 ## Verse 3
 
-Sister-in-law drank rum and starts rolling all about
+Brother and sister-in-law went to the wedding party
+Played the dhanthal, sister-in-law danced well
 
 ## Verse 4
 
-My big brother takes the car and works plenty
-
-## Verse 5
-
-Sister-in-law does not know how to work, she is sleeping plenty
-
-## Verse 6
-
-My brother and sister-in-law went in a wedding procession
-
-## Verse 7
-
-Tassa plays and sister-in-law dances plenty
-
-## Verse 8
-
-My sister-in-law is nagging plenty
-
-## Verse 9
-
-My big brother is not understanding
-
-## Verse 10
-
-Sister-in-law said big brother is a jackass, he is not understanding
-
-## Verse 11
-
-Big brother takes a stick and beats sister-in-law plenty`,
+My sister-in-law nags a lot
+My brother does not understand or listen
+Sister-in-law says, like brother, you do not understand or listen
+Brother took a stick and hit sister-in-law a lot`,
   },
   {
     slug: "payaliya-devanand-gattoo",
@@ -3961,6 +3921,91 @@ A fish came by and took her earring
 Her younger brother-in-law searches, her younger sister-in-law searches
 Her beloved casts a giant fishing net
 A fish came by and took her earring`,
+  },
+  {
+    slug: "mousie-rakesh-yankaran",
+    title: "Mousie",
+    order: 27,
+    cue: "Traditional chutney · Sohar · Rakesh Yankaran",
+    about:
+      "A sohar for a son's birth, sung by Rakesh Yankaran of Trinidad. Mousie cooks halwa in the kitchen, and the batarva — the one sent out with the news — is called for. The mother bathes and dresses, the darling boy cries for milk, and the relatives arrive with gifts. Babla and Kanchan sang it later.",
+    artist: "Rakesh Yankaran",
+    youtube_url: "https://www.youtube.com/watch?v=eunyFLKRkwo",
+    thumbnail_url: "https://i.ytimg.com/vi/eunyFLKRkwo/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/eunyFLKRkwo/hqdefault.jpg",
+    sections: ["chutney"],
+    search_tags: [
+      "mausi rasoiye halava",
+      "mousie",
+      "mausee",
+      "halwa",
+      "halava",
+      "rasoiye",
+      "batarva",
+      "sohar",
+      "rakesh yankaran",
+      "yankaran",
+    ],
+    roman_lyrics: `## Refrain
+
+Mausi rasoiye halava; ab mausi rasoiye halava.
+Batarva he batarva, ho batarva khoje; mausi rasoiye halava. (2)
+Mausi rasoiye halava; ab mausi rasoiye halava.
+Batarva khoje; mausi rasoiye halava. Ai u rai u
+
+## Verse 1
+
+Sau din ke, bhar hi manave, bhar hi manave. (2)
+Shakti ke, na bhar de. Shakti ke, na bhar de.
+Batarva ho batarva, he batarva khoje; mausi rasoiye halava. (Ref)
+
+## Verse 2
+
+Ja mai' na ye, maiya nahaye, maiya nahaye. (2)
+Pehana ab, sundar kapara. Pehana ab, sundar kapara.
+Batarva ho batarva, he batarva khoje; mausi rasoiye halava. (Ref)
+
+## Verse 3
+
+Lallana rove, dudha mange, dudha mange. (2)
+Aji bahu, jhulana jhulave. Aji bahu, jhulana jhulave.
+Batarva ho batarva, he batarva khoje; mausi rasoiye halava. (Ref)
+
+## Verse 4
+
+Parijan aye, dana laye, dana laye. (2)
+Bahu bidhi, beta lallana. Bahu bidhi, beta lallana.
+Batarva ho batarva, he batarva khoje; mausi rasoiye halava. (Ref)`,
+    translation: `## Refrain
+
+Mausi (mother's sister) is cooking halwa in the kitchen; now Mausi is cooking halwa in the kitchen.
+The batarva, oh the batarva, the batarva searches; Mausi is cooking halwa in the kitchen. (2)
+Mausi is cooking halwa in the kitchen; now Mausi is cooking halwa in the kitchen.
+The batarva searches; Mausi is cooking halwa in the kitchen. Ai u rai u
+
+## Verse 1
+
+For a hundred days, celebrate it in full, celebrate it in full. (2)
+Do not leave the strength unfilled. Do not leave the strength unfilled.
+The batarva, oh the batarva, hey the batarva searches; Mausi is cooking halwa in the kitchen. (Ref)
+
+## Verse 2
+
+Go on, mother, the mother bathes, the mother bathes. (2)
+Now put on beautiful clothes. Now put on beautiful clothes.
+The batarva, oh the batarva, hey the batarva searches; Mausi is cooking halwa in the kitchen. (Ref)
+
+## Verse 3
+
+The darling boy cries, he asks for milk, he asks for milk. (2)
+O daughter-in-law, rock the cradle. O daughter-in-law, rock the cradle.
+The batarva, oh the batarva, hey the batarva searches; Mausi is cooking halwa in the kitchen. (Ref)
+
+## Verse 4
+
+The relatives have come, they have brought gifts, they have brought gifts. (2)
+Through many rites, the darling son. Through many rites, the darling son.
+The batarva, oh the batarva, hey the batarva searches; Mausi is cooking halwa in the kitchen. (Ref)`,
   },
 ];
 

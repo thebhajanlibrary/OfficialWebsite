@@ -231,9 +231,9 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     slug: "wedding",
     title: "Wedding",
     description:
-      "Wedding bhajans and prayers. Chutney wedding songs are tagged here and open from this folder. Dropati's album stays tagged as wedding and is not listed inside.",
+      "Wedding bhajans and prayers. Chutney wedding songs and Dropati are each tagged separately inside this folder.",
     cover_url: "/images/folders/wedding/cover.jpg",
-    search_aliases: ["wedding", "shaadi", "matkorwa", "lawa", "sehra", "paar karo", "pari karo"],
+    search_aliases: ["wedding", "shaadi", "matkorwa", "lawa", "sehra", "dropati", "paar karo", "pari karo"],
   },
   {
     slug: "birthday-songs",
