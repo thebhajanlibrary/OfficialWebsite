@@ -374,6 +374,14 @@ export const FUNERAL_MOOD_SKIP_SLUGS = new Set([
   "zindagi-ka-safar-kishore-kumar",
   "kiya-hai-pyar-jise-jagjit-singh",
   "ae-malik-tere-bande-hum-lata-mangeshkar",
+  "mere-ke-panchi-pawan-sharma",
+  "aaye-bhi-akela-boodram-holass",
+  "aaj-suno-hum-geet-shri-prakash-gossai",
+  "yeh-dosti-rahul-jain",
+  "tu-kitni-achhi-hai-lata-mangeshkar",
+  "tu-kitni-achhi-hai-neha-kakkar",
+  "tere-jaisa-yaar-kahan-kishore-kumar",
+  "tujhe-sooraj-kahoon-ami-patel",
 ]);
 
 export function isKeptFromAllBhajans(slug: string): boolean {

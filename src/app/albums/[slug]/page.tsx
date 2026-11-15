@@ -391,6 +391,7 @@ export default async function AlbumDetailPage({ params }: Props) {
                     title: "Chowtal",
                     kicker: "Lyrics",
                     hint: "Phagwah singing lyrics — stays on Chowtal, not this album",
+                    cover_url: "/images/chowtal/cover.jpg",
                   },
                 ]}
               />
@@ -412,6 +413,7 @@ export default async function AlbumDetailPage({ params }: Props) {
                     title: "Chowtal",
                     kicker: "Lyrics",
                     hint: "Phagwah singing lyrics — album linked from here too",
+                    cover_url: "/images/chowtal/cover.jpg",
                   },
                 ]}
               />
@@ -426,6 +428,7 @@ export default async function AlbumDetailPage({ params }: Props) {
                     title: "Chowtal",
                     kicker: "Section",
                     hint: "This album is listed on the Chowtal page",
+                    cover_url: "/images/chowtal/cover.jpg",
                   },
                   {
                     href: "/folders/holi",

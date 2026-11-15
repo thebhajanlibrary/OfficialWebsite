@@ -1038,6 +1038,104 @@ Tell the betrothed
 Gulal flies in Holi
 Tell the betrothed`;
 
+const SUNA_SUNA_LAGE_ROMAN = `## Opening
+
+Maiya ki mamta sajhi sajh baba ka pyar
+Baal baal ki mitrata gopiyan ki manohar
+Sajh ke sab parivar ko sajh murli ki taan
+Apno se mukh mod ke Mathura chale re Kanha
+
+## Chorus
+
+Suna suna lage Brij ka dham
+Gokul ko chhod chale re Ghansham
+Suna suna lage Brij ka dham
+Gokul ko chhod chale re Ghansham
+
+## Verse 1
+
+Jamuna roye Madhuvan roye roye kadam ki chhaiya
+Bhar bhar naina roye re gawale roye Brij ki gaiya
+Raah rok kar roye mansuka bilakh rahe more Sham re
+
+Suna suna lage Brij ka dham
+Gokul ko chhod chale re Ghansham
+Suna suna lage Brij ka dham
+Gokul ko chhod chale re Ghansham
+
+## Verse 2
+
+Khol sake na ghar ke panchhi ashuan se bhahre naina
+Aaja Kanha na ja Kanha na ja Kanha
+Aaja Kanha na ja Kanha kuke re pinjare ki maina
+Nadiya roye giriwar roye le Kanha ka naam re
+
+Suna suna lage Brij ka dham
+Gokul ko chhod chale re Ghansham
+
+## Verse 3
+
+Prem diwani Radha Rani bhar nainan me pani
+Prem diwani Radha Rani bhar nainan me pani
+Subak subak kahe haye re Kanha haye re Kanha
+Subak subak kahe haye re Kanha
+Tune birha ki peedh na jani
+Kaise kategi tum bin sathi jivan ki ab shaam re
+
+Suna suna lage Brij ka dham
+Gokul ko chhod chale re Ghansham
+Suna suna lage Brij ka dham
+Gokul ko chhod chale re Ghansham`;
+
+const SUNA_SUNA_LAGE_TRANSLATION = `## Opening
+
+Mother’s love is shared, and so is father’s love
+The friendship of childhood, the charm of the milkmaids (gopīs)
+Shared with the whole family, the flute’s melody shared
+Turning his face from his own, Krishna has gone to Mathura
+
+## Chorus
+
+Brij feels empty, empty
+Krishna has left Gokul and gone
+Brij feels empty, empty
+Krishna has left Gokul and gone
+
+## Verse 1
+
+The Yamuna weeps, Madhuvan weeps, the shade of the kadam tree weeps
+Eyes fill and weep, the cowherds weep, the cows of Brij weep
+Blocking the road, Mansuka weeps, crying out, my Krishna
+
+Brij feels empty, empty
+Krishna has left Gokul and gone
+Brij feels empty, empty
+Krishna has left Gokul and gone
+
+## Verse 2
+
+The birds of the house cannot open their eyes, filled with tears
+Come, Krishna, do not go, Krishna, do not go, Krishna
+Come, Krishna, do not go, Krishna, calls the mynah in the cage
+The river weeps, the mountain weeps, taking Krishna’s name
+
+Brij feels empty, empty
+Krishna has left Gokul and gone
+
+## Verse 3
+
+Love-mad Radha, water filling her eyes
+Love-mad Radha, water filling her eyes
+Sobbing, she says, alas Krishna, alas Krishna
+Sobbing, she says, alas Krishna
+You never knew the pain of separation
+How will this evening of life pass now, companion, without you
+
+Brij feels empty, empty
+Krishna has left Gokul and gone
+Brij feels empty, empty
+Krishna has left Gokul and gone`;
+
 const OM_JAI_JAGDISH_CATEGORY_SLUGS = [
   "vishnu",
   "general",
@@ -5857,11 +5955,11 @@ Having poured the colour, Krishna has gone`,
     title: "Aaj Na Chhodenge",
     alternate_title: "Kati Patang (1971) · film original",
     artist_version: "Kishore Kumar, Lata Mangeshkar",
-    audio_url: "https://www.youtube.com/watch?v=iQzfrHVTK7s",
-    youtube_url: "https://www.youtube.com/watch?v=iQzfrHVTK7s",
-    thumbnail_url: "https://i.ytimg.com/vi/iQzfrHVTK7s/hqdefault.jpg",
-    cover_url: "https://i.ytimg.com/vi/iQzfrHVTK7s/hqdefault.jpg",
-    mini_cover_url: "https://i.ytimg.com/vi/iQzfrHVTK7s/hqdefault.jpg",
+    audio_url: "https://www.youtube.com/watch?v=VGQRMUqya3s",
+    youtube_url: "https://www.youtube.com/watch?v=VGQRMUqya3s",
+    thumbnail_url: "https://i.ytimg.com/vi/VGQRMUqya3s/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/VGQRMUqya3s/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/VGQRMUqya3s/hqdefault.jpg",
     display_order: 455,
     category_slugs: ["holi"],
     meaning:
@@ -20887,8 +20985,9 @@ Victory, Hara Hara, great God`,
       "hindi",
     ],
     meaning:
-      "Mohammed Rafi in the film Neelmani. After Kanha leaves Gokul for Mathura, Brij feels empty: the river, the kadam shade, the cows, and Radha are left calling him back.",
-    roman_lyrics: "",
+      "Mohammed Rafi in the film Neelmani. After Kanha (Krishna) leaves Gokul for Mathura, Brij feels empty: the Yamuna, the kadam shade, the cows, and Radha are left calling him back. Ghansham is another name for Krishna.",
+    roman_lyrics: SUNA_SUNA_LAGE_ROMAN,
+    translation: SUNA_SUNA_LAGE_TRANSLATION,
   },
   "sona-sona-lagay-rakesh-yankaran": {
     title: "Sona Sona Lagay",
@@ -20910,8 +21009,9 @@ Victory, Hara Hara, great God`,
       "hindi",
     ],
     meaning:
-      "Rakesh Yankaran’s chutney-style version of Suna Suna Lage Brij Ka Dham, the same song Mohammed Rafi sings in Neelmani. Brij feels empty after Kanha leaves Gokul for Mathura.",
-    roman_lyrics: "",
+      "Rakesh Yankaran’s chutney-style version of Suna Suna Lage Brij Ka Dham, the same song Mohammed Rafi sings in Neelmani. Brij feels empty after Kanha (Krishna) leaves Gokul for Mathura. Ghansham is another name for Krishna.",
+    roman_lyrics: SUNA_SUNA_LAGE_ROMAN,
+    translation: SUNA_SUNA_LAGE_TRANSLATION,
   },
   "ekadantaya-vakratundaya-after-remix": {
     title: "Ekadantaya Vakratundaya",

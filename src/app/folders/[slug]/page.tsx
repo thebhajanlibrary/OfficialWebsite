@@ -224,6 +224,7 @@ export default async function FolderDetailPage({ params }: Props) {
               title: "Chowtal",
               kicker: "Lyrics",
               hint: "Phagwah singing lyrics — not mixed into this folder",
+              cover_url: "/images/chowtal/cover.jpg",
             },
           ]}
         />
@@ -281,6 +282,7 @@ export default async function FolderDetailPage({ params }: Props) {
               title: "Chowtal",
               kicker: "Lyrics",
               hint: "Phagwah chowtal lyrics — not mixed into this folder",
+              cover_url: "/images/chowtal/cover.jpg",
             },
           ]}
         />

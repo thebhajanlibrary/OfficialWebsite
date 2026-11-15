@@ -1,14 +1,18 @@
 import { pageMeta } from "@/lib/seo";
+import Image from "next/image";
 import Link from "next/link";
 import { ShareSongButton } from "@/components/bhajan/ShareSongButton";
 import { RelatedCollections } from "@/components/layout/RelatedCollections";
 import { getChowtalGrouped, getChowtalSorted } from "@/lib/chowtal";
+
+const CHOWTAL_COVER = "/images/chowtal/cover.jpg";
 
 export const metadata = pageMeta({
   title: "Chowtal",
   description:
     "Phagwah and Holi chowtal lyrics for singing, set out by type.",
   path: "/chowtal",
+  image: CHOWTAL_COVER,
 });
 
 export default function ChowtalIndexPage() {
@@ -17,21 +21,33 @@ export default function ChowtalIndexPage() {
 
   return (
     <div className="space-y-10">
-      <header className="space-y-3">
-        <p className="text-sm text-muted">
-          <Link href="/browse/occasion/holi" className="transition hover:text-primary">
-            Holi / Phagwah
-          </Link>
-        </p>
-        <h1 className="font-display text-4xl font-semibold text-primary sm:text-5xl">
-          Chowtal
-        </h1>
-        <p className="max-w-2xl text-muted">
-          Lyrics for in-person Phagwah singing — {total} pieces, grouped by type.
-          Ordered roughly from common session openers and Holi favourites toward
-          less-used forms. Meaning sits under the whole song (not line by line).
-          No audio; use singing mode when you need bigger type.
-        </p>
+      <header className="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
+        <div className="relative aspect-square w-full max-w-[14rem] shrink-0 overflow-hidden rounded-xl border border-border bg-surface sm:w-44 md:w-52">
+          <Image
+            src={CHOWTAL_COVER}
+            alt=""
+            fill
+            priority
+            sizes="208px"
+            className="object-cover object-center"
+          />
+        </div>
+        <div className="min-w-0 space-y-3">
+          <p className="text-sm text-muted">
+            <Link href="/browse/occasion/holi" className="transition hover:text-primary">
+              Holi / Phagwah
+            </Link>
+          </p>
+          <h1 className="font-display text-4xl font-semibold text-primary sm:text-5xl">
+            Chowtal
+          </h1>
+          <p className="max-w-2xl text-muted">
+            Lyrics for in-person Phagwah singing — {total} pieces, grouped by type.
+            Ordered roughly from common session openers and Holi favourites toward
+            less-used forms. Meaning sits under the whole song (not line by line).
+            No audio; use singing mode when you need bigger type.
+          </p>
+        </div>
       </header>
 
       <RelatedCollections
