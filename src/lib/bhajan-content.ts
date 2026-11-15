@@ -894,6 +894,82 @@ Raghuveera plays Holi
 In Awadh, Raghuveera plays Holi
 It is Holi`;
 
+const RANG_BARSE_ROMAN = `## Chorus
+
+Are kaine mari pichkari
+Tori bhigee angiya
+O rangrasia rangrasia ho
+
+Rang barse bhige chunar wali rang barse
+
+## Verse 1
+
+Sone kee thali mai jona parosa
+Are sone kee thali mai jona parosa
+Are khaye gauri kaa yar
+Balam tarse
+Holi hai
+
+Rang barse bhige chunar wali rang barse
+
+## Verse 2
+
+Launga ilaichi kaa bida lagaya
+Are launga ilaichi kaa bida lagaya
+Are chabe gauri kaa yar
+Balam tarse
+Holi hai
+
+Rang barse bhige chunar wali rang barse
+
+## Verse 3
+
+Are bela chameli kaa sej bhichhaya
+Are bela chameli kaa sej bhichhaya
+Soye gauri kaa yar
+Balam tarse
+Holi hai
+
+Rang barse bhige chunar wali rang barse`;
+
+const RANG_BARSE_TRANSLATION = `## Chorus
+
+Someone sprayed the pichkari
+Your blouse is soaked
+O lover of colour, O lover of colour
+
+Colour rains — the woman in the wet chunar, colour rains
+
+## Verse 1
+
+On a golden plate the meal is served
+On a golden plate the meal is served
+Gauri’s beloved will eat
+The lover longs
+It is Holi
+
+Colour rains — the woman in the wet chunar, colour rains
+
+## Verse 2
+
+A paan of clove and cardamom is prepared
+A paan of clove and cardamom is prepared
+Gauri’s beloved will chew it
+The lover longs
+It is Holi
+
+Colour rains — the woman in the wet chunar, colour rains
+
+## Verse 3
+
+A bed of bela and jasmine is spread
+A bed of bela and jasmine is spread
+Gauri’s beloved will sleep
+The lover longs
+It is Holi
+
+Colour rains — the woman in the wet chunar, colour rains`;
+
 const HOLIYA_UDE_ROMAN = `## Chorus
 
 Holiya mein ude re gulal
@@ -5591,6 +5667,107 @@ Again and again you do not play the flute
 Now you are my settlement and refuge
 My soul and heart are hurt`,
   },
+  "rang-dhal-ke-mohanwa-babla-kanchan": {
+    title: "Rang Dhal Ke Mohanwa",
+    alternate_title: "Gorā Gorā Tanavā · Babla & Kanchan Classic",
+    artist_version: "Babla & Kanchan",
+    thumbnail_url: "/images/rang-dhal-ke-mohanwa-babla-kanchan.jpg",
+    cover_url: "/images/rang-dhal-ke-mohanwa-babla-kanchan.jpg",
+    mini_cover_url: "/images/rang-dhal-ke-mohanwa-babla-kanchan.jpg",
+    player_cover_aspect: "square",
+    display_order: 44,
+    category_slugs: ["krishna", "radha", "general", "holi", "bhajan", "devotion", "hindi"],
+    meaning:
+      "Kumari Kanchan, from Babla & Kanchan Classic. A Holi song: the fair body is rubbed with colour, Krishna pours the colour and goes, and Radha cannot sleep until someone brings him back. Kept in the Holi folder.",
+    roman_lyrics: `## Opening
+
+Gorā gorā tanavā, masalā gaile ho
+Gorā gorā tanavā, masalā gaile ho
+
+## Refrain
+
+Rang dhal ke Mohanvā, nikal gaile ho
+Rang dhal ke Mohanvā, nikal gaile ho
+Rang dhal ke Mohanvā
+Āīūṛāīū
+
+## Verse 1
+
+Baṛī baṛī māre ko, mohe pichakāriyā
+Baṛī baṛī māre ko, mohe pichakāriyā
+Lāj nahī āve, voh kare masakāriyā
+Lāj nahī āve, voh kare masakāriyā
+Gorā gorā rangavā, basalā gaile ho
+
+Rang dhal ke Mohanvā, nikal gaile ho
+Rang dhal ke Mohanvā, nikal gaile ho
+
+## Verse 2
+
+Sārī sārī ratiyā, suratiyā satāve
+Sārī sārī ratiyā, suratiyā satāve
+Kyā karū Rām re, nīndiyā nā āve
+Kyā karū Rām re, nīndiyā nā āve
+Sonavā kā sapanā, tū chal gaile ho
+
+Rang dhal ke Mohanvā, nikal gaile ho
+Rang dhal ke Mohanvā, nikal gaile ho
+
+## Verse 3
+
+Rādhā ke jiyarā, ke ke samjhāve
+Rādhā ke jiyarā, ke ke samjhāve
+Mohanvā ke koī, bhulā ke lāī āve
+Mohanvā ke koī, bhulā ke lāī āve
+Jiyarā kā mālik kal, nikal gaile ho
+
+Rang dhal ke Mohanvā, nikal gaile ho
+Rang dhal ke Mohanvā, nikal gaile ho`,
+    translation: `## Opening
+
+The fair, fair body has been rubbed with colour
+The fair, fair body has been rubbed with colour
+
+## Refrain
+
+Having poured the colour, Krishna has gone
+Having poured the colour, Krishna has gone
+Having poured the colour, Krishna
+Āīūṛāīū
+
+## Verse 1
+
+He sprays the pichkari on me, hard
+He sprays the pichkari on me, hard
+Shame does not come to him — he teases
+Shame does not come to him — he teases
+The fair colour has settled on
+
+Having poured the colour, Krishna has gone
+Having poured the colour, Krishna has gone
+
+## Verse 2
+
+All night long his face torments me
+All night long his face torments me
+What can I do, O Ram — sleep will not come
+What can I do, O Ram — sleep will not come
+A dream of gold — you have gone
+
+Having poured the colour, Krishna has gone
+Having poured the colour, Krishna has gone
+
+## Verse 3
+
+Who can explain Radha's heart
+Who can explain Radha's heart
+Someone, make Krishna forget and bring him back
+Someone, make Krishna forget and bring him back
+Yesterday the master of my heart went away
+
+Having poured the colour, Krishna has gone
+Having poured the colour, Krishna has gone`,
+  },
   "chalo-re-sabhi-ram-se-mile-babla-kanchan": {
     title: "Chalo Re Sabhi Ram Se Mile",
     alternate_title: "Hey Siya Ram · Raghu Ram Ayodhya Mein Aaye",
@@ -7695,80 +7872,8 @@ Ram is angry now, nobody can do anything`,
     category_slugs: ["krishna", "general", "holi", "satsang", "bhajan", "hindi"],
     meaning:
       "Holi remix from Let's Play Holi (Zone / VP Premier). Colour rains on Holi — the pichkari soaks the chunar and angiya, while Gauri’s beloved is served, offered paan, and laid to rest on a bed of jasmine.",
-    roman_lyrics: `## Chorus
-
-Are kaine mari pichkari
-Tori bhigee angiya
-O rangrasia rangrasia ho
-
-Rang barse bhige chunar wali rang barse
-
-## Verse 1
-
-Sone kee thali mai jona parosa
-Are sone kee thali mai jona parosa
-Are khaye gauri kaa yar
-Balam tarse
-Holi hai
-
-Rang barse bhige chunar wali rang barse
-
-## Verse 2
-
-Launga ilaichi kaa bida lagaya
-Are launga ilaichi kaa bida lagaya
-Are chabe gauri kaa yar
-Balam tarse
-Holi hai
-
-Rang barse bhige chunar wali rang barse
-
-## Verse 3
-
-Are bela chameli kaa sej bhichhaya
-Are bela chameli kaa sej bhichhaya
-Soye gauri kaa yar
-Balam tarse
-Holi hai
-
-Rang barse bhige chunar wali rang barse`,
-    translation: `## Chorus
-
-Someone sprayed the pichkari
-Your blouse is soaked
-O lover of colour, O lover of colour
-
-Colour rains — the woman in the wet chunar, colour rains
-
-## Verse 1
-
-On a golden plate the meal is served
-On a golden plate the meal is served
-Gauri’s beloved will eat
-The lover longs
-It is Holi
-
-Colour rains — the woman in the wet chunar, colour rains
-
-## Verse 2
-
-A paan of clove and cardamom is prepared
-A paan of clove and cardamom is prepared
-Gauri’s beloved will chew it
-The lover longs
-It is Holi
-
-Colour rains — the woman in the wet chunar, colour rains
-
-## Verse 3
-
-A bed of bela and jasmine is spread
-A bed of bela and jasmine is spread
-Gauri’s beloved will sleep
-The lover longs
-It is Holi
-
-Colour rains — the woman in the wet chunar, colour rains`,
+    roman_lyrics: RANG_BARSE_ROMAN,
+    translation: RANG_BARSE_TRANSLATION,
   },
   "holi-khele-dj-shane-lets-play-holi": {
     title: "Holi Khele",
@@ -11566,8 +11671,9 @@ My eyes are fixed on You, O Nurturer`,
     display_order: 120,
     category_slugs: ["general", "holi", "bhajan", "devotion", "hindi"],
     meaning:
-      "From Mohabeer Records MO-191 Sweet Phagwah Songs and Chowtal (1998). Phagwah colour song — Pt. Chunelall Narine & Jharna Mukherjee.",
-    roman_lyrics: "[Album track]",
+      "From Mohabeer MO-191 (1998). Rang Barse — Pt. Chunelall Narine & Jharna Mukherjee. Same Holi song as on Let's Play Holi.",
+    roman_lyrics: RANG_BARSE_ROMAN,
+    translation: RANG_BARSE_TRANSLATION,
   },
   "holi-ayee-re-chunelall-jharna": {
     title: "Holi Ayee Re",
@@ -11581,8 +11687,9 @@ My eyes are fixed on You, O Nurturer`,
     display_order: 121,
     category_slugs: ["general", "holi", "bhajan", "devotion", "hindi"],
     meaning:
-      "From Mohabeer MO-191 (1998). Holi has come — Pt. Chunelall Narine & Jharna Mukherjee.",
-    roman_lyrics: "[Album track]",
+      "From Mohabeer MO-191 (1998). Holi aayi re Kanhai — Pt. Chunelall Narine & Jharna Mukherjee. Same song as Holiya Aaye Re on Let's Play Holi.",
+    roman_lyrics: HOLIYA_AAYE_ROMAN,
+    translation: HOLIYA_AAYE_TRANSLATION,
   },
   "aaj-na-chorange-chunelall-jharna": {
     title: "Aaj Na Chorange",
@@ -11596,8 +11703,9 @@ My eyes are fixed on You, O Nurturer`,
     display_order: 122,
     category_slugs: ["general", "holi", "bhajan", "devotion", "hindi"],
     meaning:
-      "From Mohabeer MO-191 (1998). Classic Holi “won’t let go today” — Pt. Chunelall Narine & Jharna Mukherjee.",
-    roman_lyrics: "[Album track]",
+      "From Mohabeer MO-191 (1998). Aaj na chhodenge — Pt. Chunelall Narine & Jharna Mukherjee. Same Holi song as on Let's Play Holi.",
+    roman_lyrics: AAJ_NA_CHODDENGE_ROMAN,
+    translation: AAJ_NA_CHODDENGE_TRANSLATION,
   },
   "holi-ke-din-chunelall-jharna": {
     title: "Holi Ke Din",
@@ -11611,8 +11719,9 @@ My eyes are fixed on You, O Nurturer`,
     display_order: 123,
     category_slugs: ["general", "holi", "bhajan", "devotion", "hindi"],
     meaning:
-      "From Mohabeer MO-191 (1998). On the day of Holi — Pt. Chunelall Narine & Jharna Mukherjee.",
-    roman_lyrics: "[Album track]",
+      "From Mohabeer MO-191 (1998). Holi ke din — Pt. Chunelall Narine & Jharna Mukherjee. Same Holi song as on Let's Play Holi.",
+    roman_lyrics: HOLI_KI_DIN_ROMAN,
+    translation: HOLI_KI_DIN_TRANSLATION,
   },
   "holi-re-holi-chunelall-jharna": {
     title: "Holi Re Holi",
@@ -11626,8 +11735,9 @@ My eyes are fixed on You, O Nurturer`,
     display_order: 124,
     category_slugs: ["general", "holi", "bhajan", "devotion", "hindi"],
     meaning:
-      "From Mohabeer MO-191 (1998). Holi re Holi — Pt. Chunelall Narine & Jharna Mukherjee.",
-    roman_lyrics: "[Album track]",
+      "From Mohabeer MO-191 (1998). Holi re Holi — Pt. Chunelall Narine & Jharna Mukherjee. Same Holi song as on Let's Play Holi.",
+    roman_lyrics: HOLI_RE_ROMAN,
+    translation: HOLI_RE_TRANSLATION,
   },
   "mere-pehle-chunelall-jharna": {
     title: "Mere Pehle",
@@ -11715,8 +11825,9 @@ My eyes are fixed on You, O Nurturer`,
       "hindi",
     ],
     meaning:
-      "From Mohabeer MO-191 (1998). Raghu plays Holi — Pt. Chunelall Narine & Jharna Mukherjee.",
-    roman_lyrics: "[Album track]",
+      "From Mohabeer MO-191 (1998). Hori khele Raghuveera — Pt. Chunelall Narine & Jharna Mukherjee. Same Holi song as Holi Khele on Let's Play Holi.",
+    roman_lyrics: HOLI_KHELE_ROMAN,
+    translation: HOLI_KHELE_TRANSLATION,
   },
   "gokula-chowtal-mahatma-gandhi-satsang": {
     title: "Gokula Chowtal",
@@ -22129,8 +22240,19 @@ O mother, o mother`,
     display_order: 406,
     category_slugs: ["general", "holi", "bhajan", "devotion", "hindi"],
     meaning:
-      "Closing from Chautaal Samaadj Zoetermeer. Twameva mata cha pita twameva.",
-    roman_lyrics: "[Album track]",
+      "Closing shloka from Chautaal Samaadj Zoetermeer. You alone are mother and father, kinsman and friend, knowledge and wealth — You alone are everything, O God of gods.",
+    roman_lyrics: `## Verse
+
+Twameva Mata Cha Pita Twameva
+Twameva Bandhu Cha Sakha Twameva
+Twameva Vidya Dravinam Twameva
+Twameva Sarvam Mam Dev Deva`,
+    translation: `## Verse
+
+You alone are mother, and father You alone are
+You alone are kinsman, and friend You alone are
+You alone are knowledge, and wealth You alone are
+You alone are everything of mine, O God of gods`,
   },
 };
 

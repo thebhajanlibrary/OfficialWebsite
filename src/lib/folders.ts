@@ -225,6 +225,7 @@ export const HYMN_FOLDERS: HymnFolder[] = [
       "holi-khelai-raghuveera",
       "oh-maro-maro-pichakari-babla-kanchan",
       "radha-kanhaiya-babla-kanchan",
+      "rang-dhal-ke-mohanwa-babla-kanchan",
     ],
   },
   {
@@ -319,6 +320,7 @@ export function isInstrumentalKaraokeTrack(slug: string): boolean {
 /** Recordings that stay in a folder and are left out of All Bhajans. */
 export const EVERYDAY_LIBRARY_SKIP_SLUGS = new Set([
   "nahi-chahiye-rang-mahal-dewindersingh-sewnath",
+  "rang-dhal-ke-mohanwa-babla-kanchan",
 ]);
 
 /**

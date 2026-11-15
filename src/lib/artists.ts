@@ -186,7 +186,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "babla-kanchan": {
     name: "Babla & Kanchan",
-    bio: "Indo-Caribbean chutney duo. Kanchan’s voice and Babla’s arrangements made Holi and wedding favourites like Oh maro maro pichakari and Radhā Kanhaiyā staples across the West Indies.",
+    bio: "Indo-Caribbean chutney duo. Kanchan’s voice and Babla’s arrangements made Holi and wedding favourites like Oh maro maro pichakari, Rang Dhal Ke Mohanwa, and Radhā Kanhaiyā staples across the West Indies.",
     photo_url: "/images/babla-kanchan.png",
   },
   "anand-yankaran": {
