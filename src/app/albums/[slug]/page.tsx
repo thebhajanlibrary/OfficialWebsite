@@ -143,6 +143,15 @@ export default async function AlbumDetailPage({ params }: Props) {
               . Not included in All Bhajans Play all / shuffle.
             </p>
           )}
+          {album.slug === "chautaal-samaadj-zoetermeer" && (
+            <p className="mt-3 rounded-lg border border-border bg-surface-muted/60 px-3 py-2 text-sm text-muted">
+              Phagwah chautaal set — linked from{" "}
+              <Link href="/chowtal" className="font-medium text-accent hover:underline">
+                Chowtal
+              </Link>
+              . Not included in All Bhajans Play all / shuffle.
+            </p>
+          )}
           {album.slug === "lets-sing-and-dance-with-dropati" && (
             <p className="mt-3 rounded-lg border border-border bg-surface-muted/60 px-3 py-2 text-sm text-muted">
               Surinamese chutney album — also linked from{" "}
@@ -403,6 +412,27 @@ export default async function AlbumDetailPage({ params }: Props) {
                     title: "Chowtal",
                     kicker: "Lyrics",
                     hint: "Phagwah singing lyrics — album linked from here too",
+                  },
+                ]}
+              />
+            </div>
+          )}
+          {album.slug === "chautaal-samaadj-zoetermeer" && (
+            <div className="mt-8">
+              <RelatedCollections
+                items={[
+                  {
+                    href: "/chowtal",
+                    title: "Chowtal",
+                    kicker: "Section",
+                    hint: "This album is listed on the Chowtal page",
+                  },
+                  {
+                    href: "/folders/holi",
+                    title: "Holi",
+                    kicker: "Folder",
+                    hint: "Holi / Phagwah bhajans — separate from this album",
+                    cover_url: "/images/albums/lets-play-holi.png",
                   },
                 ]}
               />

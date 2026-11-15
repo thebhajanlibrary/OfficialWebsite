@@ -199,6 +199,13 @@ export default async function FolderDetailPage({ params }: Props) {
         <RelatedCollections
           items={[
             {
+              href: "/albums/chautaal-samaadj-zoetermeer",
+              title: "Chautaal Samaadj Zoetermeer",
+              kicker: "Album · audio",
+              hint: "M. Bansraj · linked from Chowtal, not mixed into this folder",
+              cover_url: "/images/albums/chautaal-samaadj-zoetermeer.jpg",
+            },
+            {
               href: "/albums/sweet-phagwah-songs-and-chowtal",
               title: "Sweet Phagwah Songs and Chowtal",
               kicker: "Album · audio",

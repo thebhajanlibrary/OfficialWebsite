@@ -552,6 +552,11 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
     bio: "Surinamese chutney and baithak gana singer of the Chaitoe family. Favourites include Karejwa me laage, Na Manu Na Manu, and the Paar Karo remix with Rawytee Ramroop.",
     photo_url: "/images/chutney/na-manu-na-manu-bidjanwatie-chaitoe.jpg",
   },
+  "chautaal-samaadj-zoetermeer": {
+    name: "Chautaal Samaadj Zoetermeer",
+    bio: "Phagwah chautaal group from Zoetermeer, led by M. Bansraj. A. Bansraj produced and coordinated the recording.",
+    photo_url: "/images/albums/chautaal-samaadj-zoetermeer.jpg",
+  },
 };
 
 export function artistSlug(name: string): string {
