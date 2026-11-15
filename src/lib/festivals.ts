@@ -413,12 +413,11 @@ export const FESTIVALS: Festival[] = [
     featuredSongSlugs: [
       "holi-khelai-raghuveera",
       "oh-maro-maro-pichakari-babla-kanchan",
-      "rang-barse-vp-premier-lets-play-holi",
+      "rang-dhal-ke-mohanwa-babla-kanchan",
       "gokula-chowtal-mahatma-gandhi-satsang",
       "horee-khalay-mahatma-gandhi-satsang",
       "rang-barse-chunelall-jharna",
       "holi-ayee-re-chunelall-jharna",
-      "holi-khele-dj-shane-lets-play-holi",
     ],
     fallbackCategories: ["holi", "krishna"],
     dates: [

@@ -219,13 +219,24 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     slug: "holi",
     title: "Holi",
     description:
-      "Holi / Phagwah songs for the festival of colours — Indo-Caribbean chutney bhajans and classic Holi kirtan. Remixes from Let's Play Holi stay in that album.",
+      "Holi / Phagwah songs for the festival of colours — Indo-Caribbean chutney bhajans, classic Holi kirtan, and the film songs behind the Let's Play Holi remixes. The remixes stay in that album.",
     cover_url: "/images/folders/holi/cover.jpg",
     member_slugs: [
       "holi-khelai-raghuveera",
       "oh-maro-maro-pichakari-babla-kanchan",
       "radha-kanhaiya-babla-kanchan",
       "rang-dhal-ke-mohanwa-babla-kanchan",
+      "rang-barse-silsila",
+      "holi-khele-raghuveera-baghban",
+      "holi-re-holi-paraya-dhan",
+      "ang-se-ang-lagana-darr",
+      "saat-rang-mein-aakhir-kyon",
+      "aaj-na-chodenge-kati-patang",
+      "holi-ke-din-sholay",
+      "holi-aayi-re-kanhai-mother-india",
+      "maro-bhar-bharke-pichkari-dhanwan",
+      "holi-aayi-re-mashaal",
+      "holiya-mein-ude-re-gulal-ila-arun",
     ],
   },
   {
@@ -321,6 +332,17 @@ export function isInstrumentalKaraokeTrack(slug: string): boolean {
 export const EVERYDAY_LIBRARY_SKIP_SLUGS = new Set([
   "nahi-chahiye-rang-mahal-dewindersingh-sewnath",
   "rang-dhal-ke-mohanwa-babla-kanchan",
+  "rang-barse-silsila",
+  "holi-khele-raghuveera-baghban",
+  "holi-re-holi-paraya-dhan",
+  "ang-se-ang-lagana-darr",
+  "saat-rang-mein-aakhir-kyon",
+  "aaj-na-chodenge-kati-patang",
+  "holi-ke-din-sholay",
+  "holi-aayi-re-kanhai-mother-india",
+  "maro-bhar-bharke-pichkari-dhanwan",
+  "holi-aayi-re-mashaal",
+  "holiya-mein-ude-re-gulal-ila-arun",
 ]);
 
 /**

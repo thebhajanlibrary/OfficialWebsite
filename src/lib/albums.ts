@@ -141,6 +141,7 @@ export const ALBUMS: Album[] = [
     artist: "VP Premier",
     label: "Zone",
     omit_artists_from_index: true,
+    omit_from_library: true,
     description:
       "Holi remixes — Zone proudly presents remixes of favourite Holi songs by VP Premier, DJ Shane, Mistah Studz, DJ Tone, Mistah Mixup, DJ Xquizit, DJ Ryan Jhingree, DJ Snypa, DJ Hozz, DJ Rye, DJ Static Flow, and more.",
     cover_url: "/images/albums/lets-play-holi.png",
