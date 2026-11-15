@@ -5,10 +5,9 @@ import { notFound } from "next/navigation";
 import { BhajanList } from "@/components/bhajan/BhajanList";
 import { CollectionQueueActions } from "@/components/bhajan/CollectionQueueActions";
 import { RelatedCollections } from "@/components/layout/RelatedCollections";
-import { WeddingSongList } from "@/components/wedding/WeddingSongList";
-import { getFolderWithBhajans, resolvePlayQueueTracks } from "@/lib/queries";
+import { getBhajans, getFolderWithBhajans, isWeddingBhajan, resolvePlayQueueTracks } from "@/lib/queries";
 import { getFolder } from "@/lib/folders";
-import { folkQueueTracks } from "@/lib/chutney";
+import { getWeddingSongs } from "@/lib/chutney";
 import { bhajanPlayHref, encodePlayQueue } from "@/lib/play-queue";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { collectionJsonLd, pageMeta, clip } from "@/lib/seo";
@@ -40,8 +39,10 @@ export default async function FolderDetailPage({ params }: Props) {
   const queueKey = encodePlayQueue(playQueue);
 
   if (folder.slug === "wedding") {
-    const queueTracks = folkQueueTracks("wedding");
-    const songs = queueTracks.length;
+    const bhajans = (await getBhajans()).filter((bhajan) => isWeddingBhajan(bhajan));
+    const chutneyWedding = getWeddingSongs();
+    const queueTracks = await resolvePlayQueueTracks(playQueue);
+    const songs = bhajans.length;
 
     return (
       <div className="space-y-8">
@@ -85,7 +86,8 @@ export default async function FolderDetailPage({ params }: Props) {
             </h1>
             <p className="mt-1 text-muted">{folder.description}</p>
             <p className="mt-2 text-sm text-accent">
-              {songs} track{songs === 1 ? "" : "s"}
+              {songs} bhajan{songs === 1 ? "" : "s"} and prayer
+              {songs === 1 ? "" : "s"}
               {songs > 1 ? " · plays through in order" : ""}
             </p>
             {queueTracks.length > 0 && (
@@ -101,19 +103,22 @@ export default async function FolderDetailPage({ params }: Props) {
         </div>
 
         <RelatedCollections
-          heading="Albums"
+          heading="In this folder"
           items={[
             {
-              href: "/albums/lets-sing-and-dance-with-dropati",
-              title: "Let's Sing & Dance with Dropati",
-              kicker: "Album · Wedding",
-              hint: "20 tracks — Surinamese wedding songs by Dropati",
-              cover_url: "/images/albums/lets-sing-and-dance-with-dropati.png",
+              href: "/wedding",
+              title: "Chutney wedding songs",
+              kicker: "Tagged here",
+              hint: `${chutneyWedding.length} song${chutneyWedding.length === 1 ? "" : "s"} · open them from this folder`,
             },
           ]}
         />
 
-        <WeddingSongList />
+        <BhajanList
+          bhajans={bhajans}
+          playQueue={playQueue}
+          emptyMessage="No wedding bhajans or prayers in the library yet."
+        />
       </div>
     );
   }
@@ -246,7 +251,7 @@ export default async function FolderDetailPage({ params }: Props) {
               href: "/albums/lets-sing-and-dance-with-dropati",
               title: "Let's Sing & Dance with Dropati",
               kicker: "Album · chutney",
-              hint: "Full Dropati set — also under Wedding Songs",
+              hint: "Full Dropati set — tagged Wedding, kept on the album",
               cover_url: "/images/albums/lets-sing-and-dance-with-dropati.png",
             },
             {

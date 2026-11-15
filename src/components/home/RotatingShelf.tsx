@@ -31,10 +31,11 @@ export function RotatingShelf({ items }: { items: ShelfItem[] }) {
 
   return (
     <section className="space-y-5">
-      <div className="flex items-end justify-between gap-4">
+      <div className="flex items-end gap-4">
         <h2 className="font-display text-3xl font-semibold text-primary sm:text-4xl">
           On the shelf
         </h2>
+        <span className="mb-2 hidden h-px flex-1 bg-border sm:block" />
         {items.length > count && (
           <button
             type="button"

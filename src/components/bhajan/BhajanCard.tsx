@@ -31,9 +31,9 @@ export function BhajanCard({ bhajan, playQueue = null }: Props) {
   const href = bhajanPlayHref(bhajan.slug, playQueue);
 
   return (
-    <div className="group flex items-start justify-between gap-4 border border-border bg-surface px-3 py-3.5 shadow-[3px_3px_0_rgba(44,36,22,0.05)] transition hover:bg-accent-soft/40 sm:px-4">
+    <div className="group flex items-start justify-between gap-3 border border-border bg-surface px-3 py-3.5 transition hover:bg-accent-soft/40 sm:gap-4 sm:px-4">
       {bhajan.display_order != null && (
-        <span className="mt-1 hidden w-10 shrink-0 font-display text-sm tabular-nums text-accent sm:block">
+        <span className="mt-1 w-8 shrink-0 font-display text-sm tabular-nums text-accent sm:w-10">
           {String(bhajan.display_order).padStart(3, "0")}
         </span>
       )}

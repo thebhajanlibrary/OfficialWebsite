@@ -51,7 +51,6 @@ export default async function ChutneyDetailPage({
     youtubePosterUrl(current.youtube_url) ??
     current.cover_url ??
     current.thumbnail_url;
-  const alsoWedding = (current.sections ?? ["chutney"]).includes("wedding");
   const versions = current.audio_versions ?? [];
   const localAudio = primaryAudioUrl(current);
   const queueTracks = folkQueueTracks("chutney");
@@ -65,14 +64,6 @@ export default async function ChutneyDetailPage({
           <Link href="/chutney" className="transition hover:text-primary">
             Traditional Chutney
           </Link>
-          {alsoWedding && (
-            <>
-              <span className="mx-2 text-border">·</span>
-              <Link href="/folders/wedding" className="transition hover:text-primary">
-                Wedding Songs
-              </Link>
-            </>
-          )}
         </p>
         <h1 className="font-display text-4xl font-semibold leading-tight text-primary sm:text-5xl">
           {current.title}
@@ -98,14 +89,6 @@ export default async function ChutneyDetailPage({
           >
             Chutney Artists
           </Link>
-          {alsoWedding && (
-            <Link
-              href={`/wedding/${current.slug}`}
-              className="btn-secondary rounded-lg px-4 py-2.5 text-sm"
-            >
-              View in Wedding
-            </Link>
-          )}
           {current.youtube_url && (
             <a
               href={current.youtube_url}

@@ -4001,9 +4001,14 @@ export function getChutneySorted(): ChutneySong[] {
     });
 }
 
+/** Dropati's album stays tagged wedding on the album, not inside the Wedding folder. */
+export function isDropatiAlbumSong(song: { slug: string }): boolean {
+  return song.slug.endsWith("-dropati");
+}
+
 export function getWeddingSongs(): ChutneySong[] {
   return [...CHUTNEY_SONGS]
-    .filter((s) => inSection(s, "wedding"))
+    .filter((s) => inSection(s, "wedding") && !isDropatiAlbumSong(s))
     .sort((a, b) => a.order - b.order || a.title.localeCompare(b.title));
 }
 
@@ -4075,9 +4080,8 @@ export function neighborsInWedding(slug: string): {
   const all = getWeddingSongs();
   const i = all.findIndex((s) => s.slug === slug);
   if (i < 0) {
-    // Fall back to full catalogue lookup so shared detail URLs still resolve
     const current = getChutneySong(slug);
-    if (!current || !inSection(current, "wedding")) {
+    if (!current || !inSection(current, "wedding") || isDropatiAlbumSong(current)) {
       return { prev: null, next: null, current: null };
     }
     return { prev: null, next: null, current };

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import Link from "next/link";
 
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 
 import { ChutneyVersionPlayer } from "@/components/bhajan/ChutneyVersionPlayer";
 
@@ -18,6 +18,10 @@ import {
   chutneyPerformerCredit,
 
   folkQueueTracks,
+
+  getChutneySong,
+
+  isDropatiAlbumSong,
 
   neighborsInWedding,
 
@@ -70,7 +74,11 @@ export default async function WeddingDetailPage({ params, searchParams }: Props)
 
   const { current, prev, next } = neighborsInWedding(slug);
 
-  if (!current) notFound();
+  if (!current) {
+    const song = getChutneySong(slug);
+    if (song && isDropatiAlbumSong(song)) redirect(`/chutney/${song.slug}`);
+    notFound();
+  }
 
 
 
@@ -112,25 +120,17 @@ export default async function WeddingDetailPage({ params, searchParams }: Props)
 
           <Link href="/folders/wedding" className="transition hover:text-primary">
 
-            Wedding Songs
+            Wedding folder
 
           </Link>
 
-          {alsoChutney && (
+          <span className="mx-2 text-border">·</span>
 
-            <>
+          <Link href="/wedding" className="transition hover:text-primary">
 
-              <span className="mx-2 text-border">·</span>
+            Chutney wedding songs
 
-              <Link href="/chutney" className="transition hover:text-primary">
-
-                Traditional Chutney
-
-              </Link>
-
-            </>
-
-          )}
+          </Link>
 
         </p>
 
@@ -157,13 +157,13 @@ export default async function WeddingDetailPage({ params, searchParams }: Props)
 
           <Link
 
-            href="/folders/wedding"
+            href="/wedding"
 
             className="btn-secondary rounded-lg px-4 py-2.5 text-sm"
 
           >
 
-            All Wedding Songs
+            Chutney wedding songs
 
           </Link>
 

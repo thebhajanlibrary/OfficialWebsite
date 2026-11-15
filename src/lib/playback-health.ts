@@ -98,7 +98,10 @@ function recordingTargets(): Target[] {
   }
 
   for (const song of CHUTNEY_SONGS) {
-    const section = song.sections?.includes("wedding") ? "wedding" : "chutney";
+    const section =
+      song.sections?.includes("wedding") && !song.slug.endsWith("-dropati")
+        ? "wedding"
+        : "chutney";
     const versions = song.audio_versions?.length
       ? song.audio_versions
       : [{ id: "main", label: "", audio_url: song.audio_url, youtube_url: song.youtube_url }];

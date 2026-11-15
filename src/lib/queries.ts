@@ -22,7 +22,7 @@ import {
   type HymnFolder,
 } from "@/lib/folders";
 import { ALBUMS, getAlbum, indexedArtistNameForBhajan, isOmittedFromLibrary, type Album } from "@/lib/albums";
-import { folkQueueTracks, getWeddingSongs } from "@/lib/chutney";
+import { getWeddingSongs } from "@/lib/chutney";
 import { getFestivalById } from "@/lib/festivals";
 import {
   buildQueueTrack,
@@ -684,15 +684,25 @@ export async function getArtistBySlug(slug: string): Promise<{
   };
 }
 
+export function isWeddingBhajan(bhajan: BhajanWithCategories): boolean {
+  if (isOmittedFromLibrary(bhajan.slug) || bhajan.slug.endsWith("-dropati")) {
+    return false;
+  }
+  return bhajan.categories.some(
+    (category) => category.type === "occasion" && category.slug === "wedding"
+  );
+}
+
 export async function getFolders(): Promise<
   { folder: HymnFolder; count: number }[]
 > {
   const all = await getBhajans();
+  const weddingBhajans = all.filter((b) => isWeddingBhajan(b));
   return HYMN_FOLDERS.filter((folder) => !folder.omit_from_library).map((folder) => ({
     folder,
     count:
       folder.slug === "wedding"
-        ? getWeddingSongs().length
+        ? weddingBhajans.length + getWeddingSongs().length
         : all.filter((b) => bhajanBelongsToFolder(folder.slug, b)).length,
   })).sort((a, b) =>
     a.folder.title.localeCompare(b.folder.title, undefined, {
@@ -770,7 +780,8 @@ export async function resolvePlayQueueSlugs(
   }
   if (queue.kind === "folder") {
     if (queue.id === "wedding") {
-      return getWeddingSongs().map((s) => s.slug);
+      const all = await getBhajans();
+      return all.filter((b) => isWeddingBhajan(b)).map((b) => b.slug);
     }
     const data = await getFolderWithBhajans(queue.id);
     return data?.bhajans.map((b) => b.slug) ?? [];
@@ -808,10 +819,6 @@ export async function resolvePlayQueueSlugs(
 export async function resolvePlayQueueTracks(
   queue: PlayQueueRef
 ): Promise<QueueTrack[]> {
-  if (queue.kind === "folder" && queue.id === "wedding") {
-    return folkQueueTracks("wedding");
-  }
-
   const slugs = await resolvePlayQueueSlugs(queue);
   if (slugs.length === 0) return [];
 

@@ -27,7 +27,6 @@ export default async function SearchPage({ searchParams }: Props) {
   // Avoid listing the same dual-section song twice under Wedding if already in Chutney
   const chutneySlugs = new Set(chutneyResults.map((s) => s.slug));
   const weddingOnly = weddingResults.filter((s) => !chutneySlugs.has(s.slug));
-  const dualWedding = weddingResults.filter((s) => chutneySlugs.has(s.slug));
   const total =
     bhajanResults.length +
     folderResults.length +
@@ -92,7 +91,6 @@ export default async function SearchPage({ searchParams }: Props) {
             <section className="space-y-3">
               <h2 className="font-display text-xl font-semibold text-primary">
                 Traditional Chutney
-                {dualWedding.length > 0 ? " · Wedding" : ""}
               </h2>
               <ul className="divide-y divide-border border-y border-border">
                 {chutneyResults.map((song) => (
@@ -134,7 +132,7 @@ export default async function SearchPage({ searchParams }: Props) {
           {weddingOnly.length > 0 && (
             <section className="space-y-3">
               <h2 className="font-display text-xl font-semibold text-primary">
-                Wedding Songs
+                Chutney wedding songs
               </h2>
               <ul className="divide-y divide-border border-y border-border">
                 {weddingOnly.map((song) => (

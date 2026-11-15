@@ -111,6 +111,7 @@ export default async function HomePage() {
         <h1 className="font-display text-5xl font-semibold leading-none text-primary sm:text-6xl">
           Bhajan Library
         </h1>
+        <div className="mt-4 h-px w-12 bg-accent" />
         <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
           Lyrics and recordings, kept by deity, occasion, and singer.
         </p>
@@ -143,23 +144,29 @@ export default async function HomePage() {
       )}
 
       <section className="space-y-5">
-        <div className="flex items-end justify-between gap-4">
+        <div className="flex items-end gap-4">
           <h2 className="font-display text-3xl font-semibold text-primary sm:text-4xl">
             Browse
           </h2>
+          <span className="mb-2 hidden h-px flex-1 bg-border sm:block" />
           <p className="hidden text-sm text-muted sm:block">Twelve ways in.</p>
         </div>
         <ol className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2">
-          {browse.map((item) => (
+          {browse.map((item, index) => (
             <li key={item.href} className="bg-surface">
               <Link
                 href={item.href}
-                className="group block px-5 py-3.5 transition hover:bg-accent-soft sm:px-6"
+                className="group flex items-baseline gap-4 px-5 py-3.5 transition hover:bg-accent-soft sm:px-6"
               >
-                <span className="block font-display text-xl font-semibold text-primary transition group-hover:text-accent">
-                  {item.label}
+                <span className="w-6 shrink-0 font-display text-sm tabular-nums text-accent">
+                  {String(index + 1).padStart(2, "0")}
                 </span>
-                <span className="mt-0.5 block text-sm text-muted">{item.hint}</span>
+                <span className="min-w-0">
+                  <span className="block font-display text-xl font-semibold text-primary transition group-hover:text-accent">
+                    {item.label}
+                  </span>
+                  <span className="mt-0.5 block text-sm text-muted">{item.hint}</span>
+                </span>
               </Link>
             </li>
           ))}
@@ -168,12 +175,15 @@ export default async function HomePage() {
 
       {recent.length > 0 && (
         <section className="space-y-5">
-          <div className="flex items-end justify-between gap-3">
-            <div>
-              <h2 className="font-display text-3xl font-semibold text-primary">
-                In the library
-              </h2>
-              <p className="mt-1 text-muted">Recently added.</p>
+          <div className="flex items-end justify-between gap-4">
+            <div className="flex min-w-0 flex-1 items-end gap-4">
+              <div>
+                <h2 className="font-display text-3xl font-semibold text-primary">
+                  In the library
+                </h2>
+                <p className="mt-1 text-muted">Recently added.</p>
+              </div>
+              <span className="mb-2 hidden h-px flex-1 bg-border sm:block" />
             </div>
             <Link
               href="/bhajans"

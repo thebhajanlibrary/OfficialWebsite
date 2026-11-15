@@ -54,7 +54,6 @@ export async function GET(request: Request) {
 
     for (const s of chutneyMatches) {
       seen.add(s.slug);
-      const alsoWedding = (s.sections ?? []).includes("wedding");
       folkResults.push({
         id: `chutney-${s.slug}`,
         title: s.title,
@@ -62,9 +61,7 @@ export async function GET(request: Request) {
         href: `/chutney/${s.slug}`,
         alternate_title: s.cue ?? null,
         artist_version: s.artist ?? null,
-        section: alsoWedding
-          ? "Traditional Chutney · Wedding"
-          : "Traditional Chutney",
+        section: "Traditional Chutney",
       });
     }
 
@@ -77,7 +74,7 @@ export async function GET(request: Request) {
         href: `/wedding/${s.slug}`,
         alternate_title: s.cue ?? null,
         artist_version: s.artist ?? null,
-        section: "Wedding Songs",
+        section: "Chutney wedding songs",
       });
     }
 

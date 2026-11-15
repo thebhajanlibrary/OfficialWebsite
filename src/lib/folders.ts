@@ -231,18 +231,9 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     slug: "wedding",
     title: "Wedding",
     description:
-      "Indo-Caribbean wedding songs — chutney, chutney-bhajan, lawa, sehra, matkorwa, bidai, and more. Dropati's full album, Paar Karo remix, and other marriage favourites.",
+      "Wedding bhajans and prayers. Chutney wedding songs are tagged here and open from this folder. Dropati's album stays tagged as wedding and is not listed inside.",
     cover_url: "/images/folders/wedding/cover.jpg",
-    search_aliases: [
-      "wedding",
-      "shaadi",
-      "matkorwa",
-      "lawa",
-      "sehra",
-      "dropati",
-      "paar karo",
-      "pari karo",
-    ],
+    search_aliases: ["wedding", "shaadi", "matkorwa", "lawa", "sehra", "paar karo", "pari karo"],
   },
   {
     slug: "birthday-songs",

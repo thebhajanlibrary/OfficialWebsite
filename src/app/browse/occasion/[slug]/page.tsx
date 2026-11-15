@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { WeddingIndexContent } from "@/components/wedding/WeddingIndexContent";
 import { BhajanList } from "@/components/bhajan/BhajanList";
 import { CollectionQueueActions } from "@/components/bhajan/CollectionQueueActions";
 import { queueTracksFromBhajans } from "@/lib/play-queue";
@@ -29,27 +28,6 @@ export default async function OccasionCategoryPage({ params }: Props) {
   const { slug } = await params;
   const category = await getCategoryBySlug("occasion", slug);
   if (!category) notFound();
-
-  if (slug === "wedding") {
-    return (
-      <WeddingIndexContent
-        breadcrumb={
-          <p className="text-sm text-muted">
-            <Link href="/browse/occasion" className="transition hover:text-primary">
-              Occasion
-            </Link>
-            <span className="mx-2 text-border">·</span>
-            <Link
-              href="/folders/wedding"
-              className="transition hover:text-primary"
-            >
-              Wedding folder
-            </Link>
-          </p>
-        }
-      />
-    );
-  }
 
   const bhajans = await getBhajansByCategory(category.id);
   const playQueue = { kind: "category" as const, id: category.id };
@@ -87,6 +65,16 @@ export default async function OccasionCategoryPage({ params }: Props) {
               className="font-medium text-accent transition hover:underline"
             >
               Chowtal lyrics for Phagwah singing →
+            </Link>
+          </p>
+        )}
+        {slug === "wedding" && (
+          <p className="mt-4">
+            <Link
+              href="/folders/wedding"
+              className="font-medium text-accent transition hover:underline"
+            >
+              Wedding folder →
             </Link>
           </p>
         )}

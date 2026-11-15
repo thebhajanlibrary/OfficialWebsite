@@ -98,6 +98,13 @@ export default async function AlbumDetailPage({ params }: Props) {
               )}
             </p>
           )}
+          {album.slug === "lets-sing-and-dance-with-dropati" && (
+            <p className="mt-2">
+              <span className="rounded border border-accent/40 bg-accent/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-accent">
+                Wedding
+              </span>
+            </p>
+          )}
           <p className="mt-2 text-sm font-medium tracking-wide text-accent">
             {artistNames.map((name, i) => (
               <span key={artistSlug(name)}>
