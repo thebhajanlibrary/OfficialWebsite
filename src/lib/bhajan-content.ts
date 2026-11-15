@@ -20965,6 +20965,21 @@ Brahma, Vishnu, and eternal Shiva
 Hara, Hara, great God
 Victory, Hara Hara, great God`,
   },
+  "kabhi-khushi-kabhie-gham-lata-mangeshkar": {
+    title: "Kabhi Khushi Kabhie Gham",
+    alternate_title: "Title track · Kabhi Khushi Kabhie Gham",
+    artist_version: "Lata Mangeshkar",
+    audio_url: "https://www.youtube.com/watch?v=2N7-GZpLlC0",
+    youtube_url: "https://www.youtube.com/watch?v=2N7-GZpLlC0",
+    thumbnail_url: "https://i.ytimg.com/vi/2N7-GZpLlC0/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/2N7-GZpLlC0/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/2N7-GZpLlC0/hqdefault.jpg",
+    display_order: 392,
+    category_slugs: ["general", "satsang", "bhajan", "devotion", "hindi"],
+    meaning:
+      "Lata Mangeshkar sings the title song of Kabhi Khushi Kabhie Gham. A family song: joy and sorrow travel together, and the people we love stay through both. Listed in All Bhajans.",
+    roman_lyrics: "",
+  },
   "suna-suna-lage-brij-ka-dham-mohammed-rafi": {
     title: "Suna Suna Lage Brij Ka Dham",
     alternate_title: "Gokul Ko Chhod Chale Re Ghansham · Neelmani",

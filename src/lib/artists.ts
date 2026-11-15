@@ -236,7 +236,7 @@ export const ARTIST_PROFILES: Record<string, ArtistProfile> = {
   },
   "lata-mangeshkar": {
     name: "Lata Mangeshkar",
-    bio: "Legendary Indian playback singer (1929–2022). Favourites here include her Shree Hanuman Chalisa, Tu Kitni Achhi Hai, the Raksha Bandhan classic Bhaiya Mere Rakhi Ke, and O Palanhare from Lagaan.",
+    bio: "Legendary Indian playback singer (1929–2022). Favourites here include her Shree Hanuman Chalisa, Tu Kitni Achhi Hai, the Raksha Bandhan classic Bhaiya Mere Rakhi Ke, O Palanhare from Lagaan, and Kabhi Khushi Kabhie Gham.",
     photo_url: "/images/lata-mangeshkar.png",
   },
   "udit-narayan": {

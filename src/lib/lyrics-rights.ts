@@ -24,6 +24,7 @@ const FILM_ORIGINAL_LYRIC_SLUGS = new Set([
   "maar-to-mele-ishani-dave",
   "odhani-made-in-china",
   "sanedo-made-in-china",
+  "kabhi-khushi-kabhie-gham-lata-mangeshkar",
   "setum-bandhya-ramayana",
   "nadiya-na-piye-mohammed-rafi",
   "jai-shri-ram-do-akshar-mohammed-rafi",
