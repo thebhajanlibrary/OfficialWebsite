@@ -192,7 +192,7 @@ export default async function AlbumDetailPage({ params }: Props) {
                     kicker: "Folder",
                     hint: "All instrumental / karaoke tracks together",
                     cover_url:
-                      "/images/albums/bhakti-instrumentals-kedar-pandit.png",
+                      "/images/folders/instrumentals-karaoke.png",
                   },
                 ]}
               />
@@ -217,7 +217,7 @@ export default async function AlbumDetailPage({ params }: Props) {
                     kicker: "Folder",
                     hint: "All instrumental / karaoke tracks together",
                     cover_url:
-                      "/images/albums/bhakti-3-instrumentals-kedar-pandit.png",
+                      "/images/folders/instrumentals-karaoke.png",
                   },
                 ]}
               />

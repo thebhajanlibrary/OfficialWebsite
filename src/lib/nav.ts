@@ -11,6 +11,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { href: "/bhajans", label: "Bhajans" },
       { href: "/albums", label: "Albums" },
       { href: "/artists", label: "Artists" },
+      { href: "/learn", label: "Learn" },
     ],
   },
   {

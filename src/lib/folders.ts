@@ -267,7 +267,7 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     title: "Instrumentals & Karaoke",
     description:
       "Instrumental and karaoke versions for singing along — not for All Bhajans Play all / shuffle. Open this folder (or the album) to play them.",
-    cover_url: "/images/albums/bhakti-instrumentals-kedar-pandit.png",
+    cover_url: "/images/folders/instrumentals-karaoke.png",
     member_slugs: [
       "raghupati-raghav-rajaram-kedar-pandit",
       "shyam-teri-bansi-kedar-pandit",

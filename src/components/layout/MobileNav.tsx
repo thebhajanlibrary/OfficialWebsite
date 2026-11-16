@@ -8,6 +8,7 @@ import { createPortal } from "react-dom";
 import { logoutAction } from "@/lib/actions";
 import { SearchBar } from "@/components/search/SearchBar";
 import { BrandMark } from "@/components/layout/BrandMark";
+import { LearnMascot } from "@/components/learn/LearnMascot";
 import { LIBRARY_LINKS, NAV_GROUPS, navLinkActive } from "@/lib/nav";
 
 export function MobileNav({ loggedIn = false }: { loggedIn?: boolean }) {
@@ -84,12 +85,15 @@ export function MobileNav({ loggedIn = false }: { loggedIn?: boolean }) {
                           <li key={link.href}>
                             <Link
                               href={link.href}
-                              className={`block rounded-xl px-3 py-2.5 text-base font-medium transition ${
+                              className={`flex items-center gap-2 rounded-xl px-3 py-2.5 text-base font-medium transition ${
                                 active
                                   ? "bg-accent-soft text-primary"
                                   : "text-foreground/80 hover:bg-surface-muted hover:text-primary"
                               }`}
                             >
+                              {link.href === "/learn" ? (
+                                <LearnMascot mood="rest" decorative className="h-6 w-6" />
+                              ) : null}
                               {link.label}
                             </Link>
                           </li>

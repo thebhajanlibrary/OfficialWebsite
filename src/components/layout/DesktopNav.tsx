@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { LearnMascot } from "@/components/learn/LearnMascot";
 import { NAV_GROUPS, navLinkActive } from "@/lib/nav";
 
 const primary = NAV_GROUPS[0].links.filter((link) => link.href !== "/");
