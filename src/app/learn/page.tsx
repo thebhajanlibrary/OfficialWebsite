@@ -20,10 +20,10 @@ export default function LearnHomePage() {
           <p className="text-lg leading-relaxed text-muted">
             Short lessons on language, religion, culture, and the music itself. The library of recordings stays where it is. This section is for practice.
           </p>
-          <p className="text-sm text-muted">Mor, the peacock, stays with you through each lesson.</p>
+          <p className="text-sm text-muted">Meet Mor, your practice pal. Ask for a hint during lessons, learn from mistakes, and celebrate what sticks.</p>
           <LearnXp />
         </div>
-        <LearnMascot mood="idle" className="h-36 w-36 shrink-0" />
+        <LearnMascot mood="idle" className="h-48 w-48 shrink-0 sm:h-56 sm:w-56" />
       </header>
 
       <section className="space-y-4" aria-labelledby="learn-categories">

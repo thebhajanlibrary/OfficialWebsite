@@ -45,6 +45,7 @@ export function LessonPlayer({
   const [done, setDone] = useState(false);
   const [totalXp, setTotalXp] = useState(0);
   const [awardedXp, setAwardedXp] = useState(0);
+  const [hintOpen, setHintOpen] = useState(false);
 
   const question = queue[step];
   const correct = question ? isCorrect(question, picked, pairs) : false;
@@ -73,6 +74,7 @@ export function LessonPlayer({
     setChecked(false);
     setPairs({});
     setSelectedWord(null);
+    setHintOpen(false);
   }
 
   if (done) {
@@ -139,12 +141,25 @@ export function LessonPlayer({
                 ? `What is ${question.prompt}?`
                 : question.type === "type-name" ? "What’s its Caribistani name?" : question.prompt}
         </h1>
-        <LearnMascot
-          key={checked ? `${step}-${correct ? "yes" : "no"}` : `wait-${step}`}
-          mood={checked ? (correct ? "correct" : "incorrect") : "idle"}
-          decorative
-          className="h-20 w-20 shrink-0 sm:h-24 sm:w-24"
-        />
+      </div>
+
+      <div className="flex items-center gap-3 rounded-3xl border border-[#b9dfd5] bg-[#eff9f5] p-4 text-[#173c4c] sm:gap-5">
+        <LearnMascot key={`${step}-${checked}`} mood={checked ? (correct ? "correct" : "incorrect") : "idle"} decorative className="h-24 w-24 shrink-0 sm:h-32 sm:w-32" />
+        <div className="min-w-0 space-y-2">
+          <p className="text-xs font-extrabold uppercase tracking-widest text-[#176c68]">Mor · Your practice pal</p>
+          <p className="text-sm font-semibold leading-relaxed sm:text-base" role="status">
+            {checked ? correct ? "Yes! Another one remembered. Keep going!" : "We’ll come back to this together. Read the answer below before you continue."
+              : step >= playable.length ? "Back for another go! Think about the answer you just reviewed."
+              : "Take your time. Try remembering it before choosing an answer."}
+          </p>
+          {!checked && <button type="button" onClick={() => setHintOpen(!hintOpen)} aria-expanded={hintOpen} aria-controls="mor-hint" className="rounded-full border border-[#97c9bd] bg-white px-3 py-1.5 text-sm font-bold hover:bg-[#dff1e9]">{hintOpen ? "Hide hint" : "Mor, give me a hint"}</button>}
+          {!checked && hintOpen && <p id="mor-hint" className="text-sm leading-relaxed">{question.type === "type-name"
+            ? `It starts with “${Array.from(question.answerLabel)[0]}”. Say the name aloud, then try spelling it. Accents aren’t needed.`
+            : question.type === "match" ? "Start with the pair you’re most sure of. Select a word on the left, then its meaning on the right."
+            : question.type === "picture-match" ? "Look at each object’s shape and material. Picture how you would use it in the kitchen."
+            : question.type === "purpose" ? "Picture using this object. Which description fits the job it does?"
+            : "Say each option aloud. Which name do you remember learning for this object?"}</p>}
+        </div>
       </div>
 
       {question.type === "identify-name" ? (

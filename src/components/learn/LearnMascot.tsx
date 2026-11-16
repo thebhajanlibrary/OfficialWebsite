@@ -1,80 +1,48 @@
 type Mood = "idle" | "correct" | "incorrect" | "complete" | "rest";
 
-const FEATHERS = [
-  { rot: -46, fill: "#1c1915", eye: "#e7c27a" },
-  { rot: -23, fill: "#9a6b32", eye: "#fffaf3" },
-  { rot: 0, fill: "#1f4f4a", eye: "#e7c27a" },
-  { rot: 23, fill: "#9a6b32", eye: "#fffaf3" },
-  { rot: 46, fill: "#1c1915", eye: "#e7c27a" },
-] as const;
-
-export function LearnMascot({
-  mood = "idle",
-  className = "h-28 w-28",
-  decorative = false,
-}: {
-  mood?: Mood;
-  className?: string;
-  decorative?: boolean;
+export function LearnMascot({ mood = "idle", className = "h-28 w-28", decorative = false }: {
+  mood?: Mood; className?: string; decorative?: boolean;
 }) {
+  const happy = mood === "correct" || mood === "complete";
   return (
-    <svg
-      viewBox="0 0 120 120"
-      className={`mor ${className}`}
-      data-mood={mood}
-      role={decorative ? undefined : "img"}
-      aria-hidden={decorative ? true : undefined}
-      aria-label={decorative ? undefined : "Mor, the Bhajan Learn peacock"}
-    >
+    <svg viewBox="0 0 160 160" className={`mor ${className}`} data-mood={mood}
+      role={decorative ? undefined : "img"} aria-hidden={decorative || undefined}
+      aria-label={decorative ? undefined : `Mor, your peacock learning companion${happy ? ", celebrating" : mood === "incorrect" ? ", thinking with you" : ""}`}>
+      <ellipse cx="80" cy="148" rx="35" ry="6" fill="#163f45" opacity=".12" />
       <g className="mor-bird">
-        <g transform="translate(52 86)">
-          <g className="mor-tail">
-            {FEATHERS.map((feather) => (
-              <g key={feather.rot} transform={`rotate(${feather.rot})`}>
-                <path d="M0 2C8-12 9-30 0-46C-9-30-8-12 0 2Z" fill={feather.fill} />
-                <circle cx="0" cy="-30" r="4.4" fill={feather.eye} />
-                <circle cx="0" cy="-30" r="1.8" fill="#1c1915" />
-              </g>
-            ))}
-          </g>
+        <g className="mor-tail">
+          {[-60, -40, -20, 0, 20, 40, 60].map((angle, i) => (
+            <g key={angle} transform={`rotate(${angle} 80 112)`}>
+              <path d="M80 120C66 101 54 60 62 37C67 22 93 22 98 37C106 60 94 101 80 120Z" fill={i % 2 ? "#168d80" : "#20b49a"} stroke="#126c68" strokeWidth="2" />
+              <path d="M80 89C70 73 66 54 70 43C73 34 87 34 90 43C94 54 90 73 80 89Z" fill="#a4dc6b" />
+              <ellipse cx="80" cy="51" rx="8" ry="11" fill="#ffe19a" />
+              <ellipse cx="80" cy="52" rx="5" ry="7" fill="#17647b" />
+              <circle cx="81" cy="50" r="2" fill="#a3ece0" />
+            </g>
+          ))}
         </g>
-
-        <ellipse cx="54" cy="90" rx="20" ry="15" fill="#fffaf3" stroke="#1c1915" strokeWidth="1.6" />
-        <ellipse cx="46" cy="88" rx="9" ry="6" fill="#f4ecdf" stroke="#1c1915" strokeWidth="1.3" transform="rotate(-16 46 88)" />
-
+        <path d="M64 134L60 145H48M96 134L100 145H112" fill="none" stroke="#dc8a31" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M46 100C46 76 114 76 114 100L112 117C108 149 52 149 48 117Z" fill="#156e89" />
+        <ellipse cx="80" cy="117" rx="23" ry="21" fill="#39afbd" />
+        <path d={happy ? "M48 105Q21 91 30 76Q46 78 57 97" : "M49 99Q30 100 38 122Q49 130 60 112"} fill="#12586f" />
+        <path d={happy ? "M112 105Q139 91 130 76Q114 78 103 97" : "M111 99Q130 100 122 122Q111 130 100 112"} fill="#12586f" />
         <g className="mor-head">
-          <path
-            d="M66 80c8-4 14-14 14-24"
-            fill="none"
-            stroke="#1c1915"
-            strokeWidth="8"
-            strokeLinecap="round"
-          />
-          <path
-            d="M66 80c8-4 14-14 14-24"
-            fill="none"
-            stroke="#fffaf3"
-            strokeWidth="5"
-            strokeLinecap="round"
-          />
-          <circle cx="82" cy="52" r="13" fill="#fffaf3" stroke="#1c1915" strokeWidth="1.6" />
-          <ellipse cx="74" cy="36" rx="2" ry="5" fill="#9a6b32" transform="rotate(-24 74 36)" />
-          <ellipse cx="82" cy="32" rx="2.1" ry="6" fill="#e7c27a" />
-          <ellipse cx="90" cy="36" rx="2" ry="5" fill="#9a6b32" transform="rotate(22 90 36)" />
-          <path d="M92 50l10 3.2-10 3.2z" fill="#9a6b32" />
-          <g className="mor-eye">
-            <circle cx="86" cy="51" r="3.1" fill="#1c1915" />
-            <circle cx="87" cy="50" r="1" fill="#fffaf3" />
+          <path d="M72 40L64 24M80 37V18M88 40L96 24" fill="none" stroke="#176c80" strokeWidth="4" strokeLinecap="round" />
+          <g fill="#29baa5"><circle cx="63" cy="22" r="5" /><circle cx="80" cy="16" r="6" /><circle cx="97" cy="22" r="5" /></g>
+          <path d="M43 70C43 24 117 24 117 70V82C117 115 43 115 43 82Z" fill="#208eab" />
+          <path d="M48 64C48 47 70 45 80 61C90 45 112 47 112 64V79C112 103 48 103 48 79Z" fill="#effbf1" />
+          <g className="mor-eye" fill="#173c4c">
+            {happy || mood === "rest" ? <path d="M57 73Q63 62 69 73M91 73Q97 62 103 73" fill="none" stroke="#173c4c" strokeWidth="4" strokeLinecap="round" /> : <>
+              <ellipse cx="64" cy="71" rx="6" ry={mood === "incorrect" ? 7 : 9} /><ellipse cx="96" cy="71" rx="6" ry="9" />
+              <circle cx="66" cy="68" r="2.2" fill="white" /><circle cx="98" cy="68" r="2.2" fill="white" />
+            </>}
           </g>
+          {mood === "incorrect" && <path d="M56 57L70 60M90 58L102 54" stroke="#173c4c" strokeWidth="3" strokeLinecap="round" />}
+          <ellipse cx="54" cy="83" rx="6" ry="3.5" fill="#f2a99a" /><ellipse cx="106" cy="83" rx="6" ry="3.5" fill="#f2a99a" />
+          <path d={happy ? "M69 82Q80 76 91 82L80 97Z" : "M69 82Q80 76 91 82L80 91Z"} fill="#f6b943" stroke="#dc8a31" strokeWidth="1.5" strokeLinejoin="round" />
+          {happy && <path d="M75 86H85L80 91Z" fill="#97452c" />}
         </g>
-
-        <path
-          d="M46 104l-5 7M41 111h7M62 104l4 7M63 111h7"
-          fill="none"
-          stroke="#9a6b32"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-        />
+        {mood === "complete" && <g fill="#f6b943"><path d="M23 19L26 27L34 30L26 33L23 41L20 33L12 30L20 27Z" /><path d="M137 47L140 54L147 57L140 60L137 67L134 60L127 57L134 54Z" /></g>}
       </g>
     </svg>
   );

@@ -1,3 +1,5 @@
+import { LEARN_ENABLED } from "@/lib/features";
+
 export type NavLink = { href: string; label: string };
 
 export type NavGroup = { title: string; links: NavLink[] };
@@ -11,7 +13,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { href: "/bhajans", label: "Bhajans" },
       { href: "/albums", label: "Albums" },
       { href: "/artists", label: "Artists" },
-      { href: "/learn", label: "Learn" },
+      ...(LEARN_ENABLED ? [{ href: "/learn", label: "Learn" }] : []),
     ],
   },
   {
