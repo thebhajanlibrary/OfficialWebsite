@@ -4007,6 +4007,106 @@ The relatives have come, they have brought gifts, they have brought gifts. (2)
 Through many rites, the darling son. Through many rites, the darling son.
 The batarva, oh the batarva, hey the batarva searches; Mausi is cooking halwa in the kitchen. (Ref)`,
   },
+  {
+    slug: "koi-naina",
+    title: "Koi Naina",
+    order: 28,
+    cue: "Traditional chutney · Dropati",
+    about:
+      "Dropati of Suriname sings Koi Naina live. Two dohas open it: love that lives through the days, and this world as a fair where people meet, while God is met through the prayers of the poor. Then someone keeps meeting eyes with eyes, and takes the heart from the doorway.",
+    artist: "Dropati",
+    youtube_url: "https://www.youtube.com/watch?v=GVy3ytaV5Ng",
+    thumbnail_url: "https://i.ytimg.com/vi/GVy3ytaV5Ng/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/GVy3ytaV5Ng/hqdefault.jpg",
+    sections: ["chutney"],
+    search_tags: [
+      "koi naina",
+      "naina se naina",
+      "milaye chala jay",
+      "dropati",
+      "suriname",
+      "doha",
+      "rela",
+    ],
+    roman_lyrics: `## Doha 1
+
+Prithe sakhi jiye, ki saba din me' bahatu jay.
+Pritha ne sakhi jiye, ki banuve sa ukaray. (Ai u rai u)
+
+## Doha 2
+
+Ye duniya ek mila hai, jaha' insan milte hai.
+Garibo' ke duao se, magar Bhagavan milte hai.
+
+## Refrain
+
+Koi naina se naina, milaye chala jay, koi naina.
+Milaye chala jay (2); milaye chala jay, koi naina.
+Koi naina se naina, milaye chala jay.
+
+## Verse 1
+
+Thare rahi ho mai', apane duvariya, apane duvariya.
+Ho thare rahi ho mai', apane dovariya, apane dovariya.
+Ho more jiyara se parchay chalaye chala jay, koi naina. (Ref)
+
+## Verse 2
+
+Hare liye man more, hira dekho pritham, hira dekho pritham.
+Hara liya man mora, chhup kaise pritham, chhup kaise pritham.
+Ho mohe prema na dene dubaye chala jay, koi naina. (Ref)
+
+## Verse 3
+
+Aise bedardi ke, pale pari hu, mai' pale pari hu.
+Ho aise bedardi ke, pale pari ho, mai' pale pari ho.
+Ho more binti namana karu lay chala jay, koi naina. (Ref)
+
+## Rela
+
+Binati namane karu lay, chala jay, koi naina.
+Hai koi naina se naina, milaye re chala jay, koi naina;
+hai koi naina, hai koi naina!`,
+    translation: `## Doha 1
+
+May love live, friend, so that it flows on through every day.
+Without love, friend, what is built is then uprooted. (Ai u rai u)
+
+## Doha 2
+
+This world is a fair, where people meet.
+But through the prayers of the poor, one meets God.
+
+## Refrain
+
+Someone goes on meeting eyes with eyes, someone's eyes.
+Goes on meeting (2); goes on meeting, someone's eyes.
+Someone goes on meeting eyes with eyes.
+
+## Verse 1
+
+I had been standing at my own doorway, at my own doorway.
+Oh, I had been standing at my own doorway, at my own doorway.
+Oh, he goes on making himself known to my heart, someone's eyes. (Ref)
+
+## Verse 2
+
+He has taken my heart, look at the diamond, beloved, look at the diamond, beloved.
+He has snatched my heart, how can it stay hidden, beloved, how can it stay hidden, beloved.
+Oh, without giving me love he goes on drowning me, someone's eyes. (Ref)
+
+## Verse 3
+
+I have fallen into the keeping of one so heartless, I have fallen into his keeping.
+Oh, I have fallen into the keeping of one so heartless, I have fallen into his keeping.
+Oh, I make my plea and my greeting, and he goes on taking them, someone's eyes. (Ref)
+
+## Rela
+
+I make my plea and my greeting, he takes them and goes, someone's eyes.
+Oh, someone goes on meeting eyes with eyes, someone's eyes;
+oh someone's eyes, oh someone's eyes!`,
+  },
 ];
 
 export function folkQueueTracks(section: FolkSection): QueueTrack[] {

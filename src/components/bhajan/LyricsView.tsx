@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { transliterateRomanLine } from "@/lib/roman-to-devanagari";
 
 type Props = {
   roman: string;
@@ -88,7 +89,7 @@ function pairLines(
     return Array.from({ length: len }, (_, i) => ({
       roman: romanLines[i] ?? "",
       translation: transLines[i] ?? "",
-      devanagari: devLines[i] ?? "",
+      devanagari: lineHindi(romanLines[i] ?? "", devLines[i] ?? ""),
     }));
   }
 
@@ -110,12 +111,17 @@ function pairLines(
       out.push({
         roman: romanLine,
         translation: transFlat[transIdx++] ?? "",
-        devanagari: devFlat[devIdx++] ?? "",
+        devanagari: lineHindi(romanLine, devFlat[devIdx++] ?? ""),
       });
     }
   }
 
   return out;
+}
+
+function lineHindi(romanLine: string, stored: string): string {
+  if (stored.trim()) return stored;
+  return transliterateRomanLine(romanLine);
 }
 
 export function LyricsView({
@@ -129,7 +135,7 @@ export function LyricsView({
   onReadingChange,
 }: Props) {
   const [showTranslation, setShowTranslation] = useState(showTranslationDefault);
-  const [showHindi, setShowHindi] = useState(false);
+  const [showHindi, setShowHindi] = useState(true);
   const [size, setSize] = useState<LyricSize>("md");
 
   useEffect(() => {
@@ -158,7 +164,7 @@ export function LyricsView({
   );
 
   const hasTranslation = Boolean(translation?.trim());
-  const hasHindi = Boolean(devanagari?.trim());
+  const hasHindi = lines.some((line) => line.devanagari.trim());
 
   const lightSize = {
     sm: {

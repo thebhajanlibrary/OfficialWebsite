@@ -723,7 +723,17 @@ export async function getFolderWithBhajans(slug: string): Promise<{
   const all = await getBhajans();
   const bhajans = all.filter((b) => bhajanBelongsToFolder(folder.slug, b));
 
-  if (folder.member_slugs?.length) {
+  if (folder.slug === "funeral-memorial") {
+    bhajans.sort((a, b) => {
+      const byTitle = a.title.localeCompare(b.title, undefined, {
+        sensitivity: "base",
+      });
+      if (byTitle !== 0) return byTitle;
+      return (a.artist_version ?? "").localeCompare(b.artist_version ?? "", undefined, {
+        sensitivity: "base",
+      });
+    });
+  } else if (folder.member_slugs?.length) {
     const order = new Map(folder.member_slugs.map((s, i) => [s, i]));
     bhajans.sort(
       (a, b) => (order.get(a.slug) ?? 999) - (order.get(b.slug) ?? 999)

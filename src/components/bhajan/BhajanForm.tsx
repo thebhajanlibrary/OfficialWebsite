@@ -175,7 +175,7 @@ export function BhajanForm({ categories, initial, action }: Props) {
         </Field>
         <Field
           label="Devanagari / Hindi lyrics"
-          hint="Same line breaks as roman. Hidden on the site until Show Hindi is opened."
+          hint="Same line breaks as the Roman. Shown under each line; the Hindi button hides it."
         >
           <textarea
             name="devanagari_lyrics"

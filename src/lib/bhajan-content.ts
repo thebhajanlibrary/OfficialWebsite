@@ -1638,33 +1638,33 @@ Kripa kari apanayo
 Guruji mere Ram ratan dhan payo
 Ram ratan dhan payo
 Guruji mere Ram ratan dhan payo`,
-    devanagari_lyrics: `à¤°à¤¾à¤® à¤°à¤¤à¤¨ à¤§à¤¨ à¤ªà¤¾à¤¯à¥‹
-à¤—à¥à¤°à¥à¤œà¥€ à¤®à¥‡à¤°à¥‡ à¤°à¤¾à¤® à¤°à¤¤à¤¨ à¤§à¤¨ à¤ªà¤¾à¤¯à¥‹
+    devanagari_lyrics: `राम रतन धन पायो
+गुरुजी मेरे राम रतन धन पायो
 
-à¤µà¤¸à¥à¤¤à¥ à¤…à¤®à¥‹à¤²à¤¿à¤• à¤¦à¥€ à¤®à¥‡à¤°à¥‡ à¤¸à¤¤à¤—à¥à¤°à¥
-à¤•à¥ƒà¤ªà¤¾ à¤•à¤°à¥€ à¤…à¤ªà¤¨à¤¾à¤¯à¥‹
-à¤—à¥à¤°à¥à¤œà¥€ à¤®à¥‡à¤°à¥‡ à¤°à¤¾à¤® à¤°à¤¤à¤¨ à¤§à¤¨ à¤ªà¤¾à¤¯à¥‹
+वस्तु अमोलिक दी मेरे सतगुरु
+कृपा करी अपनायो
+गुरुजी मेरे राम रतन धन पायो
 
-à¤œà¤¨à¤® à¤œà¤¨à¤® à¤•à¥€ à¤ªà¥‚à¤‚à¤œà¥€ à¤ªà¤¾à¤¯à¥€
-à¤œà¤— à¤®à¥‡à¤‚ à¤¸à¤­à¥€ à¤–à¥‹à¤µà¤¾à¤¯à¥‹
-à¤—à¥à¤°à¥à¤œà¥€ à¤®à¥‡à¤°à¥‡ à¤°à¤¾à¤® à¤°à¤¤à¤¨ à¤§à¤¨ à¤ªà¤¾à¤¯à¥‹
+जनम जनम की पूंजी पायी
+जग में सभी खोवायो
+गुरुजी मेरे राम रतन धन पायो
 
-à¤–à¤°à¥à¤š à¤¨ à¤–à¥‚à¤Ÿà¥‡, à¤šà¥‹à¤° à¤¨ à¤²à¥‚à¤Ÿà¥‡
-à¤¦à¤¿à¤¨ à¤¦à¤¿à¤¨ à¤¬à¤¢à¤¼à¤¤ à¤¸à¤µà¤¾à¤¯à¥‹
-à¤—à¥à¤°à¥à¤œà¥€ à¤®à¥‡à¤°à¥‡ à¤°à¤¾à¤® à¤°à¤¤à¤¨ à¤§à¤¨ à¤ªà¤¾à¤¯à¥‹
+खर्च न खूटे, चोर न लूटे
+दिन दिन बढ़त सवायो
+गुरुजी मेरे राम रतन धन पायो
 
-à¤¸à¤¤ à¤•à¥€ à¤¨à¤¾à¤µ à¤–à¥‡à¤µà¤Ÿà¤¿à¤¯à¤¾ à¤¸à¤¤à¤—à¥à¤°à¥
-à¤­à¤µà¤¸à¤¾à¤—à¤° à¤¤à¤° à¤†à¤¯à¥‹
-à¤—à¥à¤°à¥à¤œà¥€ à¤®à¥‡à¤°à¥‡ à¤°à¤¾à¤® à¤°à¤¤à¤¨ à¤§à¤¨ à¤ªà¤¾à¤¯à¥‹
+सत की नाव खेवटिया सतगुरु
+भवसागर तर आयो
+गुरुजी मेरे राम रतन धन पायो
 
-à¤®à¥€à¤°à¤¾ à¤•à¥‡ à¤ªà¥à¤°à¤­à¥ à¤—à¤¿à¤°à¤¿à¤§à¤° à¤¨à¤¾à¤—à¤°
-à¤¹à¤°à¤– à¤¹à¤°à¤– à¤œà¤¸ à¤—à¤¾à¤¯à¥‹
-à¤—à¥à¤°à¥à¤œà¥€ à¤®à¥‡à¤°à¥‡ à¤°à¤¾à¤® à¤°à¤¤à¤¨ à¤§à¤¨ à¤ªà¤¾à¤¯à¥‹
+मीरा के प्रभु गिरिधर नागर
+हरख हरख जस गायो
+गुरुजी मेरे राम रतन धन पायो
 
-à¤•à¥ƒà¤ªà¤¾ à¤•à¤°à¥€ à¤…à¤ªà¤¨à¤¾à¤¯à¥‹
-à¤—à¥à¤°à¥à¤œà¥€ à¤®à¥‡à¤°à¥‡ à¤°à¤¾à¤® à¤°à¤¤à¤¨ à¤§à¤¨ à¤ªà¤¾à¤¯à¥‹
-à¤°à¤¾à¤® à¤°à¤¤à¤¨ à¤§à¤¨ à¤ªà¤¾à¤¯à¥‹
-à¤—à¥à¤°à¥à¤œà¥€ à¤®à¥‡à¤°à¥‡ à¤°à¤¾à¤® à¤°à¤¤à¤¨ à¤§à¤¨ à¤ªà¤¾à¤¯à¥‹`,
+कृपा करी अपनायो
+गुरुजी मेरे राम रतन धन पायो
+राम रतन धन पायो
+गुरुजी मेरे राम रतन धन पायो`,
     translation: `I have received the priceless treasure of Lord Ram.
 O my Guru, I have received the priceless treasure of Lord Ram.
 
@@ -2575,21 +2575,21 @@ Bhakta namata charan may Bhagavana
 Kripaa kariya sevak bhaya bhanjana
 
 Bandow charana kamal Ragunandan`,
-    devanagari_lyrics: `à¤¬à¤‚à¤¦à¥Œà¤‚ à¤šà¤°à¤£ à¤•à¤®à¤² à¤°à¤˜à¥à¤¨à¤¨à¥à¤¦à¤¨
+    devanagari_lyrics: `बंदौं चरण कमल रघुनन्दन
 
-à¤œà¤¿à¤¨à¤•à¥€ à¤•à¥ƒà¤ªà¤¾ à¤¸à¤•à¤² à¤¸à¥à¤– à¤¸à¤‚à¤ªà¤¤à¤¿
-à¤ªà¤¾à¤µà¤¨ à¤œà¤¨ à¤­à¤•à¥à¤¤à¤¨ à¤‰à¤° à¤šà¤¨à¥à¤¦à¤¨
+जिनकी कृपा सकल सुख संपति
+पावन जन भक्तन उर चन्दन
 
-à¤…à¤µà¤§ à¤ªà¥à¤°à¥€ à¤ªà¥à¤°à¤­à¥ à¤¨à¤¿à¤¤à¥à¤¯ à¤¬à¤¿à¤°à¤¾à¤œà¤¤
-à¤œà¤¨à¤• à¤¸à¥à¤¤à¤¾ à¤¯à¥à¤¤ à¤¦à¥à¤·à¥à¤Ÿ à¤¨à¤¿à¤•à¤¨à¥à¤¦à¤¨
+अवध पुरी प्रभु नित्य बिराजत
+जनक सुता युत दुष्ट निकन्दन
 
-à¤¤à¥€à¤¨ à¤¤à¤¾à¤ª à¤…à¤°à¥ à¤œà¤¨à¤® à¤®à¤°à¤£ à¤­à¤¯
-à¤¦à¥‚à¤° à¤•à¤°à¤¤ à¤›à¤¿à¤¨ à¤®à¥‡à¤‚ à¤œà¤¨ à¤°à¤‚à¤œà¤¨
+तीन ताप अरु जनम मरण भय
+दूर करत छिन में जन रंजन
 
-à¤­à¤•à¥à¤¤ à¤¨à¤®à¤¤ à¤šà¤°à¤£ à¤®à¥‡à¤‚ à¤­à¤—à¤µà¤¾à¤¨
-à¤•à¥ƒà¤ªà¤¾ à¤•à¤°à¤¿à¤¯ à¤¸à¥‡à¤µà¤• à¤­à¤¯ à¤­à¤‚à¤œà¤¨
+भक्त नमत चरण में भगवान
+कृपा करिय सेवक भय भंजन
 
-à¤¬à¤‚à¤¦à¥Œà¤‚ à¤šà¤°à¤£ à¤•à¤®à¤² à¤°à¤˜à¥à¤¨à¤¨à¥à¤¦à¤¨`,
+बंदौं चरण कमल रघुनन्दन`,
     translation: `I worship the lotus feet of Shri Raghunandan.
 
 By His divine grace comes all bliss and prosperity.
@@ -21980,7 +21980,34 @@ Root-destroyer of all inauspiciousness`,
     display_order: 374,
     category_slugs: ["krishna", "general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
     meaning: "Arati Mukherjee sings to Krishna. Shyam, your flute is calling.",
-    roman_lyrics: "",
+    roman_lyrics: `## Chorus
+
+Shyam teri bansi Pukare Radha naam
+Shyam teri bansi Pukare Radha naam
+
+## Verses
+
+Brindavan ke kunj galin mein
+Goonje Tera naam
+Shyam teri bansi Pukare Radha naam
+
+Jamuna tat pe gope gopiyan
+Nachen madhur taal
+Shyam teri bansi Pukare Radha naam`,
+    translation: `## Chorus
+
+Shyam, your flute calls Radha’s name
+Shyam, your flute calls Radha’s name
+
+## Verses
+
+In the groves and lanes of Vrindavan
+Your name resounds
+Shyam, your flute calls Radha’s name
+
+On the Yamuna bank the cowherds and gopis
+Dance to a sweet beat
+Shyam, your flute calls Radha’s name`,
   },
   "jyoti-bindu-parmatma-tulsi-bk": {
     title: "Jyoti Bindu Parmatma Se",
@@ -22282,7 +22309,70 @@ O mother, o mother`,
     display_order: 389,
     category_slugs: ["general", "satsang", "funeral", "memorial", "bhajan", "devotion", "hindi", "suitable-for-funerals"],
     meaning: "Ami Patel sings Tujhe Sooraj Kahoon Ya Chanda, the father’s song from Ek Phool Do Mali. Manna Dey sang it in the film.",
-    roman_lyrics: "",
+    roman_lyrics: `## Chorus
+
+Tujhe sūraj kahūñ yā chandā, tujhe dīp kahūñ yā tārā
+Merā nām karegā roshan, jag meñ merā rāj dulārā
+Tujhe sūraj kahūñ yā chandā, tujhe dīp kahūñ yā tārā
+Merā nām karegā roshan, jag meñ merā rāj dulārā
+
+## Verse 1
+
+Maiñ kab se taras rahā thā, mere āñgan meñ koī khele
+Nanhī sī hañsī ke badle, merī sārī duniyā le le
+Tere sañg jhūl rahā hai, merī bāhoñ meñ jag sārā
+Merā nām karegā roshan, jag meñ merā rāj dulārā
+Tujhe sūraj kahūñ yā chandā, tujhe dīp kahūñ yā tārā
+Merā nām karegā roshan, jag meñ merā rāj dulārā
+
+## Verse 2
+
+Āj uñglī thām ke terī, tujhe maiñ chalnā sikhlāūñ
+Kal hāth pakaṛnā merā, jab maiñ būṛhā ho jāūñ
+Tū milā to maiñne pāyā, jīne kā nayā sahārā
+Merā nām karegā roshan, jag meñ merā rāj dulārā
+Tujhe sūraj kahūñ yā chandā, tujhe dīp kahūñ yā tārā
+Merā nām karegā roshan, jag meñ merā rāj dulārā
+
+## Verse 3
+
+Mere bād bhī is duniyā meñ, zindā merā nām rahegā
+Jo bhī tujhko dekhegā, tujhe merā lāl kahegā
+Tere rūp meñ mil jāegā, mujhko jīvan dobārā
+Merā nām karegā roshan, jag meñ merā rāj dulārā
+Tujhe sūraj kahūñ yā chandā, tujhe dīp kahūñ yā tārā
+Merā nām karegā roshan, jag meñ merā rāj dulārā`,
+    translation: `## Chorus
+
+Should I call you the sun or the moon? Should I call you a lamp or a star?
+My precious beloved child will illuminate my name across the world.
+Should I call you the sun or the moon? Should I call you a lamp or a star?
+My precious beloved child will illuminate my name across the world.
+
+## Verse 1
+
+How long I had yearned for someone to play in my courtyard!
+In return for your tiny laughter, take away my entire world.
+Along with you, the entire world swings gently in my embrace.
+My precious beloved child will illuminate my name across the world.
+Should I call you the sun or the moon...
+
+## Verse 2
+
+Today I hold your little finger and teach you how to walk;
+Tomorrow, hold my hand when I grow old.
+Having found you, I have found a brand new reason and support to live.
+My precious beloved child will illuminate my name across the world.
+Should I call you the sun or the moon...
+
+## Verse 3
+
+Even after I am gone, my name will live on in this world;
+Whoever looks upon you will call you my beloved child.
+In your form, I will have received a second life.
+My precious beloved child will illuminate my name across the world.
+Should I call you the sun or the moon? Should I call you a lamp or a star?
+My precious beloved child will illuminate my name across the world.`,
   },
   "praathna-gebed-chautaal-samaadj": {
     title: "Praathna - Gebed",

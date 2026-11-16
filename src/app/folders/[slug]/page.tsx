@@ -195,6 +195,21 @@ export default async function FolderDetailPage({ params }: Props) {
         </div>
       </div>
 
+      {folder.slug === "funeral-memorial" && (
+        <RelatedCollections
+          heading="Album"
+          items={[
+            {
+              href: "/albums/satya-ka-darshan-devashish-ramdath",
+              title: "Satya Ka Darshan",
+              kicker: "Album · Devashish Ramdath",
+              hint: "11 tracks — linked here, and listed below with the other songs",
+              cover_url: "https://i.ytimg.com/vi/QGcPSNkg3rs/hqdefault.jpg",
+            },
+          ]}
+        />
+      )}
+
       {folder.slug === "holi" && (
         <RelatedCollections
           items={[

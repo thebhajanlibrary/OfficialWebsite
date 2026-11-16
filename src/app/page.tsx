@@ -27,6 +27,8 @@ const HERO_FOLDERS: { slug: string; note: string; image?: string }[] = [
   { slug: "holi", note: "Songs for Phagwah" },
   { slug: "birthday-songs", note: "Long life and blessings" },
   { slug: "garba", note: "Navratri garba" },
+  { slug: "funeral-memorial", note: "Prayers and remembrance" },
+  { slug: "instrumentals-karaoke", note: "Sing along" },
 ];
 
 function shelfItems(): ShelfItem[] {
