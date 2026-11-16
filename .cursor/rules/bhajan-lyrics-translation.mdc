@@ -1,84 +1,230 @@
-
 ---
-description: Bhajan lyrics, copyright classification and line-by-line English translation
+description: Complete Bhajan Library lyrics, copyright assessment, full Roman transliteration and line-by-line English translations without truncation
 globs: src/lib/bhajan-content.ts
 alwaysApply: false
 ---
 
-# Bhajan Library: Lyrics and Translations
+# Bhajan Library: Complete Lyrics and Translations
 
 This project is a Hindu devotional music and lyrics library.
 
-Its purpose is to help users discover, read, understand and sing bhajans, aartis, mantras, stotras, Garba songs and other devotional compositions.
+Its purpose is to help users discover, read, understand and sing bhajans, aartis, mantras, stotras, chalisas, Garba, Chowtal and other devotional compositions.
 
-## 1. Lyrics and copyright
+## 1. Complete lyrics policy
 
-- Do not automatically classify a devotional song as copyrighted solely because it appears in a Bollywood film.
-- Distinguish traditional devotional compositions from newly written film lyrics.
-- Traditional and public-domain lyrics can remain public domain even when performed by contemporary artists.
-- A modern recording, arrangement or adaptation may have separate copyright protection.
-- Religious subject matter does not automatically make lyrics public domain.
-- Where the project owner has appropriate permission or a valid licence, support adding the authorised lyrics.
-- Do not assume a YouTube embed grants permission to reproduce lyrics separately.
-- Do not invent lyrics or present unverified text as authentic.
+**The default objective is to add the COMPLETE song, not an excerpt.**
+
+For public-domain compositions or lyrics that the project is authorised to reproduce:
+
+- Include every available verified verse from beginning to end.
+- Include the complete chorus and every repeated refrain.
+- Do not stop after the first verse or chorus.
+- Do not impose arbitrary character, word, verse or line limits.
+- Do not shorten lyrics to save tokens or processing time.
+- Do not replace remaining verses with placeholders or ellipses.
+- Do not summarise lyrics instead of reproducing authorised text.
+- Do not silently omit later verses.
+- Do not mark partially completed lyrics as complete.
+- Preserve the full song structure, including the ending.
+
+If a task is interrupted by context or output limits, retain the completed work and continue from the exact point reached without duplicating or discarding existing verses.
+
+When multiple traditional versions exist, use the version matching the selected performance where it can be verified and lawfully reproduced.
+
+## 2. Copyright and permissions
+
+Do not automatically classify a devotional song as copyrighted solely because it appears in a Bollywood film.
+
+Distinguish between:
+- Traditional and public-domain devotional compositions.
+- Modern recordings of traditional compositions.
+- New arrangements or adaptations.
+- Newly written lyrics, including film songs.
+- Lyrics supplied or licensed by the project owner.
+
+A contemporary singer performing a traditional bhajan does not automatically make the underlying traditional lyrics copyrighted.
+
+Religious subject matter alone does not establish public-domain status.
+
+A YouTube video or embed does not automatically authorise reproduction of its lyrics.
+
+When the lyrics are public domain or appropriately authorised, add the complete verified text.
 
 When copyright status is uncertain:
-1. Identify whether the underlying composition is traditional or modern.
-2. Check the available evidence and permissions.
-3. Explain the specific uncertainty rather than rejecting the entire song.
-4. Continue implementing song metadata, categories, playback and other functionality.
-5. Allow the administrator to supply authorised lyrics through the site's content management workflow.
+1. Identify the original composition and its likely authorship.
+2. Check reliable sources and available permissions.
+3. Distinguish underlying lyrics from recordings and arrangements.
+4. Do not unnecessarily reject traditional material because of a modern recording.
+5. Continue adding metadata, artist details, categories, playback and other functionality.
+6. Provide a way for administrators to add authorised lyrics.
 
-Do not treat all Bollywood devotional songs as a single copyright category.
+Do not reproduce protected lyrics without appropriate permission.
 
-## 2. Lyrics formatting
+## 3. Full lyrics collection
 
-When adding or editing a song in
-`src/lib/bhajan-content.ts`, preserve the existing content structure.
+Before adding a song:
 
-- Preserve the original lyrics accurately.
-- Maintain the established Roman transliteration format.
-- Preserve chorus and verse headings.
+1. Identify its correct title and commonly used alternative spellings.
+2. Identify the artist or performance version.
+3. Determine whether it is traditional, public domain or authorised.
+4. Find the most complete reliable version available.
+5. Compare sources where possible to identify missing verses.
+6. Preserve the original order of the song.
+7. Include every verified verse, chorus, refrain and ending.
+8. Preserve repeated lines where they occur in the selected version.
+9. Do not invent missing lines.
+10. Do not declare completion unless the available authorised version has been fully processed.
+
+If the selected performance differs from the traditional version, distinguish those differences instead of combining unrelated versions.
+
+## 4. Roman transliteration
+
+When adding or editing songs in `src/lib/bhajan-content.ts`, preserve the established content structure.
+
+The `roman_lyrics` field must contain the complete authorised Romanised lyrics.
+
+Requirements:
+
+- Use consistent Roman transliteration.
+- Preserve the original devotional wording.
+- Preserve every verified verse.
 - Maintain repeated lines.
+- Maintain chorus and verse headings.
 - Preserve stanza breaks.
-- Do not invent missing verses.
+- Preserve the order in which lines are sung.
+- Do not omit lines because they repeat.
+- Do not invent lines or verses.
+- Avoid unnecessary alterations to traditional wording.
 
-## 3. English translation
+Use existing headings such as:
 
-The `translation` field must mirror `roman_lyrics`
-line for line.
+## Chorus
 
-### Rules
+## Verse 1
 
-- One English line per Roman line.
-- Same line count and order.
-- Same section headings (`## Chorus`, `## Verse 1`, etc.).
-- Repeat every repeated line, including chorus refrains and echo lines.
-- Never summarise or merge lines.
-- Match blank lines between stanzas.
-- Preserve the devotional meaning and cultural context.
+## Verse 2
+
+## Verse 3
+
+Continue for as many sections as the composition requires.
+
+There is no arbitrary maximum number of verses.
+
+## 5. Complete English translations
+
+Every line in `roman_lyrics` must have a corresponding English translation.
+
+**The translation must cover the ENTIRE song, not only the opening verses.**
+
+Requirements:
+
+- One English line for each Romanised lyric line.
+- Preserve the exact line order.
+- Preserve section headings.
+- Translate every repeated chorus line individually.
+- Translate every repeated refrain and echo line.
+- Preserve blank lines and stanza breaks.
+- Never merge multiple lyric lines into one translation.
+- Never summarise several verses as a single paragraph.
+- Never omit a verse because its meaning is similar to another.
+- Continue translating until the final lyric line.
 - Use clear, natural British English.
-- When a line names a deity a reader may not know, the English says who they are. Do not copy the name across as the translation. Muni Muni is the call to Munishvara, the lord of the sages. Amma Mariamma is the mother of rain and healing. A short bracket may add the sung name only beside that meaning. Leave well-known names as the name: Ram, Krishna, Shiva, Durga, Kali, Lakshmi, Hanuman, Ganesh.
+- Maintain devotional meaning, theological context and cultural accuracy.
 
-### Example
+Where a deity's name requires explanation, provide the meaning naturally within the translation.
 
-roman_lyrics:
-Aisi lagi lagan, Meera ho gayi magan
-Woh to gali-gali Hari gun gaane lagi
-Aisi lagi lagan, Meera ho gayi magan
+For example:
+- Muni Muni refers to Munishvara, the lord of the sages.
+- Amma Mariamma refers to the mother associated with rain and healing.
 
-translation:
-Such was the attachment, Meera became lost in bliss
-She began singing Hari's glories through every lane
-Such was the attachment, Meera became lost in bliss
+Well-known names such as Ram, Krishna, Shiva, Durga, Kali, Lakshmi, Hanuman and Ganesh can remain untranslated.
 
-## 4. Before finishing
+## 6. Keep lyrics and translations synchronised
 
-- Confirm the lyrics are authorised or public domain.
-- Verify the lyrics against available reliable sources.
-- Count non-empty lines in `roman_lyrics` and `translation`, excluding section headings.
-- Both counts must match.
-- Ensure repeated lines are translated individually.
-- Ensure the existing website functionality is preserved.
-- If lyrics cannot be supplied, retain the song entry and provide an administrator workflow for adding authorised text.
- 
+The `roman_lyrics` and `translation` fields must remain structurally aligned.
+
+For every song:
+
+1. Split both fields into lines.
+2. Identify section headings.
+3. Exclude blank lines and headings when counting lyric lines.
+4. Count the Roman lyric lines.
+5. Count the corresponding English translation lines.
+6. Confirm the counts match.
+7. Check that each translation corresponds to the correct Roman line.
+8. Verify all repeated lines have their own corresponding translation.
+9. Verify every section appears in both fields.
+10. Check that neither field ends prematurely.
+
+A matching line count alone is insufficient. Validate line-by-line correspondence and section alignment.
+
+If a mismatch is found, correct it before marking the song as complete.
+
+Do not delete legitimate repetitions simply to force the counts to match.
+
+## 7. Handling long songs
+
+Long compositions must be treated as normal supported content.
+
+This includes:
+- Hanuman Chalisa.
+- Extended bhajans and kirtans.
+- Long aartis and stotras.
+- Repetitive devotional chants.
+- Traditional Chowtal compositions.
+- Songs containing many verses or repeated choruses.
+
+Do not apply an arbitrary length cap.
+
+For lengthy authorised compositions:
+
+1. Process lyrics section by section.
+2. Preserve completed sections.
+3. Continue sequentially through every remaining section.
+4. Translate each section in full.
+5. Validate the structure after each section.
+6. Assemble the complete song into the existing data structure.
+7. Run final validation across the entire composition.
+
+Do not truncate stored content or generate a shortened version unless explicitly requested.
+
+If a source is genuinely incomplete, flag it as incomplete rather than fabricating the missing content.
+
+## 8. Existing website functionality
+
+When updating `src/lib/bhajan-content.ts`:
+
+- Maintain existing TypeScript types and exports.
+- Preserve song IDs and references.
+- Preserve existing categories and metadata.
+- Avoid breaking playlist functionality.
+- Maintain compatibility with song search and filtering.
+- Preserve the existing lyrics display.
+- Support long lyrics without cutting off the visible content.
+- Ensure long translations remain readable on mobile and desktop.
+- Do not introduce CSS truncation, arbitrary `max-height` restrictions or content slicing that hides lyrics without an accessible expansion mechanism.
+
+Where a lyrics panel uses scrolling, ensure users can reach the final line.
+
+## 9. Completion requirements
+
+Before finishing any song update, verify:
+
+- [ ] The lyrics are public domain or appropriately authorised.
+- [ ] The complete available verified version has been added.
+- [ ] Every verse is present.
+- [ ] Every chorus and repetition is present.
+- [ ] The final verse and ending are included.
+- [ ] Roman transliteration is accurate.
+- [ ] Every Roman lyric line has an English translation.
+- [ ] Lyrics and translation line counts match.
+- [ ] Section headings and order match.
+- [ ] No content is truncated.
+- [ ] No lyrics have been invented.
+- [ ] Existing website functionality remains intact.
+
+**Definition of done:** A song is complete only when the entire verified, authorised composition has been stored, translated line by line and validated successfully.
+
+Do not report a song as complete if only some verses have been added.
+
+Where lyrics cannot lawfully be reproduced or reliable source material is unavailable, preserve the song entry and support an administrator workflow for supplying authorised text.

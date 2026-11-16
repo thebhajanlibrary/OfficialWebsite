@@ -27,6 +27,7 @@ const FILM_ORIGINAL_LYRIC_SLUGS = new Set([
   "kabhi-khushi-kabhie-gham-lata-mangeshkar",
   "setum-bandhya-ramayana",
   "nadiya-na-piye-mohammed-rafi",
+  "mujhe-apni-sharan-mein-le-lo-ram-mohammed-rafi",
   "jai-shri-ram-do-akshar-mohammed-rafi",
   "chal-ud-ja-re-panchhi-mohammed-rafi",
   "ek-pyar-ka-nagma-sanam",

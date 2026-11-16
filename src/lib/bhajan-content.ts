@@ -22645,6 +22645,187 @@ You alone are kinsman, and friend You alone are
 You alone are knowledge, and wealth You alone are
 You alone are everything of mine, O God of gods`,
   },
+  "mujhe-apni-sharan-mein-le-lo-ram-mohammed-rafi": {
+    title: "Mujhe Apni Sharan Mein Le Lo Ram",
+    alternate_title: "Tulsidas · Gopal Singh Nepali",
+    artist_version: "Mohammed Rafi",
+    audio_url: "https://www.youtube.com/watch?v=9w5hmmHxy6U",
+    youtube_url: "https://www.youtube.com/watch?v=9w5hmmHxy6U",
+    thumbnail_url: "https://i.ytimg.com/vi/9w5hmmHxy6U/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/9w5hmmHxy6U/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/9w5hmmHxy6U/hqdefault.jpg",
+    display_order: 407,
+    category_slugs: ["ram", "general", "satsang", "bhajan", "devotion", "hindi"],
+    meaning:
+      "Mohammed Rafi, from the film Tulsidas (1954). Gopal Singh Nepali wrote the words and Chitragupt wrote the music. A prayer asking Ram for shelter.",
+    roman_lyrics: "",
+  },
+  "shiv-kailasho-ke-vasi-jubin-nautiyal": {
+    title: "Shiv Kailasho Ke Vasi",
+    alternate_title: "Dhauli Dharon Ke Raja · Shankar Sankat Harna",
+    artist_version: "Jubin Nautiyal",
+    audio_url: "https://www.youtube.com/watch?v=qJWysCaxZyo",
+    youtube_url: "https://www.youtube.com/watch?v=qJWysCaxZyo",
+    thumbnail_url: "https://i.ytimg.com/vi/qJWysCaxZyo/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/qJWysCaxZyo/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/qJWysCaxZyo/hqdefault.jpg",
+    display_order: 408,
+    category_slugs: ["shiva", "general", "satsang", "bhajan", "devotion", "hindi"],
+    meaning:
+      "Jubin Nautiyal sings this traditional Shiv bhajan. T-Series credits the words and the tune as traditional; Prasanna Suresh arranged this recording. Shiv is the dweller of Kailash and the king of the white ridges, the one who takes trouble away. Bel leaves, bhang and dhatura are laid before him. The last verse is as this recording sings it: one camp of his at Chambe, and another that came and filled the heart.",
+    roman_lyrics: `## Chorus
+
+Shiv Kailashon ke vasi
+Dhauli dharon ke raja
+Shankar sankat harna
+Shankar sankat harna
+
+## Chorus
+
+Shiv Kailashon ke vasi
+Dhauli dharon ke raja
+Shankar sankat harna
+Shankar sankat harna
+
+## Verse 1
+
+Tere Kailashon ka ant na paya
+Tere Kailashon ka ant na paya
+Ant be-ant teri maya, O Bhole Baba
+Ant be-ant teri maya
+
+## Chorus
+
+Shiv Kailashon ke vasi
+Dhauli dharon ke raja
+Shankar sankat harna
+Shankar sankat harna
+
+## Verse 2
+
+Bel ki pattiyan, bhang dhatura
+Bel ki pattiyan, bhang dhatura
+Shivji ke man ko lubhaye, O Bhole Baba
+Shivji ke man ko lubhaye
+
+## Chorus
+
+Shiv Kailashon ke vasi
+Dhauli dharon ke raja
+Shankar sankat harna
+Shankar sankat harna
+
+## Verse 3
+
+Ek tha dera tera, chambe de charana
+Ek tha dera tera, chambe de charana
+Duja lai baitha bhar mora, O Bhole Baba
+Duja lai baitha bhar mora
+
+## Chorus
+
+Shiv Kailashon ke vasi
+Dhauli dharon ke raja
+Shankar sankat harna
+Shankar sankat harna
+Shankar sankat harna`,
+    translation: `## Chorus
+
+Shiv, dweller of Kailash
+King of the white mountain ridges
+Shankar, remover of trouble
+Shankar, remover of trouble
+
+## Chorus
+
+Shiv, dweller of Kailash
+King of the white mountain ridges
+Shankar, remover of trouble
+Shankar, remover of trouble
+
+## Verse 1
+
+The end of your Kailash was never found
+The end of your Kailash was never found
+Endless, endless is your maya, O Bhole Baba
+Endless, endless is your maya
+
+## Chorus
+
+Shiv, dweller of Kailash
+King of the white mountain ridges
+Shankar, remover of trouble
+Shankar, remover of trouble
+
+## Verse 2
+
+Bel leaves, bhang and dhatura
+Bel leaves, bhang and dhatura
+They draw Shivji's heart, O Bhole Baba
+They draw Shivji's heart
+
+## Chorus
+
+Shiv, dweller of Kailash
+King of the white mountain ridges
+Shankar, remover of trouble
+Shankar, remover of trouble
+
+## Verse 3
+
+One camp of yours stood there, the grazing ground at Chambe
+One camp of yours stood there, the grazing ground at Chambe
+Another was brought and sat, filling my heart, O Bhole Baba
+Another was brought and sat, filling my heart
+
+## Chorus
+
+Shiv, dweller of Kailash
+King of the white mountain ridges
+Shankar, remover of trouble
+Shankar, remover of trouble
+Shankar, remover of trouble`,
+  },
+  "karpurgauram-amitabh-bachchan-kailash-kher": {
+    title: "Karpurgauram",
+    alternate_title: "Karpura Gauram Karunavataram · Shivoham",
+    artist_version: "Amitabh Bachchan · Kailash Kher",
+    audio_url: "https://www.youtube.com/watch?v=bNiN_hW4-88",
+    youtube_url: "https://www.youtube.com/watch?v=bNiN_hW4-88",
+    thumbnail_url: "https://i.ytimg.com/vi/bNiN_hW4-88/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/bNiN_hW4-88/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/bNiN_hW4-88/hqdefault.jpg",
+    display_order: 409,
+    category_slugs: ["shiva", "shivratri", "general", "satsang", "bhajan", "devotion", "hindi"],
+    meaning:
+      "Amitabh Bachchan and Kailash Kher, from the album Shivoham (2017). The traditional Shiva shloka, sung through twice: camphor-white, compassion taken form, the essence of the world, the serpent-king around his neck, dwelling in the lotus of the heart, bowed to with Bhavani.",
+    roman_lyrics: `## Shloka
+
+Karpura gauram karunaavataram
+Samsara saaram bhujagendra haaram
+Sada vasantam hridayaravinde
+Bhavam Bhavani sahitam namami
+
+## Shloka
+
+Karpura gauram karunaavataram
+Samsara saaram bhujagendra haaram
+Sada vasantam hridayaravinde
+Bhavam Bhavani sahitam namami`,
+    translation: `## Shloka
+
+White as camphor, compassion taken form
+Essence of the world, garlanded with the king of serpents
+Ever dwelling in the lotus of the heart
+I bow to Shiva, together with Bhavani
+
+## Shloka
+
+White as camphor, compassion taken form
+Essence of the world, garlanded with the king of serpents
+Ever dwelling in the lotus of the heart
+I bow to Shiva, together with Bhavani`,
+  },
 };
 
 
