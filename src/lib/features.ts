@@ -2,3 +2,9 @@
 // Shared by server routes and client navigation; Next.js inlines NODE_ENV.
 export const LEARN_ENABLED = process.env.NODE_ENV === "development";
 export const TRADITIONAL_CHUTNEY_ENABLED = process.env.NODE_ENV === "development";
+
+export const LOCAL_ONLY_BABLA_KANCHAN_SLUGS = new Set([
+  "oh-maro-maro-pichakari-babla-kanchan",
+  "radha-kanhaiya-babla-kanchan",
+  "chalo-re-sabhi-ram-se-mile-babla-kanchan",
+]);

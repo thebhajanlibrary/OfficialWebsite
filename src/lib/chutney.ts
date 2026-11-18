@@ -4,7 +4,7 @@
  */
 
 import { getArtistProfile, resolveArtistSlug } from "@/lib/artists";
-import { TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
+import { LOCAL_ONLY_BABLA_KANCHAN_SLUGS, TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
 import { getFolder } from "@/lib/folders";
 import type { QueueTrack } from "@/lib/play-queue";
 import { matchesSearchQuery } from "@/lib/search-match";
@@ -4165,9 +4165,9 @@ const chutneySongSlugs = new Set(CHUTNEY_SONGS.map((song) => song.slug));
 const chutneyBhajanSlugs = new Set(getFolder("chutney-style-bhajan")?.member_slugs);
 
 export function isPublicBhajan(slug: string): boolean {
-  return TRADITIONAL_CHUTNEY_ENABLED ||
-    !chutneySongSlugs.has(slug) ||
-    chutneyBhajanSlugs.has(slug);
+  if (TRADITIONAL_CHUTNEY_ENABLED) return true;
+  return !LOCAL_ONLY_BABLA_KANCHAN_SLUGS.has(slug) &&
+    (!chutneySongSlugs.has(slug) || chutneyBhajanSlugs.has(slug));
 }
 
 /** Search Traditional Chutney only (not All Bhajans / artists). */

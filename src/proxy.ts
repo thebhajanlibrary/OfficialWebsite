@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
+import { LOCAL_ONLY_BABLA_KANCHAN_SLUGS, TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
 import { updateSession } from "@/lib/supabase/middleware";
 
 const sharedArtwork = new Set([
@@ -12,6 +12,10 @@ const sharedArtwork = new Set([
 ]);
 
 function isPrivateChutneyMedia(path: string) {
+  if (path.startsWith("/images/") || path.startsWith("/audio/folders/chutney-style-bhajan/")) {
+    const slug = path.slice(path.lastIndexOf("/") + 1).replace(/(?:-player)?\.[^.]+$/, "");
+    if (LOCAL_ONLY_BABLA_KANCHAN_SLUGS.has(slug)) return true;
+  }
   if (sharedArtwork.has(path)) return false;
   if (path === "/audio/chutney/lets-sing-and-dance-with-dropati/01-gowri-rooja.mp3") {
     return false;
@@ -56,9 +60,8 @@ export const config = {
     "/chutney/:path*",
     "/wedding/:path*",
     "/audio/chutney/:path*",
-    "/images/chutney/:path*",
-    "/images/albums/:path*",
-    "/images/folders/wedding/:path*",
+    "/audio/folders/chutney-style-bhajan/:path*",
+    "/images/:path*",
     "/_next/image",
   ],
 };
