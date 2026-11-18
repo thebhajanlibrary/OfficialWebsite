@@ -2710,66 +2710,77 @@ I will pick/harvest it, will you send/ship it or not?`,
 
 Nanda baba ji ko chhaiya
 Rakho naam hai Kanhaiya
+Nanda baba ji ko chhaiya
 Babu naam hai Kanhaiya
-Kanhaiya, Kanhaiya, re
+Kanhaiya, Kanhaiya re
 
 ## Verse 1
 
-Karo gend ko pilaiya
-Ai ai re bhi laiya
-Kahe ke gende hai
-Kahe ka baala
-Gende mein kahe ko laage ho challa
+Khele gend ke pilaiya
+Kanhaiya, Kanhaiya re
+Kahe ke gend hai?
+Kahe ka bhala?
+Gend mein kahe ko laage ho chala?
 
 ## Verse 2
 
-Gwaal baal sab khelan aaye
-Var ke datta chhaiya, Kanhaiya, o gora
+Gwal bal sab khelan aaye
+Var ke data chhaiya, o gora
+Kanhaiya, Kanhaiya re
 
 ## Verse 3
 
-Sone ke gende hai
-Sone ka baala
-Gende mein sone ko laage ho challa
+Sone ke gend hai
+Sone ka bhala
+Gend mein sone ko laage ho chala
+Gwal bal sab khelan aaye
+Var ke data chhaiya, o gora
+Kanhaiya, Kanhaiya re
 
 ## Verse 4
 
 Le le Jamuna neela gagan hai
 Neela Kanhaiya, neela gagan hai
 Subah re shaam ye khelan aaye
-Subah re shaam yeh nila gagan hai`,
+Subah re shaam yeh neela gagan hai`,
+    // Local review draft. Earlier English text matched The Cutlass Magazine post CrizrkfAurG.
     translation: `## Chorus
 
-Father Nanda was blessed with a baby boy
-He kept his name Kanhaiya
-The baby boy’s name is Kanhaiya
-Oh Kanhaiya, oh Kanhaiya
+A blessing has come to Nanda Baba's home.
+Name the child Krishna.
+A blessing has come to Nanda Baba's home.
+The little boy is called Krishna.
+O Krishna, dear Krishna!
 
 ## Verse 1
 
-The marigold blooms yellow
-Oh come bring them too
-What kind of marigold?
-What kind of offering?
-What will be in the marigold?
+The marigold blooms yellow.
+O Krishna, dear Krishna!
+What kind of marigold is it?
+What kind of blessing is it?
+[Exact wording and meaning to confirm.]
 
 ## Verse 2
 
-The shepherd boys all come to play
-The blessed offering, oh Kanhaiya, oh beautiful one
+All the young cowherds came out to play.
+[The line appears to invoke a giver of blessings. Exact wording to confirm.]
+O Krishna, dear Krishna!
 
 ## Verse 3
 
-The marigold is gold
-The offerings are gold
-There will be gold in the marigold
+The marigold is golden.
+[The two transcriptions differ here. Exact meaning to confirm.]
+[The line connects gold with the marigold. Exact meaning to confirm.]
+All the young cowherds came out to play.
+[The line appears to invoke a giver of blessings. Exact wording to confirm.]
+O Krishna, dear Krishna!
 
 ## Verse 4
 
-The Jamuna River flows underneath the blue sky
-Kanhaiya is blue, the sky is blue
-Morning and afternoon they come to play
-Morning and afternoon the sky is blue`,
+The Jamuna is beneath a blue sky.
+Krishna is blue, and so is the sky.
+Morning and evening, they come out to play.
+Morning and evening, the sky is blue.`,
   },
   {
     slug: "kahawa-se-aayo-bhagwane-xstatixz",

@@ -23,6 +23,7 @@ import {
 } from "@/lib/folders";
 import { ALBUMS, getAlbum, indexedArtistNameForBhajan, isOmittedFromLibrary, type Album } from "@/lib/albums";
 import { getWeddingSongs, isPublicBhajan } from "@/lib/chutney";
+import { TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
 import { getFestivalById } from "@/lib/festivals";
 import {
   buildQueueTrack,
@@ -85,6 +86,18 @@ function preferLyrics(
   return filledText(fromFile) ?? filledText(fromDatabase) ?? fallback;
 }
 
+const chutneyBhajanSlugs = new Set(getFolder("chutney-style-bhajan")?.member_slugs);
+
+function withPublishedTranslations<T extends Pick<Bhajan, "slug" | "translation" | "meaning">>(
+  bhajan: T
+): T {
+  // The English text for this collection has no verified source records.
+  if (TRADITIONAL_CHUTNEY_ENABLED || !chutneyBhajanSlugs.has(bhajan.slug)) {
+    return bhajan;
+  }
+  return { ...bhajan, translation: null, meaning: null };
+}
+
 function mapBhajan(
   row: BhajanRow,
   categoryIndex?: Map<string, Category>
@@ -104,7 +117,7 @@ function mapBhajan(
 
   if (!content) {
     return {
-      ...bhajan,
+      ...withPublishedTranslations(bhajan),
       categories: resolvedCategories,
       thumbnail_url: null,
       cover_url: null,
@@ -116,7 +129,7 @@ function mapBhajan(
     };
   }
 
-  return {
+  return withPublishedTranslations({
     ...bhajan,
     title: content.title ?? bhajan.title,
     alternate_title: content.alternate_title ?? bhajan.alternate_title,
@@ -140,7 +153,7 @@ function mapBhajan(
     video_credit: content.video_credit ?? null,
     player_cover_aspect: content.player_cover_aspect ?? undefined,
     categories: resolvedCategories,
-  };
+  });
 }
 
 function resolveContentCategories(
@@ -185,7 +198,7 @@ function localBhajanFromContent(
     content.alternate_title?.split("·")[0]?.trim() ||
     titleFromSlug(slug);
   const now = new Date().toISOString();
-  return {
+  return withPublishedTranslations({
     id: `local-${slug}`,
     slug,
     title,
@@ -209,7 +222,7 @@ function localBhajanFromContent(
     video_credit: content.video_credit ?? null,
     player_cover_aspect: content.player_cover_aspect ?? undefined,
     categories: resolveContentCategories(content, categoryIndex),
-  };
+  });
 }
 
 function mergeLocalBhajans(
@@ -520,9 +533,9 @@ export async function getPlaylistById(
 
     return {
       ...(playlist as Playlist),
-      items: ((items ?? []) as PlaylistWithItems["items"]).filter(
-        ({ bhajan }) => bhajan && isPublicBhajan(bhajan.slug)
-      ),
+      items: ((items ?? []) as PlaylistWithItems["items"])
+        .filter(({ bhajan }) => bhajan && isPublicBhajan(bhajan.slug))
+        .map((item) => ({ ...item, bhajan: withPublishedTranslations(item.bhajan) })),
     };
   } catch (err) {
     if (isDynamicServerError(err)) throw err;
