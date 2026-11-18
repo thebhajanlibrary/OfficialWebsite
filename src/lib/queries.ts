@@ -22,7 +22,7 @@ import {
   type HymnFolder,
 } from "@/lib/folders";
 import { ALBUMS, getAlbum, indexedArtistNameForBhajan, isOmittedFromLibrary, type Album } from "@/lib/albums";
-import { getWeddingSongs } from "@/lib/chutney";
+import { getWeddingSongs, isPublicBhajan } from "@/lib/chutney";
 import { getFestivalById } from "@/lib/festivals";
 import {
   buildQueueTrack,
@@ -225,9 +225,9 @@ function mergeLocalBhajans(
     if (local) extras.push(local);
   }
 
-  return [...existing, ...extras].sort((a, b) =>
-    a.title.localeCompare(b.title, undefined, { sensitivity: "base" })
-  );
+  return [...existing, ...extras]
+    .filter((bhajan) => isPublicBhajan(bhajan.slug))
+    .sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: "base" }));
 }
 
 const bhajanSelect = `
@@ -321,6 +321,7 @@ export async function getFestivalBhajans(
 export async function getBhajanBySlug(
   slug: string
 ): Promise<BhajanWithCategories | null> {
+  if (!isPublicBhajan(slug)) return null;
   try {
     const supabase = await createClient();
     const [rowResult, categories] = await Promise.all([
@@ -519,7 +520,9 @@ export async function getPlaylistById(
 
     return {
       ...(playlist as Playlist),
-      items: (items ?? []) as PlaylistWithItems["items"],
+      items: ((items ?? []) as PlaylistWithItems["items"]).filter(
+        ({ bhajan }) => bhajan && isPublicBhajan(bhajan.slug)
+      ),
     };
   } catch (err) {
     if (isDynamicServerError(err)) throw err;

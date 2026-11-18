@@ -11,9 +11,12 @@ import type { BhajanWithCategories } from "@/lib/types";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { pageMeta, websiteJsonLd } from "@/lib/seo";
 import { SITE_DESCRIPTION } from "@/lib/site";
+import { TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
 
 export const metadata = pageMeta({
-  title: "Bhajan Library — lyrics beside the recording",
+  title: TRADITIONAL_CHUTNEY_ENABLED
+    ? "Bhajan Library — Bhajan and Chutney Lyrics"
+    : "Bhajan Library — Bhajan Lyrics and Recordings",
   description: SITE_DESCRIPTION,
   path: "/",
   absolute: true,
@@ -98,7 +101,9 @@ export default async function HomePage() {
     },
     { href: "/browse/occasion", label: "Occasions", hint: "Festival, satsang, and home" },
     { href: "/calendar", label: "Hindu Calendar", hint: "The dates for this year" },
-    { href: "/chutney", label: "Traditional Chutney", hint: "Indo-Caribbean classics" },
+    ...(TRADITIONAL_CHUTNEY_ENABLED
+      ? [{ href: "/chutney", label: "Traditional Chutney", hint: "Indo-Caribbean classics" }]
+      : []),
     { href: "/folders/chutney-style-bhajan", label: "Chutney Bhajan", hint: "Baithak devotionals" },
     { href: "/chowtal", label: "Chowtal", hint: "Phagwah singing" },
     { href: "/folders/wedding", label: "Wedding Songs", hint: "Marriage and blessings" },
@@ -151,7 +156,6 @@ export default async function HomePage() {
             Browse
           </h2>
           <span className="mb-2 hidden h-px flex-1 bg-border sm:block" />
-          <p className="hidden text-sm text-muted sm:block">Twelve ways in.</p>
         </div>
         <ol className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2">
           {browse.map((item, index) => (

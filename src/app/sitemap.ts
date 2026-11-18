@@ -1,9 +1,9 @@
 import type { MetadataRoute } from "next";
 import { HYMN_FOLDERS } from "@/lib/folders";
 import { ALBUMS } from "@/lib/albums";
-import { getChutneyArtists, getChutneySorted, getWeddingSongs } from "@/lib/chutney";
-import { getChowtalSorted } from "@/lib/chowtal";
-import { getArtists, getBhajans, getCategories, getPlaylists } from "@/lib/queries";
+import { getChutneyArtists } from "@/lib/chutney";
+import { TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
+import { getArtists, getCategories, getPlaylists } from "@/lib/queries";
 import { absoluteUrl } from "@/lib/seo";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -18,10 +18,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/browse/occasion",
     "/browse/type",
     "/calendar",
-    "/chutney",
-    "/chutney/artists",
+    ...(TRADITIONAL_CHUTNEY_ENABLED ? ["/chutney", "/chutney/artists", "/wedding"] : []),
     "/chowtal",
-    "/wedding",
     "/playlists",
     "/contact",
     "/upload",
@@ -36,24 +34,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: path === "/" ? 1 : 0.8,
   }));
 
-  const [bhajans, artists, bhagwan, occasions, types, playlists] =
+  const [artists, bhagwan, occasions, types, playlists] =
     await Promise.all([
-      getBhajans(),
       getArtists(),
       getCategories("bhagwan"),
       getCategories("occasion"),
       getCategories("bhajan_type"),
       getPlaylists().catch(() => []),
     ]);
-
-  for (const song of bhajans) {
-    entries.push({
-      url: absoluteUrl(`/bhajans/${song.slug}`),
-      lastModified: song.updated_at ? new Date(song.updated_at) : now,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    });
-  }
 
   for (const artist of artists) {
     entries.push({
@@ -103,35 +91,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
-  for (const song of getChutneySorted()) {
-    entries.push({
-      url: absoluteUrl(`/chutney/${song.slug}`),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    });
-  }
-
   for (const artist of getChutneyArtists()) {
     entries.push({
       url: absoluteUrl(`/chutney/artists/${artist.slug}`),
       changeFrequency: "monthly",
       priority: 0.4,
-    });
-  }
-
-  for (const song of getWeddingSongs()) {
-    entries.push({
-      url: absoluteUrl(`/wedding/${song.slug}`),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    });
-  }
-
-  for (const song of getChowtalSorted()) {
-    entries.push({
-      url: absoluteUrl(`/chowtal/${song.slug}`),
-      changeFrequency: "monthly",
-      priority: 0.5,
     });
   }
 

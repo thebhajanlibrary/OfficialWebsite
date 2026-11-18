@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `${current.title}. Phagwah chowtal lyrics for singing, in Roman and English.`
     ),
     path: `/chowtal/${current.slug}`,
+    index: false,
   });
 }
 

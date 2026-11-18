@@ -1,5 +1,6 @@
 import { matchesSearchQuery } from "@/lib/search-match";
 import { slugify } from "@/lib/utils";
+import { TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
 
 export type HymnFolder = {
   slug: string;
@@ -50,6 +51,9 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     cover_url: "/images/folders/chutney-style-bhajan/cover.jpg",
     search_aliases: ["chutney", "baithak", "chowtal", "chutney bhajan"],
     member_slugs: [
+      "shyam-chabi",
+      "ramji-ki-bhagiya-sam-boodram",
+      "lalana-khoose-sam-boodram",
       "adjie-naath-kaise-arjun-ke-abhie-maan-ramdew-chaitoe",
       "bhaija-bharat-ghar-djawo-ramdew-chaitoe",
       "bhoel-bisar-mati-ramdew-chaitoe",
@@ -243,7 +247,9 @@ export const HYMN_FOLDERS: HymnFolder[] = [
     slug: "wedding",
     title: "Wedding",
     description:
-      "Wedding bhajans and prayers. Chutney wedding songs and Dropati are each tagged separately inside this folder.",
+      TRADITIONAL_CHUTNEY_ENABLED
+        ? "Wedding bhajans and prayers. Chutney wedding songs and Dropati are each tagged separately inside this folder."
+        : "Wedding bhajans and prayers.",
     cover_url: "/images/folders/wedding/cover.jpg",
     search_aliases: ["wedding", "shaadi", "matkorwa", "lawa", "sehra", "dropati", "paar karo", "pari karo"],
   },
@@ -330,6 +336,9 @@ export function isInstrumentalKaraokeTrack(slug: string): boolean {
 /** True when a track should be skipped from library / category Play all & shuffle. */
 /** Recordings that stay in a folder and are left out of All Bhajans. */
 export const EVERYDAY_LIBRARY_SKIP_SLUGS = new Set([
+  "shyam-chabi",
+  "ramji-ki-bhagiya-sam-boodram",
+  "lalana-khoose-sam-boodram",
   "nahi-chahiye-rang-mahal-dewindersingh-sewnath",
   "rang-dhal-ke-mohanwa-babla-kanchan",
   "rang-barse-silsila",

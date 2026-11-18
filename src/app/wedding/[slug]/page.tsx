@@ -59,6 +59,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ),
     path: `/wedding/${current.slug}`,
     image: current.thumbnail_url,
+    index: false,
   });
 
 }

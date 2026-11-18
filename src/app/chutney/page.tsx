@@ -10,7 +10,7 @@ import {
 } from "@/lib/chutney";
 
 export const metadata = pageMeta({
-  title: "Traditional Chutney",
+  title: "Traditional Chutney Lyrics",
   description:
     "Traditional Indo-Caribbean chutney songs, with the lyrics beside the recording.",
   path: "/chutney",

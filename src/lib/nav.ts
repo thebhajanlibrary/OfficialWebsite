@@ -1,4 +1,4 @@
-import { LEARN_ENABLED } from "@/lib/features";
+import { LEARN_ENABLED, TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
 
 export type NavLink = { href: string; label: string };
 
@@ -19,7 +19,9 @@ export const NAV_GROUPS: NavGroup[] = [
   {
     title: "Collections",
     links: [
-      { href: "/chutney", label: "Traditional Chutney" },
+      ...(TRADITIONAL_CHUTNEY_ENABLED
+        ? [{ href: "/chutney", label: "Traditional Chutney" }]
+        : []),
       { href: "/folders/chutney-style-bhajan", label: "Chutney Bhajan" },
       { href: "/chowtal", label: "Chowtal" },
       { href: "/folders/wedding", label: "Wedding" },

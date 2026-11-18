@@ -1585,6 +1585,165 @@ I do not want a coloured palace, nor the glory of wealth
 From you, Master, I ask only the gift of contentment`;
 
 export const BHAJAN_CONTENT: Record<string, BhajanContent> = {
+  "shyam-chabi": {
+    title: "Shyam Chabi",
+    artist_version: "Sam Boodram",
+    alternate_title: "Sham Chabi · Shyam Chabi Dekhane Aaja Chalo Re",
+    audio_url: "https://www.youtube.com/watch?v=NRARbPfR7oU",
+    youtube_url: "https://www.youtube.com/watch?v=NRARbPfR7oU",
+    thumbnail_url: "https://i.ytimg.com/vi/NRARbPfR7oU/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/NRARbPfR7oU/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/NRARbPfR7oU/hqdefault.jpg",
+    category_slugs: ["krishna", "bhajan", "devotion", "hindi"],
+    roman_lyrics: `## Introduction
+
+Shyām chābī dekhane ājā chalo re.
+
+## Refrain
+
+Shyām chābī, Shyām chābī; Shyām chābī, dekhane
+ājā chalo re. Shyām chābī, dekhane ājā chalo. (ĀĪŪṛāīū)
+
+## Verse 1
+
+Kānhā me', kundal yakī sohai; sirpar mattu se balorī. (Ref)
+
+## Verse 2
+
+Hare kadam sara, bansī bajavatā; jan se patārī manorī. (Ref)
+
+## Verse 3
+
+Dekhat rūp santāp ke rahiye; bhajan dekh kahi lorī. (Ref)
+
+## Verse 4
+
+Sab sakhiyan, dekhan Shyām kī; sab dūt rahā dorī. (?) (Ref)`,
+  },
+  "ramji-ki-bhagiya-sam-boodram": {
+    title: "Ramji Ki Bhagiya",
+    alternate_title: "Sita Ke Phulavari · Ramji Ki Bagiya",
+    artist_version: "Sam Boodram",
+    audio_url: "https://www.youtube.com/watch?v=l79K0bDYJPs",
+    youtube_url: "https://www.youtube.com/watch?v=l79K0bDYJPs",
+    thumbnail_url: "https://i.ytimg.com/vi/l79K0bDYJPs/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/l79K0bDYJPs/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/l79K0bDYJPs/hqdefault.jpg",
+    category_slugs: ["ram", "sita", "bhajan", "devotion", "hindi"],
+    roman_lyrics: `## Introduction
+
+Ai Rām-jī kī bhāgiyā me', Sītā ke... phulavā...rī.
+Rām-jī kī bhāgiyā me', Sītā ke phulavārī;
+Lachhuman devarvā, ba-ithe (baithiye) rakhavārī.
+
+## Refrain
+
+Rām-jī kī bhāgiyā me', Sītā ke phulavārī;
+Lachhuman devarvā, ba-ithe (baithiye) rakhavārī. (2)
+
+## Verse 1
+
+Tūr tūr nebulā (nimbū lā), bhejāve sasurārī; tūr tūr nebulā, bhejāve sasurārī.
+Arre tūr tūr nebulā (nimbū lā), bhejāve sasurārī; ohi nebūlā ke, banāve tarakārī.
+Sonavā ke mrigavā, tundelā phulavārī; sonavā ke mrigavā, tundelā phulavārī;
+Arre sonavā ke mrigavā, tundela phulavārī; sonavā ke mrigavā, tundela phulavārī;
+Arre mrigavā ke chāla mere man bhāī...; ab mrigavā ke chāla mere man bhāī... (Ref)
+
+## Verse 2
+
+Dhanush bān liye, tār Raghurāī; dhanush bān liye, tār Raghurāī.
+Arre dhanush bān liye, tār Raghurāī; dhanush bān liye, tār Raghurāī.
+Mrigavā ke pīche, gaye le Raghurāī; mrigavā ke pīche, gaye le Raghurāī.
+Are mrigavā ke pīchhe gaye le Raghurāī...; ab mrigavā ke pīchhe gaye le Raghurāī... (Ref)
+
+## Verse 3
+
+Tūr tūr nebulā, bhejāve sasurārī; ohi nebūlā ke, banāve tarakārī.
+Arre ek ban gailī, dosarā ban jailī; tīsarā ban me', mrigavā hai railī.
+Arre ek ban gailī, dosarā ban jailī; tīsarā ban me', mrigavā hai railī.
+Ai ek ban gailī, dosarā ban jailī...; ab tīsarā ban me', mrigavā hai railī...
+
+## Closing refrain
+
+Rām-jī kī bhāgiyā me', Sītā ke phulavārī; Lachhuman devarvā, baithiye rakhavārī.
+Lachhuman devarvā, baithiye rakhavārī; Lachhuman devarvā, baithiye rakhavārī. (2)`,
+    translation: `## Introduction
+
+
+
+
+
+## Refrain
+
+In Ram's garden are Sita's flower-beds. Sita's flower-beds are in Ram's garden.
+That is where her (Sita's) brother-in-law, Lakshman, sits keeping guard. (Āṛāūī)
+
+## Verse 1
+
+He (Lakshman) picks (steals) lemons and sends them to his father-in-law's home.
+These stolen lemons are served with (make) the tarkari (spicy vegetable curry).
+A golden deer passes by the flower-garden.
+
+Brother, the deer caught my attention.
+
+## Verse 2
+
+Ram strings (primes) the bow with an arrow.
+The bow is strung with an arrow by Ram.
+Ram takes aim at the back of the deer.
+At the back of the (golden) deer, he takes aim.
+
+## Verse 3
+
+He (Lakshman) keeps picking lemons and sends them to his in-laws' home.
+One (arrow) is let loose, a second is fired; with the third, the deer is finished.
+
+
+
+## Closing refrain
+
+In Ram's garden are Sita's flower-beds. Sita's flower-beds are in Ram's garden.
+That is where her (Sita's) brother-in-law, Lakshman, sits keeping guard.`,
+  },
+  "lalana-khoose-sam-boodram": {
+    title: "Lalana Khoose",
+    alternate_title: "Ghar Ghar Bajate Badhaiya · Kanhaiya Janma Linhe Ho",
+    artist_version: "Sam Boodram",
+    audio_url: "https://www.youtube.com/watch?v=RXGjT_Swz_0",
+    youtube_url: "https://www.youtube.com/watch?v=RXGjT_Swz_0",
+    thumbnail_url: "https://i.ytimg.com/vi/RXGjT_Swz_0/hqdefault.jpg",
+    cover_url: "https://i.ytimg.com/vi/RXGjT_Swz_0/hqdefault.jpg",
+    mini_cover_url: "https://i.ytimg.com/vi/RXGjT_Swz_0/hqdefault.jpg",
+    category_slugs: ["krishna", "janmashtami", "satsang", "bhajan", "devotion", "hindi"],
+    roman_lyrics: `## Refrain
+
+(Arre) Ghar ghar bājate badhaiyā; Kanhaiyā janmā līnhe ho. (2)
+Lallanā, lallanā, lallanā khūshī bhāe; nar nārī Jasodā māta dekhat ho. (2)
+
+## Verse 1
+
+(Arre) Gīto' ke sundar sab gāvat, dholavā bajāvat ho. (2) (Āṛāūī)
+Lallanā, lallanā, lallanā dekhat goṛavā; nāchat Prabhu ke gun gāvat ho. (2) (Ref)
+
+## Verse 2
+
+(Arre) Indra sabha se Indra-jī āye, phūlan barsāve phūlan ho. (2)
+Lallanā, lallanā, lallanā Nārad muni; Brahmā dekhat āye Shiv-jī ho. (2) (Ref)`,
+    translation: `## Refrain
+
+From house to house celebrations rang out, when Krishna birth was announced.
+The little one brings happiness to all people, while Mother Jasoda looks on.
+
+## Verse 1
+
+Beautiful songs are being sung by everyone, as the drums are being played.
+On seeing the feet of the little one, all dance and sing the Lord's praises.
+
+## Verse 2
+
+Lord Indra even came, from his heavenly assembly, to rain down flowers.
+To see the little one, the sage Narad, Lord Brahma, Lord Shiva also came.`,
+  },
   "payo-ji-mere-ram-ratan-dhan-payo": {
     title: "Ram Ratan",
     alternate_title: "(Payoji mere Ram Ratan dhan Payo)",

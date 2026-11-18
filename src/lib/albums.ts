@@ -1,4 +1,5 @@
 import { EVERYDAY_LIBRARY_SKIP_SLUGS, HYMN_FOLDERS } from "@/lib/folders";
+import { TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
 
 export type Album = {
   slug: string;
@@ -30,7 +31,7 @@ export type Album = {
  * Full albums (ordered track lists). Prefer this over loose playlists
  * when the source is a released CD / cassette set.
  */
-export const ALBUMS: Album[] = [
+const ALBUM_CATALOGUE: Album[] = [
   {
     slug: "aarti-archan-hari-om-sharan",
     title: "Aarti Archan",
@@ -430,6 +431,10 @@ export const ALBUMS: Album[] = [
     ],
   },
 ];
+
+export const ALBUMS = ALBUM_CATALOGUE.filter(
+  (album) => TRADITIONAL_CHUTNEY_ENABLED || album.slug !== "lets-sing-and-dance-with-dropati"
+);
 
 /** Normalize album / subtitle text for fuzzy matching (dashes, &amp;, etc.). */
 export function normalizeAlbumText(text: string): string {

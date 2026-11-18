@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ),
     path: `/chutney/${current.slug}`,
     image: current.thumbnail_url,
+    index: false,
   });
 }
 

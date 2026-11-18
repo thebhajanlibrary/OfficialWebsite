@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ImageSlot } from "@/components/learn/ImageSlot";
-import { LearnMascot } from "@/components/learn/LearnMascot";
+import { GaneshaGuideIcon } from "@/components/learn/GaneshaGuideIcon";
 import { KitchenStudy } from "@/components/learn/KitchenStudy";
 import { playableQuestions, pendingPictureCount } from "@/lib/learn/catalog";
 import { KITCHEN_UTENSILS } from "@/lib/learn/kitchen";
@@ -82,7 +82,7 @@ export function LessonPlayer({
       <section className="animate-rise mx-auto max-w-xl space-y-6 rounded-3xl border-2 border-b-[6px] border-[#58b51d] bg-surface p-6 sm:p-10">
         <div className="flex items-center justify-between gap-4">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">Lesson complete</p>
-          <LearnMascot mood="complete" decorative className="h-24 w-24" />
+          <GaneshaGuideIcon className="h-24 w-24" />
         </div>
         <h1 className="font-display text-4xl font-semibold text-primary">{title}</h1>
         <p className="text-lg leading-relaxed">
@@ -144,16 +144,17 @@ export function LessonPlayer({
       </div>
 
       <div className="flex items-center gap-3 rounded-3xl border border-[#b9dfd5] bg-[#eff9f5] p-4 text-[#173c4c] sm:gap-5">
-        <LearnMascot key={`${step}-${checked}`} mood={checked ? (correct ? "correct" : "incorrect") : "idle"} decorative className="h-24 w-24 shrink-0 sm:h-32 sm:w-32" />
+        <GaneshaGuideIcon className="h-20 w-20 shrink-0 sm:h-28 sm:w-28" />
         <div className="min-w-0 space-y-2">
-          <p className="text-xs font-extrabold uppercase tracking-widest text-[#176c68]">Mor · Your practice pal</p>
+          <p className="text-xs font-extrabold uppercase tracking-widest text-[#176c68]">Ganesha · Your learning guide</p>
           <p className="text-sm font-semibold leading-relaxed sm:text-base" role="status">
             {checked ? correct ? "Yes! Another one remembered. Keep going!" : "We’ll come back to this together. Read the answer below before you continue."
               : step >= playable.length ? "Back for another go! Think about the answer you just reviewed."
               : "Take your time. Try remembering it before choosing an answer."}
           </p>
-          {!checked && <button type="button" onClick={() => setHintOpen(!hintOpen)} aria-expanded={hintOpen} aria-controls="mor-hint" className="rounded-full border border-[#97c9bd] bg-white px-3 py-1.5 text-sm font-bold hover:bg-[#dff1e9]">{hintOpen ? "Hide hint" : "Mor, give me a hint"}</button>}
-          {!checked && hintOpen && <p id="mor-hint" className="text-sm leading-relaxed">{question.type === "type-name"
+          <p className="text-xs leading-relaxed text-[#47675f]">Practice tips from Bhajan Learn.</p>
+          {!checked && <button type="button" onClick={() => setHintOpen(!hintOpen)} aria-expanded={hintOpen} aria-controls="guide-hint" className="rounded-full border border-[#97c9bd] bg-white px-3 py-1.5 text-sm font-bold hover:bg-[#dff1e9]">{hintOpen ? "Hide hint" : "I'm not sure — show a hint"}</button>}
+          {!checked && hintOpen && <p id="guide-hint" role="status" className="text-sm leading-relaxed">{question.type === "type-name"
             ? `It starts with “${Array.from(question.answerLabel)[0]}”. Say the name aloud, then try spelling it. Accents aren’t needed.`
             : question.type === "match" ? "Start with the pair you’re most sure of. Select a word on the left, then its meaning on the right."
             : question.type === "picture-match" ? "Look at each object’s shape and material. Picture how you would use it in the kitchen."

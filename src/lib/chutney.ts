@@ -4,6 +4,8 @@
  */
 
 import { getArtistProfile, resolveArtistSlug } from "@/lib/artists";
+import { TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
+import { getFolder } from "@/lib/folders";
 import type { QueueTrack } from "@/lib/play-queue";
 import { matchesSearchQuery } from "@/lib/search-match";
 import { slugify, youtubeEmbedUrl } from "@/lib/utils";
@@ -4133,6 +4135,7 @@ export function getChutneySong(slug: string): ChutneySong | null {
 }
 
 export function getChutneySorted(): ChutneySong[] {
+  if (!TRADITIONAL_CHUTNEY_ENABLED) return [];
   return [...CHUTNEY_SONGS]
     .filter((s) => inSection(s, "chutney"))
     .sort((a, b) => {
@@ -4152,9 +4155,19 @@ export function isDropatiAlbumSong(song: { slug: string }): boolean {
 }
 
 export function getWeddingSongs(): ChutneySong[] {
+  if (!TRADITIONAL_CHUTNEY_ENABLED) return [];
   return [...CHUTNEY_SONGS]
     .filter((s) => inSection(s, "wedding") && !isDropatiAlbumSong(s))
     .sort((a, b) => a.order - b.order || a.title.localeCompare(b.title));
+}
+
+const chutneySongSlugs = new Set(CHUTNEY_SONGS.map((song) => song.slug));
+const chutneyBhajanSlugs = new Set(getFolder("chutney-style-bhajan")?.member_slugs);
+
+export function isPublicBhajan(slug: string): boolean {
+  return TRADITIONAL_CHUTNEY_ENABLED ||
+    !chutneySongSlugs.has(slug) ||
+    chutneyBhajanSlugs.has(slug);
 }
 
 /** Search Traditional Chutney only (not All Bhajans / artists). */

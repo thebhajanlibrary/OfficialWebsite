@@ -8,6 +8,7 @@ import { RelatedCollections } from "@/components/layout/RelatedCollections";
 import { getBhajans, getFolderWithBhajans, isWeddingBhajan, resolvePlayQueueTracks } from "@/lib/queries";
 import { getFolder } from "@/lib/folders";
 import { getWeddingSongs } from "@/lib/chutney";
+import { TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
 import { bhajanPlayHref, encodePlayQueue } from "@/lib/play-queue";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { collectionJsonLd, pageMeta, clip } from "@/lib/seo";
@@ -102,25 +103,27 @@ export default async function FolderDetailPage({ params }: Props) {
           </div>
         </div>
 
-        <RelatedCollections
-          heading="In this folder"
-          items={[
-            {
-              href: "/wedding",
-              title: "Chutney wedding songs",
-              kicker: "Tagged here",
-              hint: `${chutneyWedding.length} song${chutneyWedding.length === 1 ? "" : "s"} · open them from this folder`,
-              cover_url: "/images/folders/wedding/chutney-wedding.jpg",
-            },
-            {
-              href: "/albums/lets-sing-and-dance-with-dropati",
-              title: "Let's Sing & Dance with Dropati",
-              kicker: "Tagged separately",
-              hint: "20 tracks · Dropati's wedding album, kept on its own",
-              cover_url: "/images/albums/lets-sing-and-dance-with-dropati.png",
-            },
-          ]}
-        />
+        {TRADITIONAL_CHUTNEY_ENABLED && (
+          <RelatedCollections
+            heading="In this folder"
+            items={[
+              {
+                href: "/wedding",
+                title: "Chutney wedding songs",
+                kicker: "Tagged here",
+                hint: `${chutneyWedding.length} song${chutneyWedding.length === 1 ? "" : "s"} · open them from this folder`,
+                cover_url: "/images/folders/wedding/chutney-wedding.jpg",
+              },
+              {
+                href: "/albums/lets-sing-and-dance-with-dropati",
+                title: "Let's Sing & Dance with Dropati",
+                kicker: "Tagged separately",
+                hint: "20 tracks · Dropati's wedding album, kept on its own",
+                cover_url: "/images/albums/lets-sing-and-dance-with-dropati.png",
+              },
+            ]}
+          />
+        )}
 
         <BhajanList
           bhajans={bhajans}
@@ -272,19 +275,23 @@ export default async function FolderDetailPage({ params }: Props) {
         <RelatedCollections
           heading="Also see"
           items={[
-            {
-              href: "/chutney",
-              title: "Traditional Chutney",
-              kicker: "Collection",
-              hint: "Indo-Caribbean classics, kept in their own section",
-            },
-            {
-              href: "/albums/lets-sing-and-dance-with-dropati",
-              title: "Let's Sing & Dance with Dropati",
-              kicker: "Album · chutney",
-              hint: "Full Dropati set — tagged separately inside the Wedding folder",
-              cover_url: "/images/albums/lets-sing-and-dance-with-dropati.png",
-            },
+            ...(TRADITIONAL_CHUTNEY_ENABLED
+              ? [
+                {
+                  href: "/chutney",
+                  title: "Traditional Chutney",
+                  kicker: "Collection",
+                  hint: "Indo-Caribbean classics, kept in their own section",
+                },
+                {
+                  href: "/albums/lets-sing-and-dance-with-dropati",
+                  title: "Let's Sing & Dance with Dropati",
+                  kicker: "Album · chutney",
+                  hint: "Full Dropati set — tagged separately inside the Wedding folder",
+                  cover_url: "/images/albums/lets-sing-and-dance-with-dropati.png",
+                },
+                ]
+              : []),
             {
               href: "/albums/star-melodies-ramdew-chaitoe",
               title: "The Star Melodies",

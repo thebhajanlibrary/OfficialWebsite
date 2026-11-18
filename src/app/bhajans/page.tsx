@@ -8,7 +8,7 @@ import { queueTracksFromBhajans } from "@/lib/play-queue";
 import { getBhajans } from "@/lib/queries";
 
 export const metadata = pageMeta({
-  title: "All Bhajans",
+  title: "Bhajan Lyrics",
   description:
     "The full Bhajan Library. Play a recording and read the lyrics in Roman, Hindi, and English.",
   path: "/bhajans",

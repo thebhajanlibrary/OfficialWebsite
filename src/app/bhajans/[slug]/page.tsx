@@ -64,6 +64,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ),
     path: `/bhajans/${current.slug}`,
     image: current.cover_url ?? current.thumbnail_url,
+    index: false,
   });
 }
 
