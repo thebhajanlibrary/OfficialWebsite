@@ -6,6 +6,21 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: path.join(__dirname),
   },
+  outputFileTracingExcludes: {
+    "/*": [
+      "./holi/sweet-phagwah-songs-and-chowtal/**/*",
+      "./social/**/*",
+      "./tmp/**/*",
+      ...(process.env.NETLIFY === "true"
+        ? [
+            // Netlify publishes these directories separately as static assets.
+            "./public/audio/**/*",
+            "./public/videos/**/*",
+            "./public/images/**/*",
+          ]
+        : []),
+    ],
+  },
   images: {
     localPatterns: [
       {

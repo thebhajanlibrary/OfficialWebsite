@@ -124,10 +124,30 @@ function recordingTargets(): Target[] {
 }
 
 async function failureReason(target: Target): Promise<string | null> {
+  const netlifyUrl = process.env.SITE_ID ? process.env.URL : undefined;
   if (target.kind === "file") {
     const relative = target.url.split("?")[0]?.split("#")[0] ?? target.url;
-    const file = path.join(process.cwd(), "public", relative.replace(/^\//, ""));
-    return fs.existsSync(file) ? null : "The audio file is missing from the site.";
+    if (!netlifyUrl) {
+      const file = path.join(process.cwd(), "public", relative.replace(/^\//, ""));
+      return fs.existsSync(file) ? null : "The audio file is missing from the site.";
+    }
+
+    // Local recordings are served by Netlify's CDN outside the function.
+    try {
+      const url = new URL(netlifyUrl);
+      url.pathname = relative;
+      const response = await fetch(url, {
+        method: "HEAD",
+        cache: "no-store",
+        signal: AbortSignal.timeout(5000),
+      });
+      if (response.status === 404 || response.status === 410) {
+        return "The audio file is missing from the site.";
+      }
+    } catch {
+      // A network failure does not establish that the file is missing.
+    }
+    return null;
   }
 
   if (target.kind === "youtube") {

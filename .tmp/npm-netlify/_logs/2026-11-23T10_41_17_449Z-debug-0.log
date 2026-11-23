@@ -1,0 +1,33 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\arjun\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.19.0
+2 info using node@v22.14.0
+3 silly config load:file:C:\Users\arjun\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\arjun\bhajan-library\.npmrc
+5 silly config load:file:C:\Users\arjun\.npmrc
+6 silly config load:file:C:\Users\arjun\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm exec netlify build
+8 verbose argv "exec" "--yes" "--cache" ".tmp/npm-netlify" "--package" "netlify-cli" "netlify" "build" "--offline"
+9 verbose logfile logs-max:10 dir:C:\Users\arjun\bhajan-library\.tmp\npm-netlify\_logs\2026-11-23T10_41_17_449Z-
+10 verbose logfile C:\Users\arjun\bhajan-library\.tmp\npm-netlify\_logs\2026-11-23T10_41_17_449Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 verbose stack Error: request to https://registry.npmjs.org/netlify-cli failed: cache mode is 'only-if-cached' but no cached response is available.
+13 verbose stack     at cacheFetch (C:\Users\arjun\AppData\Roaming\npm\node_modules\npm\node_modules\make-fetch-happen\lib\cache\index.js:12:13)
+13 verbose stack     at async fetch (C:\Users\arjun\AppData\Roaming\npm\node_modules\npm\node_modules\make-fetch-happen\lib\fetch.js:98:7)
+13 verbose stack     at async RegistryFetcher.packument (C:\Users\arjun\AppData\Roaming\npm\node_modules\npm\node_modules\pacote\lib\registry.js:90:19)
+13 verbose stack     at async RegistryFetcher.manifest (C:\Users\arjun\AppData\Roaming\npm\node_modules\npm\node_modules\pacote\lib\registry.js:128:23)
+13 verbose stack     at async getManifest (C:\Users\arjun\AppData\Roaming\npm\node_modules\npm\node_modules\libnpmexec\lib\index.js:28:22)
+13 verbose stack     at async missingFromTree (C:\Users\arjun\AppData\Roaming\npm\node_modules\npm\node_modules\libnpmexec\lib\index.js:68:22)
+13 verbose stack     at async C:\Users\arjun\AppData\Roaming\npm\node_modules\npm\node_modules\libnpmexec\lib\index.js:199:32
+13 verbose stack     at async Promise.all (index 0)
+13 verbose stack     at async exec (C:\Users\arjun\AppData\Roaming\npm\node_modules\npm\node_modules\libnpmexec\lib\index.js:197:3)
+13 verbose stack     at async Npm.exec (C:\Users\arjun\AppData\Roaming\npm\node_modules\npm\lib\npm.js:193:9)
+14 error code ENOTCACHED
+15 error request to https://registry.npmjs.org/netlify-cli failed: cache mode is 'only-if-cached' but no cached response is available.
+16 verbose cwd C:\Users\arjun\bhajan-library
+17 verbose os Windows_NT 10.0.26200
+18 verbose node v22.14.0
+19 verbose npm  v11.19.0
+20 verbose exit 1
+21 verbose code 1
+22 error A complete log of this run can be found in: C:\Users\arjun\bhajan-library\.tmp\npm-netlify\_logs\2026-11-23T10_41_17_449Z-debug-0.log
