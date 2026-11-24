@@ -6,8 +6,9 @@ import { getFolders } from "@/lib/queries";
 export const metadata = pageMeta({
   title: "Folders",
   description:
-    "Shelves for Hanuman Chalisa, aarti, garba, birthday songs, and the other collections in the library.",
+    "Browse Bhajan Library collections for chutney-style bhajan, aarti, garba, festivals, and special occasions.",
   path: "/folders",
+  index: true,
 });
 
 export default async function FoldersPage() {
@@ -29,7 +30,7 @@ export default async function FoldersPage() {
           No folders yet.
         </p>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-4" data-nosnippet>
           {folders.map(({ folder, count }) => (
             <Link
               key={folder.slug}

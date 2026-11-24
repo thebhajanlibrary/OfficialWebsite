@@ -303,6 +303,24 @@ export const HYMN_FOLDERS: HymnFolder[] = [
   },
 ];
 
+// Only opt in folders named for a genre, occasion, or broad collection.
+const INDEXABLE_FOLDER_SLUGS = new Set([
+  "aarti",
+  "bhajan-party-mix",
+  "birthday-songs",
+  "chutney-style-bhajan",
+  "funeral-memorial",
+  "garba",
+  "holi",
+  "instrumentals-karaoke",
+  "mantras",
+  "wedding",
+]);
+
+export function isIndexableFolder(folder: HymnFolder): boolean {
+  return !folder.omit_from_library && INDEXABLE_FOLDER_SLUGS.has(folder.slug);
+}
+
 export function getFolder(slug: string): HymnFolder | null {
   return HYMN_FOLDERS.find((folder) => folder.slug === slug) ?? null;
 }

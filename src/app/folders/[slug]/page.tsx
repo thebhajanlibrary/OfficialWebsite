@@ -6,7 +6,7 @@ import { BhajanList } from "@/components/bhajan/BhajanList";
 import { CollectionQueueActions } from "@/components/bhajan/CollectionQueueActions";
 import { RelatedCollections } from "@/components/layout/RelatedCollections";
 import { getBhajans, getFolderWithBhajans, isWeddingBhajan, resolvePlayQueueTracks } from "@/lib/queries";
-import { getFolder } from "@/lib/folders";
+import { getFolder, isIndexableFolder } from "@/lib/folders";
 import { getWeddingSongs } from "@/lib/chutney";
 import { TRADITIONAL_CHUTNEY_ENABLED } from "@/lib/features";
 import { bhajanPlayHref, encodePlayQueue } from "@/lib/play-queue";
@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ),
     path: `/folders/${folder.slug}`,
     image: folder.cover_url,
+    index: isIndexableFolder(folder),
   });
 }
 
@@ -125,11 +126,13 @@ export default async function FolderDetailPage({ params }: Props) {
           />
         )}
 
-        <BhajanList
-          bhajans={bhajans}
-          playQueue={playQueue}
-          emptyMessage="No wedding bhajans or prayers in the library yet."
-        />
+        <div data-nosnippet>
+          <BhajanList
+            bhajans={bhajans}
+            playQueue={playQueue}
+            emptyMessage="No wedding bhajans or prayers in the library yet."
+          />
+        </div>
       </div>
     );
   }
@@ -310,11 +313,13 @@ export default async function FolderDetailPage({ params }: Props) {
         />
       )}
 
-      <BhajanList
-        bhajans={bhajans}
-        playQueue={playQueue}
-        emptyMessage="No versions in this folder yet."
-      />
+      <div data-nosnippet>
+        <BhajanList
+          bhajans={bhajans}
+          playQueue={playQueue}
+          emptyMessage="No versions in this folder yet."
+        />
+      </div>
     </div>
   );
 }

@@ -36,7 +36,6 @@ export const metadata: Metadata = {
     "bhajan",
     "bhajans",
     "satsang",
-    "Hanuman Chalisa",
     "aarti",
     "kirtan",
     "Hindi lyrics",
@@ -70,7 +69,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: ["/icons/logo-512.png"],
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
   appleWebApp: {
     capable: true,
     title: "Bhajan Library",

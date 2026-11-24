@@ -41,7 +41,7 @@ export function pageMeta({
   description,
   path,
   image,
-  index = true,
+  index = false,
   absolute = false,
 }: PageMetaInput): Metadata {
   const url = absoluteUrl(path);

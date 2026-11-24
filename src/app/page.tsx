@@ -19,6 +19,7 @@ export const metadata = pageMeta({
     : "Bhajan Library — Bhajan Lyrics and Recordings",
   description: SITE_DESCRIPTION,
   path: "/",
+  index: true,
   absolute: true,
 });
 
@@ -127,14 +128,20 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {recordings.length > 0 && <RotatingShelf items={recordings} />}
+      {recordings.length > 0 && (
+        <div data-nosnippet>
+          <RotatingShelf items={recordings} />
+        </div>
+      )}
 
       {(currentFestivalInfo || upcomingFestivals.length > 0) && (
-        <FestivalCelebration
-          currentFestivalInfo={currentFestivalInfo}
-          upcomingFestivals={upcomingFestivals}
-          festivalsBhajansMap={festivalsBhajansMap}
-        />
+        <div data-nosnippet>
+          <FestivalCelebration
+            currentFestivalInfo={currentFestivalInfo}
+            upcomingFestivals={upcomingFestivals}
+            festivalsBhajansMap={festivalsBhajansMap}
+          />
+        </div>
       )}
 
       {setupNeeded && (
@@ -150,7 +157,7 @@ export default async function HomePage() {
         </div>
       )}
 
-      <section className="space-y-5">
+      <section className="space-y-5" data-nosnippet>
         <div className="flex items-end gap-4">
           <h2 className="font-display text-3xl font-semibold text-primary sm:text-4xl">
             Browse
@@ -198,7 +205,9 @@ export default async function HomePage() {
               View all
             </Link>
           </div>
-          <BhajanList bhajans={recent} />
+          <div data-nosnippet>
+            <BhajanList bhajans={recent} />
+          </div>
         </section>
       )}
     </div>
