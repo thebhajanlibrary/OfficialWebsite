@@ -1586,8 +1586,628 @@ From you, Master, I ask only the gift of contentment`;
 
 const BEST_OF_ANUP_JALOTA_COVER = "/images/albums/best-of-anup-jalota-bhajans.png";
 const SANKIRTAN_COVER = "/images/albums/sankirtan-swami-tejomayananda.jpg";
+const JAI_SHREE_KRISHNA_COVER = "/images/albums/jai-shree-krishna.jpg";
 
 export const BHAJAN_CONTENT: Record<string, BhajanContent> = {
+  "vrindavan-ka-krishan-kanhaiya-jai-shree-krishna": {
+    title: "Vrindavan Ka Krishan Kanhaiya",
+    artist_version: "Sonu Nigam & Kavita Paudwal",
+    audio_url: "/audio/albums/jai-shree-krishna/01.mp3",
+    roman_lyrics: `## Refrain
+
+Vrindavan ka Krishan Kanhaiya
+Sab ki aankhon ka taara
+Man hi man kyon jale Radhika
+Mohan to hai sabka pyaara
+
+## Verse 1
+
+Jamuna tat par Nand ka lala
+Jab jab raas rachaye re
+Tan man dole, Kanha
+Aisi bansi madhur bajaye re
+Sudh budh bhooli khadi gopiyan
+Jaane kaisa jaadu daara
+
+## Refrain
+
+Vrindavan ka Krishan Kanhaiya
+Sab ki aankhon ka taara
+
+## Verse 2
+
+Rang salona aisa jaise
+Chhaayi ho ghata sawan ki
+Ai ri, main to hui deewani
+Manmohan man bhaavan ki
+Tere kaaran dekh saanware
+Chhod diya maine jag saara
+
+## Refrain
+
+Vrindavan ka Krishan Kanhaiya
+Sab ki aankhon ka taara
+Man hi man kyon jale Radhika
+Mohan to hai sabka pyaara`,
+    translation: `## Refrain
+
+Krishna Kanhaiya of Vrindavan,
+The apple of everyone's eye.
+Why does Radha burn with jealousy in her heart?
+Mohan is beloved by everyone.
+
+## Verse 1
+
+On the banks of the Yamuna, Nanda's son
+Dances the raas again and again.
+Body and heart sway, Kanha,
+So sweetly do you play your flute.
+The gopis stand there, lost to everything else.
+Who knows what spell he has cast?
+
+## Refrain
+
+Krishna Kanhaiya of Vrindavan,
+The apple of everyone's eye.
+
+## Verse 2
+
+His lovely dark complexion is like
+A monsoon cloud spreading across the sky.
+Oh friend, I have fallen madly in love
+With Mohan, the one who delights my heart.
+See what I have done for your sake, dark beloved.
+I have left the whole world behind.
+
+## Refrain
+
+Krishna Kanhaiya of Vrindavan,
+The apple of everyone's eye.
+Why does Radha burn with jealousy in her heart?
+Mohan is beloved by everyone.`,
+    thumbnail_url: JAI_SHREE_KRISHNA_COVER,
+    cover_url: JAI_SHREE_KRISHNA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "bhajan", "devotion", "hindi"],
+  },
+  "nandlala-krishan-murari-jai-shree-krishna": {
+    title: "Nandlala Krishan Murari",
+    artist_version: "Anuradha Paudwal",
+    audio_url: "/audio/albums/jai-shree-krishna/02.mp3",
+    roman_lyrics: `## Refrain
+
+Nandlala Krishna Murari
+Tere charanon pe balihaari
+Tu hi raas rachaiya, tu hi hai Gopala
+Tu hi murliwala, tu hi Giridhaari
+Nandlala Krishna Murari, tere charanon pe balihaari
+
+## Verse 1
+
+Shyam varn, pitaambar dhaari
+Gal Vaijayanti maala
+Kunj galan mein bansi bajaye
+Govardhan Gopala
+Mor mukut ki shobha nyaari
+Kitni sundar chhabi tumhaari
+
+## Refrain
+
+Nandlala Krishna Murari, tere charanon pe balihaari
+Tu hi raas rachaiya, tu hi hai Gopala
+Tu hi murliwala, tu hi Giridhaari
+Nandlala Krishna Murari, tere charanon pe balihaari
+
+## Verse 2
+
+Bas gayi teri saanwli surat bhakt janon ke man mein
+Hamne chaaron dhaam hain paaye tere hi charanon mein
+Pooje tujhko duniya saari
+Jai Gopala, jai Banwaari
+
+## Refrain
+
+Nandlala Krishna Murari, tere charanon pe balihaari
+Tu hi raas rachaiya, tu hi hai Gopala
+Tu hi murliwala, tu hi Giridhaari
+Nandlala Krishna Murari, tere charanon pe balihaari`,
+    translation: `## Refrain
+
+Krishna Murari, beloved child of Nanda,
+I offer myself at your feet.
+You are the dancer of the raas and Gopala, the cowherd.
+You play the flute and lift Mount Govardhan.
+Krishna, Nanda's child, I offer myself at your feet.
+
+## Verse 1
+
+Dark in colour, dressed in yellow,
+You wear the Vaijayanti garland around your neck.
+You play your flute in the lanes among the groves,
+O Gopala of Govardhan.
+Your peacock-feather crown has a beauty all its own.
+How beautiful you are!
+
+## Refrain
+
+Krishna, Nanda's child, I offer myself at your feet.
+You are the dancer of the raas and Gopala, the cowherd.
+You play the flute and lift Mount Govardhan.
+Krishna, Nanda's child, I offer myself at your feet.
+
+## Verse 2
+
+Your dark and lovely form has taken up dwelling in your devotees' hearts.
+We have found all four holy places at your feet.
+The whole world worships you.
+Glory to Gopala, glory to Banwari!
+
+## Refrain
+
+Krishna, Nanda's child, I offer myself at your feet.
+You are the dancer of the raas and Gopala, the cowherd.
+You play the flute and lift Mount Govardhan.
+Krishna, Nanda's child, I offer myself at your feet.`,
+    thumbnail_url: JAI_SHREE_KRISHNA_COVER,
+    cover_url: JAI_SHREE_KRISHNA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "bhajan", "devotion", "hindi"],
+  },
+  "raat-shyam-sapne-mein-aaye-jai-shree-krishna": {
+    title: "Raat Shyam Sapne Mein Aaye",
+    artist_version: "Kailash Anuj",
+    audio_url: "/audio/albums/jai-shree-krishna/03.mp3",
+    roman_lyrics: `## Refrain
+
+Raat Shyam sapne mein aaye
+Dahiya pee gaye, sa ra ra
+
+## Verse 1
+
+Jab Shyam ne meri khidki kholi
+Khidki kar gayi char rara
+Raat Shyam sapne mein aaye
+
+## Verse 2
+
+Jab Shyam ne meri baiyan pakdi
+Baiyan kar gayi kar rara
+Raat Shyam sapne mein aaye
+
+## Verse 3
+
+Jab Shyam ne mero maakhan khaayo
+Matki phodi, tara rara
+Raat Shyam sapne mein aaye
+
+## Verse 4
+
+Jab Shyam ne meri chunar jhatki
+Chunar ud gayi, phar rara
+Raat Shyam sapne mein aaye
+
+## Closing
+
+Chandrasakhi, bhaj Baal Krishna chhavi
+Bhav se tar jaaye, tara rara
+Raat Shyam sapne mein aaye`,
+    translation: `## Refrain
+
+Last night Shyam came to me in a dream.
+He gulped down all the curd in one go.
+
+## Verse 1
+
+When Shyam opened my window,
+The window creaked open.
+Last night Shyam came to me in a dream.
+
+## Verse 2
+
+When Shyam took me by the arm,
+My arm gave a little crack.
+Last night Shyam came to me in a dream.
+
+## Verse 3
+
+When Shyam ate my butter,
+He broke the little earthen pot with a crash.
+Last night Shyam came to me in a dream.
+
+## Verse 4
+
+When Shyam tugged at my scarf,
+It flew away with a flutter.
+Last night Shyam came to me in a dream.
+
+## Closing
+
+Chandrasakhi says to adore the beauty of Krishna as a child.
+You will cross the ocean of worldly existence.
+Last night Shyam came to me in a dream.`,
+    thumbnail_url: JAI_SHREE_KRISHNA_COVER,
+    cover_url: JAI_SHREE_KRISHNA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "bhajan", "devotion", "hindi"],
+  },
+  "jeevan-mein-amrit-ras-ghol-jai-shree-krishna": {
+    title: "Jeevan Mein Amrit Ras Ghol",
+    artist_version: "Manhar Udhas",
+    audio_url: "/audio/albums/jai-shree-krishna/04.mp3",
+    roman_lyrics: `## Refrain
+
+Jeevan mein amrit ras ghol
+Radhe Shyam, Radhe Shyam bol
+
+## Verse excerpts
+
+Ishwar naam ki jap le maala
+Jaag baawre, ab to jaag
+Kya kaata, kya boya toone
+Apne kiye karmon ko tol`,
+    translation: `## Refrain
+
+Pour the sweetness of nectar into your life.
+Chant Radhe Shyam, Radhe Shyam.
+
+## Verse excerpts
+
+Use your prayer beads to repeat God's name.
+Wake up, foolish one. Wake up now.
+What have you reaped, and what have you sown?
+Weigh the deeds you yourself have done.`,
+    thumbnail_url: JAI_SHREE_KRISHNA_COVER,
+    cover_url: JAI_SHREE_KRISHNA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "bhajan", "devotion", "hindi"],
+  },
+  "hari-naam-ki-mahima-apar-re-jai-shree-krishna": {
+    title: "Hari Naam Ki Mahima Apar Re",
+    artist_version: "Suresh Wadkar & Sama Solav",
+    audio_url: "/audio/albums/jai-shree-krishna/05.mp3",
+    roman_lyrics: `## Refrain excerpt
+
+Hari naam ki mahima apaar re
+
+## Verse excerpt
+
+Gajendra ne Hari ko naam pukaaro
+Hari sumiran hai ati hitkaari`,
+    translation: `## Refrain excerpt
+
+The glory of Hari's name knows no bounds.
+
+## Verse excerpt
+
+Gajendra called out Hari's name.
+Remembering Hari brings great good.`,
+    thumbnail_url: JAI_SHREE_KRISHNA_COVER,
+    cover_url: JAI_SHREE_KRISHNA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "bhajan", "devotion", "hindi"],
+  },
+  "aarti-kunj-bihari-ki-jai-shree-krishna": {
+    title: "Aarti Kunj Bihari Ki",
+    artist_version: "Hariharan",
+    audio_url: "/audio/albums/jai-shree-krishna/06.mp3",
+    roman_lyrics: `## Chorus
+
+Aarti Kunj Bihari ki
+Shri Girdhar Krishna Murari ki
+
+## Verse
+
+Gale mein vaijayanti mala
+Bajave murali madhur bala
+Shravan mein kundal jhalakala
+Nand ke nand, Shri Anand kand
+Mohan Brij chandra, Radhika Raman Bihari ki
+
+## Chorus
+
+Shri Girdhar Krishna Murari ki
+Aarti Kunj Bihari ki
+
+## Verse
+
+Gagan sam ang kanti kali
+Radhika chamak rahi aali
+Latan mein thade Banmali
+Bhramar si alak, kasturi tilak, chandra si jhalak
+Lalit chhavi Shyama pyari ki
+
+## Chorus
+
+Shri Girdhar Krishna Murari ki
+Aarti Kunj Bihari ki
+
+## Verse
+
+Kanakmay mor mukut bilse
+Devta darshan ko tarse
+Gagan son suman rasi barse
+Baje murchang, madhur mridang, gwalin sang
+Atul rati Gop kumari ki
+
+## Chorus
+
+Shri Girdhar Krishna Murari ki
+Aarti Kunj Bihari ki
+
+## Verse
+
+Jahan te pragat bhai Ganga
+Sakal mal haarini Shri Ganga
+Smaran te hot moh bhanga
+Basi Shiv sheesh, jata ke beech, hare agh keech
+Charan chhavi Shri Banwari ki
+
+## Chorus
+
+Shri Girdhar Krishna Murari ki
+Aarti Kunj Bihari ki
+
+## Verse
+
+Chamakti ujjwal tat renu
+Baj rahi Vrindavan benu
+Chahun disi gopi, gwal, dhenu
+Hansat mridu mand, chandni chand, katat bhav phand
+Ter sun deen bhikhari ki
+
+## Chorus
+
+Shri Girdhar Krishna Murari ki
+Aarti Kunj Bihari ki`,
+    translation: `## Chorus
+
+Aarti of Kunj Bihari
+Of Shri Girdhar, Krishna Murari
+
+## Verse
+
+A garland of wildflowers at his throat
+The young one plays a sweet flute
+Earrings gleam at his ears
+Nanda’s joy, the moon of Braj
+Radha’s beloved, the beautiful one of the grove
+
+## Chorus
+
+Of Shri Girdhar, Krishna Murari
+Aarti of Kunj Bihari
+
+## Verse
+
+A dark radiance like the sky
+Radha shines beside him, dear friend
+Banmali stands among the vines
+Bee-black locks, a musk tilak, a moonlike gleam
+The lovely form of beloved Shyama
+
+## Chorus
+
+Of Shri Girdhar, Krishna Murari
+Aarti of Kunj Bihari
+
+## Verse
+
+A golden peacock crown glitters
+The gods long for a sight of him
+A wealth of flowers rains from the sky
+Jaw’s harp sounds, the mridang is sweet, the gopis are with him
+Matchless love of the cowherd girls
+
+## Chorus
+
+Of Shri Girdhar, Krishna Murari
+Aarti of Kunj Bihari
+
+## Verse
+
+From where the Ganga appeared
+Shri Ganga, who washes away every stain
+Remembrance of her breaks attachment
+She rests on Shiva’s head, in the midst of his locks, and carries off the mire of sin
+The beauty of Shri Banwari’s feet
+
+## Chorus
+
+Of Shri Girdhar, Krishna Murari
+Aarti of Kunj Bihari
+
+## Verse
+
+Bright dust glitters on the bank
+Vrindavan’s flute is sounding
+Gopis, cowherds, and cows on every side
+A soft smile, moonlight, the snare of the world cut through
+The cry of the poor one who asks is heard
+
+## Chorus
+
+Of Shri Girdhar, Krishna Murari
+Aarti of Kunj Bihari`,
+    thumbnail_url: JAI_SHREE_KRISHNA_COVER,
+    cover_url: JAI_SHREE_KRISHNA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "aarti", "devotion", "hindi"],
+  },
+  "bansi-bajata-re-jai-shree-krishna": {
+    title: "Bansi Bajata Re",
+    artist_version: "Kavita Krishnamurthy",
+    audio_url: "/audio/albums/jai-shree-krishna/07.mp3",
+    roman_lyrics: `## Refrain excerpt
+
+Bansi bajaata re, Jamuna kinaare
+Tu aaja re, aaja re, Kanha
+Tujhe pukaare Radha`,
+    translation: `## Refrain excerpt
+
+He plays his flute by the Yamuna.
+Come, please come, Kanha.
+Radha is calling you.`,
+    thumbnail_url: JAI_SHREE_KRISHNA_COVER,
+    cover_url: JAI_SHREE_KRISHNA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "bhajan", "devotion", "hindi"],
+  },
+  "hey-shyam-ghansyam-jai-shree-krishna": {
+    title: "Hey Shyam Ghansyam",
+    artist_version: "Anuradha Paudwal",
+    audio_url: "/audio/albums/jai-shree-krishna/08.mp3",
+    roman_lyrics: `## Refrain excerpt
+
+Hey Shyam Ghanshyam
+Radha, Radha pukaare
+
+## Verse excerpt
+
+Natkhat Chhaliya, tori muraliya
+Kaam-kaaj mein daare baadha`,
+    translation: `## Refrain excerpt
+
+O Shyam, dark as a rain cloud,
+Radha keeps calling out to you.
+
+## Verse excerpt
+
+O mischievous trickster, your flute
+Distracts me from my daily work.`,
+    thumbnail_url: JAI_SHREE_KRISHNA_COVER,
+    cover_url: JAI_SHREE_KRISHNA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "bhajan", "devotion", "hindi"],
+  },
+  "murlidhar-ko-jisne-pooja-jai-shree-krishna": {
+    title: "Murlidhar Ko Jisne Pooja",
+    artist_version: "Nitin Mukesh",
+    audio_url: "/audio/albums/jai-shree-krishna/09.mp3",
+    roman_lyrics: `## Refrain excerpt
+
+Murlidhar ko jisne pooja
+Uska hi uddhaar hua
+Man mandir mein jo usko rakhe
+Uska beda paar hua
+
+## Verse excerpt
+
+Nand Nandan ki pooja karoon
+Dhyaan charanon mein sada hi dharoon
+
+## Verse excerpt
+
+Tujhko tulsi ki patiya jo arpan kare`,
+    translation: `## Refrain excerpt
+
+Whoever worships Krishna, the flute-bearer,
+Finds deliverance.
+Whoever keeps him in the temple of the heart
+Is carried safely across.
+
+## Verse excerpt
+
+May I worship the son of Nanda.
+May I always keep my mind on his feet.
+
+## Verse excerpt
+
+Whoever offers you leaves of holy basil.`,
+    thumbnail_url: JAI_SHREE_KRISHNA_COVER,
+    cover_url: JAI_SHREE_KRISHNA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "bhajan", "devotion", "hindi"],
+  },
+  "kinare-mori-naiyya-laga-de-o-kanhaiya-jai-shree-krishna": {
+    title: "Kinare Mori Naiyya Laga De O Kanhaiya",
+    artist_version: "Nitin Mukesh",
+    audio_url: "/audio/albums/jai-shree-krishna/10.mp3",
+    roman_lyrics: `## Refrain excerpt
+
+Nit japoon tera naam
+Kinaare mori naiyya laga de, O Kanhaiya
+
+## Verse excerpt
+
+Jaise Arjun ke, vaise mere bhi rathvaan bano
+Kabhi dekh meri or, kaahe bana hai kathor`,
+    translation: `## Refrain excerpt
+
+I repeat your name every day.
+O Kanhaiya, bring my little boat safely to shore.
+
+## Verse excerpt
+
+Be my charioteer too, as you were for Arjuna.
+Look my way sometime. Why have you grown so hard-hearted?`,
+    thumbnail_url: JAI_SHREE_KRISHNA_COVER,
+    cover_url: JAI_SHREE_KRISHNA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "bhajan", "devotion", "hindi"],
+  },
+  "o-jai-shri-krishna-jai-shree-krishna": {
+    title: "O Jai Shri Krishna",
+    artist_version: "Anuradha Paudwal",
+    audio_url: "/audio/albums/jai-shree-krishna/11.mp3",
+    roman_lyrics: `## Invocation excerpt
+
+Om jai Shri Radha
+Jai Shri Krishna
+Shri Radha Krishnaya namah
+
+## Verse excerpts
+
+Chandramukhi chanchal, chit chori
+Shri Radha Krishnaya namah
+
+Jagat jyoti, jag janani mata
+Jagat jeevan, jag pita, jag data
+Jagat aadhaar, jagat vikhyaat
+Shri Radha Krishnaya namah
+
+Shri Radha bhav baadha haari
+Sankat mochan Krishna Murari
+Shri Radha Krishnaya namah
+
+Radha Radha, Krishna Kanhaiya
+Bhav bhay saagar paar lagaiya
+Shri Radha Krishnaya namah
+
+Sarveshwari, sarv dukh dahan
+Tribhuwan pati, tri-taap nashavan
+Shri Radha Krishnaya namah`,
+    translation: `## Invocation excerpt
+
+Om, glory to Shri Radha.
+Glory to Shri Krishna.
+I bow to Shri Radha and Krishna.
+
+## Verse excerpts
+
+Playful and moon-faced, she steals the heart.
+I bow to Shri Radha and Krishna.
+
+Light of the world, mother who gave it birth.
+Life of the world, its father and giver.
+Support of the world, renowned throughout it.
+I bow to Shri Radha and Krishna.
+
+Shri Radha removes the obstacles of worldly life.
+Krishna Murari delivers us from distress.
+I bow to Shri Radha and Krishna.
+
+Radha, Radha, and Krishna Kanhaiya,
+You carry us across the fearful ocean of worldly life.
+I bow to Shri Radha and Krishna.
+
+Sovereign of all, she burns away all suffering.
+Lord of the three worlds, he dispels the three kinds of suffering.
+I bow to Shri Radha and Krishna.`,
+    thumbnail_url: JAI_SHREE_KRISHNA_COVER,
+    cover_url: JAI_SHREE_KRISHNA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "aarti", "devotion", "hindi"],
+  },
   "parvati-nandana-gajanana-swami-tejomayananda": {
     title: "Parvati Nandana Gajanana",
     artist_version: "Swami Tejomayananda",
@@ -11539,6 +12159,50 @@ One day they must leave — whoever has come here
 What is the colour of life, what is the form of humankind?
 Increasing our wisdom (gyaan), grant Your favour (upkaar), O Durga
 Hear everyone's prayer...`,
+  },
+  "tera-aaj-janam-din": {
+    title: "Tera Aaj Janam Din",
+    alternate_title: "Tumko Mubarak Ho",
+    audio_url: "https://www.youtube.com/watch?v=Xnx-uSmFEaQ",
+    youtube_url: "https://www.youtube.com/watch?v=Xnx-uSmFEaQ",
+    thumbnail_url: "https://i.ytimg.com/vi/Xnx-uSmFEaQ/hqdefault.jpg",
+    category_slugs: ["birthday", "hindi"],
+    meaning:
+      "A birthday blessing that wishes the listener a fruitful life and encourages them to uphold dharma, show love to people in need, remember God and their mother, and live in harmony with their siblings.",
+    roman_lyrics: `## Refrain
+
+Terā āja janam din, tumko mubārak ho.
+Terā āja janam din, tumko mubārak ho. (Āṛāūī)
+Āja janam din, āja janam din (janma-din), āja janam din.
+
+## Verse 1
+
+Phūl phalo' raho tū jagat me', karo dharam kī rakshā.
+Jo koī dīn anāth hī āve, denā prem kā bhikshā.
+Prem kā path hai barā nirālā (2), dhanī ho kangāl. (Ref)
+
+## Verse 2
+
+Parameshvar ko bhūl na jānā, manushyā banāī.
+Yād karo apanī mātā ko, jisne tujhe janamāī.
+Bhāī bahen se milkar rehnā, pānī dūdh misāl. (Ref)`,
+    translation: `## Refrain
+
+Today is your birthday. Happy birthday to you!
+Today is your birthday. Happy birthday to you!
+Today is your birthday, today is your birthday, today is your birthday.
+
+## Verse 1
+
+May you blossom and bear fruit in this world, and uphold dharma (righteousness).
+Show love to anyone who comes to you poor or orphaned.
+Love is the right way to live, whether we are rich or poor.
+
+## Verse 2
+
+Remember the Supreme Lord who gave you this human birth.
+Remember your mother (and both parents), who gave you life.
+Live in harmony with your brothers and sisters, as milk and water blend.`,
   },
   "baar-baar-din-yeh-aaye": {
     title: "Baar Baar Din Yeh Aaye",

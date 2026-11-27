@@ -33,6 +33,27 @@ export type Album = {
  */
 const ALBUM_CATALOGUE: Album[] = [
   {
+    slug: "jai-shree-krishna",
+    title: "Jai Shree Krishna",
+    artist: "Various Artists",
+    label: "T-Series",
+    description: "Eleven Krishna bhajans and aartis featuring Anuradha Paudwal, Sonu Nigam, Nitin Mukesh and other singers.",
+    cover_url: "/images/albums/jai-shree-krishna.jpg",
+    track_slugs: [
+      "vrindavan-ka-krishan-kanhaiya-jai-shree-krishna",
+      "nandlala-krishan-murari-jai-shree-krishna",
+      "raat-shyam-sapne-mein-aaye-jai-shree-krishna",
+      "jeevan-mein-amrit-ras-ghol-jai-shree-krishna",
+      "hari-naam-ki-mahima-apar-re-jai-shree-krishna",
+      "aarti-kunj-bihari-ki-jai-shree-krishna",
+      "bansi-bajata-re-jai-shree-krishna",
+      "hey-shyam-ghansyam-jai-shree-krishna",
+      "murlidhar-ko-jisne-pooja-jai-shree-krishna",
+      "kinare-mori-naiyya-laga-de-o-kanhaiya-jai-shree-krishna",
+      "o-jai-shri-krishna-jai-shree-krishna",
+    ],
+  },
+  {
     slug: "sankirtan-swami-tejomayananda",
     title: "Sankirtan",
     artist: "Swami Tejomayananda",
