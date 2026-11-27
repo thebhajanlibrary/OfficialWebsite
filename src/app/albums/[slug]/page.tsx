@@ -118,6 +118,11 @@ export default async function AlbumDetailPage({ params }: Props) {
               </span>
             ))}
           </p>
+          {album.listen_url && (
+            <a href={album.listen_url} className="mt-3 inline-block text-sm font-medium text-accent hover:underline">
+              Listen to the recording
+            </a>
+          )}
           {(album.year || album.label || album.composer) && (
             <p className="mt-2 text-sm text-muted">
               {[

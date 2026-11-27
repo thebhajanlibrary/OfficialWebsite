@@ -1588,7 +1588,925 @@ const BEST_OF_ANUP_JALOTA_COVER = "/images/albums/best-of-anup-jalota-bhajans.pn
 const SANKIRTAN_COVER = "/images/albums/sankirtan-swami-tejomayananda.jpg";
 const JAI_SHREE_KRISHNA_COVER = "/images/albums/jai-shree-krishna.jpg";
 
+const SWEET_SHIVA_BHAJANS_COVER = "/images/albums/sweet-shiva-bhajans.jpg";
+
+const BHAGAVATA_SANKIRTAN_COVER = "/images/albums/bhagavata-sankirtan.jpeg";
+
 export const BHAJAN_CONTENT: Record<string, BhajanContent> = {
+  "shri-krishna-govinda-hare-murari-bhagavata-sankirtan": {
+    title: "Shri Krishna Govinda Hare Murari",
+    artist_version: "Swami Tejomayananda",
+    display_order: 505,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["krishna", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Shri Krishna Govinda Hare Murari
+Hey Natha Narayana Vasudeva`,
+    translation: `## Chant refrain
+
+O Shri Krishna, Govinda, Hari, conqueror of Mura.
+O Lord Narayana, Vasudeva.`,
+  },
+  "jaya-jaya-govinda-bhagavata-sankirtan": {
+    title: "Jaya Jaya Govinda Jaya Hari Govinda",
+    artist_version: "Swami Tejomayananda",
+    display_order: 506,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["krishna", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Jaya jaya Govinda, jaya Hari Govinda`,
+    translation: `## Chant refrain
+
+Glory, glory to Govinda. Glory to Hari Govinda.`,
+  },
+  "hari-bol-bhagavata-sankirtan": {
+    title: "Hari Bol Hari Bol",
+    artist_version: "Swami Tejomayananda",
+    display_order: 507,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["vishnu", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Hari bol, Hari bol`,
+    translation: `## Chant refrain
+
+Chant the name of Hari, chant the name of Hari.`,
+  },
+  "jaya-jaya-ram-krishna-hari-bhagavata-sankirtan": {
+    title: "Jaya Jaya Ram Krishna Hari",
+    artist_version: "Swami Tejomayananda",
+    display_order: 508,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["ram", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Jaya jaya Ram Krishna Hari`,
+    translation: `## Chant refrain
+
+Glory, glory to Ram, Krishna, and Hari.`,
+  },
+  "om-namo-narayana-bhagavata-sankirtan": {
+    title: "Om Namo Narayana",
+    artist_version: "Swami Tejomayananda",
+    display_order: 509,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["vishnu", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Om namo Narayana`,
+    translation: `## Chant refrain
+
+Om, I bow to Narayana.`,
+  },
+  "govinda-govinda-giridhari-bhagavata-sankirtan": {
+    title: "Govinda Govinda Giridhari",
+    artist_version: "Swami Tejomayananda",
+    display_order: 510,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["krishna", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Govinda Govinda Giridhari`,
+    translation: `## Chant refrain
+
+Govinda, Govinda, lifter of Mount Govardhan.`,
+  },
+  "bhaja-man-radhe-govinda-bhagavata-sankirtan": {
+    title: "Bhaja Man Radhe Govinda",
+    artist_version: "Swami Tejomayananda",
+    display_order: 511,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["krishna", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Bhaja man Radhe Govinda`,
+    translation: `## Chant refrain
+
+O my mind, worship Radha and Govinda.`,
+  },
+  "shri-krishna-sharanam-mama-bhagavata-sankirtan": {
+    title: "Shri Krishna Sharanam Mama",
+    artist_version: "Swami Tejomayananda",
+    display_order: 512,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["krishna", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Shri Krishna sharanam mama`,
+    translation: `## Chant refrain
+
+Shri Krishna is my refuge.`,
+  },
+  "krishna-murari-jaya-krishna-murari-bhagavata-sankirtan": {
+    title: "Krishna Murari Jaya Krishna Murari",
+    artist_version: "Swami Tejomayananda",
+    display_order: 513,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["krishna", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Krishna Murari, jaya Krishna Murari`,
+    translation: `## Chant refrain
+
+Krishna, conqueror of Mura, glory to you.`,
+  },
+  "hare-ram-ram-sita-bhagavata-sankirtan": {
+    title: "Hare Ram Ram Sita",
+    artist_version: "Swami Tejomayananda",
+    display_order: 514,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["ram", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Hare Ram, Ram Sita`,
+    translation: `## Chant refrain
+
+O Ram, O Ram and Sita.`,
+  },
+  "shri-ram-jaya-ram-jaya-jaya-ram-bhagavata-sankirtan": {
+    title: "Shri Ram Jaya Ram Jaya Jaya Ram",
+    artist_version: "Swami Tejomayananda",
+    display_order: 515,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["ram", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Shri Ram, jaya Ram, jaya jaya Ram`,
+    translation: `## Chant refrain
+
+Shri Ram, glory to Ram, glory, glory to Ram.`,
+  },
+  "jaya-jaya-ram-janaki-ram-bhagavata-sankirtan": {
+    title: "Jaya Jaya Ram Janaki Ram",
+    artist_version: "Swami Tejomayananda",
+    display_order: 516,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["ram", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Jaya jaya Ram, Janaki Ram`,
+    translation: `## Chant refrain
+
+Glory, glory to Ram, beloved of Janaki.`,
+  },
+  "ram-ram-sita-ram-bhagavata-sankirtan": {
+    title: "Ram Ram Sita Ram",
+    artist_version: "Swami Tejomayananda",
+    display_order: 517,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["ram", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Ram Ram, Sita Ram`,
+    translation: `## Chant refrain
+
+Ram, Ram, Sita and Ram.`,
+  },
+  "hare-ram-hare-krishna-bhagavata-sankirtan": {
+    title: "Hare Ram Hare Ram Ram Ram Hare Hare",
+    artist_version: "Swami Tejomayananda",
+    display_order: 518,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["ram", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Hare Ram Hare Ram, Ram Ram Hare Hare
+Hare Krishna Hare Krishna, Krishna Krishna Hare Hare`,
+    translation: `## Chant refrain
+
+O Hare, O Ram, O Hare, O Ram, Ram, Ram, Hare, Hare.
+O Hare, O Krishna, O Hare, O Krishna, Krishna, Krishna, Hare, Hare.`,
+  },
+  "jaya-siya-ram-bhagavata-sankirtan": {
+    title: "Jaya Siya Ram Jaya Jaya Siya Ram",
+    artist_version: "Swami Tejomayananda",
+    display_order: 519,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["ram", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Jaya Siya Ram, jaya jaya Siya Ram`,
+    translation: `## Chant refrain
+
+Glory to Sita and Ram, glory, glory to Sita and Ram.`,
+  },
+  "krishna-krishna-mukunda-janardhana-bhagavata-sankirtan": {
+    title: "Krishna Krishna Mukunda Janardhana",
+    artist_version: "Swami Tejomayananda",
+    display_order: 520,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["krishna", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Krishna Krishna Mukunda Janardhana`,
+    translation: `## Chant refrain
+
+Krishna, Krishna, giver of liberation and protector of all.`,
+  },
+  "om-namo-bhagavate-vasudevaya-bhagavata-sankirtan": {
+    title: "Om Namo Bhagavate Vasudevaya",
+    artist_version: "Swami Tejomayananda",
+    display_order: 521,
+    thumbnail_url: BHAGAVATA_SANKIRTAN_COVER,
+    cover_url: BHAGAVATA_SANKIRTAN_COVER,
+    category_slugs: ["vishnu", "devotion", "kirtan"],
+    roman_lyrics: `## Chant refrain
+
+Om namo bhagavate Vasudevaya`,
+    translation: `## Chant refrain
+
+Om, I bow to the blessed Lord Vasudeva.`,
+  },
+  "dam-dam-roop-sweet-shiva-bhajans": {
+    title: "Dam Dam Roop",
+    artist_version: "Pt. Chunilall & Manisha",
+    display_order: 497,
+    audio_url: "/audio/albums/sweet-shiva-bhajans/01.mp3",
+    roman_lyrics: `## Mantra
+
+Om Namah Shivaya
+
+## Nirvana Shatakam
+
+Mano buddhyahankaara chittaani naaham
+Na cha shrotra jihve na cha ghraana netre
+Na cha vyoma bhoomir na tejo na vaayuh
+Chidaananda roopah shivo'ham shivo'ham
+
+Na cha praana sangyo na vai pancha vaayuh
+Na vaa sapta dhaatur na vaa pancha koshah
+Na vaak paani paadau na chopastha paayu
+Chidaananda roopah shivo'ham shivo'ham
+
+Na me dvesha raagau na me lobha mohau
+Mado naiva me naiva maatsarya bhaavah
+Na dharmo na chaartho na kaamo na mokshah
+Chidaananda roopah shivo'ham shivo'ham
+
+Na punyam na paapam na saukhyam na duhkham
+Na mantro na teertham na vedaa na yajnaah
+Aham bhojanam naiva bhojyam na bhoktaa
+Chidaananda roopah shivo'ham shivo'ham
+
+Na me mrityu shankaa na me jaati bhedah
+Pitaa naiva me naiva maataa na janma
+Na bandhur na mitram gurur naiva shishyah
+Chidaananda roopah shivo'ham shivo'ham
+
+Aham nirvikalpo niraakaara roopo
+Vibhutvaach cha sarvatra sarvendriyaanaam
+Na chaa sangatam naiva muktir na meyah
+Chidaananda roopah shivo'ham shivo'ham
+
+## Dam Dam Damru
+
+Dam dam dam dam damru bajaaye, Shiv Shankar Kailashpati
+Yug yug soya deep jalaaye, Shiv Shankar Kailashpati
+Om Namah Shivaya, bolo Om Namah Shivaya
+
+## Verse 1
+
+Maathe oopar tilak chandrama, pahare naag ki maala
+Damru ki lay par naache, srishti ka rakhwaala
+Nij bhaktan ke kasht mitaaye, Shiv Shankar Kailashpati
+Om Namah Shivaya, bolo Om Namah Shivaya
+
+## Verse 2
+
+Jata joot se jharati Ganga, bhav ki taap mitaati
+Dharati aur pyaase jeevan ki, Maiya pyaas bujhaati
+Nij kripa jag pe barsaaye, Shiv Shankar Kailashpati
+Om Namah Shivaya, bolo Om Namah Shivaya
+
+## Verse 3
+
+Mangal Gauri naam hai unka, woh hai shakti daata
+Bhavsaagar se tar jaaye woh, jo Shiv naam hai gaata
+Moh maaya se man ko chhudaaye, Shiv Shankar Kailashpati
+Om Namah Shivaya, bolo Om Namah Shivaya
+
+## Closing refrain
+
+Dam dam dam dam damru bajaaye, Shiv Shankar Kailashpati
+Om Namah Shivaya`,
+    translation: `## Mantra
+
+Om, I bow to Shiva.
+
+## Nirvana Shatakam
+
+I am neither mind, intellect, ego, nor memory.
+I am neither hearing nor taste, neither smell nor sight.
+I am neither space nor earth, neither fire nor air.
+My nature is awareness and bliss. I am Shiva, I am Shiva.
+
+I am neither the vital breath nor its five currents.
+I am neither the seven bodily tissues nor the five sheaths.
+I am neither speech, hands, nor feet, nor the organs of generation or elimination.
+My nature is awareness and bliss. I am Shiva, I am Shiva.
+
+I have neither aversion nor attachment, neither greed nor delusion.
+I have neither pride nor envy.
+I am beyond duty, wealth, desire, and liberation.
+My nature is awareness and bliss. I am Shiva, I am Shiva.
+
+I am neither merit nor wrongdoing, neither pleasure nor pain.
+I am neither mantra nor pilgrimage, neither Vedas nor sacrifice.
+I am neither the act of eating, nor the food, nor the one who eats.
+My nature is awareness and bliss. I am Shiva, I am Shiva.
+
+I have no fear of death and no distinction of birth or caste.
+I have no father or mother, and no birth.
+I have no relative or friend, no teacher or disciple.
+My nature is awareness and bliss. I am Shiva, I am Shiva.
+
+I am beyond distinctions and without form.
+I am present everywhere and pervade all the senses.
+I am beyond attachment and liberation, beyond all measure.
+My nature is awareness and bliss. I am Shiva, I am Shiva.
+
+## Dam Dam Damru
+
+Dam dam dam dam, Shiva Shankar, Lord of Kailash, plays the damaru.
+Shiva Shankar, Lord of Kailash, rekindles the lamp that has lain dormant for ages.
+Om, I bow to Shiva. Say, Om, I bow to Shiva.
+
+## Verse 1
+
+He wears the moon as a forehead mark and a garland of snakes.
+The guardian of creation dances to the rhythm of his damaru.
+Shiva Shankar, Lord of Kailash, removes the troubles of his devotees.
+Om, I bow to Shiva. Say, Om, I bow to Shiva.
+
+## Verse 2
+
+The Ganga flows from his matted hair and cools the suffering of worldly life.
+Mother Ganga quenches the thirst of the earth and its living beings.
+Shiva Shankar, Lord of Kailash, showers his grace upon the world.
+Om, I bow to Shiva. Say, Om, I bow to Shiva.
+
+## Verse 3
+
+Her name is Mangal Gauri, and she grants strength.
+Whoever sings Shiva's name crosses the ocean of worldly life.
+Shiva Shankar, Lord of Kailash, frees the mind from attachment and illusion.
+Om, I bow to Shiva. Say, Om, I bow to Shiva.
+
+## Closing refrain
+
+Dam dam dam dam, Shiva Shankar, Lord of Kailash, plays the damaru.
+Om, I bow to Shiva.`,
+    thumbnail_url: SWEET_SHIVA_BHAJANS_COVER,
+    cover_url: SWEET_SHIVA_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["shiva", "bhajan", "devotion", "hindi"],
+  },
+  "jai-shankar-sweet-shiva-bhajans": {
+    title: "Jai Shankar",
+    artist_version: "Pt. Chunilall",
+    display_order: 498,
+    audio_url: "/audio/albums/sweet-shiva-bhajans/02.mp3",
+    roman_lyrics: `## Refrain
+
+Jai Shiv Shankar, jai Shiv Shankar
+Jai Shankar Bhole
+Sab devon mein dev niraale
+Jai Bam Bam Bhole
+
+## Verse 1
+
+Tere naam anekon, Baba
+Teri mahima nyaari
+Tere bhed anokhe sabse
+Kya jaane sansaari
+Tu hi hai Kailashpati
+Tu parvat par dole
+
+## Refrain
+
+Jai Shiv Shankar, jai Shiv Shankar
+Jai Shankar Bhole
+Sab devon mein dev niraale
+Jai Bam Bam Bhole
+
+## Verse 2
+
+Mahadev, tune hi to sab
+Devon ka santaap hara
+Saagar manthan mein nikla vish
+Tune apne kanth dhara
+Isiliye har praani tujhko
+Neelkanth bole
+
+## Refrain
+
+Jai Shiv Shankar, jai Shiv Shankar
+Jai Shankar Bhole
+Sab devon mein dev niraale
+Jai Bam Bam Bhole
+
+## Verse 3
+
+Sheesh tumhaari Ganga Maiya
+Chandra shikhar pe sohe
+Tan pe sarp vicharte rahte
+Bhakton ke man mohe
+Usko kaisa kasht jagat mein
+Naam tera jo le
+
+## Refrain
+
+Jai Shiv Shankar, jai Shiv Shankar
+Jai Shankar Bhole
+Sab devon mein dev niraale
+Jai Bam Bam Bhole`,
+    translation: `## Refrain
+
+Glory to Shiva Shankar, glory to Shiva Shankar.
+Glory to Shankar, the guileless Lord.
+You stand apart among all the gods.
+Glory to Bhole! Bam Bam!
+
+## Verse 1
+
+You have countless names, Baba.
+Your glory is beyond compare.
+Your ways are unlike any other.
+How could those absorbed in the world understand them?
+You are the Lord of Kailash.
+You roam upon the mountain.
+
+## Refrain
+
+Glory to Shiva Shankar, glory to Shiva Shankar.
+Glory to Shankar, the guileless Lord.
+You stand apart among all the gods.
+Glory to Bhole! Bam Bam!
+
+## Verse 2
+
+Mahadev, it was you who
+Relieved all the gods of their distress.
+When poison rose from the churning ocean,
+You held it in your throat.
+That is why every living being
+Calls you Neelkanth, the Blue-Throated One.
+
+## Refrain
+
+Glory to Shiva Shankar, glory to Shiva Shankar.
+Glory to Shankar, the guileless Lord.
+You stand apart among all the gods.
+Glory to Bhole! Bam Bam!
+
+## Verse 3
+
+Mother Ganga rests upon your head.
+The moon shines above your brow.
+Serpents move about your body,
+And you captivate the hearts of your devotees.
+What suffering in this world could touch
+Someone who takes your name?
+
+## Refrain
+
+Glory to Shiva Shankar, glory to Shiva Shankar.
+Glory to Shankar, the guileless Lord.
+You stand apart among all the gods.
+Glory to Bhole! Bam Bam!`,
+    thumbnail_url: SWEET_SHIVA_BHAJANS_COVER,
+    cover_url: SWEET_SHIVA_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["shiva", "bhajan", "devotion", "hindi"],
+  },
+  "hay-ganga-sweet-shiva-bhajans": {
+    title: "Hay Ganga",
+    artist_version: "Manisha",
+    display_order: 499,
+    audio_url: "/audio/albums/sweet-shiva-bhajans/03.mp3",
+    roman_lyrics: `## Refrain
+
+Hey Ganga, tu jahaan se aayi
+Unka pata bata de
+Hey Maiya, teri sharan mein aayi
+Unka pata bata de
+
+## Verse excerpts
+
+Shiv Shankar, woh bhole bhaale
+Saare jag ke woh rakhwaale
+Hey Ganga, tu jahaan se aayi
+Unka pata bata de
+
+Nandi woh kare sawaari
+Kar kamal trishool dhaari
+Naagon ki maala lapetaayi
+Unka pata bata de
+
+Hey Maiya, charanaamrit de de
+Man ye mera nirmal kar de
+Shiv darshan ki jot jagaayi`,
+    translation: `## Refrain
+
+O Ganga, from the place you came,
+Tell me where I can find him.
+O Mother, I have come to take refuge in you.
+Tell me where I can find him.
+
+## Verse excerpts
+
+Shiva Shankar is gentle and guileless.
+He watches over the whole world.
+O Ganga, from the place you came,
+Tell me where I can find him.
+
+He rides on Nandi, the bull.
+He holds a trident in his lotus hand.
+He wears a garland of snakes.
+Tell me where I can find him.
+
+O Mother, give me the sacred water from your feet.
+Cleanse this heart of mine.
+I have lit a flame in longing to see Shiva.`,
+    thumbnail_url: SWEET_SHIVA_BHAJANS_COVER,
+    cover_url: SWEET_SHIVA_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["shiva", "bhajan", "devotion", "hindi"],
+  },
+  "satyam-shivam-sweet-shiva-bhajans": {
+    title: "Satyam Shivam",
+    artist_version: "Manisha",
+    display_order: 500,
+    audio_url: "/audio/albums/sweet-shiva-bhajans/04.mp3",
+    roman_lyrics: `## Opening
+
+Ishwar satya hai
+Satya hi Shiv hai
+Shiv hi sundar hai
+Jaago, uth kar dekho
+Jeevan jyot ujaagar hai
+
+## Refrain
+
+Satyam Shivam Sundaram
+
+## Verse 1
+
+Ram Awadh mein, Kashi mein Shiv
+Kanha Vrindavan mein
+Daya karo Prabhu, dekho inko
+Har ghar ke aangan mein
+Radha Mohan sharanam
+Satyam Shivam Sundaram
+
+## Verse 2
+
+Ek surya hai, ek gagan hai
+Ek hi dharti mata
+Daya karo Prabhu, ek bane sab
+Sabka ek se naata
+Radha Mohan sharanam
+Satyam Shivam Sundaram`,
+    translation: `## Opening
+
+God is truth.
+Truth itself is Shiva.
+Shiva is beauty itself.
+Wake up, rise, and see.
+The flame of life shines bright.
+
+## Refrain
+
+Truth, divinity, and beauty.
+
+## Verse 1
+
+Ram is in Awadh and Shiva is in Kashi.
+Kanha is in Vrindavan.
+Have mercy, Lord. Let us see them
+In the courtyard of every home.
+I take refuge in Radha and Mohan.
+Truth, divinity, and beauty.
+
+## Verse 2
+
+There is one sun and one sky,
+And just one Mother Earth.
+Have mercy, Lord. Let everyone come together.
+We are all bound to the One.
+I take refuge in Radha and Mohan.
+Truth, divinity, and beauty.`,
+    thumbnail_url: SWEET_SHIVA_BHAJANS_COVER,
+    cover_url: SWEET_SHIVA_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["shiva", "bhajan", "devotion", "hindi"],
+  },
+  "jai-bhola-bhandaree-sweet-shiva-bhajans": {
+    title: "Jai Bhola Bhandaree",
+    artist_version: "Pt. Chunilall",
+    display_order: 501,
+    audio_url: "/audio/albums/sweet-shiva-bhajans/05.mp3",
+    roman_lyrics: `## Refrain
+
+Jai Bhola Bhandari, Shiv Har
+Jai Bhola Bhandari
+Jai Kailashpati Shiv Shankar
+Sab jag ke hitkaari
+
+## Verse 1
+
+Nis din tera dhyaan karein hum
+Simrein mantra tumhaara
+Hey Shiv Shankar, mantra jagaao
+Hove ghat ujiyaara
+Namaami Shankar, namaami Shankar
+Kripa karo Tripuraari
+
+## Refrain
+
+Jai Bhola Bhandari, Shiv Har
+Jai Bhola Bhandari
+
+## Verse 2
+
+Shankh naad se shabd jagaakar
+Swar sangeet banaaya
+Yug yug se ye srishti naache
+Aisa damaru bajaaya
+Teri yaad bhulaake jag mein
+Dukh paave sansaari
+
+## Verse 3
+
+Teenon taap haran kar leta
+Ye trishool tihaara
+Tera naam jape se jag mein
+Milta mukti dwaara
+Aaye sharan tihaari
+
+## Refrain
+
+Jai Bhola Bhandari, Shiv Har
+Jai Bhola Bhandari`,
+    translation: `## Refrain
+
+Glory to Shiva, the kind and generous Lord.
+Glory to Bhola Bhandari.
+Glory to Shiva Shankar, Lord of Kailash,
+Who works for the good of the whole world.
+
+## Verse 1
+
+Night and day we meditate on you,
+And remember your mantra.
+O Shiva Shankar, awaken the mantra within us,
+So that light shines in our hearts.
+I bow to Shankar, I bow to Shankar.
+Show us grace, O conqueror of the three cities.
+
+## Refrain
+
+Glory to Shiva, the kind and generous Lord.
+Glory to Bhola Bhandari.
+
+## Verse 2
+
+From the sound of the conch you brought forth sound,
+And gave it notes and music.
+Through age after age creation dances,
+Such is the rhythm you play on your damaru.
+When people forget you in this world,
+They find themselves in sorrow.
+
+## Verse 3
+
+It takes away the three kinds of suffering,
+This trident of yours.
+By repeating your name in this world,
+We find the doorway to liberation.
+We have come to take refuge in you.
+
+## Refrain
+
+Glory to Shiva, the kind and generous Lord.
+Glory to Bhola Bhandari.`,
+    thumbnail_url: SWEET_SHIVA_BHAJANS_COVER,
+    cover_url: SWEET_SHIVA_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["shiva", "bhajan", "devotion", "hindi"],
+  },
+  "rakh-laaj-sweet-shiva-bhajans": {
+    title: "Rakh Laaj",
+    artist_version: "Manisha",
+    display_order: 502,
+    audio_url: "/audio/albums/sweet-shiva-bhajans/06.mp3",
+    roman_lyrics: `## Refrain
+
+Rakh laaj mere sindoor ki
+Shiv Shankar ki pyaari, Gaura Parvati
+Mohe ek tera hi aasra
+Tu hi taaranhaari, Gaura Parvati
+
+## Verse excerpts
+
+Tujhsa kiska tap hai, jis se
+Dol gaye Kailashpati
+Main dukhiyaari, main dukhiyaari
+Aayi sharan tihaari, Gaura Parvati
+
+Ghaayal ki gat ghaayal jaane
+Naari ka dukh naari jaane
+
+## Refrain
+
+Rakh laaj mere sindoor ki
+Shiv Shankar ki pyaari, Gaura Parvati`,
+    translation: `## Refrain
+
+Protect the honour of my sindoor, the mark of my marriage.
+O fair Parvati, beloved of Shiv Shankar.
+You alone are my refuge.
+You alone can carry me to safety, O Gaura Parvati.
+
+## Verse excerpts
+
+Whose austerities could compare with yours,
+When even the Lord of Kailash was moved by them?
+I am in sorrow, deep in sorrow.
+I have come to take refuge in you, O Gaura Parvati.
+
+Only someone wounded knows how another wounded person feels.
+A woman knows another woman's sorrow.
+
+## Refrain
+
+Protect the honour of my sindoor, the mark of my marriage.
+O fair Parvati, beloved of Shiv Shankar.`,
+    thumbnail_url: SWEET_SHIVA_BHAJANS_COVER,
+    cover_url: SWEET_SHIVA_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["shiva", "bhajan", "devotion", "hindi"],
+  },
+  "shiva-shambhu-sweet-shiva-bhajans": {
+    title: "Shiva Shambhu",
+    artist_version: "Pt. Chunilall & Chorus",
+    display_order: 503,
+    audio_url: "/audio/albums/sweet-shiva-bhajans/07.mp3",
+    roman_lyrics: `## Refrain
+
+Shiv Shambho, deenon ke bandhu
+Namo namah, Girijapati
+Gangaadhar, Har Har, namo namah
+
+## Verse excerpts
+
+Ardhachandra, Tripuraari
+Sukhkar, vardaani
+Neelkanth saaje
+
+Dam dam dam, damaru baje
+Naach se jag dole
+Nritya kare Natraaj
+Uma sang Bam Bhole
+Shoolpaani, kalyaani Shankar
+
+Mahaakaal, vikraal roop
+Avinaashi, sukh raashi
+
+## Refrain
+
+Namo namah, Girijapati
+Gangaadhar, Har Har, namo namah`,
+    translation: `## Refrain
+
+Shiva Shambhu, friend of those in need,
+Salutations to you, Lord of Girija.
+Bearer of the Ganga, Hara, Hara, I bow to you.
+
+## Verse excerpts
+
+You wear the crescent moon, O conqueror of the three cities.
+You bring happiness and grant blessings.
+Your blue throat shines.
+
+Dam dam dam, the damaru sounds.
+The world sways with your dance.
+Nataraja, Lord of Dance, dances.
+Uma is with you. Glory to Bhole!
+Trident in hand, you bring blessings, O Shankar.
+
+You are Mahakaal, awe-inspiring in form.
+You are imperishable, a wellspring of joy.
+
+## Refrain
+
+Salutations to you, Lord of Girija.
+Bearer of the Ganga, Hara, Hara, I bow to you.`,
+    thumbnail_url: SWEET_SHIVA_BHAJANS_COVER,
+    cover_url: SWEET_SHIVA_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["shiva", "bhajan", "devotion", "hindi"],
+  },
+  "jai-shiva-omkara-aarti-sweet-shiva-bhajans": {
+    title: "Jai Shiva Omkara Aarti",
+    artist_version: "Pt. Chunilall & Chorus",
+    display_order: 504,
+    audio_url: "/audio/albums/sweet-shiva-bhajans/08.mp3",
+    roman_lyrics: `## Refrain
+
+Om jai Shiv Omkara
+Swami jai Shiv Omkara
+Brahma Vishnu Sadashiv
+Ardhaangi dhaara
+
+## Verse excerpts
+
+Ekaanan, chaturaanan, panchaanan raaje
+Hansasan, Garudasan, vrishvaahan saaje
+
+## Verse 2
+
+Do bhuj, chaar chaturbhuj, das bhuj ati sohe
+Teenon roop nirakhte, tribhuvan jan mohe
+
+## Verse 3
+
+Akshamaala, vanamaala, rundamaala dhaari
+Chandan, mrigmad sohe, bhaale shashidhaari
+
+Shvetaambar, peetaambar, baaghambar ange
+Sanakaadik, Garudaadik, bhootaadik sange
+
+## Closing verse
+
+Trigun Swami ki aarti jo koi nar gaave
+Kahat Shivanand Swami, sukh sampatti paave
+
+## Refrain
+
+Om jai Shiv Omkara
+Swami jai Shiv Omkara
+Brahma Vishnu Sadashiv
+Ardhaangi dhaara`,
+    translation: `## Refrain
+
+Om, glory to Shiva, whose form is Om.
+Lord, glory to Shiva, whose form is Om.
+Brahma, Vishnu, and eternal Shiva,
+You bear your consort as half of yourself.
+
+## Verse excerpts
+
+The one-faced, four-faced, and five-faced forms reign.
+The swan, Garuda, and the bull carry them.
+
+## Verse 2
+
+The forms with two, four, and ten arms shine.
+The people of the three worlds are captivated by these three forms.
+
+## Verse 3
+
+You wear the rosary, the forest-flower garland, and the garland of skulls.
+Sandalwood and musk adorn you, and the moon shines on your brow.
+
+Their garments are white cloth, yellow cloth, and tiger skin.
+Sanaka and the sages, Garuda and his companions, and Shiva's spirits accompany them.
+
+## Closing verse
+
+Whoever sings the aarti of the Lord of the three qualities,
+Says Swami Shivanand, finds happiness and prosperity.
+
+## Refrain
+
+Om, glory to Shiva, whose form is Om.
+Lord, glory to Shiva, whose form is Om.
+Brahma, Vishnu, and eternal Shiva,
+You bear your consort as half of yourself.`,
+    thumbnail_url: SWEET_SHIVA_BHAJANS_COVER,
+    cover_url: SWEET_SHIVA_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["shiva", "aarti", "devotion", "hindi"],
+  },
   "vrindavan-ka-krishan-kanhaiya-jai-shree-krishna": {
     display_order: 485,
     title: "Vrindavan Ka Krishan Kanhaiya",

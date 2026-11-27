@@ -8,6 +8,7 @@ export type Album = {
   artist: string;
   description: string;
   cover_url: string;
+  listen_url?: string;
   /** Bhajan slugs in track order */
   track_slugs: string[];
   year?: number;
@@ -32,6 +33,53 @@ export type Album = {
  * when the source is a released CD / cassette set.
  */
 const ALBUM_CATALOGUE: Album[] = [
+  {
+    slug: "bhagavata-sankirtan",
+    title: "Bhagavata Sankirtan",
+    artist: "Swami Tejomayananda",
+    label: "Central Chinmaya Mission Trust",
+    description: "Seventeen devotional chants with Romanized refrains and English translations.",
+    cover_url: "/images/albums/bhagavata-sankirtan.jpeg",
+    listen_url: "https://music.apple.com/us/album/bhagavata-sankirtan/1224530980",
+    track_slugs: [
+      "shri-krishna-govinda-hare-murari-bhagavata-sankirtan",
+      "jaya-jaya-govinda-bhagavata-sankirtan",
+      "hari-bol-bhagavata-sankirtan",
+      "jaya-jaya-ram-krishna-hari-bhagavata-sankirtan",
+      "om-namo-narayana-bhagavata-sankirtan",
+      "govinda-govinda-giridhari-bhagavata-sankirtan",
+      "bhaja-man-radhe-govinda-bhagavata-sankirtan",
+      "shri-krishna-sharanam-mama-bhagavata-sankirtan",
+      "krishna-murari-jaya-krishna-murari-bhagavata-sankirtan",
+      "hare-ram-ram-sita-bhagavata-sankirtan",
+      "shri-ram-jaya-ram-jaya-jaya-ram-bhagavata-sankirtan",
+      "jaya-jaya-ram-janaki-ram-bhagavata-sankirtan",
+      "ram-ram-sita-ram-bhagavata-sankirtan",
+      "hare-ram-hare-krishna-bhagavata-sankirtan",
+      "jaya-siya-ram-bhagavata-sankirtan",
+      "krishna-krishna-mukunda-janardhana-bhagavata-sankirtan",
+      "om-namo-bhagavate-vasudevaya-bhagavata-sankirtan",
+    ],
+  },
+  {
+    slug: "sweet-shiva-bhajans",
+    title: "Sweet Shiva Bhajans",
+    artist: "Manisha & Pt. Chunilall",
+    year: 1997,
+    label: "Mohabir Records",
+    description: "Eight Shiva bhajans by Manisha and Pt. Chunilall, in cassette order.",
+    cover_url: "/images/albums/sweet-shiva-bhajans.jpg",
+    track_slugs: [
+      "dam-dam-roop-sweet-shiva-bhajans",
+      "jai-shankar-sweet-shiva-bhajans",
+      "hay-ganga-sweet-shiva-bhajans",
+      "satyam-shivam-sweet-shiva-bhajans",
+      "jai-bhola-bhandaree-sweet-shiva-bhajans",
+      "rakh-laaj-sweet-shiva-bhajans",
+      "shiva-shambhu-sweet-shiva-bhajans",
+      "jai-shiva-omkara-aarti-sweet-shiva-bhajans",
+    ],
+  },
   {
     slug: "jai-shree-krishna",
     title: "Jai Shree Krishna",
