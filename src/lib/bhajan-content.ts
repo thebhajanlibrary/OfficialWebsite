@@ -1584,7 +1584,669 @@ May every home be happy, may joy stay green forever
 I do not want a coloured palace, nor the glory of wealth
 From you, Master, I ask only the gift of contentment`;
 
+const BEST_OF_ANUP_JALOTA_COVER = "/images/albums/best-of-anup-jalota-bhajans.png";
+
 export const BHAJAN_CONTENT: Record<string, BhajanContent> = {
+  "aisi-laagi-lagan-anup-jalota": {
+    title: "Aisi Laagi Lagan",
+    artist_version: "Anup Jalota",
+    audio_url: "/audio/albums/best-of-anup-jalota-bhajans/01-aisi-laagi-lagan.mp3",
+    roman_lyrics: `Aisi laagi lagan, Meera ho gayi magan
+Woh to gali gali Hari gun gaane lagi
+Mahalon mein pali, ban ke jogan chali
+Meera rani deewani kahaane lagi
+
+Koi roke nahin, koi toke nahin
+Meera Govind Gopal gaane lagi
+Baithi santon ke sang, rangi Mohan ke rang
+Meera premi preetam ko manaane lagi
+
+Aisi laagi lagan, Meera ho gayi magan
+Woh to gali gali Hari gun gaane lagi
+Mahalon mein pali, ban ke jogan chali
+Meera rani deewani kahaane lagi
+
+Rana ne vish diya, maano amrit piya
+Meera saagar mein sarita samaane lagi
+Dukh laakhon sahe, mukh se Govind kahe
+Meera Govind Gopal gaane lagi
+
+Aisi laagi lagan, Meera ho gayi magan
+Woh to gali gali Hari gun gaane lagi
+Mahalon mein pali, ban ke jogan chali
+Meera rani deewani kahaane lagi`,
+    devanagari_lyrics: `ऐसी लागी लगन, मीरा हो गई मगन
+वो तो गली गली हरि गुण गाने लगी
+महलों में पली, बन के जोगन चली
+मीरा रानी दीवानी कहाने लगी
+
+कोई रोके नहीं, कोई टोके नहीं
+मीरा गोविंद गोपाल गाने लगी
+बैठी संतों के संग, रंगी मोहन के रंग
+मीरा प्रेमी प्रीतम को मनाने लगी
+
+ऐसी लागी लगन, मीरा हो गई मगन
+वो तो गली गली हरि गुण गाने लगी
+महलों में पली, बन के जोगन चली
+मीरा रानी दीवानी कहाने लगी
+
+राणा ने विष दिया, मानो अमृत पिया
+मीरा सागर में सरिता समाने लगी
+दुख लाखों सहे, मुख से गोविंद कहे
+मीरा गोविंद गोपाल गाने लगी
+
+ऐसी लागी लगन, मीरा हो गई मगन
+वो तो गली गली हरि गुण गाने लगी
+महलों में पली, बन के जोगन चली
+मीरा रानी दीवानी कहाने लगी`,
+    thumbnail_url: BEST_OF_ANUP_JALOTA_COVER,
+    cover_url: BEST_OF_ANUP_JALOTA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "bhajan", "devotion", "hindi"],
+  },
+  "naam-japan-kyoon-chhod-diya-anup-jalota": {
+    title: "Naam Japan Kyoon Chhod Diya",
+    artist_version: "Anup Jalota",
+    audio_url: "/audio/albums/best-of-anup-jalota-bhajans/02-naam-japan-kyoon-chhod-diya.mp3",
+    roman_lyrics: `Toone naam japan kyoon chhod diya
+Krodh na chhoda, jhooth na chhoda
+Satya vachan kyoon chhod diya
+
+Jhoothe jag mein dil lalcha kar
+Asal vatan kyoon chhod diya
+
+Krodh na chhoda, jhooth na chhoda
+Satya vachan kyoon chhod diya
+Toone naam japan kyoon chhod diya
+
+Kaudi ko to khoob sambhaala
+Laal ratan kyoon chhod diya
+
+Krodh na chhoda, jhooth na chhoda
+Satya vachan kyoon chhod diya
+Toone naam japan kyoon chhod diya
+
+Jehi sumiran se ati sukh paave
+So sumiran kyoon chhod diya
+
+Krodh na chhoda, jhooth na chhoda
+Satya vachan kyoon chhod diya
+Toone naam japan kyoon chhod diya
+
+Khalis ek Bhagwan bharose
+Tan man dhan kyoon nahin chhod diya
+
+Krodh na chhoda, jhooth na chhoda
+Satya vachan kyoon chhod diya
+Toone naam japan kyoon chhod diya`,
+    devanagari_lyrics: `तूने नाम जपन क्यों छोड़ दिया
+क्रोध न छोड़ा, झूठ न छोड़ा
+सत्य वचन क्यों छोड़ दिया
+
+झूठे जग में दिल ललचा कर
+असल वतन क्यों छोड़ दिया
+
+क्रोध न छोड़ा, झूठ न छोड़ा
+सत्य वचन क्यों छोड़ दिया
+तूने नाम जपन क्यों छोड़ दिया
+
+कौड़ी को तो खूब संभाला
+लाल रतन क्यों छोड़ दिया
+
+क्रोध न छोड़ा, झूठ न छोड़ा
+सत्य वचन क्यों छोड़ दिया
+तूने नाम जपन क्यों छोड़ दिया
+
+जेहि सुमिरन से अति सुख पावे
+सो सुमिरन क्यों छोड़ दिया
+
+क्रोध न छोड़ा, झूठ न छोड़ा
+सत्य वचन क्यों छोड़ दिया
+तूने नाम जपन क्यों छोड़ दिया
+
+ख़ालिस एक भगवान भरोसे
+तन मन धन क्यों नहीं छोड़ दिया
+
+क्रोध न छोड़ा, झूठ न छोड़ा
+सत्य वचन क्यों छोड़ दिया
+तूने नाम जपन क्यों छोड़ दिया`,
+    thumbnail_url: BEST_OF_ANUP_JALOTA_COVER,
+    cover_url: BEST_OF_ANUP_JALOTA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["bhajan", "devotion", "hindi"],
+  },
+  "ud-jayega-hans-akela-anup-jalota": {
+    title: "Ud Jayega Hans Akela",
+    artist_version: "Anup Jalota",
+    audio_url: "/audio/albums/best-of-anup-jalota-bhajans/03-ud-jayega-hans-akela.mp3",
+    roman_lyrics: `Ud jaayega hans akela
+Do din ka darshan mela
+
+Raaja bhi jaayega, jogi bhi jaayega
+Guru bhi jaayega, chela
+
+Ud jaayega hans akela
+Do din ka darshan mela
+
+Maat pita bhaai bandhu bhi jaayenge
+Aur rupayon ka thaila
+
+Ud jaayega hans akela
+Do din ka darshan mela
+
+Tu bhi jaayega, tera bhi jaayega
+Yah maaya ka khela
+
+Ud jaayega hans akela
+Do din ka darshan mela
+
+Kaudi kaudi maaya jodi
+Sang chale na dhela
+
+Ud jaayega hans akela
+Do din ka darshan mela
+
+Saathi re saathi, tere paar utar gaye
+Tu kyoon raha akela
+
+Ud jaayega hans akela
+Do din ka darshan mela`,
+    devanagari_lyrics: `उड़ जाएगा हंस अकेला
+दो दिन का दर्शन मेला
+
+राजा भी जाएगा, जोगी भी जाएगा
+गुरु भी जाएगा, चेला
+
+उड़ जाएगा हंस अकेला
+दो दिन का दर्शन मेला
+
+मात पिता भाई बंधु भी जाएँगे
+और रुपयों का थैला
+
+उड़ जाएगा हंस अकेला
+दो दिन का दर्शन मेला
+
+तू भी जाएगा, तेरा भी जाएगा
+यह माया का खेला
+
+उड़ जाएगा हंस अकेला
+दो दिन का दर्शन मेला
+
+कौड़ी कौड़ी माया जोड़ी
+संग चले न ढेला
+
+उड़ जाएगा हंस अकेला
+दो दिन का दर्शन मेला
+
+साथी रे साथी, तेरे पार उतर गए
+तू क्यों रहा अकेला
+
+उड़ जाएगा हंस अकेला
+दो दिन का दर्शन मेला`,
+    thumbnail_url: BEST_OF_ANUP_JALOTA_COVER,
+    cover_url: BEST_OF_ANUP_JALOTA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["bhajan", "devotion", "hindi"],
+  },
+  "kyoon-paani-mein-malmal-nahaye-anup-jalota": {
+    title: "Kyoon Paani Mein Malmal Nahaye",
+    artist_version: "Anup Jalota",
+    audio_url: "/audio/albums/best-of-anup-jalota-bhajans/04-kyoon-paani-mein-malmal-nahaye.mp3",
+    roman_lyrics: `Maala pherat jug gaya, gaya na man ka pher
+Kar ka manka daar de, man ka manka pher
+
+Kyoon paani mein mal mal nahaaye
+Man ki mail utaar ho praani
+
+Paap karam tan ke nahin chhode
+Kaise hoy sudhaar re pyaare
+
+Kyoon paani mein mal mal nahaaye
+Man ki mail utaar ho praani
+
+Haad maans ki deh bani hai
+Jhare sada nav dvaar ho pyaare
+
+Kyoon paani mein mal mal nahaaye
+Man ki mail utaar ho praani
+
+Sat sangat teerath jal nirmal
+Nit uth gota maar ho pyaare
+
+Kyoon paani mein mal mal nahaaye
+Man ki mail utaar ho praani
+
+Brahmaanand bhajan kar Hari ka
+Jo chaahe nistaar ho pyaare
+
+Kyoon paani mein mal mal nahaaye
+Man ki mail utaar ho praani`,
+    devanagari_lyrics: `माला फेरत जुग गया, गया न मन का फेर
+कर का मनका डार दे, मन का मनका फेर
+
+क्यों पानी में मल मल नहाये
+मन की मैल उतार हो प्राणी
+
+पाप करम तन के नहीं छोड़े
+कैसे होय सुधार रे प्यारे
+
+क्यों पानी में मल मल नहाये
+मन की मैल उतार हो प्राणी
+
+हाड़ मांस की देह बनी है
+झरे सदा नव द्वार हो प्यारे
+
+क्यों पानी में मल मल नहाये
+मन की मैल उतार हो प्राणी
+
+सत्संगत तीरथ जल निर्मल
+नित उठ गोता मार हो प्यारे
+
+क्यों पानी में मल मल नहाये
+मन की मैल उतार हो प्राणी
+
+ब्रह्मानंद भजन कर हरि का
+जो चाहे निस्तार हो प्यारे
+
+क्यों पानी में मल मल नहाये
+मन की मैल उतार हो प्राणी`,
+    thumbnail_url: BEST_OF_ANUP_JALOTA_COVER,
+    cover_url: BEST_OF_ANUP_JALOTA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["bhajan", "devotion", "hindi"],
+  },
+  "chadar-ho-gayee-bahut-purani-anup-jalota": {
+    title: "Chadar Ho Gayee Bahut Purani",
+    artist_version: "Anup Jalota",
+    audio_url: "/audio/albums/best-of-anup-jalota-bhajans/05-chadar-ho-gayee-bahut-purani.mp3",
+    roman_lyrics: `Chaadar ho gayi bahut puraani
+Ab soch samajh abhimaani
+
+Ajab julaaha chaadar beeni
+Soot karam ki taani
+Surati nirati ka bharna deeni
+Tab sabke man maani
+
+Chaadar ho gayi bahut puraani
+Ab soch samajh abhimaani
+
+Maile daag pade paapan ke
+Vishayan mein liptaani
+Gyaan ke haathon laay ke dhovo
+Satsangat ke paani
+
+Chaadar ho gayi bahut puraani
+Ab soch samajh abhimaani
+
+Bhai maili aur bheegi saari
+Lobh moh mein saani
+Aise hi odhat umar ganvaayi
+Bhali buri nahin jaani
+
+Chaadar ho gayi bahut puraani
+Ab soch samajh abhimaani
+
+Shanka mati jaan jiya apne
+Hai yah vastu biraani
+Kahe Kabir ise raakh jatan se
+Yah phir haath na aani
+
+Chaadar ho gayi bahut puraani
+Ab soch samajh abhimaani`,
+    devanagari_lyrics: `चादर हो गई बहुत पुरानी
+अब सोच समझ अभिमानी
+
+अजब जुलाहा चादर बीनी
+सूत करम की तानी
+सुरति निरति का भरना दीनी
+तब सबके मन मानी
+
+चादर हो गई बहुत पुरानी
+अब सोच समझ अभिमानी
+
+मैले दाग पड़े पापन के
+विषयन में लिपटानी
+ज्ञान के हाथों लाय के धोवो
+सत्संगत के पानी
+
+चादर हो गई बहुत पुरानी
+अब सोच समझ अभिमानी
+
+भई मैली और भीगी सारी
+लोभ मोह में सानी
+ऐसे ही ओढ़त उमर गँवाई
+भली बुरी नहीं जानी
+
+चादर हो गई बहुत पुरानी
+अब सोच समझ अभिमानी
+
+शंका मति जान जिया अपने
+है यह वस्तु बिरानी
+कहे कबीर इसे राख जतन से
+यह फिर हाथ न आनी
+
+चादर हो गई बहुत पुरानी
+अब सोच समझ अभिमानी`,
+    thumbnail_url: BEST_OF_ANUP_JALOTA_COVER,
+    cover_url: BEST_OF_ANUP_JALOTA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["bhajan", "devotion", "hindi"],
+  },
+  "aayega-jab-re-bulawa-hari-ka-anup-jalota": {
+    title: "Aayega Jab Re Bulawa Hari Ka",
+    artist_version: "Anup Jalota",
+    audio_url: "/audio/albums/best-of-anup-jalota-bhajans/06-aayega-jab-re-bulawa-hari-ka.mp3",
+    roman_lyrics: `Aayega jab re bulaawa Hari ka
+Chhod ke sab kuchh jaana padega
+
+Naam Hari ka saath jaayega
+Aur tu kuchh na le paayega
+
+Aayega jab re bulaawa Hari ka
+Chhod ke sab kuchh jaana padega
+
+Raag dvesh mein Hari bisraayo
+Bhool ke nij ko janam ganvaayo
+
+Aayega jab re bulaawa Hari ka
+Chhod ke sab kuchh jaana padega
+
+Sumiran ki saachi kamaai
+Jhoothi jag ki sab hai sagaai
+
+Aayega jab re bulaawa Hari ka
+Chhod ke sab kuchh jaana padega
+
+Arzi kar tu Hari se aisi
+Bhakti mile Meera ki jaisi
+
+Aayega jab re bulaawa Hari ka
+Chhod ke sab kuchh jaana padega
+
+Haath tere jeevan ki baazi
+Bhakti se kar tu Hari ko raazi
+
+Aayega jab re bulaawa Hari ka
+Chhod ke sab kuchh jaana padega
+
+Naam Hari ka saath jaayega
+Aur tu kuchh na le paayega
+
+Aayega jab re bulaawa Hari ka
+Chhod ke sab kuchh jaana padega`,
+    devanagari_lyrics: `आएगा जब रे बुलावा हरि का
+छोड़ के सब कुछ जाना पड़ेगा
+
+नाम हरि का साथ जाएगा
+और तू कुछ न ले पाएगा
+
+आएगा जब रे बुलावा हरि का
+छोड़ के सब कुछ जाना पड़ेगा
+
+राग द्वेष में हरि बिसरायो
+भूल के निज को जनम गँवायो
+
+आएगा जब रे बुलावा हरि का
+छोड़ के सब कुछ जाना पड़ेगा
+
+सुमिरन की साची कमाई
+झूठी जग की सब है सगाई
+
+आएगा जब रे बुलावा हरि का
+छोड़ के सब कुछ जाना पड़ेगा
+
+अर्ज़ी कर तू हरि से ऐसी
+भक्ति मिले मीरा की जैसी
+
+आएगा जब रे बुलावा हरि का
+छोड़ के सब कुछ जाना पड़ेगा
+
+हाथ तेरे जीवन की बाज़ी
+भक्ति से कर तू हरि को राज़ी
+
+आएगा जब रे बुलावा हरि का
+छोड़ के सब कुछ जाना पड़ेगा
+
+नाम हरि का साथ जाएगा
+और तू कुछ न ले पाएगा
+
+आएगा जब रे बुलावा हरि का
+छोड़ के सब कुछ जाना पड़ेगा`,
+    thumbnail_url: BEST_OF_ANUP_JALOTA_COVER,
+    cover_url: BEST_OF_ANUP_JALOTA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["bhajan", "devotion", "hindi"],
+  },
+  "sun-nath-arj-ab-meri-anup-jalota": {
+    title: "Sun Nath Arj Ab Meri",
+    artist_version: "Anup Jalota",
+    audio_url: "/audio/albums/best-of-anup-jalota-bhajans/07-sun-nath-arj-ab-meri.mp3",
+    roman_lyrics: `Sun Naath araj ab meri
+Main sharan pada Prabhu teri
+
+Tum maanush tan mohe deenha
+Bhajan nahin tumharo keenha
+Vishayon ne lai mati gheri
+
+Main sharan pada Prabhu teri
+
+Sut daaradik yah parivaara
+Sab swaarath ka hai sansaara
+Jin hetu paap kiye dheri
+
+Main sharan pada Prabhu teri
+
+Maaya mein yah jeev bhulaaya
+Roop nahin par tumharo jaana
+Pada janam maran ki pheri
+
+Main sharan pada Prabhu teri
+
+Bhavsaagar mein neer apaara
+Mohe kripaalu Prabhu kar ubaara
+Brahmaanand karo nahin deri
+
+Main sharan pada Prabhu teri`,
+    devanagari_lyrics: `सुन नाथ अरज अब मेरी
+मैं शरण पड़ा प्रभु तेरी
+
+तुम मानुष तन मोहे दीन्हा
+भजन नहीं तुम्हारो कीन्हा
+विषयों ने लई मति घेरी
+
+मैं शरण पड़ा प्रभु तेरी
+
+सुत दारादिक यह परिवारा
+सब स्वारथ का है संसारा
+जिन हेतु पाप किये ढेरी
+
+मैं शरण पड़ा प्रभु तेरी
+
+माया में यह जीव भुलाया
+रूप नहीं पर तुम्हारो जाना
+पड़ा जनम मरण की फेरी
+
+मैं शरण पड़ा प्रभु तेरी
+
+भवसागर में नीर अपारा
+मोहे कृपालु प्रभु कर उबारा
+ब्रह्मानंद करो नहीं देरी
+
+मैं शरण पड़ा प्रभु तेरी`,
+    thumbnail_url: BEST_OF_ANUP_JALOTA_COVER,
+    cover_url: BEST_OF_ANUP_JALOTA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["bhajan", "devotion", "hindi"],
+  },
+  "man-laga-mera-yaar-fakiri-mein-anup-jalota": {
+    title: "Man Laga Mera Yaar Fakiri Mein",
+    artist_version: "Anup Jalota",
+    audio_url: "/audio/albums/best-of-anup-jalota-bhajans/08-man-laga-mera-yaar-fakiri-mein.mp3",
+    roman_lyrics: `Man laga mera yaar fakiri mein
+
+Jo sukh paaya Ram bhajan mein
+So sukh naahin ameeri mein
+Bhala bura sab ka sun leeje
+Kar guzaraan ghareebi mein
+
+Man laga mera yaar fakiri mein
+
+Prem nagar mein rahani hamaari
+Bhali bani aayi saboori mein
+Haath mein kundi, bagal mein sota
+Chaaron disha jaageeri mein
+
+Man laga mera yaar fakiri mein
+
+Aakhir yah tan khaak milega
+Kahaan phirat magroori mein
+Kahat Kabir suno bhai saadho
+Saahib mile saboori mein
+
+Man laga mera yaar fakiri mein`,
+    devanagari_lyrics: `मन लागा मेरा यार फ़कीरी में
+
+जो सुख पाया राम भजन में
+सो सुख नाहीं अमीरी में
+भला बुरा सब का सुन लीजे
+कर गुज़रान ग़रीबी में
+
+मन लागा मेरा यार फ़कीरी में
+
+प्रेम नगर में रहनी हमारी
+भली बनी आई सबूरी में
+हाथ में कुंडी, बगल में सोटा
+चारों दिशा जागीरी में
+
+मन लागा मेरा यार फ़कीरी में
+
+आख़िर यह तन ख़ाक मिलेगा
+कहाँ फिरत मगरूरी में
+कहत कबीर सुनो भाई साधो
+साहिब मिले सबूरी में
+
+मन लागा मेरा यार फ़कीरी में`,
+    thumbnail_url: BEST_OF_ANUP_JALOTA_COVER,
+    cover_url: BEST_OF_ANUP_JALOTA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["bhajan", "devotion", "hindi"],
+  },
+  "mohe-lagi-lagan-guru-charanan-ki-anup-jalota": {
+    title: "Mohe Lagi Lagan Guru Charanan Ki",
+    artist_version: "Anup Jalota",
+    audio_url: "/audio/albums/best-of-anup-jalota-bhajans/09-mohe-lagi-lagan-guru-charanan-ki.mp3",
+    roman_lyrics: `Mohe laagi lagan guru charanan ki
+Guru charanan ki, guru charanan ki
+
+Charan bina mohe kachhu nahin bhaave
+Jag maaya sab sapanan ki
+
+Mohe laagi lagan guru charanan ki
+Guru charanan ki, guru charanan ki
+
+Bhavsaagar sab sookh gaye hain
+Fikar nahin mohe tarne ki
+
+Mohe laagi lagan guru charanan ki
+Guru charanan ki, guru charanan ki
+
+Meera ke Prabhu Giridhar Naagar
+Aas lagi guru charanan ki
+
+Mohe laagi lagan guru charanan ki
+Guru charanan ki, guru charanan ki`,
+    devanagari_lyrics: `मोहे लागी लगन गुरु चरणन की
+गुरु चरणन की, गुरु चरणन की
+
+चरण बिना मोहे कछु नहीं भावे
+जग माया सब सपनन की
+
+मोहे लागी लगन गुरु चरणन की
+गुरु चरणन की, गुरु चरणन की
+
+भवसागर सब सूख गए हैं
+फ़िकर नहीं मोहे तरने की
+
+मोहे लागी लगन गुरु चरणन की
+गुरु चरणन की, गुरु चरणन की
+
+मीरा के प्रभु गिरिधर नागर
+आस लगी गुरु चरणन की
+
+मोहे लागी लगन गुरु चरणन की
+गुरु चरणन की, गुरु चरणन की`,
+    thumbnail_url: BEST_OF_ANUP_JALOTA_COVER,
+    cover_url: BEST_OF_ANUP_JALOTA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["bhajan", "devotion", "hindi"],
+  },
+  "do-din-ka-jag-mein-mela-anup-jalota": {
+    title: "Do Din Ka Jag Mein Mela",
+    artist_version: "Anup Jalota",
+    audio_url: "/audio/albums/best-of-anup-jalota-bhajans/10-do-din-ka-jag-mein-mela.mp3",
+    roman_lyrics: `Chalti chaaki dekh kar, diya Kabira roye
+Do paatan ke beech mein, saabut bacha na koy
+
+Do din ka jag mein mela
+Sab chala chali ka khela
+
+Koi chala gaya, koi jaave
+Koi gathri baandh sidhaave ji
+Koi khada taiyaar akela re
+Chala chali ka khela re
+
+Do din ka jag mein mela
+Sab chala chali ka khela
+
+Maat pita sut naari bhaai
+Ant sahaayak naahin
+Phir kyoon bharta paap ka thela re
+Chala chali ka khela re
+
+Do din ka jag mein mela
+Sab chala chali ka khela
+
+Ye to hai nashvar sansaara
+Bhajan kar le Eesh ka pyaara
+Brahmaanand kahe sun chela re
+Chala chali ka khela re
+
+Do din ka jag mein mela
+Sab chala chali ka khela`,
+    devanagari_lyrics: `चलती चाकी देख कर, दिया कबीरा रोय
+दो पाटन के बीच में, साबुत बचा न कोय
+
+दो दिन का जग में मेला
+सब चला चली का खेला
+
+कोई चला गया, कोई जावे
+कोई गठरी बाँध सिधावे जी
+कोई खड़ा तैयार अकेला रे
+चला चली का खेला रे
+
+दो दिन का जग में मेला
+सब चला चली का खेला
+
+मात पिता सुत नारी भाई
+अंत सहायक नाहीं
+फिर क्यों भरता पाप का ठेला रे
+चला चली का खेला रे
+
+दो दिन का जग में मेला
+सब चला चली का खेला
+
+ये तो है नश्वर संसारा
+भजन कर ले ईश का प्यारा
+ब्रह्मानंद कहे सुन चेला रे
+चला चली का खेला रे
+
+दो दिन का जग में मेला
+सब चला चली का खेला`,
+    thumbnail_url: BEST_OF_ANUP_JALOTA_COVER,
+    cover_url: BEST_OF_ANUP_JALOTA_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["bhajan", "devotion", "hindi"],
+  },
   "shyam-chabi": {
     title: "Shyam Chabi",
     artist_version: "Sam Boodram",

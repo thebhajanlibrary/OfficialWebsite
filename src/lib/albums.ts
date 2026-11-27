@@ -33,6 +33,26 @@ export type Album = {
  */
 const ALBUM_CATALOGUE: Album[] = [
   {
+    slug: "best-of-anup-jalota-bhajans",
+    title: "Best of Anup Jalota Bhajans",
+    artist: "Anup Jalota",
+    label: "Wings",
+    description: "Ten bhajans sung by Anup Jalota, opening with Aisi Laagi Lagan.",
+    cover_url: "/images/albums/best-of-anup-jalota-bhajans.png",
+    track_slugs: [
+      "aisi-laagi-lagan-anup-jalota",
+      "naam-japan-kyoon-chhod-diya-anup-jalota",
+      "ud-jayega-hans-akela-anup-jalota",
+      "kyoon-paani-mein-malmal-nahaye-anup-jalota",
+      "chadar-ho-gayee-bahut-purani-anup-jalota",
+      "aayega-jab-re-bulawa-hari-ka-anup-jalota",
+      "sun-nath-arj-ab-meri-anup-jalota",
+      "man-laga-mera-yaar-fakiri-mein-anup-jalota",
+      "mohe-lagi-lagan-guru-charanan-ki-anup-jalota",
+      "do-din-ka-jag-mein-mela-anup-jalota",
+    ],
+  },
+  {
     slug: "aarti-archan-hari-om-sharan",
     title: "Aarti Archan",
     artist: "Hari Om Sharan & Nandini Sharan",
