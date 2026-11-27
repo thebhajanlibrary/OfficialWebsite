@@ -33,6 +33,27 @@ export type Album = {
  */
 const ALBUM_CATALOGUE: Album[] = [
   {
+    slug: "sankirtan-swami-tejomayananda",
+    title: "Sankirtan",
+    artist: "Swami Tejomayananda",
+    label: "Chinmaya Mission",
+    description: "Eleven devotional chants from Swami Tejomayananda’s Sankirtan DVD, in disc order.",
+    cover_url: "/images/albums/sankirtan-swami-tejomayananda.jpg",
+    track_slugs: [
+      "parvati-nandana-gajanana-swami-tejomayananda",
+      "jai-sadguru-omkara-swami-tejomayananda",
+      "shri-ram-jai-ram-jai-jai-ram-swami-tejomayananda",
+      "om-namah-shivaya-swami-tejomayananda",
+      "hey-natha-narayana-vasudeva-swami-tejomayananda",
+      "parameshwara-pralayankara-swami-tejomayananda",
+      "govinda-govinda-swami-tejomayananda",
+      "shri-krishna-kunj-bihari-swami-tejomayananda",
+      "hari-bol-swami-tejomayananda",
+      "jai-jai-jai-janaki-vallabh-swami-tejomayananda",
+      "rama-rama-sita-rama-swami-tejomayananda",
+    ],
+  },
+  {
     slug: "best-of-anup-jalota-bhajans",
     title: "Best of Anup Jalota Bhajans",
     artist: "Anup Jalota",

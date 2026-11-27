@@ -1585,12 +1585,136 @@ I do not want a coloured palace, nor the glory of wealth
 From you, Master, I ask only the gift of contentment`;
 
 const BEST_OF_ANUP_JALOTA_COVER = "/images/albums/best-of-anup-jalota-bhajans.png";
+const SANKIRTAN_COVER = "/images/albums/sankirtan-swami-tejomayananda.jpg";
 
 export const BHAJAN_CONTENT: Record<string, BhajanContent> = {
+  "parvati-nandana-gajanana-swami-tejomayananda": {
+    title: "Parvati Nandana Gajanana",
+    artist_version: "Swami Tejomayananda",
+    audio_url: "/audio/albums/sankirtan-swami-tejomayananda/01.mp3",
+    thumbnail_url: SANKIRTAN_COVER,
+    cover_url: SANKIRTAN_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["ganesh", "bhajan", "devotion"],
+  },
+  "jai-sadguru-omkara-swami-tejomayananda": {
+    title: "Jai Sadguru Omkara",
+    artist_version: "Swami Tejomayananda",
+    audio_url: "/audio/albums/sankirtan-swami-tejomayananda/02.mp3",
+    thumbnail_url: SANKIRTAN_COVER,
+    cover_url: SANKIRTAN_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["guru", "bhajan", "devotion"],
+  },
+  "shri-ram-jai-ram-jai-jai-ram-swami-tejomayananda": {
+    title: "Shri Ram Jai Ram Jai Jai Ram",
+    artist_version: "Swami Tejomayananda",
+    audio_url: "/audio/albums/sankirtan-swami-tejomayananda/03.mp3",
+    thumbnail_url: SANKIRTAN_COVER,
+    cover_url: SANKIRTAN_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["ram", "bhajan", "devotion"],
+  },
+  "om-namah-shivaya-swami-tejomayananda": {
+    title: "Om Namah Shivaya",
+    artist_version: "Swami Tejomayananda",
+    audio_url: "/audio/albums/sankirtan-swami-tejomayananda/04.mp3",
+    thumbnail_url: SANKIRTAN_COVER,
+    cover_url: SANKIRTAN_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["shiva", "bhajan", "devotion"],
+  },
+  "hey-natha-narayana-vasudeva-swami-tejomayananda": {
+    title: "Hey Natha Narayana Vasudeva",
+    artist_version: "Swami Tejomayananda",
+    audio_url: "/audio/albums/sankirtan-swami-tejomayananda/05.mp3",
+    thumbnail_url: SANKIRTAN_COVER,
+    cover_url: SANKIRTAN_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["vishnu", "bhajan", "devotion"],
+  },
+  "parameshwara-pralayankara-swami-tejomayananda": {
+    title: "Parameshwara Pralayankara",
+    artist_version: "Swami Tejomayananda",
+    audio_url: "/audio/albums/sankirtan-swami-tejomayananda/06.mp3",
+    thumbnail_url: SANKIRTAN_COVER,
+    cover_url: SANKIRTAN_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["shiva", "bhajan", "devotion"],
+  },
+  "govinda-govinda-swami-tejomayananda": {
+    title: "Govinda Govinda",
+    artist_version: "Swami Tejomayananda",
+    audio_url: "/audio/albums/sankirtan-swami-tejomayananda/07.mp3",
+    thumbnail_url: SANKIRTAN_COVER,
+    cover_url: SANKIRTAN_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "bhajan", "devotion"],
+  },
+  "shri-krishna-kunj-bihari-swami-tejomayananda": {
+    title: "Shri Krishna Kunj Bihari",
+    artist_version: "Swami Tejomayananda",
+    audio_url: "/audio/albums/sankirtan-swami-tejomayananda/08.mp3",
+    thumbnail_url: SANKIRTAN_COVER,
+    cover_url: SANKIRTAN_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["krishna", "bhajan", "devotion"],
+  },
+  "hari-bol-swami-tejomayananda": {
+    title: "Hari Bol",
+    artist_version: "Swami Tejomayananda",
+    audio_url: "/audio/albums/sankirtan-swami-tejomayananda/09.mp3",
+    thumbnail_url: SANKIRTAN_COVER,
+    cover_url: SANKIRTAN_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["bhajan", "devotion"],
+  },
+  "jai-jai-jai-janaki-vallabh-swami-tejomayananda": {
+    title: "Jai Jai Jai Janaki Vallabh",
+    artist_version: "Swami Tejomayananda",
+    audio_url: "/audio/albums/sankirtan-swami-tejomayananda/10.mp3",
+    thumbnail_url: SANKIRTAN_COVER,
+    cover_url: SANKIRTAN_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["ram", "bhajan", "devotion"],
+  },
+  "rama-rama-sita-rama-swami-tejomayananda": {
+    title: "Rama Rama Sita Rama",
+    artist_version: "Swami Tejomayananda",
+    audio_url: "/audio/albums/sankirtan-swami-tejomayananda/11.mp3",
+    thumbnail_url: SANKIRTAN_COVER,
+    cover_url: SANKIRTAN_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["ram", "bhajan", "devotion"],
+  },
   "aisi-laagi-lagan-anup-jalota": {
     title: "Aisi Laagi Lagan",
     artist_version: "Anup Jalota",
     audio_url: "/audio/albums/best-of-anup-jalota-bhajans/01-aisi-laagi-lagan.mp3",
+    translation: `Such was Meera's devotion that she lost herself in it.
+She went from lane to lane singing Hari's praises.
+Raised in palaces, she set out as a wandering ascetic.
+People began calling Queen Meera mad with love.
+
+No one stops her, no one reproaches her.
+Meera began singing the names Govind and Gopal.
+She sat among the saints, dyed in Mohan's colours.
+Meera, the lover, began to woo her Beloved.
+
+Such was Meera's devotion that she lost herself in it.
+She went from lane to lane singing Hari's praises.
+Raised in palaces, she set out as a wandering ascetic.
+People began calling Queen Meera mad with love.
+
+The Rana gave her poison, yet she drank it as if it were nectar.
+Meera began to merge with the ocean like a river.
+She bore countless sorrows and spoke the name Govind.
+Meera began singing the names Govind and Gopal.
+
+Such was Meera's devotion that she lost herself in it.
+She went from lane to lane singing Hari's praises.
+Raised in palaces, she set out as a wandering ascetic.
+People began calling Queen Meera mad with love.`,
     roman_lyrics: `Aisi laagi lagan, Meera ho gayi magan
 Woh to gali gali Hari gun gaane lagi
 Mahalon mein pali, ban ke jogan chali
@@ -1648,6 +1772,37 @@ Meera rani deewani kahaane lagi`,
     title: "Naam Japan Kyoon Chhod Diya",
     artist_version: "Anup Jalota",
     audio_url: "/audio/albums/best-of-anup-jalota-bhajans/02-naam-japan-kyoon-chhod-diya.mp3",
+    translation: `Why did you stop repeating God's name?
+You kept your anger and your lies.
+Why did you give up speaking the truth?
+
+You let this deceptive world entice your heart.
+Why did you leave your true home?
+
+You kept your anger and your lies.
+Why did you give up speaking the truth?
+Why did you stop repeating God's name?
+
+You took such care to save a worthless shell.
+Why did you throw away the ruby?
+
+You kept your anger and your lies.
+Why did you give up speaking the truth?
+Why did you stop repeating God's name?
+
+Remembering God brings deep joy.
+Why did you give up that remembrance?
+
+You kept your anger and your lies.
+Why did you give up speaking the truth?
+Why did you stop repeating God's name?
+
+Put your trust in God alone.
+Why have you held back your body, mind and wealth?
+
+You kept your anger and your lies.
+Why did you give up speaking the truth?
+Why did you stop repeating God's name?`,
     roman_lyrics: `Toone naam japan kyoon chhod diya
 Krodh na chhoda, jhooth na chhoda
 Satya vachan kyoon chhod diya
@@ -1719,6 +1874,38 @@ Toone naam japan kyoon chhod diya`,
     title: "Ud Jayega Hans Akela",
     artist_version: "Anup Jalota",
     audio_url: "/audio/albums/best-of-anup-jalota-bhajans/03-ud-jayega-hans-akela.mp3",
+    translation: `The swan will fly away alone.
+This world's spectacle is a fair that lasts two days.
+
+The king will go, and so will the ascetic.
+The guru will go, and so will the disciple.
+
+The swan will fly away alone.
+This world's spectacle is a fair that lasts two days.
+
+Mother, father, brothers and kin will go too.
+So will that bag of money.
+
+The swan will fly away alone.
+This world's spectacle is a fair that lasts two days.
+
+You will go, and all that is yours will go too.
+Such is the play of worldly illusion.
+
+The swan will fly away alone.
+This world's spectacle is a fair that lasts two days.
+
+Shell by shell, you piled up your wealth.
+You will take none of it with you.
+
+The swan will fly away alone.
+This world's spectacle is a fair that lasts two days.
+
+My friend, your companions have reached the far shore.
+Why have you stayed behind alone?
+
+The swan will fly away alone.
+This world's spectacle is a fair that lasts two days.`,
     roman_lyrics: `Ud jaayega hans akela
 Do din ka darshan mela
 
@@ -1792,6 +1979,35 @@ Do din ka darshan mela`,
     title: "Kyoon Paani Mein Malmal Nahaye",
     artist_version: "Anup Jalota",
     audio_url: "/audio/albums/best-of-anup-jalota-bhajans/04-kyoon-paani-mein-malmal-nahaye.mp3",
+    translation: `An age has passed turning prayer beads, yet the mind keeps its old ways.
+Set down the beads in your hand and turn the beads of your mind.
+
+Why scrub yourself over and over in water?
+Wash the grime from your mind, dear soul.
+
+You still cling to harmful deeds.
+How will you change, dear friend?
+
+Why scrub yourself over and over in water?
+Wash the grime from your mind, dear soul.
+
+This body is made of bone and flesh.
+Its nine openings are always discharging, dear friend.
+
+Why scrub yourself over and over in water?
+Wash the grime from your mind, dear soul.
+
+The company of the devout is as pure as water at a holy place.
+Rise each day and plunge into it, dear friend.
+
+Why scrub yourself over and over in water?
+Wash the grime from your mind, dear soul.
+
+Brahmanand urges you to sing Hari's praises.
+Do so if you seek liberation, dear friend.
+
+Why scrub yourself over and over in water?
+Wash the grime from your mind, dear soul.`,
     roman_lyrics: `Maala pherat jug gaya, gaya na man ka pher
 Kar ka manka daar de, man ka manka pher
 
@@ -1859,6 +2075,40 @@ Man ki mail utaar ho praani`,
     title: "Chadar Ho Gayee Bahut Purani",
     artist_version: "Anup Jalota",
     audio_url: "/audio/albums/best-of-anup-jalota-bhajans/05-chadar-ho-gayee-bahut-purani.mp3",
+    translation: `The cloth has grown very old.
+Think carefully now, you who are so proud.
+
+A wondrous weaver wove this cloth.
+The threads of our deeds formed its warp.
+Awareness and contemplation formed its weft.
+The finished cloth delighted every heart.
+
+The cloth has grown very old.
+Think carefully now, you who are so proud.
+
+It took on the stains of wrongdoing.
+It became wrapped up in sensual pleasures.
+Take it in the hands of wisdom and wash it.
+Wash it in the waters of holy company.
+
+The cloth has grown very old.
+Think carefully now, you who are so proud.
+
+It grew dirty and soaked right through.
+It was steeped in greed and attachment.
+Wearing it this way, you let your years slip by.
+You never learned to tell right from wrong.
+
+The cloth has grown very old.
+Think carefully now, you who are so proud.
+
+Have no doubt about it in your heart.
+This cloth is on loan to you.
+Kabir says to look after it with care.
+You will never get it back again.
+
+The cloth has grown very old.
+Think carefully now, you who are so proud.`,
     roman_lyrics: `Chaadar ho gayi bahut puraani
 Ab soch samajh abhimaani
 
@@ -1936,6 +2186,44 @@ Ab soch samajh abhimaani`,
     title: "Aayega Jab Re Bulawa Hari Ka",
     artist_version: "Anup Jalota",
     audio_url: "/audio/albums/best-of-anup-jalota-bhajans/06-aayega-jab-re-bulawa-hari-ka.mp3",
+    translation: `When Hari's summons comes,
+You will have to leave everything behind.
+
+Hari's name will go with you.
+You will be able to take nothing else.
+
+When Hari's summons comes,
+You will have to leave everything behind.
+
+Lost in attachment and aversion, you forgot Hari.
+Forgetting your true self, you wasted your life.
+
+When Hari's summons comes,
+You will have to leave everything behind.
+
+Remembering Hari is the wealth that lasts.
+All the ties of this world are fleeting.
+
+When Hari's summons comes,
+You will have to leave everything behind.
+
+Make this prayer to Hari.
+May you receive devotion like Meera's.
+
+When Hari's summons comes,
+You will have to leave everything behind.
+
+The course of your life is in your hands.
+Gladden Hari with your devotion.
+
+When Hari's summons comes,
+You will have to leave everything behind.
+
+Hari's name will go with you.
+You will be able to take nothing else.
+
+When Hari's summons comes,
+You will have to leave everything behind.`,
     roman_lyrics: `Aayega jab re bulaawa Hari ka
 Chhod ke sab kuchh jaana padega
 
@@ -2021,6 +2309,32 @@ Chhod ke sab kuchh jaana padega`,
     title: "Sun Nath Arj Ab Meri",
     artist_version: "Anup Jalota",
     audio_url: "/audio/albums/best-of-anup-jalota-bhajans/07-sun-nath-arj-ab-meri.mp3",
+    translation: `Lord, hear my plea now.
+I have come to take refuge in you, Lord.
+
+You gave me this human body.
+I failed to offer you my devotion.
+Sensual pleasures took hold of my mind.
+
+I have come to take refuge in you, Lord.
+
+Children, spouse and the rest of this family,
+This whole world is bound by self-interest.
+For their sake I piled up countless wrongs.
+
+I have come to take refuge in you, Lord.
+
+This soul lost its way in worldly illusion.
+I failed to recognise your true form.
+I fell into the cycle of birth and death.
+
+I have come to take refuge in you, Lord.
+
+The ocean of worldly existence is boundless.
+Compassionate Lord, carry me to safety.
+Brahmanand prays that you come without delay.
+
+I have come to take refuge in you, Lord.`,
     roman_lyrics: `Sun Naath araj ab meri
 Main sharan pada Prabhu teri
 
@@ -2082,6 +2396,28 @@ Main sharan pada Prabhu teri`,
     title: "Man Laga Mera Yaar Fakiri Mein",
     artist_version: "Anup Jalota",
     audio_url: "/audio/albums/best-of-anup-jalota-bhajans/08-man-laga-mera-yaar-fakiri-mein.mp3",
+    translation: `My friend, my heart has found its home in the simple life of a fakir.
+
+The joy I found in singing Ram's praises
+Is a joy that riches cannot give.
+Listen to whatever people say, whether kind or cruel.
+Make your way through life with little.
+
+My friend, my heart has found its home in the simple life of a fakir.
+
+I make my home in the city of love.
+I have found contentment in patience.
+With a bowl in my hand and a staff at my side,
+I have the whole world for my estate.
+
+My friend, my heart has found its home in the simple life of a fakir.
+
+In the end, this body will return to dust.
+Why strut about so proudly?
+Kabir says, listen, fellow seekers.
+Through patience you will find the Lord.
+
+My friend, my heart has found its home in the simple life of a fakir.`,
     roman_lyrics: `Man laga mera yaar fakiri mein
 
 Jo sukh paaya Ram bhajan mein
@@ -2135,6 +2471,26 @@ Man laga mera yaar fakiri mein`,
     title: "Mohe Lagi Lagan Guru Charanan Ki",
     artist_version: "Anup Jalota",
     audio_url: "/audio/albums/best-of-anup-jalota-bhajans/09-mohe-lagi-lagan-guru-charanan-ki.mp3",
+    translation: `My heart is devoted to the feet of my guru.
+To the feet of my guru, to the feet of my guru.
+
+Away from those feet, nothing brings me joy.
+All the world's illusions are dreams.
+
+My heart is devoted to the feet of my guru.
+To the feet of my guru, to the feet of my guru.
+
+The ocean of worldly existence has dried up.
+I no longer worry about crossing it.
+
+My heart is devoted to the feet of my guru.
+To the feet of my guru, to the feet of my guru.
+
+O Giridhar, Meera's Lord,
+My hope rests at the feet of my guru.
+
+My heart is devoted to the feet of my guru.
+To the feet of my guru, to the feet of my guru.`,
     roman_lyrics: `Mohe laagi lagan guru charanan ki
 Guru charanan ki, guru charanan ki
 
@@ -2184,6 +2540,35 @@ Guru charanan ki, guru charanan ki`,
     title: "Do Din Ka Jag Mein Mela",
     artist_version: "Anup Jalota",
     audio_url: "/audio/albums/best-of-anup-jalota-bhajans/10-do-din-ka-jag-mein-mela.mp3",
+    translation: `Seeing the mill turn, Kabir began to weep.
+Nothing comes out whole between the two grinding stones.
+
+The fair of this world lasts only two days.
+Everyone is on their way out.
+
+One has gone, and another is leaving.
+Someone ties up their bundle and sets off.
+Someone stands alone, ready to leave.
+Everyone is on their way out.
+
+The fair of this world lasts only two days.
+Everyone is on their way out.
+
+Mother, father, child, wife and brother
+Cannot help you at the end.
+Why then keep loading your cart with wrongs?
+Everyone is on their way out.
+
+The fair of this world lasts only two days.
+Everyone is on their way out.
+
+This world is fleeting.
+Sing the Lord's praises, dear friend.
+Brahmanand says, listen, disciple.
+Everyone is on their way out.
+
+The fair of this world lasts only two days.
+Everyone is on their way out.`,
     roman_lyrics: `Chalti chaaki dekh kar, diya Kabira roye
 Do paatan ke beech mein, saabut bacha na koy
 
