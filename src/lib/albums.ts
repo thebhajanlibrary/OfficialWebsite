@@ -34,13 +34,31 @@ export type Album = {
  */
 const ALBUM_CATALOGUE: Album[] = [
   {
+    slug: "shanti-bhajans-shri-prakash-gossai",
+    title: "Shanti Bhajans",
+    artist: "Shri Prakash Gossai",
+    year: 2012,
+    description: "Shri Prakash Gossai's Shanti Bhajans, with seven recordings from the release available here.",
+    cover_url: "/images/albums/shanti-bhajans-shri-prakash-gossai.jpg",
+    track_slugs: [
+      "aaj-suno-hum-geet-shri-prakash-gossai",
+      "mai-hoon-aaya-hai-tere-dwaar-shri-prakash-gossai",
+      "koee-kahay-tujhe-ram-shri-prakash-gossai",
+      "bhole-naath-se-nirala-shri-prakash-gossai",
+      "kabhi-pyaase-shri-prakash-gossai",
+      "balaji-kahaaya-shri-prakash-gossai",
+      "bhajtaa-nahi-shri-prakash-gossai",
+    ],
+  },
+  {
     slug: "bhagavata-sankirtan",
     title: "Bhagavata Sankirtan",
     artist: "Swami Tejomayananda",
     label: "Central Chinmaya Mission Trust",
-    description: "Seventeen devotional chants with Romanized refrains and English translations.",
+    description: "The 17-track Chinmaya Mission release. Read the chant refrains with English translations and listen on Apple Music.",
     cover_url: "/images/albums/bhagavata-sankirtan.jpeg",
     listen_url: "https://music.apple.com/us/album/bhagavata-sankirtan/1224530980",
+    omit_from_library: true,
     track_slugs: [
       "shri-krishna-govinda-hare-murari-bhagavata-sankirtan",
       "jaya-jaya-govinda-bhagavata-sankirtan",
@@ -106,7 +124,7 @@ const ALBUM_CATALOGUE: Album[] = [
     title: "Sankirtan",
     artist: "Swami Tejomayananda",
     label: "Chinmaya Mission",
-    description: "Eleven devotional chants from Swami Tejomayananda’s Sankirtan DVD, in disc order.",
+    description: "The 11-track recording, opening with Parvati Nandana Gajanana. Play the chants here and follow the refrains in English.",
     cover_url: "/images/albums/sankirtan-swami-tejomayananda.jpg",
     track_slugs: [
       "parvati-nandana-gajanana-swami-tejomayananda",

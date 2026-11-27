@@ -337,7 +337,9 @@ export default async function AlbumDetailPage({ params }: Props) {
 
           <ol className="mt-6 border-t border-border/80">
             {tracks.map((track, i) => {
-              const href = bhajanPlayHref(track.slug, playQueue);
+              const href = queueTracks.length > 0
+                ? bhajanPlayHref(track.slug, playQueue)
+                : `/bhajans/${track.slug}`;
               return (
                 <li
                   key={track.id}

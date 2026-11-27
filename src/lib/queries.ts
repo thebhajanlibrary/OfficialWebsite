@@ -804,7 +804,9 @@ export async function resolvePlayQueueSlugs(
 ): Promise<string[]> {
   if (queue.kind === "album") {
     const data = await getAlbumWithTracks(queue.id);
-    return data?.tracks.map((t) => t.slug) ?? [];
+    return data?.tracks
+      .filter((t) => t.audio_url || t.youtube_url || t.video_url)
+      .map((t) => t.slug) ?? [];
   }
   if (queue.kind === "folder") {
     if (queue.id === "wedding") {
@@ -840,7 +842,9 @@ export async function resolvePlayQueueSlugs(
       .map((b) => b.slug);
   }
   const data = await getArtistBySlug(queue.id);
-  return data?.bhajans.map((b) => b.slug) ?? [];
+  return data?.bhajans
+    .filter((b) => b.audio_url || b.youtube_url || b.video_url)
+    .map((b) => b.slug) ?? [];
 }
 
 /** Full track payloads for continuous play (audio / YouTube / site video). */

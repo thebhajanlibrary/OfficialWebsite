@@ -1592,7 +1592,400 @@ const SWEET_SHIVA_BHAJANS_COVER = "/images/albums/sweet-shiva-bhajans.jpg";
 
 const BHAGAVATA_SANKIRTAN_COVER = "/images/albums/bhagavata-sankirtan.jpeg";
 
+const SHANTI_BHAJANS_COVER = "/images/albums/shanti-bhajans-shri-prakash-gossai.jpg";
+
 export const BHAJAN_CONTENT: Record<string, BhajanContent> = {
+  "jai-ganaraya-sri-ganaraya-shri-prakash-gossai": {
+    title: "Jai Ganaraya Sri Ganaraya",
+    artist_version: "Shri Prakash Gossai",
+    display_order: 522,
+    audio_url: "/audio/jai-ganaraya-sri-ganaraya-shri-prakash-gossai.mp3",
+    roman_lyrics: `## Refrain
+
+Jai Ganaraya, Sri Ganaraya
+Jai Ganaraya, Sri Ganaraya, mangal moorti Morya
+
+## Invocations
+
+Siddhi Vinayaka, mangal daata
+Ashta Vinayaka, mangal daayaka, mangal moorti Morya
+Sindura vadana, pankaja charana
+Ganapati Bappa Morya`,
+    translation: `## Refrain
+
+Glory to Ganaraya, glorious Lord Ganesha.
+Glory to Lord Ganesha, the embodiment of blessing. Morya!
+
+## Invocations
+
+O Siddhi Vinayaka, giver of success and good fortune.
+O Vinayaka in eight forms, giver and embodiment of blessings. Morya!
+Your face is vermilion and your feet are like lotuses.
+Glory to Ganapati, our beloved Lord. Morya!`,
+    thumbnail_url: "/images/shri-prakash-gossai.png",
+    cover_url: "/images/shri-prakash-gossai.png",
+    player_cover_aspect: "square",
+    category_slugs: ["ganesh", "bhajan", "devotion", "hindi"],
+  },
+  "mai-hoon-aaya-hai-tere-dwaar-shri-prakash-gossai": {
+    title: "Mai Hoon Aaya Hai Tere Dwaar",
+    alternate_title: "Mai Hoon Aaye Hai Tere Dwaar",
+    artist_version: "Shri Prakash Gossai",
+    display_order: 523,
+    audio_url: "/audio/albums/shanti-bhajans-shri-prakash-gossai/02.mp3",
+    roman_lyrics: `## Refrain
+
+Main hoon aaya tere dwaar, jai Mahalakshmi Maa
+Meri sun le pukaar, hey Maa
+
+## Verse excerpts
+
+Jeevan naiya paar lagaaye
+Aaye sharan kamal mein
+Tu hi Lakshmi, Sharada tu hi
+
+## Refrain
+
+Main hoon aaya tere dwaar, jai Mahalakshmi Maa`,
+    translation: `## Refrain
+
+I have come to your door. Glory to Mother Mahalakshmi.
+Hear my plea, O Mother.
+
+## Verse excerpts
+
+You guide the boat of life safely across.
+I have come to take refuge at your lotus feet.
+You are Lakshmi, and you are Sharada.
+
+## Refrain
+
+I have come to your door. Glory to Mother Mahalakshmi.`,
+    thumbnail_url: SHANTI_BHAJANS_COVER,
+    cover_url: SHANTI_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["general", "bhajan", "devotion", "hindi"],
+  },
+  "koee-kahay-tujhe-ram-shri-prakash-gossai": {
+    title: "Koee Kahay Tujhe Ram",
+    alternate_title: "Koee Kahay Tujhe Raam",
+    artist_version: "Shri Prakash Gossai",
+    display_order: 524,
+    audio_url: "/audio/albums/shanti-bhajans-shri-prakash-gossai/03.mp3",
+    roman_lyrics: `## Refrain
+
+Koi kahe tujhe Ram
+Koi kahe tujhe Shiv Bhagwan
+Koi kahe Allah tero naam
+
+## Verse excerpt
+
+Ayodhya vaasi Ram
+Koi kahe tujhe Ram`,
+    translation: `## Refrain
+
+Some call you Ram.
+Some call you Lord Shiva.
+Some say your name is Allah.
+
+## Verse excerpt
+
+Ram, who dwells in Ayodhya.
+Some call you Ram.`,
+    thumbnail_url: SHANTI_BHAJANS_COVER,
+    cover_url: SHANTI_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["ram", "bhajan", "devotion", "hindi"],
+  },
+  "bhole-naath-se-nirala-shri-prakash-gossai": {
+    title: "Bhole Naath Se Nirala",
+    artist_version: "Shri Prakash Gossai",
+    display_order: 525,
+    audio_url: "/audio/albums/shanti-bhajans-shri-prakash-gossai/04.mp3",
+    roman_lyrics: `## Refrain
+
+Bhole Nath se niraala
+Gauri Nath se niraala
+Koi aur nahin
+
+## Verse 1
+
+Unka damru dam dam bole
+Aagam nigam ke bhed khole
+Aisa damru bajaane waala koi aur nahin
+
+## Refrain
+
+Bhole Nath se niraala, koi aur nahin
+
+## Verse 2
+
+Kaaya jab jab karvat badle
+Paap chamakte agle pichhle
+Ab mujhko bachaane waala koi aur nahin
+
+## Refrain
+
+Bhole Nath se niraala, koi aur nahin
+
+## Verse 3
+
+Tumne jag ka kasht mitaaya
+Mujhko Swami kyun bisraaya
+Aisa bhakton ka rakhwaala koi aur nahin`,
+    translation: `## Refrain
+
+There is no one as extraordinary as Bhole Nath,
+No one as extraordinary as the Lord of Gauri.
+There is no other.
+
+## Verse 1
+
+His damaru sounds, dam dam,
+Unfolding the mysteries of the sacred scriptures.
+No one else plays the damaru like him.
+
+## Refrain
+
+There is no one like Bhole Nath.
+
+## Verse 2
+
+Whenever the body turns and changes,
+Wrongs from earlier and later come into view.
+There is no one else who can save me now.
+
+## Refrain
+
+There is no one like Bhole Nath.
+
+## Verse 3
+
+You have relieved the suffering of the world.
+Why, my Lord, have you forgotten me?
+No one else watches over devotees as you do.`,
+    thumbnail_url: SHANTI_BHAJANS_COVER,
+    cover_url: SHANTI_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["shiva", "bhajan", "devotion", "hindi"],
+  },
+  "goonje-sada-jaikaar-o-bhole-tere-bhawan-mein-shri-prakash-gossai": {
+    title: "Goonje Sada Jaikaar O Bhole Tere Bhawan Mein",
+    artist_version: "Shri Prakash Gossai",
+    display_order: 526,
+    audio_url: "/audio/goonje-sada-jaikaar-o-bhole-tere-bhawan-mein-shri-prakash-gossai.mp3",
+    roman_lyrics: `## Refrain
+
+Goonje sada jaikaar, O Bhole, tere bhawan mein
+
+## Verse excerpts
+
+Bel patra aur Ganga jal se
+Bhakti bhaav se puja kar le
+Taarenge bhav se paar
+Chalo Shiv ki sharan mein
+
+Shiv ka dhyaan kare man nirmal
+Shiv bhakti hai punyon ka phal
+Karte hain Bhole nivaas
+Apne bhakton ke man mein
+
+Sankat se Shiv sada ubaare
+Darshan dekar bhaag sanwaare
+
+## Refrain
+
+Goonje sada jaikaar, O Bhole, tere bhawan mein`,
+    translation: `## Refrain
+
+May cries of praise always resound in your abode, O Bhole.
+
+## Verse excerpts
+
+With bel leaves and water from the Ganga,
+Offer worship with a heart full of devotion.
+He will carry us across the ocean of worldly life.
+Come, let us take refuge in Shiva.
+
+Meditation on Shiva cleanses the mind.
+Devotion to Shiva is the fruit of good deeds.
+Bhole makes his home
+In the hearts of his devotees.
+
+Shiva always delivers us from trouble.
+A glimpse of him can transform our fortunes.
+
+## Refrain
+
+May cries of praise always resound in your abode, O Bhole.`,
+    thumbnail_url: "/images/shri-prakash-gossai.png",
+    cover_url: "/images/shri-prakash-gossai.png",
+    player_cover_aspect: "square",
+    category_slugs: ["shiva", "bhajan", "devotion", "hindi"],
+  },
+  "kabhi-pyaase-shri-prakash-gossai": {
+    title: "Kabhi Pyaase",
+    artist_version: "Shri Prakash Gossai",
+    display_order: 527,
+    audio_url: "/audio/albums/shanti-bhajans-shri-prakash-gossai/06.mp3",
+    roman_lyrics: `## Refrain
+
+Kabhi pyaase ko paani pilaaya nahin
+Baad amrit pilaane se kya faayda?
+Kabhi girte hue ko uthaaya nahin
+Baad aansoo bahaane se kya faayda?
+
+## Verse 1
+
+Main to mandir gaya, puja aarti ki
+Puja karte hue khayaal aa gaya
+Kabhi maa baap ki seva ki hi nahin
+Sirf puja karaane se kya faayda?
+
+## Verse 2
+
+Main to satsang gaya, guruvaani suni
+Guruvaani ko sunkar khayaal aa gaya
+Janam maanav ka lekar daya na kari
+Phir maanav kahlaane se kya faayda?
+
+## Verse 3
+
+Maine daan kiya, maine jap tap kiya
+Daan karte hue khayaal aa gaya
+Kabhi bhookhe ko bhojan khilaaya nahin
+Daan laakhon ka karne se kya faayda?
+
+## Verse 4
+
+Ganga nahaane Haridwar Kashi gaya
+Ganga nahaate hi man mein khayaal aa gaya
+Tan ko dhoya magar, man ko dhoya nahin
+Phir Ganga nahaane se kya faayda?
+
+## Refrain
+
+Kabhi pyaase ko paani pilaaya nahin
+Baad amrit pilaane se kya faayda?`,
+    translation: `## Refrain
+
+If you never gave water to someone who was thirsty,
+What good is offering nectar afterwards?
+If you never helped someone who was falling,
+What good is shedding tears afterwards?
+
+## Verse 1
+
+I went to the temple, worshipped, and offered the lamp.
+As I worshipped, a thought came to me.
+If I never cared for my mother and father,
+What good is arranging a ritual?
+
+## Verse 2
+
+I went to satsang and heard the guru's words.
+As I listened to the guru, a thought came to me.
+If I was born human and showed no compassion,
+What good is being called human?
+
+## Verse 3
+
+I gave alms, repeated prayers, and practised austerity.
+As I gave, a thought came to me.
+If I never fed someone who was hungry,
+What good is giving vast sums in charity?
+
+## Verse 4
+
+I went to Haridwar and Kashi to bathe in the Ganga.
+As I bathed in the Ganga, a thought came to me.
+If I washed my body and left my heart unclean,
+What good is bathing in the Ganga?
+
+## Refrain
+
+If you never gave water to someone who was thirsty,
+What good is offering nectar afterwards?`,
+    thumbnail_url: SHANTI_BHAJANS_COVER,
+    cover_url: SHANTI_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["general", "bhajan", "devotion", "hindi"],
+  },
+  "balaji-kahaaya-shri-prakash-gossai": {
+    title: "Balaji Kahaaya",
+    alternate_title: "Bakaji Kahaaya",
+    artist_version: "Shri Prakash Gossai",
+    display_order: 528,
+    audio_url: "/audio/albums/shanti-bhajans-shri-prakash-gossai/07.mp3",
+    roman_lyrics: `## Refrain
+
+Balaji kahaaye Hanumanji hamaare
+Anjani ke pyaare, Shri Ram ke dulaare
+
+## Verse excerpts
+
+Mahabeer Hanuman, matwaale niraale
+Sheesh pe mukut sohe
+Bigde kaam bhakton ke Balaji sanwaare
+
+## Refrain
+
+Balaji kahaaye Hanumanji hamaare
+Anjani ke pyaare, Shri Ram ke dulaare`,
+    translation: `## Refrain
+
+Our beloved Hanuman is known as Balaji.
+Beloved son of Anjani, cherished by Shri Ram.
+
+## Verse excerpts
+
+Mighty Hanuman, spirited and unlike any other.
+A crown shines upon your head.
+Balaji sets his devotees' troubles right.
+
+## Refrain
+
+Our beloved Hanuman is known as Balaji.
+Beloved son of Anjani, cherished by Shri Ram.`,
+    thumbnail_url: SHANTI_BHAJANS_COVER,
+    cover_url: SHANTI_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["hanuman", "bhajan", "devotion", "hindi"],
+  },
+  "bhajtaa-nahi-shri-prakash-gossai": {
+    title: "Bhajtaa Nahi",
+    artist_version: "Shri Prakash Gossai",
+    display_order: 529,
+    audio_url: "/audio/albums/shanti-bhajans-shri-prakash-gossai/08.mp3",
+    roman_lyrics: `## Refrain excerpt
+
+Bhajta nahin Ram naam, are paagal bande
+
+## Verse excerpts
+
+Bhaagyavaan hai tu jo nar tan ko paaya hai
+Lekin is mein Shri Ram na basaaya hai
+
+Ab bhi samay hai, praani, jaldi sambhal ja
+
+Kehta tu mera mera, kuchh nahin tera hai`,
+    translation: `## Refrain excerpt
+
+O foolish one, you spend your days without chanting Ram's name.
+
+## Verse excerpts
+
+You are fortunate to have been given a human life.
+Yet you have made no place for Shri Ram in it.
+
+There is still time. Come to your senses while you can.
+
+You keep saying “mine, mine,” yet nothing belongs to you.`,
+    thumbnail_url: SHANTI_BHAJANS_COVER,
+    cover_url: SHANTI_BHAJANS_COVER,
+    player_cover_aspect: "square",
+    category_slugs: ["general", "bhajan", "devotion", "hindi"],
+  },
   "shri-krishna-govinda-hare-murari-bhagavata-sankirtan": {
     title: "Shri Krishna Govinda Hare Murari",
     artist_version: "Swami Tejomayananda",
@@ -3142,6 +3535,12 @@ I bow to Shri Radha and Krishna.`,
     title: "Parvati Nandana Gajanana",
     artist_version: "Swami Tejomayananda",
     audio_url: "/audio/albums/sankirtan-swami-tejomayananda/01.mp3",
+    roman_lyrics: `## Chant refrain
+
+Parvati nandana Gajanana`,
+    translation: `## Chant refrain
+
+O elephant-faced Ganesha, son of Parvati.`,
     thumbnail_url: SANKIRTAN_COVER,
     cover_url: SANKIRTAN_COVER,
     player_cover_aspect: "square",
@@ -3152,6 +3551,12 @@ I bow to Shri Radha and Krishna.`,
     title: "Jai Sadguru Omkara",
     artist_version: "Swami Tejomayananda",
     audio_url: "/audio/albums/sankirtan-swami-tejomayananda/02.mp3",
+    roman_lyrics: `## Chant refrain
+
+Jai Sadguru Omkara`,
+    translation: `## Chant refrain
+
+Glory to the true guru, embodiment of Om.`,
     thumbnail_url: SANKIRTAN_COVER,
     cover_url: SANKIRTAN_COVER,
     player_cover_aspect: "square",
@@ -3162,6 +3567,12 @@ I bow to Shri Radha and Krishna.`,
     title: "Shri Ram Jai Ram Jai Jai Ram",
     artist_version: "Swami Tejomayananda",
     audio_url: "/audio/albums/sankirtan-swami-tejomayananda/03.mp3",
+    roman_lyrics: `## Chant refrain
+
+Shri Ram, jai Ram, jai jai Ram`,
+    translation: `## Chant refrain
+
+Shri Ram, glory to Ram, glory, glory to Ram.`,
     thumbnail_url: SANKIRTAN_COVER,
     cover_url: SANKIRTAN_COVER,
     player_cover_aspect: "square",
@@ -3172,6 +3583,12 @@ I bow to Shri Radha and Krishna.`,
     title: "Om Namah Shivaya",
     artist_version: "Swami Tejomayananda",
     audio_url: "/audio/albums/sankirtan-swami-tejomayananda/04.mp3",
+    roman_lyrics: `## Chant refrain
+
+Om namah Shivaya`,
+    translation: `## Chant refrain
+
+Om, I bow to Shiva.`,
     thumbnail_url: SANKIRTAN_COVER,
     cover_url: SANKIRTAN_COVER,
     player_cover_aspect: "square",
@@ -3182,6 +3599,12 @@ I bow to Shri Radha and Krishna.`,
     title: "Hey Natha Narayana Vasudeva",
     artist_version: "Swami Tejomayananda",
     audio_url: "/audio/albums/sankirtan-swami-tejomayananda/05.mp3",
+    roman_lyrics: `## Chant refrain
+
+Hey Natha Narayana Vasudeva`,
+    translation: `## Chant refrain
+
+O Lord Narayana, Vasudeva.`,
     thumbnail_url: SANKIRTAN_COVER,
     cover_url: SANKIRTAN_COVER,
     player_cover_aspect: "square",
@@ -3192,6 +3615,12 @@ I bow to Shri Radha and Krishna.`,
     title: "Parameshwara Pralayankara",
     artist_version: "Swami Tejomayananda",
     audio_url: "/audio/albums/sankirtan-swami-tejomayananda/06.mp3",
+    roman_lyrics: `## Chant refrain
+
+Parameshwara Pralayankara`,
+    translation: `## Chant refrain
+
+O Supreme Lord, who brings about the dissolution of the universe.`,
     thumbnail_url: SANKIRTAN_COVER,
     cover_url: SANKIRTAN_COVER,
     player_cover_aspect: "square",
@@ -3202,6 +3631,12 @@ I bow to Shri Radha and Krishna.`,
     title: "Govinda Govinda",
     artist_version: "Swami Tejomayananda",
     audio_url: "/audio/albums/sankirtan-swami-tejomayananda/07.mp3",
+    roman_lyrics: `## Chant refrain
+
+Govinda, Govinda`,
+    translation: `## Chant refrain
+
+Govinda, Govinda, beloved Lord Krishna.`,
     thumbnail_url: SANKIRTAN_COVER,
     cover_url: SANKIRTAN_COVER,
     player_cover_aspect: "square",
@@ -3212,6 +3647,12 @@ I bow to Shri Radha and Krishna.`,
     title: "Shri Krishna Kunj Bihari",
     artist_version: "Swami Tejomayananda",
     audio_url: "/audio/albums/sankirtan-swami-tejomayananda/08.mp3",
+    roman_lyrics: `## Chant refrain
+
+Shri Krishna Kunj Bihari`,
+    translation: `## Chant refrain
+
+O Shri Krishna, who delights in the groves of Vrindavan.`,
     thumbnail_url: SANKIRTAN_COVER,
     cover_url: SANKIRTAN_COVER,
     player_cover_aspect: "square",
@@ -3222,6 +3663,12 @@ I bow to Shri Radha and Krishna.`,
     title: "Hari Bol",
     artist_version: "Swami Tejomayananda",
     audio_url: "/audio/albums/sankirtan-swami-tejomayananda/09.mp3",
+    roman_lyrics: `## Chant refrain
+
+Hari bol`,
+    translation: `## Chant refrain
+
+Chant the name of Hari.`,
     thumbnail_url: SANKIRTAN_COVER,
     cover_url: SANKIRTAN_COVER,
     player_cover_aspect: "square",
@@ -3232,6 +3679,12 @@ I bow to Shri Radha and Krishna.`,
     title: "Jai Jai Jai Janaki Vallabh",
     artist_version: "Swami Tejomayananda",
     audio_url: "/audio/albums/sankirtan-swami-tejomayananda/10.mp3",
+    roman_lyrics: `## Chant refrain
+
+Jai jai jai Janaki Vallabh`,
+    translation: `## Chant refrain
+
+Glory, glory, glory to Ram, beloved of Janaki.`,
     thumbnail_url: SANKIRTAN_COVER,
     cover_url: SANKIRTAN_COVER,
     player_cover_aspect: "square",
@@ -3242,6 +3695,12 @@ I bow to Shri Radha and Krishna.`,
     title: "Rama Rama Sita Rama",
     artist_version: "Swami Tejomayananda",
     audio_url: "/audio/albums/sankirtan-swami-tejomayananda/11.mp3",
+    roman_lyrics: `## Chant refrain
+
+Rama Rama, Sita Rama`,
+    translation: `## Chant refrain
+
+Ram, Ram, Sita and Ram.`,
     thumbnail_url: SANKIRTAN_COVER,
     cover_url: SANKIRTAN_COVER,
     player_cover_aspect: "square",
@@ -9135,9 +9594,10 @@ A fair of two days`,
     alternate_title: "",
     artist_version: "Shri Prakash Gossai",
     audio_url: "/audio/aaj-suno-hum-geet-shri-prakash-gossai.mp3",
-    thumbnail_url: "/images/aaj-suno-hum-geet-shri-prakash-gossai-thumb.jpg",
-    cover_url: "/images/aaj-suno-hum-geet-shri-prakash-gossai-player.jpg",
-    mini_cover_url: "/images/aaj-suno-hum-geet-shri-prakash-gossai-thumb.jpg",
+    thumbnail_url: SHANTI_BHAJANS_COVER,
+    cover_url: SHANTI_BHAJANS_COVER,
+    mini_cover_url: SHANTI_BHAJANS_COVER,
+    player_cover_aspect: "square",
     display_order: 56,
     category_slugs: [
       "general",
